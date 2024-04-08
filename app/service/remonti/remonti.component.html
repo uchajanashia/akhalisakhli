@@ -1,0 +1,18 @@
+<div class="forAlign">
+    <article>
+      <h1>რემონტი</h1>
+      <div class="txtcontain">
+        <p *ngFor="let remontiItem of remontiList">
+          {{remontiItem.pcont11}}
+        </p>
+        <ul>
+          <ng-container *ngFor="let remontiItem of remontiList">
+            <li *ngFor="let item of remontiItem.pcontli">{{ item }}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </article>
+    <app-carusel-pic-remonti class="compo"></app-carusel-pic-remonti>
+    <app-carusel-vid-remonti class="compovid"></app-carusel-vid-remonti>
+  </div>
+  

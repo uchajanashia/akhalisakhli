@@ -1,0 +1,20 @@
+<div class="forAlign">
+    <article>
+      <h1>ინტერიერის დიზაინი</h1>
+      <div class="txtcontain">
+        <p *ngFor="let interieriItem of interieriList">
+          {{interieriItem.pcont11}}
+        </p>
+        <ul>
+          <ng-container *ngFor="let interieriItem of interieriList">
+            <ng-container *ngFor="let item of interieriItem.pcontli">
+              <li>{{ item }}</li>
+            </ng-container>
+          </ng-container>
+        </ul>
+      </div>
+    </article>
+    <app-carusel-pic-interier class="compo"></app-carusel-pic-interier>
+    <app-carusel-vid-interier class="compovid"></app-carusel-vid-interier>
+  </div>
+  

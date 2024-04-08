@@ -1,0 +1,214 @@
+h1 {
+  color: white;
+  &:lang(ka) {
+    font-family: "ALK Sanet", sans-serif;
+  }
+}
+thead th tr{
+  max-width: 200px;
+}
+.hoverable {
+  position: relative;
+}
+
+.hoverable:hover::before {
+  content: "Your text here";
+  position: absolute;
+  top: -20px; /* Adjust as needed */
+  background-color: #ffffff; /* Background color of the tooltip */
+  padding: 5px;
+  border: 1px solid #000000; /* Border color of the tooltip */
+}
+
+textarea{
+  width: 160px;
+    height: 80px;
+    font-size: 14px;
+    resize: vertical;
+  
+}
+.forrelative {
+  position: relative;
+  padding: 70px 20px;
+  position: relative;
+  height: 100vh;
+  overflow-x: auto;
+  background: url(../../../assets/pics/SVG/pattern.svg), var(--black-v4);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  .notification {
+    background-color: goldenrod;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .notification-item {
+      padding: 10px;
+      .notification-details {
+        position: relative;
+        border-radius: 10px;
+        max-width: 300px;
+        gap: 10px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        background-color: #dddddd;
+        p {
+          color: black;
+        }
+        .comment {
+          span {
+            background-color: rgb(55, 255, 105);
+            border-radius: 5px;
+            color: black;
+          }
+        }
+        .date {
+          position: absolute;
+          right: 0;
+          font-size: 0.7rem;
+        }
+        .comm {
+          display: flex;
+          input {
+            width: 90%;
+          }
+          button {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+.back {
+  font-size: 30px;
+  color: white;
+  transition: 0.5s;
+  &:hover {
+    scale: 1.2;
+    color: rgb(177, 177, 177);
+  }
+  position: absolute;
+  left: 2%;
+  top: 2%;
+}
+p {
+  &:lang(ka) {
+    font-family: "BPG Banner ExtraSquare", sans-serif;
+  }
+}
+th {
+  &:lang(ka) {
+    font-family: "ALK Sanet", sans-serif;
+  }
+}
+td {
+  &:lang(ka) {
+    font-family: "BPG Banner ExtraSquare", sans-serif;
+  }
+}
+h2 {
+  &:lang(ka) {
+    font-family: "ALK Sanet", sans-serif;
+  }
+}
+.notification-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notification-table th,
+.notification-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.notification-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+tbody {
+  tr {
+    background-color: #b3b3b3;
+  }
+}
+
+.notification-item:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.comm {
+  display: flex;
+}
+
+.comm input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+}
+
+.comm button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.comm button:hover {
+  background-color: #0056b3;
+}
+
+.star {
+  color: gray; /* Default color for unfilled stars */
+  cursor: pointer;
+}
+
+.filled {
+  color: gold; /* Gold color for filled stars */
+}
+.seentd {
+  .seen {
+    width: 30px;
+    height: 30px;
+  }
+  .seen:disabled {
+    /* Set background color to blue */
+    background-color: blue !important;
+    border-color: blue !important;
+    color: white !important;
+}
+}
+.deletebutton{
+  color: red;
+  border-style: none;
+  margin: 10px;
+  height: 20px;
+  width: 23px;
+  background-color: transparent;
+}
+
+.messages{
+  ul{
+    gap: 5px;
+    li{
+      list-style: none;
+      margin-top: 5px;
+      background-color: #8dc4ff;
+      border: 2px solid black;
+    }
+  }
+}
+.thead{
+  tr{
+    th{
+      flex-wrap: nowrap;
+    }
+  }
+}

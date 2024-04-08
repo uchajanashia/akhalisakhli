@@ -1,0 +1,321 @@
+/* Add your table styling here (optional) */
+.container {
+  p {
+    &:lang(ka) {
+      font-family: "BPG Banner ExtraSquare", sans-serif;
+    }
+  }
+  th {
+    &:lang(ka) {
+      font-family: "ALK Sanet", sans-serif;
+    }
+  }
+  td {
+    &:lang(ka) {
+      font-family: "BPG Banner ExtraSquare", sans-serif;
+    }
+  }
+  h2 {
+    &:lang(ka) {
+      font-family: "ALK Sanet", sans-serif;
+    }
+  }
+
+  padding: 20px;
+  position: relative;
+  height: 100vh;
+  overflow-x: auto;
+  background: url(../../assets/pics/SVG/pattern.svg), var(--black-v4);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  .search {
+    width: 20%;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color: white;
+    &:placeholder-shown {
+      &:lang(ka) {
+        font-family: "ALK Sanet", sans-serif;
+      }
+    }
+  }
+  .checkbox {
+    input {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  label {
+    &:lang(ka) {
+      font-family: "BPG Banner ExtraSquare", sans-serif;
+    }
+  }
+  .add-user-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .subadd{
+        h3{
+            &:lang(ka) {
+                font-family: "ALK Sanet", sans-serif;
+              }
+              color: white;
+              filter: drop-shadow(3px 3px 0 black);
+        }
+        width: 30%;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background-color: hsla(0, 0%, 63%, 0.247);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        label{
+            &:lang(ka) {
+                font-family: "BPG Banner ExtraSquare", sans-serif;
+              }
+              color: white;
+        }
+        input{
+            width: 90%;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: white;
+            background-color: rgb(53, 53, 53);
+        }
+        select{
+            width: 90%;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: white;
+            background-color: rgb(53, 53, 53);
+        }
+        .close{
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            top: 2%;
+            right: 2%;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+  }
+}
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    .delete{
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: #f31414;
+        transition: 0.3s;
+        &:hover{
+          background-color: #960808;
+        }
+    }
+    .edit{
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: #8d8d8d;
+        transition: 0.3s;
+        &:hover{
+          background-color: #4e4e4e;
+        }
+    }
+}
+.forrelative {
+  position: absolute;
+  right: 0;
+  top: 7%;
+  .notification {
+    background-color: goldenrod;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .notification-item {
+      padding: 10px;
+      .notification-details {
+        position: relative;
+        border-radius: 10px;
+        max-width: 300px;
+        gap: 10px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        background-color: #dddddd;
+        p {
+          color: black;
+        }
+        .comment {
+          span {
+            background-color: rgb(55, 255, 105);
+            border-radius: 5px;
+            color: black;
+          }
+        }
+        .date {
+          position: absolute;
+          right: 0;
+          font-size: 0.7rem;
+        }
+        .comm {
+          display: flex;
+          input {
+            width: 90%;
+          }
+          button {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+.adduser {
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+  &:hover {
+    color: rgb(187, 187, 187);
+    scale: 1.2;
+  }
+}
+.notify {
+  position: absolute;
+  right: 2%;
+  cursor: pointer;
+  top: 2%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+  z-index: 998;
+  &:hover {
+    color: rgb(187, 187, 187);
+    scale: 1.2;
+  }
+  span{
+    position: absolute;
+    z-index: 999;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f31414;
+    color: #f31414;
+    scale: 1.5;
+  }
+}
+.users{
+    border-radius: 10px;
+    thead{
+        border-radius: 10px;
+    }
+}
+.addusers{
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: goldenrod;
+    color: black;
+    &:lang(ka) {
+        font-family: "BPG Banner ExtraSquare", sans-serif;
+      }
+}
+.checkbox {
+  display: flex;
+  gap: 20px;
+  div {
+    label {
+      color: white;
+    }
+  }
+}
+h2 {
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  color: black;
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  color: white;
+  background-color: #f2f2f200;
+}
+tr:nth-child(odd) {
+  color: white;
+  background-color: #a5a5a53a;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  th,
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  td {
+    display: block;
+  }
+  tr {
+    margin-bottom: 10px;
+    display: block;
+  }
+  tbody {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 300px; /* Adjust the max height as needed */
+  }
+}

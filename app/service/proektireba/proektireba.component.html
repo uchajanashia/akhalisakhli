@@ -1,0 +1,17 @@
+<div class="forAlign">
+  <article>
+    <h1>პროექტირება</h1>
+    <div class="txtcontain">
+      <p *ngFor="let proeqtirebaItem of proeqtirebaList">
+        {{ proeqtirebaItem.pcont11 }}
+      </p>
+      <ul>
+        <ng-container *ngFor="let proeqtirebaItem of proeqtirebaList">
+          <li *ngFor="let item of proeqtirebaItem.pcontli">{{ item }}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </article>
+  <app-carusel-inside class="compo"></app-carusel-inside>
+  <app-vidcarusel class="compovid"></app-vidcarusel>
+</div>

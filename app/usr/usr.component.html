@@ -1,0 +1,129 @@
+<div class="container">
+  <h2>ადმინ პანელი</h2>
+
+  <input
+    class="search"
+    type="text"
+    placeholder="ძებნა"
+    [(ngModel)]="searchTerm"
+    (keyup)="applyFilter()"
+  />
+  <div class="add-user-form" *ngIf="isadduseron">
+    <div class="subadd">
+      <button class="close" (click)="toggleadduser()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3>მომხმარებლის დამატება</h3>
+      <label>დასახელება:</label>
+      <input type="text" [(ngModel)]="newUser.username" required />
+      <label>ელ-ფოსტა:</label>
+      <input type="email" [(ngModel)]="newUser.email" required />
+      <label>სახელი - გვარი:</label>
+      <input type="text" [(ngModel)]="newUser.full_name" required />
+      <label>როლი:</label>
+      <select [(ngModel)]="newUser.role">
+        <option value="admin">Admin</option>
+        <option value="moderator">Moderator</option>
+        <option value="user">User</option>
+      </select>
+      <button class="addusers" (click)="addUser()">დამატება</button>
+    </div>
+  </div>
+  <button class="adduser" (click)="toggleadduser()">
+    <i class="fa-solid fa-user-plus"></i>
+  </button>
+  <a class="notify" href="mes"
+    ><span *ngIf="ifNotificationRead"></span><i class="fa-solid fa-message"></i
+  ></a>
+  <div class="forrelative" *ngIf="showNotifications">
+    <div class="notification">
+      <div
+        *ngFor="let notification of notifications; let i = index"
+        class="notification-item"
+      >
+        <div class="notification-details">
+          <p><strong>სახ:</strong>{{ notification.name }}</p>
+          <p><strong>ტელ:</strong>{{ notification.phone }}</p>
+          <p><strong>ელ-ფოსტა:</strong>{{ notification.email }}</p>
+          <p><strong>სმს:</strong>{{ notification.message }}</p>
+          <p class="date">
+            <strong>{{ notification.date | date : "medium" }}</strong>
+          </p>
+          <p class="comment"><strong>კომენტარი:</strong><span>comment</span></p>
+          <div class="comm">
+            <input type="text" />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="users">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>დასახელება
+          <input
+        class="search"
+        type="text"
+        placeholder="ძებნა"
+        [(ngModel)]="usernameFilter"
+        (keyup)="applyFilter()"
+      />
+        </th>
+        <th>ელ-ფოსტა
+          <input
+        class="search"
+        type="text"
+        placeholder="ძებნა"
+        [(ngModel)]="emailFilter"
+        (keyup)="applyFilter()"
+      />
+        </th>
+        <th>სახელი - გვარი
+          <input
+        class="search"
+        type="text"
+        placeholder="ძებნა"
+        [(ngModel)]="fullNameFilter"
+        (keyup)="applyFilter()"
+      />
+        </th>
+        <th>
+          დამატების თარიღი
+          <input
+            class="search"
+            type="date"
+            [(ngModel)]="dateFilter"
+            (change)="applyFilter()"
+          />
+        </th>
+        <th>
+          როლი
+          <select [(ngModel)]="roleFilter" (change)="applyFilter()">
+            <option value="">ყველა</option>
+            <option value="admin">Admin</option>
+            <option value="moderator">Moderator</option>
+            <option value="user">User</option>
+          </select>
+        </th>
+        <th>მოქმედებები</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.full_name }}</td>
+        <td>{{ user.created_at | date : "medium" }}</td>
+        <td>{{ user.roles.join(", ") }}</td>
+        <td class="actions">
+          <button class="edit" (click)="editUser(user)">Edit</button>
+          <button class="delete" (click)="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

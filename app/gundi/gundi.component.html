@@ -1,0 +1,14 @@
+<section class="gundi">
+    <div class="tMshromlebi" *ngFor="let gundi of gundiList">
+      <div class="backMshromlebi">
+        <div class="portret">
+          <img data-aos="fade-up" [src]="gundi.img" alt="">
+        </div>
+        <div class="txt">
+          <h1 data-aos="fade-left" class="saxel">{{gundi.name}}</h1>
+          <h1 data-aos="fade-left" class="gvari">{{gundi.surname}}</h1>
+          <h2 data-aos="fade-left" class="pozicia">{{gundi.position}}</h2>
+        </div>
+      </div>
+    </div>
+  </section>

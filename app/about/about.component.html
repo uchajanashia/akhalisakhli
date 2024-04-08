@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="contain">
+  <ul class="shortcut" >
+    <li><a [routerLink]="['/about/aboutCompany']">კომპანიის შესახებ</a></li>
+    <li><a [routerLink]="['/about/mxf']">მისია, ხედვა, ფასეულობები</a></li>
+    <li><a [routerLink]="['/about/team']">ჩვენი გუნდი</a></li>
+    <li><a [routerLink]="['/about/partners']">პარტნიორები</a></li>
+</ul>
+<router-outlet></router-outlet>
+<app-float-contact></app-float-contact>
+</div>
+<app-footer></app-footer>

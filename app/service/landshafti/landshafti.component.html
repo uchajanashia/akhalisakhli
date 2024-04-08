@@ -1,0 +1,17 @@
+<div class="forAlign">
+  <article>
+    <h1>ლანდშაფტის დიზაინი</h1>
+    <div class="txtcontain">
+      <p *ngFor="let landshaftiItem of landshaftList">
+        {{ landshaftiItem.pcont11 }}
+      </p>
+      <ul>
+        <ng-container *ngFor="let landshaftiItem of landshaftList">
+          <li *ngFor="let item of landshaftiItem.pcontli">{{ item }}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </article>
+  <app-carusel-pic-landshaft class="compo"></app-carusel-pic-landshaft>
+  <app-carusel-vid-landshaft class="compovid"></app-carusel-vid-landshaft>
+</div>

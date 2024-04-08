@@ -1,0 +1,113 @@
+.floatingmess {
+    animation: 1s fromtop ease-in-out;
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    // background-color: var(--light-green);
+    // background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--black-v2-tr);
+  
+    backdrop-filter: blur(3px);
+    // top: 20%;
+    top: 55%;
+    border-radius: 10px 0 0 10px;
+    z-index: 1000;
+  }
+  .floatingmess ul li {
+    list-style: none;
+  }
+  
+  .floatingmess i {
+    font-size: 25px;
+    margin: 10px;
+    // color: var(--dark-green);
+    color: white;
+    transition: 0.5s;
+    //without shadow
+    // filter: drop-shadow(0 0 5px black);
+  }
+  
+  .phn:hover .phone {
+    scale: 1.1;
+    color: var(--dark-green);
+  }
+  .msgr .mes {
+    background-position: 100% 0;
+    color: white; /* Change this to the desired color on hover */
+  }
+  .msgr:hover .mes {
+    background: linear-gradient(35deg, #2A88FF, #A73DFB, #FF766E);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    scale: 1.1;
+  }
+  .vbr:hover .viber {
+    color: #793baa;
+    scale: 1.1;
+  }
+  .wtsp:hover .watsapp {
+    color: rgb(46, 228, 46);
+    scale: 1.1;
+  }
+  .floating {
+    animation: 1s fromtop ease-in-out;
+    position: fixed;
+    left: 0;
+    padding: 10px;
+    background-color: var(--black-v2-tr);
+    backdrop-filter: blur(3px);
+    top: 55%;
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+  }
+  
+  .floating ul li {
+    list-style: none;
+  }
+  
+  .floating i {
+    font-size: 25px;
+    margin: 10px;
+    // color: var(--dark-green);
+    color: white;
+    transition: 0.5s;
+    //without shadow
+    // filter: drop-shadow(0 0 5px black);
+  }
+  .faceb:hover .face {
+    color: #207BF3;
+    scale: 1.1;
+  }
+  .linke:hover .link {
+    color: #126BC4;
+    scale: 1.1;
+  }
+  
+  .instag .insta {
+    background-position: 100% 0;
+    color: white;
+  }
+  .instag:hover .insta {
+    background: linear-gradient(35deg, #FFB508, #ff1169, #FD0AC4);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    scale: 1.1;
+  }
+  
+  .tikt:hover .tik {
+    color: black;
+    filter: drop-shadow(2px 2px 0 #F62950) drop-shadow(-1px -1px 0 #00EAE7);
+    scale: 1.1;
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }

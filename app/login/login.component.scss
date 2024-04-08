@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.loginbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--black-v4) url(../../assets/pics/SVG/pattern.svg);
+    background-size: 100%;
+}
+.container {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.login-box {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.137), -5px -5px 20px rgba(255, 255, 255, 0.137);
+    backdrop-filter: blur(10px);
+    width: 400px;
+}
+.login-box form {
+    width: 100%;
+    padding: 0 50px;
+}
+h2 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: var(--logColor);
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid var(--logColor-v2);
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px;
+    transition: .5s ease;
+}
+.input-box input:focus,
+.input-box input:valid {
+    border-color: var(--logColor);
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s ease;
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 1px;
+    transform: translateY(-20px);
+    font-size: .8em;
+    background: transparent;
+    padding: 0 6px;
+    color: var(--logColor);
+}
+.forgot-pass {
+    margin: -15px 0 10px;
+    text-align: center;
+}
+.forgot-pass a {
+    font-size: .85em;
+    color: #fff;
+    text-decoration: none;
+}
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+.btn {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 45px;
+    background: var(--logColor);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--logColor-v2);
+    font-weight: 600;
+}
+.signup-link {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+.signup-link a {
+    font-size: 1em;
+    color: var(--logColor);
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+}
+.verifycode{
+    display: flex;
+}
+.second{
+    width: 100%;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    h3{
+        color: white;
+    }
+    .verifycode{
+        input{
+            margin: 10px 0;
+        }
+    }
+}

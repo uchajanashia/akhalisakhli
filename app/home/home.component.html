@@ -1,0 +1,136 @@
+<app-header [ngClass]="{ hidden: loading }"></app-header>
+<!-- <div class="loading-sence" [ngClass]="{ hidden: !loading }">
+  <div class="introdiv">
+    <video #videoElement id="vid" class="video" autoplay muted loop>
+      <source src="assets/vids/logo1.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div> -->
+<article id="top" class="article" [ngClass]="{ 'hidden': loading}">
+  <div class="vidin">
+    <ul class="carusel">
+      <li *ngFor="let imageObject of imageObjects">
+        <a
+          [href]="imageObject.linkUrl"
+          (mouseenter)="showImage(imageObject)"
+          (mouseleave)="hideImage()"
+          >{{ imageObject.text }}</a
+        >
+      </li>
+    </ul>
+    <div class="hoverpics">
+      <div
+        *ngFor="let imageObject of imageObjects"
+        class="hover-image"
+        [ngClass]="{
+          'fade-in': hoveredImage === imageObject,
+          'fade-out': hoveredImage !== imageObject
+        }"
+      >
+        <img [src]="imageObject.imageUrl" alt="Project Image" />
+      </div>
+    </div>
+    <video data-aos="flip-down" #sairmeVideo id="vid" class="video" autoplay muted loop>
+      <source src="../../assets/vids/vidd.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <button class="butt" (click)="onButtonClick()">
+    <i
+      [ngClass]="{
+        'fa-circle-play': !sairmeVideo.paused,
+        'fa-circle-pause': sairmeVideo.paused
+      }"
+      class="fa-regular"
+    ></i>
+  </button>
+</article>
+<app-float-contact [ngClass]="{ hidden: loading }"></app-float-contact>
+<section [ngClass]="{ hidden: loading }" class="sect">
+  <ul>
+    <li *ngFor="let service of serviceList; let even = even; let odd = odd">
+      <a [href]="service.link" data-aos="fade-up" class="seccontain" id="sec1">
+        <div class="text">
+          <p class="nowrap">{{ service.name }}</p>
+          <p>{{ service.description }}</p>
+        </div>
+        <div class="imgtxt">
+          <img [src]="service.photo" alt="pic" />
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section [ngClass]="{ hidden: loading }" class="contact" id="myContact">
+  <div data-aos="zoom-out-down" class="contContain">
+    <div class="hedtxt">
+      <h2 class="translate mobilehead">
+        მოითხოვეთ ზარი
+      </h2>
+    </div>
+    <h2 class="translate mobilehead">ჩვენ მალე დაგიკავშირდებით</h2>
+    <form  #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+      <!-- <label class="translate" for="name">სახელი, გვარი:</label> -->
+      <input
+        style="color: white"
+        class="translate inputinput"
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="clientName"
+        (ngModelChange)="onInputChange()"
+        placeholder="სახელი, გვარი"
+        required
+      />
+      <div style="display: flex; ">
+        <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage">
+        <!-- <select class="form-select" id="phoone" name="phone" [(ngModel)]="selectedCountry" (ngModelChange)="onCountryChange()">
+          <option *ngFor="let country of countryList" [value]="country.code" > {{country.code}}  {{country.name}}</option>
+        </select> -->
+        <input
+          style="color: white; flex-grow: 1; width: 80"
+          class="translate inputinput" 
+          type="tel"
+          id="phone"
+          name="phone"
+          [(ngModel)]="clienPhoneNumber"
+          (ngModelChange)="onInputChange()"
+          placeholder="ტელეფონი"
+          required
+        />
+      </div>
+      
+      <input
+        style="color: white"
+        class="translate inputinput"
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="clienEmail"
+        (ngModelChange)="onInputChange()"
+        placeholder="ელ-ფოსტა"
+      />
+      
+      <textarea
+        style="color: white"
+        class="translate inputinput"
+        id="message"
+        name="message"
+        [(ngModel)]="clientMessage"
+        (ngModelChange)="onInputChange()"
+        required
+        placeholder="შეტყობინება"
+      ></textarea>
+      <button
+        id="button"
+        type="submit"
+        [disabled]="contactForm.invalid"
+      >
+        გაგზავნა
+      </button>
+    </form>
+  </div>
+</section>
+<app-map data-aos="fade-up"
+data-aos-duration="3000" [ngClass]="{ hidden: loading }"></app-map>
+<app-footer [ngClass]="{ hidden: loading }"></app-footer>

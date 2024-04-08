@@ -1,0 +1,51 @@
+<header>
+    <nav>
+      <div class="logo">
+        <a href="homeinput"><img src="assets/pics/SVG/tetri logo.svg" alt="logo" /></a>
+      </div>
+      <ul class="list">
+        <li><a href="">მთავარი</a></li>
+        <li><a class="linksub1">ჩვენს შესახებ</a>
+          <ul class="submenu1">
+            <li><a href="aboutinput/shesaxebinput">კომპანიის შესახებ</a></li>
+            <li><a href="aboutinput/mxfinput">მისია, ხედვა, ფასეულობები</a></li>
+            <li><a href="aboutinput/gundiinput">ჩვენი გუნდი</a></li>
+            <li><a href="aboutinput/partnersinput">პარტნიორები</a></li>
+          </ul>
+        </li>
+        <li><a>სერვისები</a>
+          <ul class="submenu2">
+            <li><a href="serviceinput/proektirebainput">პროექტირება</a></li>
+            <li><a href="serviceinput/msheneblobainput">მშენებლობა</a></li>
+            <li><a href="serviceinput/interieriinput">ინტერიერის დიზაინი</a></li>
+            <li><a href="serviceinput/remontiinput">რემონტი</a></li>
+            <li><a href="serviceinput/landshaftiinput">ლანდშაფტის დიზაინი</a></li>
+          </ul>
+        </li>
+        <li><a href="newsinput">სიახლეები</a></li>
+        <li><a href="contactinput">კონტაქტი</a></li>
+        <select class="lang" (change)="toggleLanguage()" name="" id="">
+          <option value="ka">GE</option>
+          <option value="en">EN</option>
+        </select>
+      </ul>
+      <div class="mobile-menu" *ngIf="isMobileMenuOpen">
+        <ul class="listo">
+          <li><a href="">მთავარი</a></li>
+          <li><a href="aboutinput/shesaxebinput">ჩვენს შესახებ</a></li>
+          <li><a href="services/proektirebainput">სერვისები</a></li>
+          <li><a href="newsinput">სიახლეები</a></li>
+          <li><a href="contactinput">კონტაქტი</a></li>
+        </ul>
+        <select class="lang" (change)="toggleLanguage()" name="" id="">
+          <option value="ka">GE</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+      <button id="menu" class="mobile-menu-button" (click)="toggleMobileMenu()">
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line buttom"></span>
+      </button>
+    </nav>
+  </header>

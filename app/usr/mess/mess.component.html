@@ -1,0 +1,88 @@
+<div class="forrelative">
+  <h1>შეტყონინებები</h1>
+  <!-- <a href="usr" class="back"><i class="fa-solid fa-circle-arrow-left"></i></a> -->
+  <table class="notification-table">
+    <thead class="thead">
+      <tr>
+        <th>სახელი და გვარი <input type="text" placeholder="მოძებნე სახელით" (input)="filterTable('customerNameAndSurname', $event)"></th>
+        <th>ტელეფონის ნომერი  <input type="text" placeholder="მოძებნე ნომერით" (input)="filterTable('phoneNumber', $event)"></th>
+        <th>ელ-ფოსტა  <input type="text" placeholder="მოეძებნე ელ-ფოსტით" (input)="filterTable('customerEmail', $event)"></th>
+        <th > შეტყონინებება</th> 
+        <th>კომენტარი</th>
+        <th>დატოვე კომენტარი</th>
+        <th>Seen</th> 
+        <th>შეფასება <input type="text" placeholder="მოეძებნე შეფასებით" (input)="filterTable('customerPoint', $event)"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let notification of filteredNotifications; let i = index" class="notification-item">
+        <td>{{ notification.customerNameAndSurname }}</td>
+        <td>{{ notification.phoneNumber }}</td>
+        <td>{{ notification.customerEmail }}</td>
+        <td style="word-wrap: break-word;" class="messages" colspan="4" >
+           <table>
+             <tr *ngFor="let message of notification.customerMessages">
+                <td>
+                  <ul>
+                    <div style="max-width: 200px; width: 150px;">
+                    <p style="margin-bottom: 10px; font-size: 12px;"  >
+                      {{ message.message }}</p>
+                      <p style="font-size: 10px; ">
+                      {{formatDate(message.messageReciveDate)}}</p>
+                    
+                  </div>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <div style="max-width: 200px; width: 150px;">
+                    <p style="margin-bottom: 10px; font-size: 12px;">
+                      {{ message.messageComment }}
+        
+                    </p>
+                  </div>
+                  </ul>
+                </td>
+                <td>
+                  <div class="comm" >
+                    <input type="text" [(ngModel)]="message.newComment">
+                    <button (click)="updateComment(message.customerMessageId, message.newComment)"><i class="fa-solid fa-paper-plane"></i></button>
+                  </div>
+                </td>
+                <td class="seentd" style="width: 100px; margin: auto;">
+                  <ul style="display: flex;">
+                    <div style=" display: grid;" (click)="check(message.customerMessageId)" >
+                      <input class="seen" type="checkbox"  [checked]="message.isChecked"   >
+                  </div>
+                  <button class="fa-solid fa-delete-left" style="  background-color: transparent;
+                  border: none;
+                  font-size: 24px;
+                  color: red;
+                  margin: auto;
+              " (click)="deletemessage(message.customerMessageId)"
+              ></button>
+                  </ul></td>
+                
+             </tr>
+           </table>
+         </td>
+         <td style="display: flex;">
+            <div class="rating">
+              <span class="star" (click)="rateMessage(notification.customerId, 'POINT_1')" [class.filled]="extractNumberFromValue(notification.customerPoint) >= 1 ">&#9733;</span>
+              <span class="star" (click)="rateMessage(notification.customerId, 'POINT_2')" [class.filled]="extractNumberFromValue(notification.customerPoint) >= 2 ">&#9733;</span>
+              <span class="star" (click)="rateMessage(notification.customerId, 'POINT_3')" [class.filled]="extractNumberFromValue(notification.customerPoint) >= 3 ">&#9733;</span>
+              <span class="star" (click)="rateMessage(notification.customerId, 'POINT_4')" [class.filled]="extractNumberFromValue(notification.customerPoint) >= 4 ">&#9733;</span>
+              <span class="star" (click)="rateMessage(notification.customerId, 'POINT_5')" [class.filled]="extractNumberFromValue(notification.customerPoint) >= 5 ">&#9733;</span>
+            </div>
+            <button class="fa-solid fa-delete-left" style="  background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: red;
+            margin: auto;
+        " (click)="deleteclient(notification.customerId)"
+        ></button>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

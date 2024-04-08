@@ -1,0 +1,28 @@
+.otxsotx{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../assets/pics/SVG/pattern.svg), var(--black-v4);
+    background-size: 100%;
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        h1{
+            color: white;
+            &:lang(ka) {
+                font-family: "ALK Sanet", sans-serif;
+              }
+        }
+        p{
+            color: white;
+            &:lang(ka) {
+                font-family: "ALK Sanet", sans-serif;
+              }
+        }
+    }
+}

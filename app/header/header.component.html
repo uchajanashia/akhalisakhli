@@ -1,0 +1,51 @@
+<header>
+  <nav>
+    <div class="logo">
+      <a href=""><img src="assets/pics/SVG/tetri logo.svg" alt="logo" /></a>
+    </div>
+    <ul class="list">
+      <li><a href="">{{ isGeorgian ? 'მთავარი' : 'Home' }}</a></li>
+      <li><a class="linksub1">{{ isGeorgian ? 'ჩვენს შესახებ' : 'About us' }}</a>
+        <ul class="submenu1">
+          <li><a href="about/aboutCompany">{{ isGeorgian ? 'კომპანიის შესახებ' : 'About Company' }}</a></li>
+          <li><a href="about/mxf">{{ isGeorgian ? 'მისია, ხედვა, ფასეულობები' : 'Vision, mission, values' }}</a></li>
+          <li><a href="about/team">{{ isGeorgian ? 'ჩვენი გუნდი' : 'Our team' }}</a></li>
+          <li><a href="about/partners">{{ isGeorgian ? 'პარტნიორები' : 'Partners' }}</a></li>
+        </ul>
+      </li>
+      <li><a>{{ isGeorgian ? 'სერვისები' : 'Services' }}</a>
+        <ul class="submenu2">
+          <li><a href="services/proektireba">{{ isGeorgian ? 'პროექტირება' : 'Project design' }}</a></li>
+          <li><a href="services/mshenebloba">{{ isGeorgian ? 'მშენებლობა' : 'Construction' }}</a></li>
+          <li><a href="services/interieri">{{ isGeorgian ? 'ინტერიერის დიზაინი' : 'Interior design' }}</a></li>
+          <li><a href="services/remonti">{{ isGeorgian ? 'რემონტი' : 'Renovation' }}</a></li>
+          <li><a href="services/landshafti">{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape design' }}</a></li>
+        </ul>
+      </li>
+      <li><a href="news">{{ isGeorgian ? 'სიახლეები' : 'News' }}</a></li>
+      <li><a href="contact">{{ isGeorgian ? 'კონტაქტი' : 'Contact' }}</a></li>
+      <select class="lang" (change)="toggleLanguage()"  [(ngModel)]="selectedLanguage">
+        <option value="ka">GE</option>
+        <option value="en">EN</option>
+      </select>
+    </ul>
+    <div class="mobile-menu" *ngIf="isMobileMenuOpen">
+      <ul class="listo">
+        <li><a href="">{{ isGeorgian ? 'მთავარი' : 'Home' }}</a></li>
+        <li><a href="about/aboutCompany">{{ isGeorgian ? 'ჩვენს შესახებ' : 'About us' }}</a></li>
+        <li><a href="services/proektireba">{{ isGeorgian ? 'სერვისები' : 'Services' }}</a></li>
+        <li><a href="news">{{ isGeorgian ? 'სიახლეები' : 'News' }}</a></li>
+        <li><a href="contact">{{ isGeorgian ? 'კონტაქტი' : 'Contact' }}</a></li>
+      </ul>
+      <select class="lang" (change)="toggleLanguage()" [(ngModel)]="selectedLanguage" >
+        <option value="ka">GE</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <button id="menu" class="mobile-menu-button" (click)="toggleMobileMenu()">
+      <span class="line top"></span>
+      <span class="line middle"></span>
+      <span class="line buttom"></span>
+    </button>
+  </nav>
+</header>

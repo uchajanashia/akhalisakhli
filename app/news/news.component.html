@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="main">
+    <div class="pagination">
+        <button *ngFor="let page of getPageNumbers()"
+        (click)="onPageChange(page)"
+        [class.selected]="page === currentPage">
+        {{ page }}
+    </button>
+</div>
+    <div class="news" *ngFor="let item of getPaginatedNews()">
+        <div data-aos="fade-up" class="text">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.content }}</p>
+        </div>
+        <img data-aos="fade-up" [src]="item.image" alt="" (click)="toggleFullScreen(item.image)">
+    </div>
+    
+    <div class="pagination">
+        <button *ngFor="let page of getPageNumbers()"
+        (click)="onPageChange(page)"
+        [class.selected]="page === currentPage">
+        {{ page }}
+    </button>
+</div>
+</div>
+
+<app-footer></app-footer>
+<div
+class="fullscreen-image"
+[ngClass]="{ show: isFullScreen && fullscreenImage }"
+*ngIf="isFullScreen && fullscreenImage"
+(click)="toggleFullScreen(fullscreenImage)"
+>
+<img [src]="fullscreenImage" alt="" />

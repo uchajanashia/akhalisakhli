@@ -1,0 +1,84 @@
+:root {
+    --light-green: rgba(182, 221, 192, 0.612);
+    --mid-green: #689979;
+    --dark-green: #07342f;
+    --transparent-dark-green: rgba(7, 52, 47, 0.4);
+    --snowFlaces: #50d8f3;
+    --pallete-grey: #eef0e5;
+    --pallete-light-grey: #b6c4b6;
+    --pallete-dark-green: #163020;
+    --pallete-green: #304d30;
+    --black-tr: rgba(0, 0, 0, 0.7);
+    --black-v2-tr: rgba(0, 0, 0, 0.5);
+    --black-v3-tr: rgba(0, 0, 0, 0.87);
+    --black-v4:#212121;
+    --black-v5:#363636;
+    --logColor:#3fdfa9;
+    --logColor-v2:#07412d;
+  }
+  
+  html{
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: white;
+    // background-image: url("../src/assets/pics/SVG/Wave.svg");
+    background-size: 100%;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 1;
+    }
+  }
+  @keyframes sway {
+    0% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: 50px;
+    }
+    50% {
+      margin-left: -50px;
+    }
+    75% {
+      margin-left: 50px;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  
+  #snow-container {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transition: opacity 500ms;
+    width: 100%;
+    z-index: -1;
+  }
+  .snow {
+    animation: fall ease-in infinite, sway ease-in-out infinite;
+    color: skyblue;
+    position: absolute;
+    z-index: -1;
+  }
+  
