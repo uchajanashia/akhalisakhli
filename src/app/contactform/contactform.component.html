@@ -1,0 +1,12 @@
+<div id="contactForm" *ngIf="sharedService.showContactForm">
+    <h1>Keep in touch!</h1>
+    <small>I'll get back to you as quickly as possible</small>
+  
+      <input placeholder="Name" type="text" required />
+      <input placeholder="Email" type="email" required />
+      <input placeholder="Subject" type="text" required />
+      <textarea placeholder="Comment"></textarea>
+      <button class="formBtn" (click)="closeContactForm()">Close</button>
+
+  </div>
+  
