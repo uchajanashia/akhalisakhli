@@ -2,12 +2,14 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { FloatContactComponent } from '../float-contact/float-contact.component';
-import Aos from 'aos';
 import { MapComponent } from "../map/map.component";
 import { ServiceListService } from '../service-list.service';
 import { FormsModule } from '@angular/forms';
-import { Country, Services } from '../services';
 import { CommonModule } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
+import { CustumerdataService } from '../custumerdata.service';
+import { LanguageService } from '../language.service';
+import { SharedcontactService } from '../projects/sharedcontact.service';
 
 @Component({
     selector: 'app-contact',
@@ -18,32 +20,12 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactComponent implements OnInit{
 
-  @Input() country!:Country;
-  countryList:Country[]=[];
-  constructor(
-    private serviceService: ServiceListService
-    ) {}
+  constructor(public sharedService: SharedcontactService, private languageService: LanguageService, private toastr: ToastrService ,     private serviceService: ServiceListService,
+    private custumerData: CustumerdataService,
+    private tost:ToastrService) {}
 
-    
-    selectedCountry: string='';
-    selectedCountryImage:string='';
-  
-  
-    ngOnInit(): void {
-    Aos.init();
-    Aos.refresh();
-    this.countryList=this.serviceService.getAllCountry();
-  }
-
-
-
-  onCountryChange() {
-    const selectedCountry = this.countries.find(country => country.code === this.selectedCountry);
-    if (selectedCountry) {
-      this.selectedCountryImage = selectedCountry.img;
-    } else {
-      this.selectedCountryImage = '';
-    }
+  closeContactForm(): void {
+    this.sharedService.showContactForm = false;
   }
 
   countries=[
@@ -242,16 +224,42 @@ export class ContactComponent implements OnInit{
     { id: 193, name: 'Zambia', code: '+260', img: 'assets/4x3/zm.svg' },
     { id: 194, name: 'Zimbabwe', code: '+263', img: 'assets/4x3/zw.svg' }
   ]
+  selectedCountry: string='';
+  selectedCountryImage: string='assets/4x3/ge.svg';
+  clienPhoneNumber ='+995';
+  clientName ='';
+  clienEmail ='';
+  clientMessage ='';
+  clientCountry = 'GEORGIA';
+  count="";
+
+  onInputChange(){
+    const guessContry = this.countries.find((element) => element.code == this.clienPhoneNumber);
+    console.log(this.clienPhoneNumber)
+    
+    if (guessContry) {
+      this.selectedCountryImage = guessContry.img;
+      this.count = guessContry.name;
+      this.clientCountry = this.count.toUpperCase();
+
+    } 
+  }
+
+  ngOnInit(): void {}
 
 
-  //button toggle
   submitForm(form: any): void {
     if (form.valid) {
-      // Handle form submission logic here
-      console.log('Form submitted!', form.value);
-
-      // Reset the form after submission if needed
-      form.resetForm();
+      this.custumerData.custumerSendData(this.clientName,this.clienEmail,this.clientCountry.toLocaleUpperCase(),this.clienPhoneNumber,this.clientMessage).subscribe(
+        response => {
+          this.tost.info('ჩვენ მალე გიპასუხებთ')
+        },
+        error => {
+          this.tost.info('გთხოვთ შეავსეთ ყველა ველი')
+        });
+      
+    }else{
+      this.tost.info('გთხოვთ შეავსეთ ყველა ველი')
     }
-  }
+    }
 }

@@ -1,266 +1,82 @@
 article{
-    padding: 10% 0;
+  background: url(../../assets/pics/SVG/pattern.svg);
+  background-attachment: fixed;
+  background-size: 250%;
 }
 .contact {
-    height: 250px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../../assets/pics/iphone\ backgr.jpg);
-    background-size: 100% 100%;
-    object-fit: cover;
-    color: white;
-    overflow: visible;
-    padding: 50px 0;
-    z-index: 998;
-  }
-  .contContain {
-    position: absolute;
-    aspect-ratio: 8/16;
-    z-index: 999;
-    gap: 20px;
-    height: 500px;
-    background-image: url(../../assets/pics/iphone1.png);
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: visible;
-    align-items: center;
-  }
-  .hedtxt{
-    margin-top: 20px;
-  }
-  .contContain h2 {
-    margin: 0 10px;
-    width: 100;
-    text-align: center;
-  }
-  .contContain form {
-    height: 150px;
-    width: 100%;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  input {
-    padding: 5px 0;
-    width: 100%;
-    font-size: 13px;
-    border-radius: 10px;
-    color: white;
-    border-style: none;
-    background-color: var(--transparent-dark-green);
-    height: 20px;
-  }
-  input::placeholder {
-    color: white;
-  }
-  textarea::placeholder {
-    color: white;
-  }
-  textarea {
-    padding: 5px 0;
-    border-radius: 10px;
-    width: 100%;
-    border-style: none;
-    background-color: var(--transparent-dark-green);
-    color: white;
-    height: 30px;
-    font-size: 14px;
-    resize: none;
-  }
-  #button {
-    border: none;
-    background-color: var(--dark-green);
-    height: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    width: 100%;
-    cursor: pointer;
-    transition: 0.2s;
-    padding: 5px 20px;
-    color: white;
-  }
-  #button:hover {
-    background-color: var(--mid-green);
-    color: var(--dark-green);
-  }
-  .translate:lang(ka) {
-    font-family: "ALK Sanet", sans-serif;
-  }
-  #phoone {
-    width: 10%;
-  }
+  padding: 130px 0;
+}
 
+.contact .heading h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
 
-  .contact {
-    overflow: hidden;
-    form {
-      height: 300px;
-      select {
-        width: 20px;
-        font-size: 1.1rem;
-      }
-      input {
-        
-        width: 90%;
-        height: 30px;
-        font-size: 1.1rem;
-      }
-    }
-    #phone {
-      width: 100%;
-    }
-    textarea {
-      height: 50px;
-      font-size: 1rem;
-      width: 90%;
-      padding: 5px 0;
-    }
-    #button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 90%;
-      font-size: 1rem;
-      padding: 5px 0;
-    }
-  }
+}
 
+.contact .heading h2 span {
+  color: var(--dark-green);
+}
 
-  .nowrap {
-    padding: 15px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: black;
-    letter-spacing: 2px;
-    text-wrap: nowrap;
-  }
-  select {
-    width: 10%;
-    color: white;
-    margin-right: 5px;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--transparent-dark-green);
-  }
-  
-  .countryimg{
-    width: 40px;
-  }
+.contact .heading p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 60px;
+  padding: 0;
+}
 
+.contact .form-control {
+  padding: 25px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 0;
+  border-radius: 10px;
+}
 
+.contact button.btn {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  background: var(--dark-green);
+  color: #ffffff;
+}
 
-  .info{
-    width: 100%;
-    height: 40vh;
-    background: url(../../assets/pics/SVG/pattern.svg), var(--black-v4);
-    background-size: 100%;
-    margin-bottom: 150px;
-    h1{
-      font-size: clamp(1rem, 3.5vw, 3rem);
-      &:lang(ka){
-        font-family: "ALK Sanet", sans-serif;
-      }
-      color: white;
-      text-align: center;
-      padding-top: 20px;
-    }
-    .sakontacto{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 80%;
-      .infoSubdiv1{
-        width: 50%;
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-right: 5px solid white;
-        gap: 30px;
-        i{
-          font-size: clamp(1rem, 3.5vw, 3rem);
-          color: white;
-        }
-        .tel{
-          gap: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: start;
-          flex-direction: column;
-          a{
-            text-decoration: none;
-            color: white;
-            font-size: clamp(0.7rem, 2.5vw, 2rem);
-            flex-wrap: nowrap;
-            &:lang(ka){
-              font-family: "ALK Sanet", sans-serif;
-            }
-          }
-        }
-      }
-      .infoSubdiv2{
-        width: 50%;
-        height: 80%;
-        .other{
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          gap: 30px;
-          a{
-            text-decoration: none;
-            color: white;
-            font-size: clamp(0.7rem, 2.5vw, 2rem);
-            flex-wrap: nowrap;
-            &:lang(ka){
-              font-family: "ALK Sanet", sans-serif;
-            }
-            i{
-              font-size: clamp(1rem, 3.5vw, 3rem);
-              padding: 5px;
-            }
-          }
-        }
-      }
-    }
-  }
+.contact .title h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
 
-  @media only screen and (min-width: 770px) and (max-width: 1024px) {
-    article{
-      padding: 20% 0;
-  }
-  }
-  @media only screen and (max-width: 768px) {
-    article{
-      padding: 150px 0;
-  }
-    .info{
-      .sakontacto{
-        display: flex;
-        flex-direction: column;
-        .infoSubdiv1{
-          border-right: none;
-          border-bottom: 5px solid white;
-        }
-      }
-    }
-  }
-  @media only screen and (max-width: 588px) {
-    .info{
-      .sakontacto{
-        .infoSubdiv1{
-          border-right: none;
-          border-bottom: 5px solid white;
-        }
-    }
-  }
-  }
+.contact .title p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  line-height: 1.6;
+  margin: 0 0 40px;
+}
+
+.contact .content .info {
+  margin-top: 30px;
+}
+.contact .content .info i {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  color: #02434b;
+  margin-right: 20px;
+  text-align: center;
+  width: 20px;
+}
+.contact .content .info h4 {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.contact .content .info h4 span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #999999;
+}

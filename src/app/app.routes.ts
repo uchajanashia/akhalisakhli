@@ -35,7 +35,6 @@ import { RemontiinputComponent } from './inputed/service-input/remontiinput/remo
 import { LandinputComponent } from './inputed/service-input/landinput/landinput.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './guard.guard';
-import { SaleComponent } from './sale/sale.component';
 import { ViewprojectComponent } from './projects/viewproject/viewproject.component';
 
 export const routes: Routes = [

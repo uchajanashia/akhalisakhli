@@ -1,1 +1,25 @@
-<p>projects works!</p>
+<app-header ></app-header>
+<div>
+    <ul class="shortcut">
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '' }" (click)="dontdo()">ყველა</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'projects' }" (click)="filterByTitle('projects')">პროექტირება</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'construction' }" (click)="filterByTitle('construction')">მშენებლობა</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'interieris dizaini' }" (click)="filterByTitle('interieris dizaini')">ინტერიერის დიზაინი</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'repair' }" (click)="filterByTitle('repair')">რემონტი</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'landshapti' }" (click)="filterByTitle('landshapti')">ლანდშაფტის დიზაინი</a></li>
+      
+      
+      </ul>
+      <section id="portfolio">
+        <div class="project" *ngFor="let project of filteredProjects">
+          <img class="project__image" [src]="project.image" />
+          <p>{{ project.category }}</p>
+          <h3 class="grid__title" [class.long-title]="project.title.length > 20">{{ project.title }}</h3>
+          <div class="grid__overlay">
+            <button class="viewbutton" (click)="viewMore(project)" >View more</button>
+          </div>
+        </div>
+      </section>
+      
+</div>
+<app-footer ></app-footer>

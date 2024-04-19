@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -26,8 +27,15 @@ export class LoginComponent {
     this.toastr.success("2fa code send " , "check mail please")
     this.isMFA = true;
     this.code = ""
-    },(error) => {
-      this.toastr.error("login or password incorect", " check your Credentials");
+    },(error: HttpErrorResponse) => {
+      console.log(error);
+      console.log(error.error);
+
+      if (error.status === 400 && error.error == 'Account Is Locked') {
+        this.toastr.info('ანგარიში დროებით დაიბლოკებულია');
+      } else {
+        this.toastr.info('რაღაც შეცდომა მოხდა. გთხოვთ, სცადოთ თავიდან');
+      }
     });
   }
    

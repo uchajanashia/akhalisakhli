@@ -24,6 +24,7 @@ nav {
   width: 180px;
 }
 .list {
+  transform: translateX(-50px);
   display: flex;
   gap: 20px;
 }
@@ -67,7 +68,7 @@ ul li a:before {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 50px;
+  border-radius: 3px;
   background: white;
   transition: 0.3s;
   transform-origin: right;
@@ -89,7 +90,7 @@ ul li a:hover:before {
   top: 80%;
   z-index: 1001;
   left:0;
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: var(--black-tr);
   li{
     list-style: none;
@@ -118,7 +119,7 @@ ul li a:hover:before {
   top: 80%;
   z-index: 1001;
   left: 0;
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: var(--black-tr);
   li{
     list-style: none;
@@ -142,19 +143,29 @@ ul li a:hover:before {
   width: 50px;
   padding: 5px;
   z-index: 1005;
-  right: 4%;
+  right: 1%;
+  top: 35px;
+
   position: absolute;
-  border-radius: 10px;
-  background-color: var(--pallete-dark-green);
+  border-radius: 3px;
+  background-color: var(--black-tr);
   color: white;
 }
+.lango{
+  width: 50px;
+  padding: 5px;
+  z-index: 1005;
+  border-radius: 3px;
+  background-color: var(--black-tr);
+  color: white;
+}
+
 
 
 //responsive
 
 .mobile-menu-button {
-  display: none; /* Initially hide the button on larger screens */
-  // Add styles for the button icon (you can use your own styling)
+  display: none;
   z-index: 999;
 }
 @keyframes fadeInUp {
@@ -195,6 +206,9 @@ ul li a:hover:before {
 }
 
 @media only screen and (max-width: 588px) {
+  .lang{
+    display: none;
+  }
   header {
     display: flex;
     justify-content: space-between; /* Ensure the button is on the right */
@@ -256,6 +270,9 @@ ul li a:hover:before {
   }
 }
 @media only screen and (max-width: 768px) {
+  .lang{
+    display: none;
+  }
   header {
     display: flex;
     justify-content: space-around;
@@ -320,6 +337,9 @@ ul li a:hover:before {
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1024px) {
+  .lang{
+    display: none;
+  }
   header {
     display: flex;
     justify-content: space-around;
@@ -385,6 +405,73 @@ ul li a:hover:before {
 }
 
 
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .lang{
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Ensure the button is on the right */
+  }
+  nav {
+    gap: 60%;
+  }
+  .mobile-menu-button {
+    z-index: 999;
+    display: flex; /* Display the button on smaller screens */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    gap: 8px;
+    flex-direction: column;
+  }
+  .line {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  .list {
+    display: none; /* Hide the default list on small screens */
+  }
+
+  .mobile-menu {
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black-tr);
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  .listo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .listo li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+  }
+  .listo a {
+    font-size: 2rem;
+  }
+  .listo li a{
+    font-family: "ALK Sanet", sans-serif;
+  }
+}
 
 .edit{
   width: 30px;

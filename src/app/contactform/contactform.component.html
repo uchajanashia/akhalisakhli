@@ -1,12 +1,75 @@
 <div id="contactForm" *ngIf="sharedService.showContactForm">
-    <h1>Keep in touch!</h1>
-    <small>I'll get back to you as quickly as possible</small>
+  <div class="hedtxt">
+    <h2 class="translate mobilehead">
+      მოითხოვეთ ზარი
+    </h2>
+  </div>
+  <h2 class="translate mobilehead">ჩვენ მალე დაგიკავშირდებით</h2>
   
-      <input placeholder="Name" type="text" required />
-      <input placeholder="Email" type="email" required />
-      <input placeholder="Subject" type="text" required />
-      <textarea placeholder="Comment"></textarea>
-      <button class="formBtn" (click)="closeContactForm()">Close</button>
+  <form  #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+    <!-- <label class="translate" for="name">სახელი, გვარი:</label> -->
+    <input
+      style="color: white"
+      class="translate inputinput"
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="clientName"
+      (ngModelChange)="onInputChange()"
+      placeholder="სახელი, გვარი"
+      required
+    />
+    <div style="display: flex; align-items: center;">
+      <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="height: 30px; margin-right: 10px; margin-left: 15px;">
+      <!-- <select class="form-select" id="phoone" name="phone" [(ngModel)]="selectedCountry" (ngModelChange)="onCountryChange()">
+        <option *ngFor="let country of countryList" [value]="country.code" > {{country.code}}  {{country.name}}</option>
+      </select> -->
+      <input
+        style="color: white; flex-grow: 1;margin-right: 15px;"
+        class="translate inputinput" 
+        type="tel"
+        id="phone"
+        name="phone"
+        [(ngModel)]="clienPhoneNumber"
+        (ngModelChange)="onInputChange()"
+        placeholder="ტელეფონი"
+        required
+      />
+    </div>
+    
+    <input
+      style="color: white"
+      class="translate inputinput"
+      type="email"
+      id="email"
+      name="email"
+      [(ngModel)]="clienEmail"
+      (ngModelChange)="onInputChange()"
+      placeholder="ელ-ფოსტა"
+      required
+
+    />
+    
+    <textarea
+      style="color: white"
+      class="translate inputinput"
+      id="message"
+      name="message"
+      [(ngModel)]="clientMessage"
+      (ngModelChange)="onInputChange()"
+      required
+      placeholder="შეტყობინება"
+    ></textarea>
+    <button 
+    class="formBtn"
+      id="button"
+      type="submit"
+    >
+      გაგზავნა
+    </button>
+  </form>
+      <button class="formBtn" (click)="closeContactForm()">გათიშვა</button>
+
 
   </div>
   

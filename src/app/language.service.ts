@@ -9,14 +9,18 @@ export class LanguageService {
   private currentLanguageSubject: BehaviorSubject<string> = new BehaviorSubject<string>('ka');
   public currentLanguage$: Observable<string> = this.currentLanguageSubject.asObservable();
 
-  constructor(public cook : CookieService) {      this.currentLanguageSubject.next(this.cook.get('lang'))
+  constructor(public cook : CookieService) {    
+      this.currentLanguageSubject.next(this.cook.get('lang'))
   }
 
   setLanguage(language: boolean) {
     if(language){
-    this.cook.set('lang', 'ka');}
+    this.cook.set('lang', 'ka');
+}
     if(!language){
-      this.cook.set('lang', 'en');}
+      this.cook.set('lang', 'en');
+    
+    }
 
       this.currentLanguageSubject.next(this.cook.get('lang'))
 

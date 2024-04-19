@@ -1,88 +1,78 @@
 <app-header></app-header>
 <article>
-    <section class="info">
-      <h1>კონტაქტი</h1>
-        <div class="sakontacto">
-            <div class="infoSubdiv1">
-              <i class="fa-solid fa-phone"></i>
-                <div class="tel">
-                  <a href="tel:+995595044111">+995595044111</a>
-                  <a href="tel:+995551351111">      +995551351111</a>
+  <section class="contact" id="contact">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>Contact
+                <span> Us </span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                <br>incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="title">
+                    <h3>Contact detail</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+                <div class="content">
+                    <!-- Info-1 -->
+                    <div class="info">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4 class="d-inline-block">PHONE :
+                            <br>
+                            <span>+995 551 351 111 , +995 595 04 41 11</span></h4>
+                    </div>
+                    <!-- Info-2 -->
+                    <div class="info">
+                        <i class="far fa-envelope"></i>
+                        <h4 class="d-inline-block">EMAIL :
+                            <br>
+                            <a >info&commat;akhalisakhli.com</a> </h4>
+                    </div>
+                    <!-- Info-3 -->
+                    <div class="info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4 class="d-inline-block">ADDRESS :<br>
+                            <span>S.Chikovani st. N4</span></h4>
+                    </div>
                 </div>
             </div>
-            <div class="infoSubdiv2">
-                <div class="other">
-                  <a href="mailto:infoakhalisakhli@gmail.com"><i class="fa-solid fa-envelope"></i>infoakhalisakhli&commat;gmail.com</a>
-                  <a target="_blank" href= "https://www.google.com/maps/place/4%2F6%2F8%2F10+%E1%83%A1%E1%83%98%E1%83%9B%E1%83%9D%E1%83%9C+%E1%83%A9%E1%83%98%E1%83%A5%E1%83%9D%E1%83%95%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90,+%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98/@41.7151511,44.7743724,17z/data=!3m1!4b1!4m6!3m5!1s0x4044732bbab1e52b:0x9f4813344b06734e!8m2!3d41.7151471!4d44.7769473!16s%2Fg%2F11_pq20wv?entry=ttu"><i class="fa-solid fa-location-dot"></i> სიმონ ჩიქოვანის ქუჩა N4</a>
+
+            <div class="col-md-7">
+
+              <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="clientName" name="clientName"
+                        (ngModelChange)="onInputChange()" placeholder="სახელი, გვარი" required>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="email" class="form-control" [(ngModel)]="clienEmail" name="clienEmail"
+                        (ngModelChange)="onInputChange()" placeholder="ელ-ფოსტა" required>
+                    </div>
+                    <div class="col-sm-12" style="display: flex; margin-bottom: 10px;">
+                        <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="height: 30px; margin: auto;">
+                        <input type="text" class="form-control" [(ngModel)]="clienPhoneNumber" name="clienPhoneNumber"
+                        (ngModelChange)="onInputChange()" placeholder="ტელეფონი" required style="margin: 0;">
+                    </div>
                 </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="comment" [(ngModel)]="clientMessage" name="clientMessage"
+                    (ngModelChange)="onInputChange()" required placeholder="შეტყობინება"></textarea>
+                </div>
+                <button class="btn btn-block" type="submit">გაგზავნა</button>
+            </form>
+            
+                  
+
+
+    
             </div>
         </div>
-    </section>
-    <section class="contact" id="myContact">
-        <div data-aos="zoom-out-down" class="contContain">
-          <div class="hedtxt">
-            <h2 class="translate">
-              მოითხოვეთ ზარი
-            </h2>
-          </div>
-          <h2 class="translate">ჩვენ მალე დაგიკავშირდებით</h2>
-          <form  #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
-            <!-- <label class="translate" for="name">სახელი, გვარი:</label> -->
-            <input
-              style="color: white"
-              class="translate"
-              type="text"
-              id="name"
-              name="name"
-              ngModel
-              placeholder="სახელი, გვარი"
-              required
-            />
-            <div style="display: flex; width: 90%">
-              <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage">
-              <select class="form-select" id="phoone" name="phone" [(ngModel)]="selectedCountry" (ngModelChange)="onCountryChange()">
-                <option *ngFor="let country of countryList" [value]="country.code" > {{country.code}}  {{country.name}}</option>
-              </select>
-              <input
-                style="color: white; flex-grow: 1; width: 80"
-                class="translate"
-                type="tel"
-                id="phone"
-                name="phone"
-                ngModel
-                placeholder="ტელეფონი"
-                required
-              />
-            </div>
-            <input
-              style="color: white"
-              class="translate"
-              type="email"
-              id="email"
-              name="email"
-              ngModel
-              placeholder="ელ-ფოსტა"
-            />
-            <textarea
-              style="color: white"
-              class="translate"
-              id="message"
-              name="message"
-              ngModel
-              required
-              placeholder="შეტყობინება"
-            ></textarea>
-            <button
-              id="button"
-              class="translate"
-              type="submit"
-              [disabled]="contactForm.invalid"
-            >
-              გაგზავნა
-            </button>
-          </form>
-        </div>
-      </section>
+    </div>
+</section>
+
+      
 </article>
 <app-map></app-map>
 <app-float-contact></app-float-contact>

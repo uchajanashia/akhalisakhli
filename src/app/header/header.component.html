@@ -22,13 +22,14 @@
           <li><a href="services/landshafti">{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape design' }}</a></li>
         </ul>
       </li>
+      <li><a href="projects">{{ isGeorgian ? 'გალერეა' : 'Gallery' }}</a></li>
       <li><a href="news">{{ isGeorgian ? 'სიახლეები' : 'News' }}</a></li>
       <li><a href="contact">{{ isGeorgian ? 'კონტაქტი' : 'Contact' }}</a></li>
-      <select class="lang" (change)="toggleLanguage()"  [(ngModel)]="selectedLanguage">
-        <option value="ka">GE</option>
-        <option value="en">EN</option>
-      </select>
     </ul>
+    <select class="lang" (change)="toggleLanguage()" name="" id="">
+      <option value="ka">GE</option>
+      <option value="en">EN</option>
+    </select>
     <div class="mobile-menu" *ngIf="isMobileMenuOpen">
       <ul class="listo">
         <li><a href="">{{ isGeorgian ? 'მთავარი' : 'Home' }}</a></li>
@@ -36,12 +37,17 @@
         <li><a href="services/proektireba">{{ isGeorgian ? 'სერვისები' : 'Services' }}</a></li>
         <li><a href="news">{{ isGeorgian ? 'სიახლეები' : 'News' }}</a></li>
         <li><a href="contact">{{ isGeorgian ? 'კონტაქტი' : 'Contact' }}</a></li>
+        <select class="lang" (change)="toggleLanguage()"  [(ngModel)]="selectedLanguage">
+          <option value="ka">GE</option>
+          <option value="en">EN</option>
+        </select>
       </ul>
       <select class="lang" (change)="toggleLanguage()" [(ngModel)]="selectedLanguage" >
         <option value="ka">GE</option>
         <option value="en">EN</option>
       </select>
     </div>
+
     <button id="menu" class="mobile-menu-button" (click)="toggleMobileMenu()">
       <span class="line top"></span>
       <span class="line middle"></span>

@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+
+
+
+#contactForm { 
+    width: 18%;
+  height: 500px;
+  text-align: center;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -wekit-transform: translate(-50%,-50%);
+  background-image: url(../../assets/pics/iphone1.png);
+  background-size: 100% 100%;
+  color: white;
+  
+}
+.contryimg{
+    height: 26px;
+    margin-right: 10px;
+}
+h2{
+    margin-top: 10px;
+}
+.hedtxt h2{
+    margin-top: 40px;
+}
+input, textarea { 
+    border-style: none;
+  border-radius: 10px;
+  background-color: var(--transparent-dark-green);
+  color: white;
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 90%; 
+  padding: .4em;
+}
+input::placeholder {
+    color: white;
+  }
+  textarea::placeholder {
+    color: white;}
+textarea { height: 80px; resize: vertical; }
+
+.formBtn { 
+    margin: auto;
+    text-align: center;
+    display: block;
+    width: 95%;
+    border: none;
+    background-color: var(--dark-green);
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}

@@ -89,7 +89,9 @@ rateMessage(notification: any, rating: string) {
 
 }
 extractNumberFromValue( value :string) {
-  
+  if(value==null){
+    return 1;
+  }
   // Extracting number using regular expression
   const matches = value.match(/\d+/);
   if (matches && matches.length > 0) {

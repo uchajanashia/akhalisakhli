@@ -1,12 +1,14 @@
-<main>
+
+  <app-header ></app-header>
+  <main style="padding-top: 100px;">
     <div class="container">
       <div class="grid second-nav">
         <div class="column-xs-12">
           <nav>
             <ol class="breadcrumb-list">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Household Plants</a></li>
-              <li class="breadcrumb-item active">Bonsai</li>
+              <li class="breadcrumb-item"><a href="/projects">{{project.category}}</a></li>
+              <li class="breadcrumb-item active">{{project.title}}</li>
             </ol>
           </nav>
         </div>
@@ -15,22 +17,24 @@
         <div class="column-xs-12 column-md-7">
           <div class="product-gallery">
             <div class="product-image">
-              <img class="active" [src]="activeImageUrl">
+              <img class="active" [src]="product">
             </div>
             <ul class="image-list">
-              <li class="image-item" *ngFor="let image of productImages">
-                <img [src]="image" (click)="changeImage($event)">
+              <li class="image-item" *ngFor="let image of productlist">
+                <img [src]="image" (click)="changeImage(image)">
               </li>
             </ul>
           </div>
         </div>
+     
+      
         <div class="column-xs-12 column-md-5">
-          <h1>Bonsai</h1>
-          <h2>$19.99</h2>
+          <h1>{{project.title}}</h1>
           <div class="description">
-            <p>The purposes of bonsai are primarily contemplation for the viewer, and the pleasant exercise of effort and ingenuity for the grower.</p>
-            <p>By contrast with other plant cultivation practices, bonsai is not intended for production of food or for medicine. Instead, bonsai practice focuses on long-term cultivation and shaping of one or more small trees growing in a container.</p>
+           <div [innerHTML]="project.text"></div>
           </div>
+          
+
           <button id="contact" class="add-to-cart" (click)="toggleContactForm()">contact us </button>
 
           <app-contactform *ngIf="sharedService.showContactForm" (close)="closeContactForm()"></app-contactform>
@@ -38,4 +42,4 @@
       </div>
     </div>
   </main>
-  
+  <app-footer ></app-footer>

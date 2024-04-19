@@ -271,8 +271,17 @@ article {
   font-family: "ALK Sanet", sans-serif;
 }
 
+.introdiv{
+  overflow: hidden;
+  width: 70%; 
+}
 .introdiv video {
-  width: 80%;
+
+
+    object-fit: cover;
+    width: 70%; /* Ensure video covers the container */
+    height: 100%;
+    border: none;
 }
 .hover-image {
   top: 0;

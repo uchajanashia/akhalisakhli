@@ -20,22 +20,24 @@ import { MapComponent } from '../map/map.component';
 import { LanguageService } from '../language.service';
 import { CustumerdataService } from '../custumerdata.service';
 import { ToastrService } from 'ngx-toastr';
+import { ContactformComponent } from "../contactform/contactform.component";
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    MapComponent,
-    FloatContactComponent,
-    FormsModule,
-    CommonModule,
-  ],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    encapsulation: ViewEncapsulation.None,
+    imports: [
+        HeaderComponent,
+        FooterComponent,
+        MapComponent,
+        FloatContactComponent,
+        FormsModule,
+        CommonModule,
+        ContactformComponent
+    ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @Input() country!:Country;
@@ -307,7 +309,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.loading = false;
       this.playVideo();
-    }, 3500);
+    }, 4000);
     Aos.refresh();
   }
 
