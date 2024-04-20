@@ -23,9 +23,6 @@
   }
   body {
     background-color: white;
-    // background-image: url("../src/assets/pics/SVG/Wave.svg");
-    background-size: 100%;
-    background-attachment: fixed;
     scroll-behavior: smooth;
     object-fit: cover;
     transition: 0.3s;
@@ -65,20 +62,5 @@
       margin-left: 0;
     }
   }
-  
-  #snow-container {
-    height: 100vh;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    transition: opacity 500ms;
-    width: 100%;
-    z-index: -1;
-  }
-  .snow {
-    animation: fall ease-in infinite, sway ease-in-out infinite;
-    color: skyblue;
-    position: absolute;
-    z-index: -1;
-  }
+
   

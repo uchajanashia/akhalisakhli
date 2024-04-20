@@ -254,14 +254,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   clientCountry = 'GEORGIA';
   count="";
   
-  // onCountryChange() {
-  //   const selectedCountry = this.countries.find(country => country.code === this.selectedCountry);
-  //   if (selectedCountry) {
-  //     this.selectedCountryImage = selectedCountry.img;
-  //   } else {
-  //     this.selectedCountryImage = '';
-  //   }
-  // }
+  onCountryChange() {
+    const selectedCountry = this.countries.find(country => country.code === this.selectedCountry);
+    if (selectedCountry) {
+      this.selectedCountryImage = selectedCountry.img;
+    } else {
+      this.selectedCountryImage = '';
+    }
+  }
   onInputChange(){
     const guessContry = this.countries.find((element) => element.code == this.clienPhoneNumber);
     console.log(this.clienPhoneNumber)
