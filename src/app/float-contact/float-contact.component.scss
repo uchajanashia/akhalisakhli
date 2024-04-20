@@ -4,6 +4,7 @@
 }
 
 .floatingmess {
+    transition: top 0.6s ease-out;  
     animation: 1s fromtop ease-in-out;
     position: fixed;
     right: 0;
@@ -21,7 +22,7 @@
   .floatingmess ul li {
     list-style: none;
   }
-  
+
   .floatingmess i {
     font-size: 25px;
     margin: 10px;
@@ -57,6 +58,8 @@
     scale: 1.1;
   }
   .floating {
+    transition: top 0.6s ease-out;  
+    
     animation: 1s fromtop ease-in-out;
     position: fixed;
     left: 0;
@@ -116,8 +119,5 @@
       opacity: 0;
     }
   }
-  .floatingmess.sticky {
-    position: absolute;
-    top: 90%;
-  }
+ 
   
