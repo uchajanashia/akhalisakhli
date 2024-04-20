@@ -51,7 +51,11 @@
                         (ngModelChange)="onInputChange()" placeholder="ელ-ფოსტა" required>
                     </div>
                     <div class="col-sm-12" style="display: flex; margin-bottom: 10px;">
-                        <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="height: 30px; margin: auto;">
+                        <img  class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="    height: 30px;
+                        margin: auto;
+                        margin-right: 10px;
+                        background-color: var(--dark-green);
+                        padding: 1px;">
                         <input type="text" class="form-control" [(ngModel)]="clienPhoneNumber" name="clienPhoneNumber"
                         (ngModelChange)="onInputChange()" placeholder="ტელეფონი" required style="margin: 0;">
                     </div>

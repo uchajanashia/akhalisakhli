@@ -271,8 +271,17 @@ article {
   font-family: "ALK Sanet", sans-serif;
 }
 
+.introdiv{
+  overflow: hidden;
+  width: 70%; 
+}
 .introdiv video {
-  width: 80%;
+
+
+    object-fit: cover;
+    width: 70%; /* Ensure video covers the container */
+    height: 100%;
+    border: none;
 }
 .hover-image {
   top: 0;
@@ -317,7 +326,7 @@ article {
   min-width: 200px;
   list-style: none;
   &:nth-child(odd) {
-    background: url(../../assets/pics/SVG/pattern.svg), var(--black-v4);
+    background: url(../../assets/pics/SVG/backPatern.svg);
     background-attachment: fixed;
     background-size: 100%;
     a {
