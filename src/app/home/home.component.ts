@@ -309,7 +309,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.loading = false;
       this.playVideo();
-    }, 4000);
+    }, 5000);
     Aos.refresh();
   }
 

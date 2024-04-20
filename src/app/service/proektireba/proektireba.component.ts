@@ -6,8 +6,10 @@ import { HammerModule } from '@angular/platform-browser';
 import { CaruselInsideComponent } from '../../carusel-inside/carusel-inside.component';
 import Aos from 'aos';
 import { VidcaruselComponent } from "../../vidcarusel/vidcarusel.component";
+import { Proeqtireba } from '../../services';
 import { ServiceListService } from '../../service-list.service';
-import { Proeqtireba, Services } from '../../services';
+import { LanguageService } from '../../language.service';
+
 export interface SlideVId {
   vidSrc: string;
 }
@@ -29,6 +31,24 @@ export interface SlideVId {
     ]
 })
 export class ProektirebaComponent {
+// Inside your component class
+handleItemHover(index: number) {
+  if (index === 8) {
+    this.floatcontainer = true;
+  }
+}
+
+handleItemLeave(index: number) {
+  if (index === 8) {
+    this.floatcontainer = false;
+  }
+}
+
+
+  floatcontainer=false;
+
+  isGeorgian: boolean = true; 
+
   @Input() images: SlideVId[] = [];
   @Input() proeqtireba!:Proeqtireba;
 
@@ -38,11 +58,14 @@ export class ProektirebaComponent {
   fullscreenVideo: string | null = null;
   isFullScreen = false;
 
-  constructor(private serviceService: ServiceListService){}
+  constructor(private serviceService: ServiceListService,private languageService: LanguageService){}
   ngOnInit(): void {
     Aos.init();
     Aos.refresh();
     this.proeqtirebaList=this.serviceService.getAllProeqtireba();
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+    });
   }
   selectedPicIndex = 0;
   showPrev(): void {

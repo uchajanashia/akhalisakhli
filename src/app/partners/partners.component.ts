@@ -4,6 +4,8 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import Aos from 'aos';
 import { FloatContactComponent } from "../float-contact/float-contact.component";
+import { ServiceListService } from '../service-list.service';
+import { LanguageService } from '../language.service';
 
 @Component({
     selector: 'app-partners',
@@ -13,9 +15,17 @@ import { FloatContactComponent } from "../float-contact/float-contact.component"
     imports: [CaruselComponent, HeaderComponent, FooterComponent, FloatContactComponent]
 })
 export class PartnersComponent implements OnInit{
+  isGeorgian: boolean = true; 
+  constructor(
+    private serviceService: ServiceListService,
+    private languageService: LanguageService // Assuming LanguageService is imported correctly
+  ) {}
   ngOnInit(): void {
     Aos.init();
     Aos.refresh();
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+    });
   }
 
 }

@@ -1,13 +1,13 @@
 <div class="forAlign">
   <article>
-    <h1>ლანდშაფტის დიზაინი</h1>
+    <h1>{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape Design' }}</h1>
     <div class="txtcontain">
       <p *ngFor="let landshaftiItem of landshaftList">
-        {{ landshaftiItem.pcont11 }}
+        {{ isGeorgian ? landshaftiItem.pcont11 : landshaftiItem.pcont11EN }}
       </p>
       <ul>
         <ng-container *ngFor="let landshaftiItem of landshaftList">
-          <li *ngFor="let item of landshaftiItem.pcontli">{{ item }}</li>
+          <li *ngFor="let item of isGeorgian ? landshaftiItem.pcontli : landshaftiItem.pcontliEN">{{ item }}</li>
         </ng-container>
       </ul>
     </div>

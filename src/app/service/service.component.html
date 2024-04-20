@@ -1,11 +1,11 @@
 <app-header></app-header>
 <ul class="shortcut">
-  <li><a [routerLink]="['/services/proektireba']">პროექტირება</a></li>
-  <li><a [routerLink]="['/services/mshenebloba']">მშენებლობა</a></li>
-  <li><a [routerLink]="['/services/interieri']">ინტერიერის დიზაინი</a></li>
-  <li><a [routerLink]="['/services/remonti']">რემონტი</a></li>
-  <li><a [routerLink]="['/services/landshafti']">ლანდშაფტის დიზაინი</a></li>
+  <li><a [routerLink]="['/services/proektireba']">{{ isGeorgian ? 'პროექტირება' : 'Projecting' }}</a></li>
+  <li><a [routerLink]="['/services/mshenebloba']">{{ isGeorgian ? 'მშენებლობა' : 'Construction' }}</a></li>
+  <li><a [routerLink]="['/services/interieri']">{{ isGeorgian ? 'ინტერიერის დიზაინი' : 'Interior Design' }}</a></li>
+  <li><a [routerLink]="['/services/remonti']">{{ isGeorgian ? 'რემონტი' : 'Renovation' }}</a></li>
+  <li><a [routerLink]="['/services/landshafti']">{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape Design' }}</a></li>
 </ul>
-<router-outlet ></router-outlet>
+<router-outlet></router-outlet>
 <app-float-contact></app-float-contact>
 <app-footer class="foot"></app-footer>

@@ -1,18 +1,17 @@
 <div class="forAlign">
-    <article>
-      <h1>მშენებლობა</h1>
-      <div class="txtcontain">
-        <p *ngFor="let msheneblobaItem of msheneblobaList">
-          {{msheneblobaItem.pcont11}}
-        </p>
-        <ul>
-          <ng-container *ngFor="let msheneblobaItem of msheneblobaList">
-            <li *ngFor="let item of msheneblobaItem.pcontli">{{ item }}</li>
-          </ng-container>
-        </ul>
-      </div>
-    </article>
-    <app-carusel-pic-mshenebloba class="compo"></app-carusel-pic-mshenebloba>
-    <app-carusel-vid-mshenebloba class="compovid"></app-carusel-vid-mshenebloba>
-  </div>
-  
+  <article>
+    <h1>{{ isGeorgian ? 'მშენებლობა' : 'Construction' }}</h1>
+    <div class="txtcontain">
+      <p *ngFor="let msheneblobaItem of msheneblobaList">
+        {{ isGeorgian ? msheneblobaItem.pcont11 : msheneblobaItem.pcont11EN }}
+      </p>
+      <ul>
+        <ng-container *ngFor="let msheneblobaItem of msheneblobaList">
+          <li *ngFor="let item of isGeorgian ? msheneblobaItem.pcontli : msheneblobaItem.pcontliEN">{{ item }}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </article>
+  <app-carusel-pic-mshenebloba class="compo"></app-carusel-pic-mshenebloba>
+  <app-carusel-vid-mshenebloba class="compovid"></app-carusel-vid-mshenebloba>
+</div>

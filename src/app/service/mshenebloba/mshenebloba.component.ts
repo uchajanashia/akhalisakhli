@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { VidsliderComponent } from "../../vidcarusel/vidslider/vidslider.component";
 import { SlideVId } from '../proektireba/proektireba.component';
 import Aos from 'aos';
-import { Mshenebloba, Services } from '../../services';
+import { Mshenebloba } from '../../services';
 import { ServiceListService } from '../../service-list.service';
 import { CaruselPicMsheneblobaComponent } from "../../carusel-vids-pics/carusel-pic-mshenebloba/carusel-pic-mshenebloba.component";
 import { CaruselVidMsheneblobaComponent } from "../../carusel-vids-pics/carusel-vid-mshenebloba/carusel-vid-mshenebloba.component";
+import { LanguageService } from '../../language.service';
 
 @Component({
     selector: 'app-mshenebloba',
@@ -18,10 +19,11 @@ import { CaruselVidMsheneblobaComponent } from "../../carusel-vids-pics/carusel-
 })
 export class MsheneblobaComponent {
   @Input() mshenebloba!:Mshenebloba;
+  isGeorgian: boolean = true; 
 
   msheneblobaList:Mshenebloba[]=[];
 
-  constructor(private serviceService: ServiceListService){}
+  constructor(private serviceService: ServiceListService,private languageService: LanguageService){}
 
   slideimg=[
     {
@@ -59,6 +61,9 @@ export class MsheneblobaComponent {
   ngOnInit(): void {
     Aos.init();
     Aos.refresh();
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+    });
     this.msheneblobaList=this.serviceService.getAllMshenebloba();
     this.slidevid = [
       {

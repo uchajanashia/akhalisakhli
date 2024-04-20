@@ -1,3 +1,8 @@
+.floatingmess.sticky {
+  position: absolute;
+  top: 90%;
+}
+
 .floatingmess {
     animation: 1s fromtop ease-in-out;
     position: fixed;
@@ -111,3 +116,8 @@
       opacity: 0;
     }
   }
+  .floatingmess.sticky {
+    position: absolute;
+    top: 90%;
+  }
+  

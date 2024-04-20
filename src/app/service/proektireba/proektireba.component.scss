@@ -1,3 +1,21 @@
+.floatcont {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.233);
+  backdrop-filter: blur(5px);
+  border-radius: 3px;
+  padding: 20px;
+  transition: 0.3s;
+  right: 5%;
+  opacity: 0; /* Add opacity property */
+  transition: opacity 0.3s;
+  ul {
+    li {
+      color: var(--mid-green);
+      font-family: "BPG Banner ExtraSquare", sans-serif;
+      line-height: 1.6;
+    }
+  }
+}
 .forAlign {
   width: 100%;
   display: flex;
@@ -5,58 +23,96 @@
   align-items: center;
   flex-direction: column;
   padding: 0;
+  padding: 50px 0;
   margin: 0;
   article {
     width: 100%;
-    margin-top: 20px;
     background: url(../../../assets/pics/SVG/pattern.svg) var(--black-v4);
+    background-attachment: fixed;
     background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
     h1 {
       color: white;
       padding: 25px 0 10px 0;
       margin-left: 70px;
-      &:lang(ka) {
-        font-family: "ALK Sanet", sans-serif;
-      }
+
+      font-family: "ALK Sanet", sans-serif;
     }
+    
     .txtcontain {
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(3px);
+      border-radius: 3px;
+      padding: 20px;
+      margin: 2% 10%;
       display: flex;
       justify-content: space-around;
+      flex-direction: column;
       flex-wrap: wrap;
       padding-bottom: 30px;
       p {
-        max-width: 430px;
-        font-size: clamp(0.7rem, 1vw, 0.9rem);
+        max-width: 100%;
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
         text-align: justify;
         color: white;
         line-height: 1.3;
-        height: min-content;
         font-weight: 100;
         margin: 10px;
-        &:nth-of-type(1) {
-          margin-left: 70px;
-        }
-        &:nth-of-type(3) {
-          margin-right: 70px;
-        }
-        &:lang(ka) {
+        margin: 0;
+        font-family: "BPG Banner ExtraSquare", sans-serif;
+        padding-bottom: 20px;
+      }
+      ul {
+        li {
+          color: white;
+          line-height: 1.6;
+          margin-left: 30px;
           font-family: "BPG Banner ExtraSquare", sans-serif;
+          width: auto;
+          transition: 0.3s;
+          &:nth-child(8){
+            padding: 5px;
+            backdrop-filter: blur(3px);
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--mid-green);
+            &:hover {
+              .floatcont {
+                display: contents;
+                opacity: 1;
+              }
+            }
+          }
+          .floatcont {
+
+            display: none;
+            ul {
+              li {
+                color: var( --mid-green);
+                filter: drop-shadow(2px 2px 0 black);
+                font-weight: 100;
+                transition: 0.3s;
+                &:nth-of-type(8) {
+                 color: var( --mid-green);
+                 padding: 0;
+                 backdrop-filter: none;
+                 background-color: transparent;
+                }
+                &:hover{
+                  background-color: rgba(255, 255, 255, 0.05);
+                }
+              }
+            }
         }
       }
-      ul{
-        li{
-          color: white;
-          line-height: 1.2;
-          &:lang(ka) {
-            font-family: "BPG Banner ExtraSquare", sans-serif;
-          }
-        }
       }
     }
-    
   }
 }
-.txtcontain2{
+.txtcontain2 {
   width: 100%;
   background: url(../../../assets/pics/SVG/pattern.svg) var(--black-v4);
   display: flex;
@@ -78,17 +134,16 @@
     &:nth-of-type(3) {
       margin-right: 70px;
     }
-    &:lang(ka) {
-      font-family: "BPG Banner ExtraSquare", sans-serif;
-    }
-  } 
+    font-family: "BPG Banner ExtraSquare", sans-serif;
+  }
 }
 .compo {
   margin-top: 100px;
   height: 100%;
 }
-.compovid{
+.compovid {
   margin-top: 100px;
+  margin-bottom: 50px;
   padding: 0;
   height: 100%;
 }
@@ -141,7 +196,7 @@
       transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
       transform: scale(0);
       opacity: 0;
-      border-radius: 10px;
+      border-radius: 3px;
       object-fit: cover;
       aspect-ratio: 16/9;
     }
@@ -178,5 +233,18 @@
         transform: translateX(50%) scale(0);
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .forAlign article h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .forAlign article .txtcontain {
+    margin: 2% 5%;
   }
 }

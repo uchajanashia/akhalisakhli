@@ -1,12 +1,12 @@
 <app-header></app-header>
 <div class="contain">
   <ul class="shortcut" >
-    <li><a [routerLink]="['/about/aboutCompany']">კომპანიის შესახებ</a></li>
-    <li><a [routerLink]="['/about/mxf']">მისია, ხედვა, ფასეულობები</a></li>
-    <li><a [routerLink]="['/about/team']">ჩვენი გუნდი</a></li>
-    <li><a [routerLink]="['/about/partners']">პარტნიორები</a></li>
-</ul>
-<router-outlet></router-outlet>
-<app-float-contact></app-float-contact>
+    <li><a [routerLink]="['/about/aboutCompany']">{{ isGeorgian ? 'კომპანიის შესახებ' : 'About Company' }}</a></li>
+    <li><a [routerLink]="['/about/mxf']">{{ isGeorgian ? 'მისია, ხედვა, ფასეულობები' : 'Mission, Vision, Values' }}</a></li>
+    <li><a [routerLink]="['/about/team']">{{ isGeorgian ? 'ჩვენი გუნდი' : 'Our Team' }}</a></li>
+    <li><a [routerLink]="['/about/partners']">{{ isGeorgian ? 'პარტნიორები' : 'Partners' }}</a></li>
+  </ul>
+  <router-outlet></router-outlet>
+  <app-float-contact></app-float-contact>
 </div>
 <app-footer></app-footer>
