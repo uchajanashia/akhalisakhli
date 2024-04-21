@@ -1,26 +1,45 @@
+
 .shortcut {
-    padding-top: 110px;
-    width: 90%;
-    position: relative;
-    margin-left: 20px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    li {
-      list-style: none;
-      a {
-        text-decoration: none;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 40px;
+  padding-top: 120px;
+  width: 90%;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+  li {
+    list-style: none;
+    .active-filter {
+      color: black;
+      background-color: white;
+      border: 1px solid black;
+    }
+    
+    a {
+      color: black;
+      background-color: white;
+      border: 1px solid black;
+      text-decoration: none;
+
+      border-radius: 3px;
+      padding: 5px 10px;
+      font-size: clamp(0.6rem, 1.2vw, 1rem);
+      text-wrap: nowrap;
+      transition: 0.2s;
+      
+      &:lang(ka) {
+        font-family: "BPG Banner ExtraSquare", sans-serif;
+      }
+      
+      
+      &:hover {
         color: white;
-        background-color: var(--black-v5);
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: clamp(0.6rem, 1.2vw, 1rem);
-        text-wrap: nowrap;
-        transition: 0.2s;
-          font-family: "BPG Banner ExtraSquare", sans-serif;
-        &:hover {
-          padding: 9px 10px;
-        }
+        background-color:  rgb(20 20 20);
       }
     }
+    
   }
+}

@@ -31,18 +31,7 @@ export interface SlideVId {
     ]
 })
 export class ProektirebaComponent {
-// Inside your component class
-handleItemHover(index: number) {
-  if (index === 8) {
-    this.floatcontainer = true;
-  }
-}
 
-handleItemLeave(index: number) {
-  if (index === 8) {
-    this.floatcontainer = false;
-  }
-}
 
 
   floatcontainer=false;

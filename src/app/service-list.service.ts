@@ -602,7 +602,7 @@ export class ServiceListService {
         'პროექტის შეთანხმება შესაბამის მუნიციპალიტებთან და მშენებლობის ნებართვის აღება;',
       ],
       pcont11EN:
-        'Creating project\nWe start designing with a detailed analysis of the territory, develop a pre-design concept, agree on a sketch with the customer, prepare all the necessary project documentation and obtain a building permit from the municipality.\n\nThe stages of the design process are:\n• Creating a concept;\n• Preparation of a topographic map;\n• Qualitative evaluation of green plantings and preparation of expert opinion (if necessary);\n• Preparation of engineering-geological report and expert report;\n• Determination of the conditions for the use of the land plot for construction (gap);\n• Project sketch agreement with the customer;\n• Agreement on the traffic organization scheme;\n• Preparation of energy efficiency declaration;\n• Preparation of an architectural project;\n• Construction project preparation;\n• Expert evaluation of the construction project;\n• Preparation of construction organization project (mop);\n• Issuing the cost estimate of the approved project;\n• Project agreement with the relevant municipalities and obtaining a building permit;',
+        'Creating project\nWe start designing with a detailed analysis of the territory, develop a pre-design concept, agree on a sketch with the customer, prepare all the necessary project documentation and obtain a building permit from the municipality.\n\nThe stages of the design process are:',
       pcontliEN: [
         'Creating a concept;',
         'Preparation of a topographic map;',

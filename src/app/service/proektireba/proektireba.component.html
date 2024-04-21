@@ -27,6 +27,8 @@
 </div> -->
 
 <div class="forAlign">
+  <app-carusel-inside class="compo"></app-carusel-inside>
+
   <article>
     <h1>{{ isGeorgian ? 'პროექტირება' : 'Projecting' }}</h1>
     <div class="txtcontain">
@@ -34,7 +36,7 @@
         {{ isGeorgian ? proeqtirebaItem.pcont11 : proeqtirebaItem.pcont11EN }}
       </p>
       <ul>
-        <ng-container *ngFor="let proeqtirebaItem of proeqtirebaList; let i = index">
+        <ng-container *ngFor="let proeqtirebaItem of proeqtirebaList">
           <li class="item"
             *ngFor="let item of isGeorgian ? proeqtirebaItem.pcontli : proeqtirebaItem.pcontliEN;">
             {{ item }}
@@ -51,6 +53,5 @@
       </ul>
     </div>
   </article>
-  <app-carusel-inside class="compo"></app-carusel-inside>
-  <app-vidcarusel class="compovid"></app-vidcarusel>
+  <!-- <app-vidcarusel class="compovid"></app-vidcarusel> -->
 </div>

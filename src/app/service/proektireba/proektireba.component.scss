@@ -23,11 +23,10 @@
   align-items: center;
   flex-direction: column;
   padding: 0;
-  padding: 50px 0;
   margin: 0;
   article {
     width: 100%;
-    background: url(../../../assets/pics/SVG/pattern.svg) var(--black-v4);
+    background: url(../../../assets/pics/SVG/backPatern.svg);
     background-attachment: fixed;
     background-size: 100%;
     display: flex;
@@ -73,7 +72,7 @@
           font-family: "BPG Banner ExtraSquare", sans-serif;
           width: auto;
           transition: 0.3s;
-          &:nth-child(8){
+          &:nth-child(9){
             padding: 5px;
             backdrop-filter: blur(3px);
             border-radius: 3px;
@@ -114,7 +113,7 @@
 }
 .txtcontain2 {
   width: 100%;
-  background: url(../../../assets/pics/SVG/pattern.svg) var(--black-v4);
+  background: url(../../../assets/pics/SVG/backPatern.svg);
   display: flex;
   background-size: 100%;
   justify-content: space-around;
@@ -138,7 +137,8 @@
   }
 }
 .compo {
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   height: 100%;
 }
 .compovid {

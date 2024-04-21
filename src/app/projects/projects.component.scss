@@ -70,7 +70,7 @@ button {
   width: 100%;
   background: #ffffff;
   display: flex;
-  flex-wrap: wrap; // Allow items to wrap
+  flex-wrap: wrap; 
   background: url(../../assets/pics/SVG/pattern.svg);
   background-attachment: fixed;
   background-size: 100%;
@@ -105,18 +105,18 @@ button {
     text-align: center;
     white-space: normal;
     z-index: 3;
-    opacity: 0; // Initially hidden
-    transition: opacity 0.3s ease; // Transition for smooth opacity change
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
   }
 
   p {
-    top: 10px; // Adjust the top position for category
+    top: 10px; 
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
   .grid__title {
-    bottom: 10px; // Adjust the bottom position for title
+    bottom: 10px; 
     font-weight: 100;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -153,7 +153,7 @@ button {
         background: #ffffff;
         color: rgb(20 20 20);
         transform: scale(1.05);
-        border: 1px solid rgb(20 20 20); // Fixed border style
+        border: 1px solid rgb(20 20 20); 
       }
     }
   }
@@ -165,7 +165,7 @@ button {
 
     p,
     .grid__title {
-      opacity: 1; // Make category and title visible on hover
+      opacity: 1; 
     }
 
     .grid__overlay {
