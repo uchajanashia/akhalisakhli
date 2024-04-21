@@ -47,11 +47,9 @@ export class CustumerdataService {
     return this.http.post(URL+API.Manage_Customer.WriteOrUpdateCommentOnMessage, body , httpOptions).subscribe(
       response => {
         console.log('POST request successful:', response);
-        // Handle the response here
       },
       error => {
         console.error('Error in POST request:', error);
-        // Log more information about the error
         if (error instanceof HttpErrorResponse) {
           console.error('Status:', error.status);
           console.error('Status Text:', error.statusText);
@@ -169,10 +167,8 @@ rate(customerId:string, customerPoint : string){
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error occurred';
     if (error.error instanceof ErrorEvent) {
-      // Client-side error
       errorMessage = `Error: ${error.error.message}`;
     } else {
-      // Server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     console.error(errorMessage);
