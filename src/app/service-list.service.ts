@@ -796,134 +796,18 @@ export class ServiceListService {
   protected news: News[] = [
     {
       id: 1,
-      title: 'ტესტი',
+      title: '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
       content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/1.jpg',
-      titleEN: 'Test',
+        'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
+      image: 'assets/news/anonsi16.9.jpg',
+      titleEN: 
+       '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
+
       contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
+      'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
+
     },
-    {
-      id: 2,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/5.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 3,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/3.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 4,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/4.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 5,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/4.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 6,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/4.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 7,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/4.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 8,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/11.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 9,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/12.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 10,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/13.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 11,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/14.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 12,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/9.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkk  kkkkkkkkkkkkkkk  kkkkkkkkkkkk kkkkaaaaaaaaaaaljbavljkbrvlkajberlvkj ablekvblakjbflvkahbkhblkjbvfah',
-    },
-    {
-      id: 13,
-      title: 'ტესტი',
-      content:
-        'იაჯბფვლიუბალიუვბლაიბვლიაბვბალ ბალრუბვლაუ ბლურ ბლაბ ლიაბ ლუაბლრი ბლაიბ ლიაბრლიბ ლიბალიბალი ბლიბ ლაიბ ლაბლიბრლ ბალეფბ ლაიბლიუბლფლ ბალე ბლ ბალრეუბლაბლ ბლაუე ბლარუებლუბლ უაბლ რე',
-      image: 'assets/pics/renders/10.jpg',
-      titleEN: 'Test',
-      contentEN:
-        'ajdvlaijbvliaublidbavlijbfvlajbldjvbalkjbljbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaljbavljkbrvlkajberlvkjablekvblakjbflvkahbkhblkjbvfah',
-    },
+    
   ];
   //news
   getNews(): Observable<News[]> {
