@@ -6,9 +6,9 @@
         <div class="column-xs-12">
           <nav>
             <ol class="breadcrumb-list">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="/projects">{{project.category}}</a></li>
-              <li class="breadcrumb-item active">{{project.title}}</li>
+              <li class="breadcrumb-item upper" ><a href="#">მთავარი</a></li>
+              <li class="breadcrumb-item upper"><a href="/projects">{{project.category}}</a></li>
+              <li class="breadcrumb-item active upper">{{project.title}}</li>
             </ol>
           </nav>
         </div>
@@ -29,15 +29,15 @@
      
       
         <div class="column-xs-12 column-md-5">
-          <h1>{{project.title}}</h1>
+          <h1 class="upper">{{project.title}}</h1>
           <div class="description">
            <div [innerHTML]="project.text"></div>
           </div>
           
 
-          <button id="contact" class="add-to-cart" (click)="toggleContactForm()">contact us </button>
+          <button id="contact" class="add-to-cart upper" (click)="toggleContactForm()"> დაგვიკავშირდით</button>
 
-          <app-contactform *ngIf="sharedService.showContactForm" (close)="closeContactForm()"></app-contactform>
+          <app-contactform *ngIf="sharedService.showContactForm"  [@fadeIn]></app-contactform>
         </div>
       </div>
     </div>

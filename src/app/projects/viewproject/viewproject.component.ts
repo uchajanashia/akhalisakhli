@@ -10,14 +10,26 @@ import { CustumerdataService } from '../../custumerdata.service';
 import { LanguageService } from '../../language.service';
 import { ServiceListService } from '../../service-list.service';
 import { FormsModule } from '@angular/forms';
-
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
     selector: 'app-viewproject',
     standalone: true,
     templateUrl: './viewproject.component.html',
     styleUrl: './viewproject.component.scss',
-    imports: [CommonModule, ContactformComponent, HeaderComponent, FooterComponent,FormsModule]
+    imports: [CommonModule, ContactformComponent, HeaderComponent, FooterComponent,FormsModule],
+    animations: [
+      trigger('fadeIn', [
+        state('void', style({ opacity: 0 })),
+        transition(':enter', [
+          animate('600ms ease-in', style({ opacity: 1 }))
+        ]),
+        transition(':leave', [
+          animate('600ms ease-out', style({ opacity: 0 }))
+        ])
+      ])]
+      
 })
+
 export class ViewprojectComponent {
 
   project: any;

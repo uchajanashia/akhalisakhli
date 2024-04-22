@@ -1,6 +1,8 @@
 * { box-sizing: border-box; }
 
-
+form div { 
+  display: flex; align-items: center;
+}
 
 #contactForm { 
     width: 18%;
@@ -15,6 +17,12 @@
   background-size: 100% 100%;
   color: white;
   
+}
+.mobilehead{
+  font-size: 1.2em;
+  letter-spacing: 0.15rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
 }
 .contryimg{
     height: 26px;
@@ -31,7 +39,7 @@ input, textarea {
   border-radius: 10px;
   background-color: var(--transparent-dark-green);
   color: white;
-  margin: .8em auto;
+  margin: .4em auto;
   font-family: inherit; 
   text-transform: inherit; 
   font-size: inherit;

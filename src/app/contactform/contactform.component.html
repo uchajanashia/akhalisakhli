@@ -7,7 +7,7 @@
   <h2 class="translate mobilehead">ჩვენ მალე დაგიკავშირდებით</h2>
   
   <form  #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
-    <!-- <label class="translate" for="name">სახელი, გვარი:</label> -->
+    <div>
     <input
       style="color: white"
       class="translate inputinput"
@@ -19,7 +19,8 @@
       placeholder="სახელი, გვარი"
       required
     />
-    <div style="display: flex; align-items: center;">
+  </div>
+    <div >
       <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="height: 30px; margin-right: 10px; margin-left: 15px;">
       <!-- <select class="form-select" id="phoone" name="phone" [(ngModel)]="selectedCountry" (ngModelChange)="onCountryChange()">
         <option *ngFor="let country of countryList" [value]="country.code" > {{country.code}}  {{country.name}}</option>
@@ -36,7 +37,7 @@
         required
       />
     </div>
-    
+    <div>
     <input
       style="color: white"
       class="translate inputinput"
@@ -49,7 +50,8 @@
       required
 
     />
-    
+  </div>
+  <div>
     <textarea
       style="color: white"
       class="translate inputinput"
@@ -60,6 +62,7 @@
       required
       placeholder="შეტყობინება"
     ></textarea>
+  </div>
     <button 
     class="formBtn"
       id="button"
