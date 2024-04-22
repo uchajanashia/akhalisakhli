@@ -17,11 +17,14 @@
         <div class="column-xs-12 column-md-7">
           <div class="product-gallery">
             <div class="product-image">
-              <img class="active" [src]="product">
+              <div id="youtube-container"></div>
+
+              <img *ngIf="!video" class="active" [src]="product">
             </div>
             <ul class="image-list">
               <li class="image-item" *ngFor="let image of productlist">
-                <img [src]="image" (click)="changeImage(image)">
+                
+                <img  [src]="image" (click)="changeImage(image)">
               </li>
             </ul>
           </div>
@@ -35,7 +38,11 @@
           </div>
           
 
+          <div style="display: flex; justify-content: space-between;">
           <button id="contact" class="add-to-cart upper" (click)="toggleContactForm()"> დაგვიკავშირდით</button>
+
+            <button (click)="openVideo('TsmShfuoC7w')" class="add-to-cart upper" >ვიდეოს ნახვა</button>
+          </div>
 
           <app-contactform *ngIf="sharedService.showContactForm"  [@fadeIn]></app-contactform>
         </div>

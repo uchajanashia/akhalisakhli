@@ -83,3 +83,17 @@ export interface AboutCompany {
     qveda2EN:string,
     qveda3EN:string,
 }
+
+export interface project{
+    title:string,
+    titleEn:string,
+
+    category:string,
+    categoryEn:string,
+
+    text:string,
+    textEn:string,
+
+    image:string[],
+    video:string,
+}

@@ -11,6 +11,8 @@ import { LanguageService } from '../../language.service';
 import { ServiceListService } from '../../service-list.service';
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { YoutubePlayerService } from '../../youtube-player.service';
+import { delay } from 'rxjs';
 @Component({
     selector: 'app-viewproject',
     standalone: true,
@@ -242,7 +244,8 @@ export class ViewprojectComponent {
   clientMessage ='';
   clientCountry = 'GEORGIA';
   count="";
-  
+  video = false
+  first = true;
   onInputChange(){
     const guessContry = this.countries.find((element) => element.code == this.clienPhoneNumber);
     console.log(this.clienPhoneNumber)
@@ -258,10 +261,12 @@ export class ViewprojectComponent {
   constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,    private serviceService: ServiceListService,
     private languageService: LanguageService,
     private custumerData: CustumerdataService,
-    private tost:ToastrService) {
+    private tost:ToastrService,
+  private youtubePlayerService:YoutubePlayerService) {
 
   }
   ngOnInit(): void {
+
     this.project = history.state.project;
     console.log(this.project);
     this.product = this.project.image;
@@ -287,7 +292,9 @@ export class ViewprojectComponent {
 
   
   changeImage(imageUrl: string): void {
+    this.video=false;
     this.product = imageUrl;
+    this.youtubePlayerService.hidePlayer()
   }
 
   submitForm(form: any): void {
@@ -304,6 +311,14 @@ export class ViewprojectComponent {
     }else{
       this.tost.info('გთხოვთ შეავსეთ ყველა ველი')
     }
+    }
+
+    openVideo(id:string) {
+      this.video=true
+      this.youtubePlayerService.loadPlayer(id);
+      this.youtubePlayerService.showPlayer();
+
+
     }
 
 }

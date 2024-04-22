@@ -258,7 +258,6 @@ throw new Error('Method not implemented.');
   ngOnInit() {
     Aos.init();
     Aos.refresh();
-    this.countryList=this.serviceService.getAllCountry();
     this.partniorebiList = this.serviceService.getAllPartniorebi();
     this.languageService.currentLanguage$.subscribe(language => {
       if (language === 'en') {

@@ -1,13 +1,13 @@
 <app-header></app-header>
 
 <div class="main">
-    <div class="pagination">
+    <!-- <div class="pagination">
         <button *ngFor="let page of getPageNumbers()"
         (click)="onPageChange(page)"
         [class.selected]="page === currentPage">
         {{ page }}
     </button>
-</div>
+    </div> -->
     <div class="news" *ngFor="let item of getPaginatedNews()">
         <div data-aos="fade-up" class="text">
             <h3>{{ item.title }}</h3>

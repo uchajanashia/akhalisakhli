@@ -46,7 +46,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   longList: any;
   //just for autoplay :)))))))
   serviceList: Services[] = [];
-  partniorebiList: Partniorebi[] = [];
   countryList:Country[]=[];
 
   countries=[
@@ -292,8 +291,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     Aos.init();
     Aos.refresh();
-    this.countryList=this.serviceService.getAllCountry();
-    this.partniorebiList = this.serviceService.getAllPartniorebi();
     this.languageService.currentLanguage$.subscribe(language => {
       if (language === 'en') {
         this.serviceList = this.serviceService.getAllServiceEN();
@@ -328,15 +325,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   playVideo() {
-    // Play intro video
     if (this.videoElement && this.videoElement.nativeElement) {
       const video: HTMLVideoElement = this.videoElement.nativeElement;
       video
         .play()
         .then(() => {
-          console.log('Intro video played successfully');
           video.addEventListener('ended', () => {
-            console.log('Intro video ended. Playing Sairme video.');
             this.playSairmeVideo();
           });
         })
@@ -397,9 +391,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
-  //end of fking autoplay video code :))))
-
-  // ...
 
   imageObjects: { imageUrl: string; text: string; linkUrl: string }[] = [
     { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', linkUrl: 'services/proektireba' },
@@ -417,8 +408,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
 
   hoveredImage: { imageUrl: string; text: string } | null = null;
-
-  // ... (your existing methods)
 
   showImage(imageObject: { imageUrl: string; text: string }) {
     console.log('Hovered Image:', imageObject);
