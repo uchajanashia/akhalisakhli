@@ -22,7 +22,7 @@
                     <!-- Info-2 -->
                     <div class="info">
                         <i class="far fa-envelope"></i>
-                        <h4 class="d-inline-block upper">{{languagecheck ?'ელ-ფოსტა':'mail'}} :
+                        <h4 class="d-inline-block upper">{{languagecheck ?'ელ-ფოსტა':'e-mail'}} :
                             <br>
                             <a >info&commat;akhalisakhli.com</a> </h4>
                     </div>
@@ -37,7 +37,7 @@
 
             <div class="col-md-7">
 
-              <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+              <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)" class="upper">
                 <div class="row">
                     <div class="col-sm-6">
                         <input type="text" class="form-control" [(ngModel)]="clientName" name="clientName"
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-sm-6">
                         <input type="email" class="form-control" [(ngModel)]="clienEmail" name="clienEmail"
-                        (ngModelChange)="onInputChange()" placeholder="{{languagecheck ?'ელ-ფოსტა':'mail'}}" required>
+                        (ngModelChange)="onInputChange()" placeholder="{{languagecheck ?'ელ-ფოსტა':'e-mail'}}" required>
                     </div>
                     <div class="col-sm-12" style="display: flex; margin-bottom: 10px;">
                         <img  class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="    height: 30px;
