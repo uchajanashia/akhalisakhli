@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit{
+  languagecheck = true;
+  constructor(private language : LanguageService){
 
+  }
+  ngOnInit(): void {
+    this.language.getBoolean().subscribe(value => {
+      this.languagecheck = value;
+    });
+  }
+  
 }

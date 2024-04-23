@@ -8,6 +8,19 @@
   width: 100%;
 }
 
+.background {
+  padding-top: 50px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: url(../../../assets/pics/SVG/pattern.svg);
+  background-size: cover; /* Adjust as needed */
+  z-index: -1; /* Ensure the background stays behind other content */
+}
+.product-gallery{
+  margin-top: 1.75rem
+}
 .grid {
   display: flex;
   flex-direction: column;
@@ -776,9 +789,20 @@ footer {
     margin: 0 0 0.75rem 0;
   }
 
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
   .image-list {
     display: flex;
     overflow: hidden;
+  }
+  .image-item {
+    margin: 0 0.75rem 0 0;
+    flex-basis: 100%;
+  }
+  .image-item:last-child {
+    margin-right: 0;
   }
   .image-list li {
     margin: 0 0.75rem 0 0;
@@ -796,7 +820,32 @@ footer {
   .image-list img:hover {
     opacity: 0.7;
   }
+  .arrow {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+    width: 50px;
+    border: none;
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.7)
+    }
+  } 
 
+  .left-arrow {
+    color: rgba(255, 255, 255, 0.596);
+    left: 0rem;
+  }
+  
+  .right-arrow {
+    color: rgba(255, 255, 255, 0.596);
+    right: 0rem;
+  }
   nav ul {
     justify-content: flex-end;
   }

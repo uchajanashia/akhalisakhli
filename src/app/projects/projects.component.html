@@ -1,22 +1,24 @@
 <app-header ></app-header>
 <div>
     <ul class="shortcut">
-      <li><a [ngClass]="{ 'active-filter': activeFilter === '' }" (click)="dontdo()">ყველა</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'projects' }" (click)="filterByTitle('projects')">პროექტირება</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'construction' }" (click)="filterByTitle('construction')">მშენებლობა</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'interieris dizaini' }" (click)="filterByTitle('interieris dizaini')">ინტერიერის დიზაინი</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'repair' }" (click)="filterByTitle('repair')">რემონტი</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'landshapti' }" (click)="filterByTitle('landshapti')">ლანდშაფტის დიზაინი</a></li>
+
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '' }" (click)="dontdo()">{{languagecheck ?'ყველა' : 'all'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'projects' }" (click)="filterByTitle('projects')">{{languagecheck ?'პროექტირება' : 'Projecting'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'construction' }" (click)="filterByTitle('construction')">{{languagecheck ?'მშენებლობა' : 'construction'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'interieris dizaini' }" (click)="filterByTitle('interieris dizaini')">{{languagecheck ?'ინტერიერის დიზაინი' : 'interior design'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'repair' }" (click)="filterByTitle('repair')">{{languagecheck ?'რემონტი' : 'repair'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'landshapti' }" (click)="filterByTitle('landshapti')">{{languagecheck ?'ლანდშაფტის დიზაინი' : 'Landscape design'}} </a></li>
       
       
       </ul>
       <section id="portfolio">
         <div class="project" *ngFor="let project of filteredProjects">
-          <img class="project__image" [src]="project.image" />
-          <p>{{ project.category }}</p>
-          <h3 class="grid__title" [class.long-title]="project.title.length > 20">{{ project.title }}</h3>
+          <img class="project__image" [src]="project.image[0]" />
           <div class="grid__overlay">
-            <button class="viewbutton" (click)="viewMore(project)" >View more</button>
+          <h3 class="grid__title long-title" >{{ languagecheck? project.title :project.titleEn}}</h3>
+            <button class="viewbutton" (click)="viewMore(project)" > {{languagecheck ?'დეტალების ნახვა' : 'see more'}} </button>
+          <p>{{ languagecheck? project.category : project.categoryEn }}</p>
+
           </div>
         </div>
       </section>

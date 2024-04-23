@@ -40,13 +40,8 @@ import { ContactformComponent } from "../contactform/contactform.component";
     ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  @Input() country!:Country;
-  @Input() services!: Services;
-  @Input() partniorebi!: Partniorebi;
   longList: any;
-  //just for autoplay :)))))))
   serviceList: Services[] = [];
-  countryList:Country[]=[];
 
   countries=[
     { id: 1, name: 'Afghanistan', code: '+93', img: 'assets/4x3/af.svg' },
@@ -273,7 +268,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     } 
   }
   constructor(
-    private renderer: Renderer2,
     private serviceService: ServiceListService,
     private languageService: LanguageService,
     private custumerData: CustumerdataService,
@@ -284,7 +278,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   loading = true;
   @ViewChild('videoElement', { static: false }) videoElement!: ElementRef;
   @ViewChild('sairmeVideo', { static: false }) sairmeVideoElement!: ElementRef;
-  @ViewChild('phoneInput') phoneInput!: ElementRef;
 
   
   ngOnInit() {
@@ -419,9 +412,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(() => {}, 100);
   }
 
-  //button toggle
   submitForm(form: any): void {
-    console.log('Form submitted!', form.value);
     if (form.valid) {
       this.custumerData.custumerSendData(this.clientName,this.clienEmail,this.clientCountry.toLocaleUpperCase(),this.clienPhoneNumber,this.clientMessage).subscribe(
         response => {

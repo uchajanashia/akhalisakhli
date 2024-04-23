@@ -6,15 +6,16 @@
         <div class="column-xs-12">
           <nav>
             <ol class="breadcrumb-list">
-              <li class="breadcrumb-item upper" ><a href="#">მთავარი</a></li>
-              <li class="breadcrumb-item upper"><a href="/projects">{{project.category}}</a></li>
-              <li class="breadcrumb-item active upper">{{project.title}}</li>
+              <li class="breadcrumb-item upper" ><a href="#">{{languagecheck ? 'მთავარი':'Main'}}</a></li>
+              <li class="breadcrumb-item upper"><a href="/projects">{{ languagecheck ?project.category : project.categoryEn}}</a></li>
+              <li class="breadcrumb-item active upper">{{languagecheck ? project.title : project.titleEn}}</li>
             </ol>
           </nav>
         </div>
       </div>
       <div class="grid product">
         <div class="column-xs-12 column-md-7">
+          <div class="background"></div>
           <div class="product-gallery">
             <div class="product-image">
               <div id="youtube-container"></div>
@@ -22,26 +23,32 @@
               <img *ngIf="!video" class="active" [src]="product">
             </div>
             <ul class="image-list">
-              <li class="image-item" *ngFor="let image of productlist">
-                
-                <img  [src]="image" (click)="changeImage(image)">
-              </li>
+              <div class="carousel-container">
+                <ul class="image-list">
+                  <li class="image-item" *ngFor="let image of visibleImages">
+                    <img [src]="image" (click)="changeImage(image)">
+                  </li>
+                </ul>
+                <div *ngIf="moreimage">
+                <button class="arrow left-arrow" (click)="moveCarousel(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="arrow right-arrow" (click)="moveCarousel(1)"><i class="fa-solid fa-chevron-right"></i></button></div>
+              </div>
             </ul>
           </div>
         </div>
      
       
         <div class="column-xs-12 column-md-5">
-          <h1 class="upper">{{project.title}}</h1>
+          <h1 class="upper">{{languagecheck? project.title : project.titleEn}}</h1>
           <div class="description">
-           <div [innerHTML]="project.text"></div>
+           <div [innerHTML]="languagecheck ? project.text: project.textEn"></div>
           </div>
           
 
           <div style="display: flex; justify-content: space-between;">
-          <button id="contact" class="add-to-cart upper" (click)="toggleContactForm()"> დაგვიკავშირდით</button>
-
-            <button (click)="openVideo('TsmShfuoC7w')" class="add-to-cart upper" >ვიდეოს ნახვა</button>
+          <button id="contact" class="add-to-cart upper" (click)="toggleContactForm()">{{languagecheck ?'დაგვიკავშირდით':'Contact Us'}} </button>
+            
+            <button *ngIf="video" (click)="openVideo(project.video)" class="add-to-cart upper" >{{languagecheck ?'ვიდეოს ნახვა':'Show Video'}}</button>
           </div>
 
           <app-contactform *ngIf="sharedService.showContactForm"  [@fadeIn]></app-contactform>

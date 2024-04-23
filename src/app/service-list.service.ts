@@ -565,9 +565,13 @@ export class ServiceListService {
       category: 'ინტერიერი დიზაინი',
       categoryEn: 'interior design',
       text: 'შევასრულეთ  2 სართულიანი ინდივიდუალური საცხოვრებელი სახლის ინტერიერის დიზაინის პროექტი.<br> <strong>სახლის ფართობი: 400 კვ.მ. </strong> <br>I სართულზე განთავსებულია: სტუდიოს ტიპის მისაღები ოთახი, კაბინეტი, საძინებელი, სველი წერტილი, ტექნიკური ოთახი.<br>II სართულზე განთავსებულია: მისაღები ოთახი, 3 საძინებელი, 2 აივანი.',
-      textEn: 'bla',
+      textEn: 'no text for english sorry',
       image: [
-        'assets/galerea/interieris dizaini/1/1.jpg'
+        'assets/galerea/interieris dizaini/1/1.jpg',
+        'assets/galerea/interieris dizaini/1/1.jpg',
+
+        'assets/galerea/interieris dizaini/1/1.jpg',
+
       ],
       video: ''
     },

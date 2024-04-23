@@ -101,7 +101,7 @@ button {
   .grid__title {
     color: white;
     position: absolute;
-    width: 100%;
+    width: 90%;
     text-align: center;
     white-space: normal;
     z-index: 3;
@@ -111,7 +111,6 @@ button {
 
   p {
     top: 10px; 
-    text-transform: uppercase;
     letter-spacing: 2px;
   }
 
@@ -119,13 +118,12 @@ button {
     bottom: 10px; 
     font-weight: 100;
     font-size: 0.8em;
-    text-transform: uppercase;
     color: white;
     letter-spacing: 2px;
   }
 
   .grid__overlay {
-    background: url(../../assets/pics/SVG/pattern.svg), var(--black-v4);
+    background: url(../../assets/pics/SVG/backPatern.svg);
     background-attachment: fixed;
     background-size: 300%;
     height: 100%;
@@ -149,6 +147,7 @@ button {
       padding: 10px;
 
       &:hover {
+        
         transition: all 0.3s ease-in-out;
         background: #ffffff;
         color: rgb(20 20 20);
@@ -169,6 +168,7 @@ button {
     }
 
     .grid__overlay {
+      opacity: 1;
       transform: translateY(0%);
     }
   }

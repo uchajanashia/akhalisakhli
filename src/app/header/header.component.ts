@@ -31,10 +31,12 @@ export class HeaderComponent {
   }
 
   toggleLanguage(): void {
- this.isGeorgian=!this.isGeorgian
- const newLanguage = this.isGeorgian ? 'ka' : 'en';
+    if(this.selectedLanguage=='ka'){
+      this.isGeorgian=true}
+    if(this.selectedLanguage=='en'){
+      this.isGeorgian=false}
  this.languageService.setLanguage(this.isGeorgian)
- document.documentElement.lang = newLanguage;
+
   
 }
 

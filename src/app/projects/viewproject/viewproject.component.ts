@@ -244,8 +244,48 @@ export class ViewprojectComponent {
   clientMessage ='';
   clientCountry = 'GEORGIA';
   count="";
+
   video = false
   first = true;
+
+  languagecheck = true;
+
+  currentIndex = 0;
+  visibleImages: string[] = [];
+  moreimage = false;
+
+
+
+  constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,    private serviceService: ServiceListService,
+    private language: LanguageService,
+    private custumerData: CustumerdataService,
+    private tost:ToastrService,
+  private youtubePlayerService:YoutubePlayerService) {
+    this.project = history.state;
+    this.updateVisibleImages();
+
+  }
+  ngOnInit(): void {
+    this.language.getBoolean().subscribe(value => {
+      this.languagecheck = value;
+    });
+    this.product = this.project.image[0];
+  }
+
+  updateVisibleImages() {
+    if(this.project.image.length >= 4){this.moreimage = true}
+    const startIndex = Math.max(0, this.currentIndex);
+    const endIndex = Math.min(startIndex + 3, this.project.image.length);
+    this.visibleImages = this.project.image.slice(startIndex, endIndex);
+    
+    
+  }
+
+  moveCarousel(step: number) {
+    this.currentIndex += step;
+    this.updateVisibleImages();
+  }
+
   onInputChange(){
     const guessContry = this.countries.find((element) => element.code == this.clienPhoneNumber);
     console.log(this.clienPhoneNumber)
@@ -256,31 +296,6 @@ export class ViewprojectComponent {
       this.clientCountry = this.count.toUpperCase();
 
     } 
-  }
-
-  constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,    private serviceService: ServiceListService,
-    private languageService: LanguageService,
-    private custumerData: CustumerdataService,
-    private tost:ToastrService,
-  private youtubePlayerService:YoutubePlayerService) {
-
-  }
-  ngOnInit(): void {
-
-    this.project = history.state.project;
-    console.log(this.project);
-    this.product = this.project.image;
-     this.image2url = this.project.image2;
-     this.image3url = this.project.image3;
-     if (this.product != null) {
-      this.productlist.push(this.product);
-    }
-    if (this.image2url != null) {
-      this.productlist.push(this.image2url);
-    if (this.image3url != null) {
-        this.productlist.push(this.image3url);
-      }
-  }
   }
   toggleContactForm(): void {
     this.sharedService.showContactForm = !this.sharedService.showContactForm;
