@@ -25,7 +25,6 @@ export class ProjectsComponent implements OnInit{
 
       constructor(private router: Router , private service: ServiceListService, private language : LanguageService) {
         this.projects =service.getproject();
-        console.log(this.projects)
       }
   ngOnInit(): void {
     this.filteredProjects = this.projects; 
@@ -41,9 +40,9 @@ export class ProjectsComponent implements OnInit{
 
       }
       filterByTitle(title: string) {
-        this.activeFilter = title;
+          this.activeFilter = title;
   
-          this.filteredProjects = this.projects.filter(project => project.category === title);
+          this.filteredProjects = this.projects.filter(project => project.category == title);
         }
       
       dontdo() {

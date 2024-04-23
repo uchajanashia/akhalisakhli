@@ -2,35 +2,35 @@
 <article>
   <section class="contact" id="contact">
     <div class="container">
-        <div class="heading text-center">
-            <h2>დაგვიკავშირდით
+        <div class="heading text-center upper ">
+            <h2 class="upper">{{languagecheck ? 'დაგვიკავშირდით':'Contact Us'}}
                   </h2>
         </div>
         <div class="row">
             <div class="col-md-5">
-                <div class="title">
-                    <h3>საკონტაქტო ინფორმაცია</h3>
+                <div class="title upper">
+                    <h3 >{{languagecheck ? 'საკონტაქტო ინფორმაცია :': 'contact information :'}}</h3>
                 </div>
                 <div class="content">
                     <!-- Info-1 -->
                     <div class="info">
                         <i class="fas fa-mobile-alt"></i>
-                        <h4 class="d-inline-block">ტელეფონი:
+                        <h4 class="d-inline-block upper"> {{languagecheck ? 'ტელეფონი':'phone'}} :
                             <br>
                             <span> +995 551 351 111  |  +995 595 04 41 11 </span></h4>
                     </div>
                     <!-- Info-2 -->
                     <div class="info">
                         <i class="far fa-envelope"></i>
-                        <h4 class="d-inline-block">ელ-ფოსტა :
+                        <h4 class="d-inline-block upper">{{languagecheck ?'ელ-ფოსტა':'mail'}} :
                             <br>
                             <a >info&commat;akhalisakhli.com</a> </h4>
                     </div>
                     <!-- Info-3 -->
                     <div class="info">
                         <i class="fas fa-map-marker-alt"></i>
-                        <h4 class="d-inline-block">მისამართი :<br>
-                            <span>S.Chikovani st. N4</span></h4>
+                        <h4 class="d-inline-block upper">{{languagecheck ? 'მისამართი':'address'}} :<br>
+                            <span>{{languagecheck ?'ს.ჩიქოვანის ქუჩა #4 ':'S.Chikovani st. N4'}}</span></h4>
                     </div>
                 </div>
             </div>
@@ -41,27 +41,27 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <input type="text" class="form-control" [(ngModel)]="clientName" name="clientName"
-                        (ngModelChange)="onInputChange()" placeholder="სახელი, გვარი" required>
+                        (ngModelChange)="onInputChange()" placeholder="{{languagecheck ?'სახელი და გვარი':'full name'}}" required>
                     </div>
                     <div class="col-sm-6">
                         <input type="email" class="form-control" [(ngModel)]="clienEmail" name="clienEmail"
-                        (ngModelChange)="onInputChange()" placeholder="ელ-ფოსტა" required>
+                        (ngModelChange)="onInputChange()" placeholder="{{languagecheck ?'ელ-ფოსტა':'mail'}}" required>
                     </div>
                     <div class="col-sm-12" style="display: flex; margin-bottom: 10px;">
                         <img  class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" style="    height: 30px;
                         margin: auto;
                         margin-right: 10px;
-                        background-color: var(--dark-green);
+                        background-color: #e3e3e3;
                         padding: 1px;">
                         <input type="text" class="form-control" [(ngModel)]="clienPhoneNumber" name="clienPhoneNumber"
-                        (ngModelChange)="onInputChange()" placeholder="ტელეფონი" required style="margin: 0;">
+                        (ngModelChange)="onInputChange()" placeholder="{{languagecheck ?'ტელეფონი':'phone number'}}ტელეფონი" required style="margin: 0;">
                     </div>
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" rows="5" id="comment" [(ngModel)]="clientMessage" name="clientMessage"
-                    (ngModelChange)="onInputChange()" required placeholder="შეტყობინება"></textarea>
+                    (ngModelChange)="onInputChange()" required placeholder="{{languagecheck ? 'შეტყობინება':'message'}}"></textarea>
                 </div>
-                <button class="btn btn-block" type="submit">გაგზავნა</button>
+                <button class="btn btn-block" type="submit"> {{languagecheck ? 'გაგზავნა':'submit'}}</button>
             </form>
             
                   

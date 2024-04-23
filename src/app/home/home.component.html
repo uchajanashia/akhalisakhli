@@ -14,7 +14,7 @@
           [href]="imageObject.linkUrl"
           (mouseenter)="showImage(imageObject)"
           (mouseleave)="hideImage()"
-          >{{ imageObject.text }}</a
+          >{{ languagecheck ? imageObject.text :imageObject.textEn}}</a
         >
       </li>
     </ul>
@@ -65,10 +65,10 @@
   <div data-aos="zoom-out-down" class="contContain">
     <div class="hedtxt">
       <h2 class="translate mobilehead">
-        მოითხოვეთ ზარი
+        {{languagecheck ? 'მოითხოვეთ ზარი' :'Request a call'}}
       </h2>
     </div>
-    <h2 class="translate mobilehead">ჩვენ მალე დაგიკავშირდებით</h2>
+    <h2 class="translate mobilehead">{{languagecheck ? 'ჩვენ მალე დაგიკავშირდებით':'We will contact you soon'}}</h2>
     <form  #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
       <!-- <label class="translate" for="name">სახელი, გვარი:</label> -->
       <input
@@ -79,7 +79,7 @@
         name="name"
         [(ngModel)]="clientName"
         (ngModelChange)="onInputChange()"
-        placeholder="სახელი, გვარი"
+        placeholder="{{languagecheck ? 'სახელ და გვარი':'fullname'}}"
         required
       />
       <div style="display: flex; ">
@@ -95,7 +95,7 @@
           name="phone"
           [(ngModel)]="clienPhoneNumber"
           (ngModelChange)="onInputChange()"
-          placeholder="ტელეფონი"
+          placeholder="{{languagecheck ? 'ტელეფონი':'telephone'}}"
           required
         />
       </div>
@@ -108,7 +108,7 @@
         name="email"
         [(ngModel)]="clienEmail"
         (ngModelChange)="onInputChange()"
-        placeholder="ელ-ფოსტა"
+        placeholder="{{languagecheck ? 'ელ-ფოსტა':'e-mail'}}"
       />
       
       <textarea
@@ -119,14 +119,14 @@
         [(ngModel)]="clientMessage"
         (ngModelChange)="onInputChange()"
         required
-        placeholder="შეტყობინება"
+        placeholder="{{languagecheck ? 'შეტყობინება':'message'}}"
       ></textarea>
       <button
         id="button"
         type="submit"
         [disabled]="contactForm.invalid"
       >
-        გაგზავნა
+        {{ languagecheck ? 'გაგზავნა':'submit'}}
       </button>
     </form>
   </div>

@@ -20,9 +20,11 @@ $widthPercentage: 23%;
     }
     
     a {
+      color: black;
+      background-color: white;
+      border: 1px solid black;
       text-decoration: none;
-      color: white;
-      background-color:  rgb(20 20 20);
+
       border-radius: 3px;
       padding: 5px 10px;
       font-size: clamp(0.6rem, 1.2vw, 1rem);
@@ -30,20 +32,24 @@ $widthPercentage: 23%;
       transition: 0.2s;
       
       &:lang(ka) {
-        font-family: "BPG Banner ExtraSquare", sans-serif;
+        font-family: "ALK Sanet", sans-serif;
+
       }
+
       
       
       &:hover {
-        color: black;
-        background-color: white;
-        border: 1px solid black;
+        color: white;
+        background-color:  rgb(20 20 20);
       }
     }
     
   }
 }
+.upper{
+  font-family: "ALK Sanet", sans-serif;
 
+}
 
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
 
@@ -74,6 +80,9 @@ button {
   background: url(../../assets/pics/SVG/pattern.svg);
   background-attachment: fixed;
   background-size: 100%;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .project {
@@ -121,7 +130,9 @@ button {
     color: white;
     letter-spacing: 2px;
   }
-
+  .upper{
+    font-family: "ALK Sanet", sans-serif;
+  }
   .grid__overlay {
     background: url(../../assets/pics/SVG/backPatern.svg);
     background-attachment: fixed;

@@ -1,17 +1,11 @@
 <app-header></app-header>
 
 <div class="main">
-    <!-- <div class="pagination">
-        <button *ngFor="let page of getPageNumbers()"
-        (click)="onPageChange(page)"
-        [class.selected]="page === currentPage">
-        {{ page }}
-    </button>
-    </div> -->
+
     <div class="news" *ngFor="let item of getPaginatedNews()">
         <div data-aos="fade-up" class="text">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.content }}</p>
+            <h3>{{ languagecheck ? item.title : item.titleEN}}</h3>
+            <p>{{ languagecheck ? item.content  : item.contentEN}}</p>
         </div>
         <img data-aos="fade-up" [src]="item.image" alt="" (click)="toggleFullScreen(item.image)">
     </div>

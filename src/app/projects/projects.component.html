@@ -1,13 +1,13 @@
 <app-header ></app-header>
 <div>
-    <ul class="shortcut">
+    <ul class="shortcut upper">
 
       <li><a [ngClass]="{ 'active-filter': activeFilter === '' }" (click)="dontdo()">{{languagecheck ?'ყველა' : 'all'}}</a></li>
       <li><a [ngClass]="{ 'active-filter': activeFilter === 'projects' }" (click)="filterByTitle('projects')">{{languagecheck ?'პროექტირება' : 'Projecting'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'construction' }" (click)="filterByTitle('construction')">{{languagecheck ?'მშენებლობა' : 'construction'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'interieris dizaini' }" (click)="filterByTitle('interieris dizaini')">{{languagecheck ?'ინტერიერის დიზაინი' : 'interior design'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'მშენებლობა' }" (click)="filterByTitle('მშენებლობა')">{{languagecheck ?'მშენებლობა' : 'construction'}}</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'ინტერიერი დიზაინი' }" (click)="filterByTitle('ინტერიერი დიზაინი')">{{languagecheck ?'ინტერიერის დიზაინი' : 'interior design'}}</a></li>
       <li><a [ngClass]="{ 'active-filter': activeFilter === 'repair' }" (click)="filterByTitle('repair')">{{languagecheck ?'რემონტი' : 'repair'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'landshapti' }" (click)="filterByTitle('landshapti')">{{languagecheck ?'ლანდშაფტის დიზაინი' : 'Landscape design'}} </a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === 'ლანდშაფტი' }" (click)="filterByTitle('ლანდშაფტი')">{{languagecheck ?'ლანდშაფტის დიზაინი' : 'Landscape design'}} </a></li>
       
       
       </ul>
@@ -15,9 +15,9 @@
         <div class="project" *ngFor="let project of filteredProjects">
           <img class="project__image" [src]="project.image[0]" />
           <div class="grid__overlay">
-          <h3 class="grid__title long-title" >{{ languagecheck? project.title :project.titleEn}}</h3>
-            <button class="viewbutton" (click)="viewMore(project)" > {{languagecheck ?'დეტალების ნახვა' : 'see more'}} </button>
-          <p>{{ languagecheck? project.category : project.categoryEn }}</p>
+          <h3 class="grid__title long-title upper" >{{ languagecheck? project.title :project.titleEn}}</h3>
+            <button class="viewbutton upper" (click)="viewMore(project)" > {{languagecheck ?'დეტალების ნახვა' : 'see more'}} </button>
+          <p class="upper">{{ languagecheck? project.category : project.categoryEn }}</p>
 
           </div>
         </div>

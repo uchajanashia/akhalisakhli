@@ -247,6 +247,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   clientMessage ='';
   clientCountry = 'GEORGIA';
   count="";
+
+  languagecheck = true;
   
   onCountryChange() {
     const selectedCountry = this.countries.find(country => country.code === this.selectedCountry);
@@ -269,7 +271,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   constructor(
     private serviceService: ServiceListService,
-    private languageService: LanguageService,
+    private language: LanguageService,
     private custumerData: CustumerdataService,
     private tost:ToastrService
   ) {
@@ -284,13 +286,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     Aos.init();
     Aos.refresh();
-    this.languageService.currentLanguage$.subscribe(language => {
-      if (language === 'en') {
-        this.serviceList = this.serviceService.getAllServiceEN();
-      } else {
+    this.language.getBoolean().subscribe(value => {
+      this.languagecheck = value;
+      if (this.languagecheck) {
         this.serviceList = this.serviceService.getAllService();
+
+      } else {
+        this.serviceList = this.serviceService.getAllServiceEN();
+
       }
     });
+
     };
   
 
@@ -385,20 +391,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 
-  imageObjects: { imageUrl: string; text: string; linkUrl: string }[] = [
-    { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', linkUrl: 'services/proektireba' },
-    { imageUrl: 'assets/pics/web/mshenebloba/cover.jpg', text: 'მშენებლობა', linkUrl: 'services/mshenebloba' },
-    { imageUrl: 'assets/pics/web/interieri/cover.jpg', text: 'ინტერიერის დიზაინი', linkUrl: 'services/interieri' },
-    { imageUrl: 'assets/pics/web/remonti/cover.jpg', text: 'რემონტი', linkUrl: 'services/remonti' },
-    { imageUrl: 'assets/pics/web/landshapti/cover.jpg', text: 'ლანდშაფტის დიზაინი', linkUrl: 'services/landshafti' },
+  imageObjects: { imageUrl: string; text: string; textEn:string; linkUrl: string }[] = [
+    { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', textEn:'Design',  linkUrl: 'services/proektireba' },
+    { imageUrl: 'assets/pics/web/mshenebloba/cover.jpg', text: 'მშენებლობა',textEn:'construction', linkUrl: 'services/mshenebloba' },
+    { imageUrl: 'assets/pics/web/interieri/cover.jpg', text: 'ინტერიერის დიზაინი',textEn:'interior design', linkUrl: 'services/interieri' },
+    { imageUrl: 'assets/pics/web/remonti/cover.jpg', text: 'რემონტი',textEn:'Repair', linkUrl: 'services/remonti' },
+    { imageUrl: 'assets/pics/web/landshapti/cover.jpg', text: 'ლანდშაფტის დიზაინი',textEn:'Landscape design', linkUrl: 'services/landshafti' },
   ];
-  imageObjectsen: { imageUrl: string; text: string; linkUrl: string }[] = [
-    { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', linkUrl: 'services/proektireba' },
-    { imageUrl: 'assets/pics/web/mshenebloba/cover.jpg', text: 'მშენებლობა', linkUrl: 'services/mshenebloba' },
-    { imageUrl: 'assets/pics/web/interieri/cover.jpg', text: 'ინტერიერის დიზაინი', linkUrl: 'services/interieri' },
-    { imageUrl: 'assets/pics/web/remonti/cover.jpg', text: 'რემონტი', linkUrl: 'services/remonti' },
-    { imageUrl: 'assets/pics/web/landshapti/cover.jpg', text: 'ლანდშაფტის დიზაინი', linkUrl: 'services/landshafti' },
-  ];
+
 
   hoveredImage: { imageUrl: string; text: string } | null = null;
 

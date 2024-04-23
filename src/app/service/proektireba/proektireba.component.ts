@@ -53,7 +53,7 @@ export class ProektirebaComponent {
     Aos.refresh();
     this.proeqtirebaList=this.serviceService.getAllProeqtireba();
     this.languageService.currentLanguage$.subscribe(language => {
-      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+      this.isGeorgian = language === 'ka'; 
     });
   }
   selectedPicIndex = 0;
@@ -113,4 +113,6 @@ export class ProektirebaComponent {
       vidSrc: 'assets/vids/rgoli_mshenebloba/7 Vani Clip.mp4',
     },
   ];
+
+
 }

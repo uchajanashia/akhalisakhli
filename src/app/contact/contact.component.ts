@@ -19,15 +19,6 @@ import { SharedcontactService } from '../projects/sharedcontact.service';
     imports: [HeaderComponent, FooterComponent, FloatContactComponent, MapComponent,CommonModule,FormsModule]
 })
 export class ContactComponent implements OnInit{
-
-  constructor(public sharedService: SharedcontactService, private languageService: LanguageService, private toastr: ToastrService ,     private serviceService: ServiceListService,
-    private custumerData: CustumerdataService,
-    private tost:ToastrService) {}
-
-  closeContactForm(): void {
-    this.sharedService.showContactForm = false;
-  }
-
   countries=[
     { id: 1, name: 'Afghanistan', code: '+93', img: 'assets/4x3/af.svg' },
     { id: 2, name: 'Albania', code: '+355', img: 'assets/4x3/al.svg' },
@@ -233,6 +224,21 @@ export class ContactComponent implements OnInit{
   clientCountry = 'GEORGIA';
   count="";
 
+  languagecheck = true;
+
+
+  constructor(public sharedService: SharedcontactService, private language: LanguageService, private toastr: ToastrService ,     private serviceService: ServiceListService,
+    private custumerData: CustumerdataService,
+    private tost:ToastrService) {
+      }
+
+ 
+  ngOnInit(): void {
+    this.language.getBoolean().subscribe(value => {
+      this.languagecheck = value;
+    });
+  }
+
   onInputChange(){
     const guessContry = this.countries.find((element) => element.code == this.clienPhoneNumber);
     console.log(this.clienPhoneNumber)
@@ -244,9 +250,9 @@ export class ContactComponent implements OnInit{
 
     } 
   }
-
-  ngOnInit(): void {}
-
+  closeContactForm(): void {
+    this.sharedService.showContactForm = false;
+  }
 
   submitForm(form: any): void {
     if (form.valid) {

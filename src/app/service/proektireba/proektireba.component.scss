@@ -76,8 +76,6 @@
             padding: 5px;
             backdrop-filter: blur(3px);
             border-radius: 3px;
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--mid-green);
             &:hover {
               .floatcont {
                 display: contents;
@@ -87,22 +85,13 @@
           }
           .floatcont {
 
-            display: none;
+            display: contents;
             ul {
               li {
-                color: var( --mid-green);
                 filter: drop-shadow(2px 2px 0 black);
                 font-weight: 100;
                 transition: 0.3s;
-                &:nth-of-type(8) {
-                 color: var( --mid-green);
-                 padding: 0;
-                 backdrop-filter: none;
-                 background-color: transparent;
-                }
-                &:hover{
-                  background-color: rgba(255, 255, 255, 0.05);
-                }
+         
               }
             }
         }

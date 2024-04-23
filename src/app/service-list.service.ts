@@ -536,11 +536,10 @@ export class ServiceListService {
         'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
       image: 'assets/news/anonsi16.9.jpg',
       titleEN: 
-       '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
+       'New House participates in the 28th International Caucasus Build 2024 exhibition of building materials and interiors',
 
       contentEN:
-      'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
-
+      'The Exhibition Center will organize the 28th International Exhibition of Construction Materials and Interior on April 26-27-28, 2024.The New House will host guests at the 5th Pavilion.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements..',
     },
     {
       id: 1,
@@ -568,13 +567,148 @@ export class ServiceListService {
       textEn: 'no text for english sorry',
       image: [
         'assets/galerea/interieris dizaini/1/1.jpg',
-        'assets/galerea/interieris dizaini/1/1.jpg',
-
-        'assets/galerea/interieris dizaini/1/1.jpg',
-
       ],
       video: ''
     },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი საგურამოში',
+      titleEn: 'individual residential house in Saguramo',
+      category: 'ლანდშაფტი',
+      categoryEn: 'landscape',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br> <strong>ეზოს ფართობი: 2100 კვ.მ. <strong>',
+      textEn: 'no text for english sorry',
+      image: [
+        'assets/galerea/landshapti/1/10.jpg',
+        'assets/galerea/landshapti/1/cover.jpg',
+      ],
+      video: ''
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი  დიდ დიღომში',
+      titleEn: 'Individual Residential House in Didi Digomi',
+      category: 'ლანდშაფტი',
+      categoryEn: 'Landscape ',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br>ეზოს ფართობი: 1800 კვ.მ.',
+      textEn: 'We have completed a landscape design project.<br> Yard area: 1800 sq.m.',
+      image: [
+        'assets/galerea/landshapti/2/1.jpg',
+        'assets/galerea/landshapti/2/9.jpg',
+       
+      ],
+      video: ''
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი ლისზე',
+      titleEn: 'Individual Residential House on Lisi',
+      category: 'ლანდშაფტი',
+      categoryEn: 'Landscape ',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი.<br>ეზოს ფართობი: 800 კვ.მ. ',
+      textEn: 'We have completed a landscape design project. <br> Yard area: 800 sq.m. ',
+      image: [
+        'assets/galerea/landshapti/3/7.jpg',
+        'assets/galerea/landshapti/3/8.jpg',
+      ],
+      video: ''
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი საგურამოში',
+      titleEn: 'Individual residential house in Saguramo',
+      category: 'ლანდშაფტი',
+      categoryEn: 'Landscape ',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br>ეზოს ფართობი: 900 კვ.მ.',
+      textEn: 'We have completed a landscape design project.<br> Yard area: 900 sq.m.',
+      image: [
+        'assets/galerea/landshapti/4/5.jpg',
+        'assets/galerea/landshapti/4/6.jpg',
+      ],
+      video: ''
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი  წოდორეთში',
+      titleEn: 'An individual residential house in Tsodori',
+      category: 'ლანდშაფტი',
+      categoryEn: 'Landscape ',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br>ეზოს ფართობი: 22 000  კვ.მ.',
+      textEn: 'We have completed a landscape design project.<br> Yard area: 22 000 sq.m.',
+      image: [
+        'assets/galerea/landshapti/5/3.jpg',
+        'assets/galerea/landshapti/5/4.jpg',
+      ],
+      video: ''
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი ნაფეტვრებში',
+      titleEn: 'Individual residential house in napkets',
+      category: 'ლანდშაფტი',
+      categoryEn: 'Landscape ',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი.<br>ეზოს ფართობი: 2000  კვ.მ.',
+      textEn: 'We have completed a landscape design project. <br> Yard area: 2000 sq.m.',
+      image: [
+        'assets/galerea/landshapti/6/2.jpg',
+       
+      ],
+      video: ''
+    },
+    {
+      title: 'ინდივიდუალურ საცხოვრებელი სახლი ქოშიგორაზე',
+      titleEn: 'Individual Residential House on Koshigora',
+      category: 'მშენებლობა',
+      categoryEn: 'construction',
+      text: 'შევასრულეთ სრული საპროექტო მომსახურება, ავიღეთ მშენებლობის ნებართვა და მიმდინარეობს მშენებლობის პროცესი.',
+      textEn: 'We have performed full design services, we have obtained a construction permit, and the construction process is underway.',
+      image: [
+        'assets/galerea/mshenebloba/1/1.jpg',
+        'assets/galerea/mshenebloba/1/2.jpg',
+        'assets/galerea/mshenebloba/1/3.jpg',
+        'assets/galerea/mshenebloba/1/4.jpg',
+      ],
+      video: '7A6AP0K5aXI'
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი საგურამოში',
+      titleEn: 'Individual residential house in Saguramo',
+      category: 'მშენებლობა',
+      categoryEn: 'construction',
+      text: 'შევასრულეთ სამშენებლო სამუშაოები.<br>სახლის ფართობი: 220 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, საძინებელი, სველი  წერტილი, ტექნიკური ოთახი, აივანი.<br>II სართულზე განთავსებულია: 3 საძინებელი, 2 სველი წერტილი, აივანი.',
+      textEn: 'We have done the construction work. <br> House area: 220 sq.m.<br> On the first floor there are: living room, kitchen, bedroom, bathroom, technical room, balcony. <br> II floor: 3 bedrooms, 2 bathrooms, balcony.',
+      image: [
+        'assets/galerea/mshenebloba/2/5.jpg',
+
+      ],
+      video: 'u3iXzDmQpyA'
+    },
+    {
+      title: 'ინდივიდუალური საცხოვრებელი სახლი წყნეთში',
+      titleEn: 'An individual residential house in Tskneti',
+      category: 'მშენებლობა',
+      categoryEn: 'construction',
+      text: 'შევასრულეთ სამშენებლო და სარემონტო სამუშაოები.<br>სახლის ფართობი: 220 კვ.მ. <br>სახლში განთავსებულია: მისაღები ოთახი, 4 საძინებელი,  სასადილო ოთახი, სამზარეულო, სველი წერტილი, ვერანდა.',
+      textEn: 'We have performed construction and repair work. <br> House area: 220 sq.m.<br> House: living room, 4 bedrooms, dining room, kitchen, bathroom, porch.',
+      image: [
+        'assets/galerea/mshenebloba/3/6.jpg',
+        'assets/galerea/mshenebloba/3/7.jpg',
+        'assets/galerea/mshenebloba/3/8.jpg',
+        'assets/galerea/mshenebloba/3/9.jpg',
+
+      ],
+      video: '_N2INtpRIos'
+    },
+    {
+      title: 'ინდივიდუალურ საცხოვრებელი სახლი ვანში',
+      titleEn: 'Individual Residential House in Van',
+      category: 'მშენებლობა',
+      categoryEn: 'construction',
+      text: 'სახლი მდებარეობს ვანის რაიონის სოფელ მთისძირში. შევასრულეთ სრული საპროექტო მომსახურება, ავიღეთ მშენებლობის ნებართვა, მიმდინარეობს სამშენებლო და სარემონტო სამუშაოები.<br>სახლის ფართობი: 190 კვ.მ.<br>სახლში განთავსებულია: მისაღები ოთახი, 3 საძინებელი, სამზარეულო, სველი წერტილი.',
+      textEn: 'The house is located in the village of Mtisdziri in Vani district.We have performed full design services, we have received construction permits, construction and renovations are underway. <br> House area: 190 sq.m.',
+      image: [
+        'assets/galerea/mshenebloba/4/10.jpg',
+        'assets/galerea/mshenebloba/4/11.jpg',
+        'assets/galerea/mshenebloba/4/12.jpg',
+        'assets/galerea/mshenebloba/4/13.jpg',
+      ],
+      video: 'zJQV9dwPb00'
+    },
+    
   ]
 
 getproject(): project[]{

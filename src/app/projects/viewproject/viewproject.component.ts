@@ -274,6 +274,7 @@ export class ViewprojectComponent {
 
   updateVisibleImages() {
     if(this.project.image.length >= 4){this.moreimage = true}
+    if(this.currentIndex <= this.project.image.length -2){}
     const startIndex = Math.max(0, this.currentIndex);
     const endIndex = Math.min(startIndex + 3, this.project.image.length);
     this.visibleImages = this.project.image.slice(startIndex, endIndex);
@@ -282,7 +283,11 @@ export class ViewprojectComponent {
   }
 
   moveCarousel(step: number) {
-    this.currentIndex += step;
+
+    this.currentIndex += step; 
+    if(this.currentIndex >= this.project.image.length-3){
+      this.currentIndex = this.project.image.length-3
+    }
     this.updateVisibleImages();
   }
 

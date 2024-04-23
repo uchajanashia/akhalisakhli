@@ -3,7 +3,7 @@
 article{
   background: url(../../assets/pics/SVG/pattern.svg);
   background-attachment: fixed;
-  background-size: 300%;
+  background-size: 200%;
 }
 .contact {
   padding: 130px 0;
@@ -16,7 +16,9 @@ article{
   padding: 0;
 
 }
-
+.upper{
+  font-family: "ALK Sanet", sans-serif;
+}
 .contact .heading h2 span {
   color: var(--dark-green);
 }
@@ -35,7 +37,7 @@ article{
   padding: 25px;
   font-size: 13px;
   margin-bottom: 10px;
-  background: #f9f9f9;
+  background: #e3e3e3;
   border: 0;
   border-radius: 10px;
 }

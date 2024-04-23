@@ -18,15 +18,18 @@ export class HeaderComponent {
   isGeorgian: boolean = true;
   isMobileMenuOpen: boolean = false;
   selectedLanguage: string= "";
-  constructor(private languageService: LanguageService , private cook :CookieService) {}
+  constructor(private language: LanguageService , private cook :CookieService) {}
 
   ngOnInit(): void {
-    const currentLanguage = this.languageService.getCurrentLanguage();
-    this.selectedLanguage = currentLanguage || 'ka'
-    if(this.selectedLanguage=='ka'){
-      this.isGeorgian=true}
-    if(this.selectedLanguage=='en'){
-      this.isGeorgian=false}
+    this.language.getBoolean().subscribe(value => {
+      this.isGeorgian = value;
+    });
+    if(this.isGeorgian){
+      this.selectedLanguage='ka';
+    }else{
+      this.selectedLanguage='en';
+
+    }
 
   }
 
@@ -35,11 +38,14 @@ export class HeaderComponent {
       this.isGeorgian=true}
     if(this.selectedLanguage=='en'){
       this.isGeorgian=false}
- this.languageService.setLanguage(this.isGeorgian)
-
-  
+ this.language.setLanguage(this.isGeorgian)
 }
-
+  setGeo() {
+ this.language.setLanguage(true)
+  }
+  setEn() {
+ this.language.setLanguage(false)
+  }
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   

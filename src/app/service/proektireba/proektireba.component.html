@@ -37,18 +37,23 @@
       </p>
       <ul>
         <ng-container *ngFor="let proeqtirebaItem of proeqtirebaList">
-          <li class="item"
-            *ngFor="let item of isGeorgian ? proeqtirebaItem.pcontli : proeqtirebaItem.pcontliEN;">
+          <li class="item" *ngFor="let item of isGeorgian ? proeqtirebaItem.pcontli : proeqtirebaItem.pcontliEN;">
             {{ item }}
-            <div class="floatcont">
+            <ng-container *ngIf="item === 'Preparation of an architectural project;'">
               <ul>
-                <ng-container *ngFor="let proeqt of proeqtirebaList">
-                  <li class="floatlist" *ngFor="let item of isGeorgian ? proeqt.hoverList : proeqt.hoverListEN">{{ item }}</li>
-                </ng-container>
+                <li *ngFor="let hoverItem of proeqtirebaItem.hoverListEN">
+                  {{ hoverItem }}
+                </li>
               </ul>
-            </div>
+            </ng-container>
+            <ng-container *ngIf="item === 'არქიტექტურული პროექტის მომზადება;'">
+              <ul>
+                <li *ngFor="let hoverItem of proeqtirebaItem.hoverList">
+                  {{ hoverItem }}
+                </li>
+              </ul>
+            </ng-container>
           </li>
-          
         </ng-container>
       </ul>
     </div>

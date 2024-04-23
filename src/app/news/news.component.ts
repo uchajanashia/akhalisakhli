@@ -5,6 +5,7 @@ import { ServiceListService } from '../service-list.service';
 import { CommonModule } from '@angular/common';
 import Aos from 'aos';
 import { News, Services } from '../services';
+import { LanguageService } from '../language.service';
 
 @Component({
     selector: 'app-news',
@@ -31,10 +32,13 @@ export class NewsComponent implements OnInit{
   news: News[] = [];
   currentPage = 1;
   itemsPerPage = 5;
-
-  constructor(private serviceService: ServiceListService) { }
+  languagecheck = true;
+  constructor(private serviceService: ServiceListService , private language : LanguageService) { }
 
   ngOnInit(): void {
+    this.language.getBoolean().subscribe(value => {
+      this.languagecheck = value;
+    });
     this.loadNews();
     Aos.init();
     Aos.refresh();
