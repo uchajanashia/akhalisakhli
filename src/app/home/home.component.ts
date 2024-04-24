@@ -317,14 +317,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
       videoElement.setAttribute('autoplay', 'autoplay');
       videoElement.muted = true;
     }
-    if(!this.loading){
+  
     if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
       const sairmeVideoElement: HTMLVideoElement =
         this.sairmeVideoElement.nativeElement;
       sairmeVideoElement.setAttribute('autoplay', 'autoplay');
       sairmeVideoElement.muted = true;
     }
-  }
+  
   }
 
   playVideo() {
