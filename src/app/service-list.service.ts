@@ -529,31 +529,24 @@ export class ServiceListService {
   ];
 
   protected news: News[] = [
-    {
-      id: 1,
-      title: '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
-      content:
-        'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
-      image: 'assets/news/anonsi16.9.jpg',
-      titleEN: 
-       'New House participates in the 28th International Caucasus Build 2024 exhibition of building materials and interiors',
 
-      contentEN:
-      'The Exhibition Center will organize the 28th International Exhibition of Construction Materials and Interior on April 26-27-28, 2024.The New House will host guests at the 5th Pavilion.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements..',
-    },
-    {
-      id: 1,
-      title: '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
-      content:
-        'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
-      image: 'assets/news/anonsi16.9.jpg',
-      titleEN: 
-       '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
+  {
+    title: '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
+    title2: 'ტესტ სათაური',
+    title3: ' ტესტ სათაური',
+    content: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
+    content2: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს.', 
+    content3: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
+    titleEN: 'New House participates in the 28th International Caucasus Build 2024 exhibition of building materials and interiors',
+    titleEN2: 'only test',
+    titleEN3: 'only test',
+    contentEN: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements.I will serve with a discount.',
+    contentEN2: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.',
+    contentEN3: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements.I will serve with a discount.',
+    image: 'assets/news/anonsi16.9.jpg',
+    id: 1
+  },
 
-      contentEN:
-      'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება. „ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
-
-    },
     
   ];
 

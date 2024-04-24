@@ -1,4 +1,3 @@
-$widthPercentage: 23%;
 
 .shortcut {
   justify-content: center;
@@ -50,7 +49,11 @@ $widthPercentage: 23%;
   font-family: "ALK Sanet", sans-serif;
 
 }
-
+.lowtext{
+  font-family: Arial, sans-serif !important; 
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
 
 body {

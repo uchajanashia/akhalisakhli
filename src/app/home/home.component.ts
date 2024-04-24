@@ -301,26 +301,30 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
 
   ngAfterViewInit() {
-    this.setAutoplayAttribute();
     setTimeout(() => {
       this.loading = false;
       this.playVideo();
     }, 5000);
+    this.setAutoplayAttribute();
+
     Aos.refresh();
   }
 
+  
   private setAutoplayAttribute(): void {
     if (this.videoElement && this.videoElement.nativeElement) {
       const videoElement: HTMLVideoElement = this.videoElement.nativeElement;
       videoElement.setAttribute('autoplay', 'autoplay');
       videoElement.muted = true;
     }
+    if(!this.loading){
     if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
       const sairmeVideoElement: HTMLVideoElement =
         this.sairmeVideoElement.nativeElement;
       sairmeVideoElement.setAttribute('autoplay', 'autoplay');
       sairmeVideoElement.muted = true;
     }
+  }
   }
 
   playVideo() {

@@ -27,10 +27,19 @@ export interface Partniorebi {
 export interface News {
     id: number;
   title: string;
+  title2: string;
+  title3: string;
   content: string;
-  image:string;
+  content2: string;
+  content3: string;
   titleEN:string;
+  titleEN2:string;
+  titleEN3:string;
   contentEN:string;
+  contentEN2:string;
+  contentEN3:string;
+  image:string;
+
 }
 export interface Mshenebloba {
     pcont11:string;

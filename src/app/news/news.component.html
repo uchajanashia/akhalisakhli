@@ -2,10 +2,13 @@
 
 <div class="main">
 
-    <div class="news" *ngFor="let item of getPaginatedNews()">
+    <div class="news" *ngFor="let item of getPaginatedNews()" >
         <div data-aos="fade-up" class="text">
             <h3>{{ languagecheck ? item.title : item.titleEN}}</h3>
-            <p>{{ languagecheck ? item.content  : item.contentEN}}</p>
+            <p [innerHTML]="languagecheck ? item.content2  : item.contentEN2"></p>
+            <div class="parent-container">
+                <a (click)="viewMore(item)">  {{ languagecheck ? 'გაიგე მეტი ' : 'see  details' }}</a>
+              </div>
         </div>
         <img data-aos="fade-up" [src]="item.image" alt="" (click)="toggleFullScreen(item.image)">
     </div>

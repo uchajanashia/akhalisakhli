@@ -36,6 +36,7 @@ import { LandinputComponent } from './inputed/service-input/landinput/landinput.
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './guard.guard';
 import { ViewprojectComponent } from './projects/viewproject/viewproject.component';
+import { NewsviewComponent } from './news/newsview/newsview.component';
 
 export const routes: Routes = [
     {
@@ -202,6 +203,10 @@ export const routes: Routes = [
     {
       path: 'projectview',
       component:ViewprojectComponent
+    },
+    {      path: 'newsview',
+    component:NewsviewComponent
+
     },
     { path: '**', component: OtxsotxComponent }
   ];

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import Aos from 'aos';
 import { News, Services } from '../services';
 import { LanguageService } from '../language.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-news',
@@ -15,6 +16,8 @@ import { LanguageService } from '../language.service';
     imports: [HeaderComponent, FooterComponent,CommonModule]
 })
 export class NewsComponent implements OnInit{
+project: any;
+
 
   fullscreenImage: string | null = null;
   isFullScreen = false;
@@ -33,7 +36,7 @@ export class NewsComponent implements OnInit{
   currentPage = 1;
   itemsPerPage = 5;
   languagecheck = true;
-  constructor(private serviceService: ServiceListService , private language : LanguageService) { }
+  constructor(private serviceService: ServiceListService , private language : LanguageService , private router : Router) { }
 
   ngOnInit(): void {
     this.language.getBoolean().subscribe(value => {
@@ -43,7 +46,9 @@ export class NewsComponent implements OnInit{
     Aos.init();
     Aos.refresh();
   }
-
+  viewMore(item: any) {
+    this.router.navigate(['/newsview'], { state: item});
+  }
   loadNews(): void {
     this.serviceService.getNews().subscribe(news => {
       this.news = news;
