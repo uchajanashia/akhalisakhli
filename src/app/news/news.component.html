@@ -7,7 +7,7 @@
             <h3>{{ languagecheck ? item.title : item.titleEN}}</h3>
             <p [innerHTML]="languagecheck ? item.content2  : item.contentEN2"></p>
             <div class="parent-container">
-                <a (click)="viewMore(item)">  {{ languagecheck ? 'გაიგე მეტი ' : 'see  details' }}</a>
+                <a (click)="viewMore(item)" class="upper">  {{ languagecheck ? 'იხილეთ ვრცლად ' : 'find more' }}</a>
               </div>
         </div>
         <img data-aos="fade-up" [src]="item.image" alt="" (click)="toggleFullScreen(item.image)">

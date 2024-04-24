@@ -1,10 +1,10 @@
 <app-header></app-header>
 <ul class="shortcut">
-  <li><a [routerLink]="['/services/proektireba']">{{ isGeorgian ? 'პროექტირება' : 'Project Design' }}</a></li>
-  <li><a [routerLink]="['/services/mshenebloba']">{{ isGeorgian ? 'მშენებლობა' : 'Construction' }}</a></li>
-  <li><a [routerLink]="['/services/interieri']">{{ isGeorgian ? 'ინტერიერის დიზაინი' : 'Interior Design' }}</a></li>
-  <li><a [routerLink]="['/services/remonti']">{{ isGeorgian ? 'რემონტი' : 'Renovation' }}</a></li>
-  <li><a [routerLink]="['/services/landshafti']">{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape Design' }}</a></li>
+  <li><a [ngClass]="{ 'active-filter': activeFilter === '/services/proektireba' }"  [routerLink]="['/services/proektireba']">{{ isGeorgian ? 'პროექტირება' : 'Project Design' }}</a></li>
+  <li><a [ngClass]="{ 'active-filter': activeFilter === '/services/mshenebloba' }"  [routerLink]="['/services/mshenebloba']">{{ isGeorgian ? 'მშენებლობა' : 'Construction' }}</a></li>
+  <li><a [ngClass]="{ 'active-filter': activeFilter === '/services/interieri' }"  [routerLink]="['/services/interieri']">{{ isGeorgian ? 'ინტერიერის დიზაინი' : 'Interior Design' }}</a></li>
+  <li><a [ngClass]="{ 'active-filter': activeFilter === '/services/remonti' }"  [routerLink]="['/services/remonti']">{{ isGeorgian ? 'რემონტი' : 'Renovation' }}</a></li>
+  <li><a [ngClass]="{ 'active-filter': activeFilter === '/services/landshafti' }"  [routerLink]="['/services/landshafti']">{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape Design' }}</a></li>
 </ul>
 <router-outlet></router-outlet>
 <app-float-contact></app-float-contact>

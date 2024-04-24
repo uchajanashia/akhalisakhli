@@ -9,13 +9,14 @@
 	<section>
 		<h1>{{languagecheck ? news.title : news.titleEN}}</h1>
 		<div class="h1-divider"></div>
+		<div class="placeHolder_img">
+			<img style="	width: 1000px;
+			height: 562px; margin-bottom: 30px;" [src]="news.image" alt="" (click)="toggleFullScreen(news.image) ">
+			</div>
 		<p  class="intro" [innerHTML]="languagecheck ? news.content: news.contentEN"></p>
 
-		<article>
-			<div class="placeHolder_img">
-				<img style="	width: 1000px;
-				height: 562px;" [src]="news.image" alt="" (click)="toggleFullScreen(news.image) ">
-				</div>
+		<!-- <article>
+			
 			<h3  *ngIf="news.title2">{{languagecheck ? news.title2 : news.titleEN2}}</h3>
 			<p  *ngIf="news.content2" [innerHTML]="languagecheck ? news.content2: news.contentEN2"></p>
 
@@ -24,7 +25,7 @@
 
 			<p *ngIf="news.content3" [innerHTML]="languagecheck ? news.content3: news.contentEN3"></p>
 
-		</article>
+		</article> -->
 	</section>
 </main>
 <app-footer></app-footer>

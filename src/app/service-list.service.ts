@@ -329,12 +329,12 @@ export class ServiceListService {
         'პროექტის ესკიზის შეთანხმება დამკვეთთან;',
         'საგზაო მოძრაობის ორგანიზების სქემის შეთანხმება;',
         'ენერგოეფექტურობის დეკალარაციის მომზადება;',
-        'არქიტექტურული პროექტის მომზადება;',
+        'არქიტექტურული პროექტის მომზადება:',
         'კონსტრუქციური პროექტის მომზადება;',
         'კონსტრუქციური პროექტის საექსპერტო შეფასება;',
         'მშენებლობის ორგანიზების პროექტის მომზადება (მოპი);',
         'დამტკიცებული პროექტის ხარჯთაღრიცხვის გაწერა;',
-        'პროექტის შეთანხმება შესაბამის მუნიციპალიტებთან და მშენებლობის ნებართვის აღება;',
+        'პროექტის შეთანხმება შესაბამის მუნიციპალიტებთან და მშენებლობის ნებართვის აღება.',
       ],
       pcont11EN:
         'Creating project\nWe start designing with a detailed analysis of the territory, develop a pre-design concept, agree on a sketch with the customer, prepare all the necessary project documentation and obtain a building permit from the municipality.\n\nThe stages of the design process are:',
@@ -347,44 +347,44 @@ export class ServiceListService {
         'Project sketch agreement with the customer;',
         'Agreement on the traffic organization scheme;',
         'Preparation of energy efficiency declaration;',
-        'Preparation of an architectural project;',
+        'Preparation of an architectural project:',
         'Construction project preparation;',
         'Expert evaluation of the construction project;',
         'Preparation of construction organization project (mop);',
         'Issuing the cost estimate of the approved project;',
-        'Project agreement with the relevant municipalities and obtaining a building permit;',
+        'Project agreement with the relevant municipalities and obtaining a building permit.',
       ],
 
       hoverList: [
-        'ტერიტორიის ანალიზი',
-        'წინასაპროექტო კონცეფციის მომზადება',
-        'გენერალური გეგმის ზონირება და შენობის განთავსების იდენტიფიცირება',
-        'კოეფიციენტებისა და დამკვეთის მოთხოვნების მიხედვით შენობის ზონირების გაკეთება',
-        'სტილისა და გამოყენებული მასალის მიხედვით წინასაპროექტო ფასადების შექმნა',
-        'საპროექტო დავალების მიხედვით დეტალური გეგმარების შექმნა',
-        'ავეჯის განლაგების გეგმის მომზადება',
-        'ფასადზე გამოყენებული მასალების სპეციფიკაცია',
-        'კარ-ფანჯრებისა და მოაჯირების სპეციფიკაცია',
-        'ღობის, ჭიშკრისა და ავტოსადგომის პროექტირება',
-        'რენდერებისა და ფოტომონტაჟების მომზადება',
-        'ტექნიკურ-ეკონომიკური მაჩვენებლებისა და განმარტებითი ბარათის გაწერა',
-        'არქიტექურული ალბომის შეკვრა და www.tas.ge –ზე ატვირთვა',
+        'ტერიტორიის ანალიზი;',
+        'წინასაპროექტო კონცეფციის მომზადება;',
+        'გენერალური გეგმის ზონირება და შენობის განთავსების იდენტიფიცირება;',
+        'კოეფიციენტებისა და დამკვეთის მოთხოვნების მიხედვით შენობის ზონირების გაკეთება;',
+        'სტილისა და გამოყენებული მასალის მიხედვით წინასაპროექტო ფასადების შექმნა;',
+        'საპროექტო დავალების მიხედვით დეტალური გეგმარების შექმნა;',
+        'ავეჯის განლაგების გეგმის მომზადება;',
+        'ფასადზე გამოყენებული მასალების სპეციფიკაცია;',
+        'კარ-ფანჯრებისა და მოაჯირების სპეციფიკაცია;',
+        'ღობის, ჭიშკრისა და ავტოსადგომის პროექტირება;',
+        'რენდერებისა და ფოტომონტაჟების მომზადება;',
+        'ტექნიკურ-ეკონომიკური მაჩვენებლებისა და განმარტებითი ბარათის გაწერა;',
+        'არქიტექურული ალბომის შეკვრა და www.tas.ge –ზე ატვირთვა.',
       ],
 
       hoverListEN: [
-        'Territory analysis',
-        'Preparation of pre-project concept',
-        'General plan zoning and building location identification',
-        "Zoning the building according to the coefficients and customer's requirements",
-        'Creation of pre-project facades according to the style and material used',
-        'Creation of detailed planning according to project task',
-        'Preparation of furniture arrangement plan',
-        'Specification of materials used on the facade',
-        'Specification of doors, windows and railings',
-        'Designing fence, gate and parking lot',
-        'Preparation of renderings and photomontages',
-        'Issuance of technical and economic indicators and explanatory card',
-        'Binding of the architectural album and uploading it to www.tas.ge',
+        'Territory analysis;',
+        'Preparation of pre-project concept;',
+        'General plan zoning and building location identification;',
+        "Zoning the building according to the coefficients and customer's requirements;",
+        'Creation of pre-project facades according to the style and material used;',
+        'Creation of detailed planning according to project task;',
+        'Preparation of furniture arrangement plan;',
+        'Specification of materials used on the facade;',
+        'Specification of doors, windows and railings;',
+        'Designing fence, gate and parking lot;',
+        'Preparation of renderings and photomontages;',
+        'Issuance of technical and economic indicators and explanatory card;',
+        'Binding of the architectural album and uploading it to www.tas.ge.',
       ],
     },
   ];
@@ -405,7 +405,7 @@ export class ServiceListService {
         'ვადების სისტემატიური კონტროლი;',
         'უსაფრთხოების კონტროლი;',
         'სამშენებლო მოედნის დაცვის უზრუნველყოფა;',
-        'დასრულებული მშენებლობის დამკვეთისთვის ჩაბარება;',
+        'დასრულებული მშენებლობის დამკვეთისთვის ჩაბარება.',
       ],
       pcont11EN:
         'Correct and consistent coordination of the construction process will ensure the success of the project.The stages of construction works are:',
@@ -421,7 +421,7 @@ export class ServiceListService {
         'Systematic control of deadlines;',
         'Security control;',
         'Ensuring protection of the construction site;',
-        'Handing over the completed construction to the customer;',
+        'Handing over the completed construction to the customer.',
       ],
     },
   ];
@@ -445,7 +445,7 @@ export class ServiceListService {
         'მასალების შერჩევა დამკვეთის ბიუჯეტის გათვალისწინებით;',
         'ფარდების, ჟალუზების და საკიდების შერჩევა;',
         'დეკორატიული ელემენტებისა და მცენარეების შერჩევა;',
-        '3D ვიზუალიზაცია;',
+        '3D ვიზუალიზაცია.',
       ],
       pcont11EN:
         'We offer detailed consultation, space planning and 3D visualization to bring your vision to life. The stages of creating an interior design are:',
@@ -465,7 +465,7 @@ export class ServiceListService {
         "Selection of materials considering the customer's budget;",
         'Selection of curtains, blinds and hangers;',
         'Selection of decorative elements and plants;',
-        '3D visualization;',
+        '3D visualization.',
       ],
     },
   ];
@@ -482,7 +482,7 @@ export class ServiceListService {
         'მასალის შესყიდვების და მიწოდების უზრუნველყოფა;',
         'ხარისხის პერიოდული მონიტორინგი;',
         'ვადების სისტემატიური კონტროლი;',
-        'დასრულებული რემონტის დამკვეთისთვის ჩაბარება;',
+        'დასრულებული რემონტის დამკვეთისთვის ჩაბარება.'
       ],
       pcont11EN:
         'Renovation plays a crucial role in the concept of interior design to bring to reality. The first stage is a thorough assessment of the existing space, as a result We draw up a detailed plan and during the entire process we control the quality of ongoing works.',
@@ -495,7 +495,7 @@ export class ServiceListService {
         'Ensuring procurement and delivery of material;',
         'Periodic quality monitoring;',
         'Systematic control of deadlines;',
-        'Handing over the completed repairs to the customer;',
+        'Handing over the completed repairs to the customer.',
       ],
     },
   ];
@@ -511,7 +511,7 @@ export class ServiceListService {
         'წყლის სიტემების მოწესრიგება;',
         'დეკორატიული ნაწილისა და ხე-მცენარეების შერჩევა;',
         'განათების დაგეგმვა;',
-        'ღობის მოპირკეთება და ვერტიკალური გამწვანების პროექტირება;',
+        'ღობის მოპირკეთება და ვერტიკალური გამწვანების პროექტირება.',
       ],
       pcont11EN:
         'Landscape design involves the planning, design and management of outdoor spaces. The main goal of landscape design is to create an aesthetically pleasing, functional and sustainable environment.',
@@ -523,7 +523,7 @@ export class ServiceListService {
         'Arrangement of water systems;',
         'Selection of decorative parts and trees;',
         'Lighting planning;',
-        'Covering the fence and projecting vertical greenery;',
+        'Covering the fence and projecting vertical greenery.',
       ],
     },
   ];
@@ -531,21 +531,22 @@ export class ServiceListService {
   protected news: News[] = [
 
   {
-    title: '„ახალმა სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
-    title2: 'ტესტ სათაური',
-    title3: ' ტესტ სათაური',
-    content: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
+    title: '„ახალი სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
+    title2: ' ',
+    title3: '  ',
+    content: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<p></p><br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<p></p><br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
     content2: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს.', 
-    content3: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
+    content3: '',
     titleEN: 'New House participates in the 28th International Caucasus Build 2024 exhibition of building materials and interiors',
-    titleEN2: 'only test',
-    titleEN3: 'only test',
+    titleEN2: ' ',
+    titleEN3: ' ',
     contentEN: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements.I will serve with a discount.',
     contentEN2: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.',
-    contentEN3: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements.I will serve with a discount.',
+    contentEN3: ' ',
     image: 'assets/news/anonsi16.9.jpg',
     id: 1
   },
+
 
     
   ];
@@ -556,7 +557,7 @@ export class ServiceListService {
       titleEn: 'Individual residential house in Batumi',
       category: 'ინტერიერი დიზაინი',
       categoryEn: 'interior design',
-      text: 'შევასრულეთ  2 სართულიანი ინდივიდუალური საცხოვრებელი სახლის ინტერიერის დიზაინის პროექტი.<br> <strong>სახლის ფართობი: 400 კვ.მ. </strong> <br>I სართულზე განთავსებულია: სტუდიოს ტიპის მისაღები ოთახი, კაბინეტი, საძინებელი, სველი წერტილი, ტექნიკური ოთახი.<br>II სართულზე განთავსებულია: მისაღები ოთახი, 3 საძინებელი, 2 აივანი.',
+      text: 'შევასრულეთ  2 სართულიანი ინდივიდუალური საცხოვრებელი სახლის ინტერიერის დიზაინის პროექტი.<p></p> <br> <strong>სახლის ფართობი: 400 კვ.მ. </strong> <br>I სართულზე განთავსებულია: სტუდიოს ტიპის მისაღები ოთახი, კაბინეტი, საძინებელი, სველი წერტილი, ტექნიკური ოთახი.<p></p> <br>II სართულზე განთავსებულია: მისაღები ოთახი, 3 საძინებელი, 2 აივანი.',
       textEn: 'no text for english sorry',
       image: [
         'assets/galerea/interieris dizaini/1/1.jpg',
@@ -568,7 +569,7 @@ export class ServiceListService {
       titleEn: 'individual residential house in Saguramo',
       category: 'ლანდშაფტის დიზაინი',
       categoryEn: 'Landscape Design',
-      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br> <strong>ეზოს ფართობი: 2100 კვ.მ. <strong>',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <p></p> <br> <strong>ეზოს ფართობი: 2100 კვ.მ. <strong>',
       textEn: 'no text for english sorry',
       image: [
         'assets/galerea/landshapti/1/10.jpg',
@@ -581,7 +582,7 @@ export class ServiceListService {
       titleEn: 'Individual Residential House in Didi Digomi',
       category: 'ლანდშაფტის დიზაინი',
       categoryEn: 'Landscape Design ',
-      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br>ეზოს ფართობი: 1800 კვ.მ.',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <p></p> <br>ეზოს ფართობი: 1800 კვ.მ.',
       textEn: 'We have completed a landscape design project.<br> Yard area: 1800 sq.m.',
       image: [
         'assets/galerea/landshapti/2/1.jpg',
@@ -595,7 +596,7 @@ export class ServiceListService {
       titleEn: 'Individual Residential House on Lisi',
       category: 'ლანდშაფტის დიზაინი',
       categoryEn: 'Landscape Design ',
-      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი.<br>ეზოს ფართობი: 800 კვ.მ. ',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი.<p></p> <br>ეზოს ფართობი: 800 კვ.მ. ',
       textEn: 'We have completed a landscape design project. <br> Yard area: 800 sq.m. ',
       image: [
         'assets/galerea/landshapti/3/7.jpg',
@@ -608,7 +609,7 @@ export class ServiceListService {
       titleEn: 'Individual residential house in Saguramo',
       category: 'ლანდშაფტის დიზაინი',
       categoryEn: 'Landscape Design ',
-      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br>ეზოს ფართობი: 900 კვ.მ.',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <p></p> <br>ეზოს ფართობი: 900 კვ.მ.',
       textEn: 'We have completed a landscape design project.<br> Yard area: 900 sq.m.',
       image: [
         'assets/galerea/landshapti/4/5.jpg',
@@ -621,7 +622,7 @@ export class ServiceListService {
       titleEn: 'An individual residential house in Tsodori',
       category: 'ლანდშაფტის დიზაინი',
       categoryEn: 'Landscape Design ',
-      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <br>ეზოს ფართობი: 22 000  კვ.მ.',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი. <p></p> <br>ეზოს ფართობი: 22 000  კვ.მ.',
       textEn: 'We have completed a landscape design project.<br> Yard area: 22 000 sq.m.',
       image: [
         'assets/galerea/landshapti/5/3.jpg',
@@ -634,7 +635,7 @@ export class ServiceListService {
       titleEn: 'Individual residential house in napkets',
       category: 'ლანდშაფტის დიზაინი',
       categoryEn: 'Landscape Design ',
-      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი.<br>ეზოს ფართობი: 2000  კვ.მ.',
+      text:'შევასრულეთ ლანდშაფტის დიზაინის პროექტი.<p></p> <br>ეზოს ფართობი: 2000  კვ.მ.',
       textEn: 'We have completed a landscape design project. <br> Yard area: 2000 sq.m.',
       image: [
         'assets/galerea/landshapti/6/2.jpg',
@@ -662,8 +663,8 @@ export class ServiceListService {
       titleEn: 'Individual residential house in Saguramo',
       category: 'მშენებლობა',
       categoryEn: 'construction',
-      text: 'შევასრულეთ სამშენებლო სამუშაოები.<br>სახლის ფართობი: 220 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, საძინებელი, სველი  წერტილი, ტექნიკური ოთახი, აივანი.<br>II სართულზე განთავსებულია: 3 საძინებელი, 2 სველი წერტილი, აივანი.',
-      textEn: 'We have done the construction work. <br> House area: 220 sq.m.<br> On the first floor there are: living room, kitchen, bedroom, bathroom, technical room, balcony. <br> II floor: 3 bedrooms, 2 bathrooms, balcony.',
+      text: 'შევასრულეთ სამშენებლო სამუშაოები.<p></p> <p></p> <br>სახლის ფართობი: 220 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, საძინებელი, სველი  წერტილი, ტექნიკური ოთახი, აივანი.<p></p> <br>II სართულზე განთავსებულია: 3 საძინებელი, 2 სველი წერტილი, აივანი.',
+      textEn: 'We have done the construction work. <br> House area: 220 sq.m.<p></p> <br> On the first floor there are: living room, kitchen, bedroom, bathroom, technical room, balcony. <br> II floor: 3 bedrooms, 2 bathrooms, balcony.',
       image: [
         'assets/galerea/mshenebloba/2/5.jpg',
 
@@ -675,8 +676,8 @@ export class ServiceListService {
       titleEn: 'An individual residential house in Tskneti',
       category: 'მშენებლობა',
       categoryEn: 'construction',
-      text: 'შევასრულეთ სამშენებლო და სარემონტო სამუშაოები.<br>სახლის ფართობი: 220 კვ.მ. <br>სახლში განთავსებულია: მისაღები ოთახი, 4 საძინებელი,  სასადილო ოთახი, სამზარეულო, სველი წერტილი, ვერანდა.',
-      textEn: 'We have performed construction and repair work. <br> House area: 220 sq.m.<br> House: living room, 4 bedrooms, dining room, kitchen, bathroom, porch.',
+      text: 'შევასრულეთ სამშენებლო და სარემონტო სამუშაოები.<p></p> <br>სახლის ფართობი: 220 კვ.მ. <br>სახლში განთავსებულია: მისაღები ოთახი, 4 საძინებელი,  სასადილო ოთახი, სამზარეულო, სველი წერტილი, ვერანდა.',
+      textEn: 'We have performed construction and repair work. <p></p> <br> House area: 220 sq.m.<br> House: living room, 4 bedrooms, dining room, kitchen, bathroom, porch.',
       image: [
         'assets/galerea/mshenebloba/3/6.jpg',
         'assets/galerea/mshenebloba/3/7.jpg',
@@ -691,8 +692,8 @@ export class ServiceListService {
       titleEn: 'Individual Residential House in Van',
       category: 'მშენებლობა',
       categoryEn: 'construction',
-      text: 'სახლი მდებარეობს ვანის რაიონის სოფელ მთისძირში. შევასრულეთ სრული საპროექტო მომსახურება, ავიღეთ მშენებლობის ნებართვა, მიმდინარეობს სამშენებლო და სარემონტო სამუშაოები.<br>სახლის ფართობი: 190 კვ.მ.<br>სახლში განთავსებულია: მისაღები ოთახი, 3 საძინებელი, სამზარეულო, სველი წერტილი.',
-      textEn: 'The house is located in the village of Mtisdziri in Vani district.We have performed full design services, we have received construction permits, construction and renovations are underway. <br> House area: 190 sq.m.',
+      text: 'სახლი მდებარეობს ვანის რაიონის სოფელ მთისძირში. შევასრულეთ სრული საპროექტო მომსახურება, ავიღეთ მშენებლობის ნებართვა, მიმდინარეობს სამშენებლო და სარემონტო სამუშაოები.<p></p> <br>სახლის ფართობი: 190 კვ.მ.<br>სახლში განთავსებულია: მისაღები ოთახი, 3 საძინებელი, სამზარეულო, სველი წერტილი.',
+      textEn: 'The house is located in the village of Mtisdziri in Vani district.We have performed full design services, we have received construction permits, construction and renovations are underway. <p></p> <br> House area: 190 sq.m.',
       image: [
         'assets/galerea/mshenebloba/4/10.jpg',
         'assets/galerea/mshenebloba/4/11.jpg',
@@ -706,7 +707,7 @@ export class ServiceListService {
       titleEn: 'Individual Residential House in Lisi Topograph',
       category: 'პროექტირება',
       categoryEn: 'Project Design',
-      text: 'სახლი მდებარეობს ლისის ტბის მიმდებარედ. შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა. <br>სახლის ფართობი: 460 კვ.მ.  <br>I სართულზე განთავსებულია:  მისაღები ოთახი, სამზარეულო, კაბინეტი, საძინებელი, ტექნიკური ოთახი, 2 სველი წერტილი. <br>II სართულზე განთავსებულია: 4 საძინებელი (საგარდერობო ოთახებითა და სველი წერტილებით), სამრეცხაო/საშრობი ოთახი.<br>III სართულზე მდებარეობს  ღია ტერსა და სველი წერტილი.',
+      text: 'სახლი მდებარეობს ლისის ტბის მიმდებარედ. შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა. <br>სახლის ფართობი: 460 კვ.მ.  <p></p> <br>I სართულზე განთავსებულია:  მისაღები ოთახი, სამზარეულო, კაბინეტი, საძინებელი, ტექნიკური ოთახი, 2 სველი წერტილი. <br>II სართულზე განთავსებულია: 4 საძინებელი (საგარდერობო ოთახებითა და სველი წერტილებით), სამრეცხაო/საშრობი ოთახი.<p></p> <br>III სართულზე მდებარეობს  ღია ტერსა და სველი წერტილი.',
       textEn: '',
       image: [
         'assets/galerea/proeqtireba/1/1.jpg',
@@ -724,7 +725,7 @@ export class ServiceListService {
 
       ],
       video: '',
-      text: 'შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა.<br>სახლის ფართობი: 450 კვ.მ.   <br> I  სართულზე განთავსებულია:  მისაღები ოთახი, სამზარეულო, საძინებელი, სველი წერტილი, ტექნიკური ოთახი. <br>II სართულზე  განთავსებულია: მისღები ოთახი,  4 საძინებელი, 3 სველი წერტილი, 2 აივანი.'
+      text: 'შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა.<br>სახლის ფართობი: 450 კვ.მ.   <p></p> <br> I  სართულზე განთავსებულია:  მისაღები ოთახი, სამზარეულო, საძინებელი, სველი წერტილი, ტექნიკური ოთახი. <br>II სართულზე  განთავსებულია: მისღები ოთახი,  4 საძინებელი, 3 სველი წერტილი, 2 აივანი.'
     },
     {
       title: 'ინდივიდუალური საცხოვრებელი სახლი დიდ დიღომში',
@@ -737,7 +738,7 @@ export class ServiceListService {
 
       ],
       video: '',
-      text: 'შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა. <br>სახლის ფართობი: 400 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო/სასადილო, კაბინეტი, სველი წერტილი, ტექნიკური ოთახი.<br>II სართულზე განთავსებულია: მისაღები ოთახი,  4 საძინებელი, კაბინეტი, 2 სველი წერტილი, 2 ტერასა.<br>III სართულზე მდებარეობს ღია ტერასა.'
+      text: 'შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა. <p></p> <br>სახლის ფართობი: 400 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო/სასადილო, კაბინეტი, სველი წერტილი, ტექნიკური ოთახი.<p></p> <br>II სართულზე განთავსებულია: მისაღები ოთახი,  4 საძინებელი, კაბინეტი, 2 სველი წერტილი, 2 ტერასა.<br>III სართულზე მდებარეობს ღია ტერასა.'
     },
     {
       title: 'ინდივიდუალური საცხოვრებელი  სახლი ნავდარაანთკარში',
@@ -752,7 +753,7 @@ export class ServiceListService {
 
       ],
       video: '',
-      text: 'სახლი მდებარეობს მცხეთის მუნიციპალიტეტის სოფელ ნავდარაანთკარში. შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა.<br>სახლის ფართობი: 370 კვ.მ.<br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, საძინებელი, სველი წერტილი,  ტექნიკური ოთახი.<br>II სართულზე განთავსებულია: 4 საძინებელი, 2 სველი წერტილი, სამრეცხაო ოთახი, 3 აივანი.'
+      text: 'სახლი მდებარეობს მცხეთის მუნიციპალიტეტის სოფელ ნავდარაანთკარში. შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა.<p></p> <br>სახლის ფართობი: 370 კვ.მ.<br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, საძინებელი, სველი წერტილი,  ტექნიკური ოთახი.<p></p> <br>II სართულზე განთავსებულია: 4 საძინებელი, 2 სველი წერტილი, სამრეცხაო ოთახი, 3 აივანი.'
     },
     {
       title: 'ინდივიდუალური საცხოვრებელი სახლი ლისზე',
@@ -765,7 +766,7 @@ export class ServiceListService {
 
       ],
       video: '',
-      text: 'შევასრულეთ  არქიტექტურული პროექტი.<br>სახლის ფართობი: 410 კვ.მ.<br>I  სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, ტექნიკური ოთახი, 2 ტერასა.<br>II სართულზე განთავსებულია: 4 საძინებელი (საგარდერობე ოთახებითა და სველი წერტილებით),  2 აივანი.'
+      text: 'შევასრულეთ  არქიტექტურული პროექტი.<br>სახლის ფართობი: 410 კვ.მ.<p></p> <br>I  სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, ტექნიკური ოთახი, 2 ტერასა.<br>II სართულზე განთავსებულია: 4 საძინებელი (საგარდერობე ოთახებითა და სველი წერტილებით),  2 აივანი.'
     },
 
     {
@@ -779,14 +780,14 @@ export class ServiceListService {
 
       ],
       video: '',
-      text: 'სახლი მდებარეობს მცხეთის მუნიციპალიტეტის სოფელ ძეგვში. შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა. <br>სახლის ფართობი: 200 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, სველი წერტილი, ტექნიკური ოთახი, ღია ტერასა.<br>II სართულზე განთავსებულია: 3 საძინებელი, 2 სველი წერტილი, 2 აივანი.'
+      text: 'სახლი მდებარეობს მცხეთის მუნიციპალიტეტის სოფელ ძეგვში. შევასრულეთ სრული საპროექტო მომსახურება და ავიღეთ მშენებლობის ნებართვა. <p></p> <br>სახლის ფართობი: 200 კვ.მ. <br>I სართულზე განთავსებულია: მისაღები ოთახი, სამზარეულო, სველი წერტილი, ტექნიკური ოთახი, ღია ტერასა.<p></p> <br>II სართულზე განთავსებულია: 3 საძინებელი, 2 სველი წერტილი, 2 აივანი.'
     },
     {
       title: 'საცხოვრებელი ბინა თბილისში',
       titleEn: 'Residential apartment in Tbilisi',
       category: 'რემონტი',
       categoryEn: 'Renovation',
-      text: 'ბინა მდებარეობს ქ. თბილისში, საირმის ქუჩაზე. შევასრულეთ ინტერიერის  დიზაინის პროექტი და სარემონტო სამუშაოები.<br>ბინის ფართობი: 134 კვ.მ. <br>ბინაში განთავსებულია:  მისაღები ოთახი, 2 საძინებელი, საგარდერობე ოთხი, კაბინეტი, სამზარეულო, ჰოლი, 2 სველი წერტილი, აივანი.',
+      text: 'ბინა მდებარეობს ქ. თბილისში, საირმის ქუჩაზე. შევასრულეთ ინტერიერის  დიზაინის პროექტი და სარემონტო სამუშაოები.<br>ბინის ფართობი: 134 კვ.მ. <p></p> <br>ბინაში განთავსებულია:  მისაღები ოთახი, 2 საძინებელი, საგარდერობე ოთხი, კაბინეტი, სამზარეულო, ჰოლი, 2 სველი წერტილი, აივანი.',
       textEn: '',
       image: [
         'assets/galerea/remonti/1/1.jpg',
@@ -804,7 +805,7 @@ export class ServiceListService {
       titleEn: 'Individual Residential House in Shindisi',
       category: 'რემონტი',
       categoryEn: 'Renovation',
-      text: 'შევასრულეთ ინტერიერის დიზაინის პროექტი და სარემონტო სამუშაოები. <br> სახლის ფართობი: 320 კვ.მ.  <br>სახლში განთავსებულია: სტუდიოს ტიპის მისაღები, 3 საძინებელი, 3 სველი წერტილი, ტექნიკური ოთახი, 2 ტერასა.',
+      text: 'შევასრულეთ ინტერიერის დიზაინის პროექტი და სარემონტო სამუშაოები. <br> სახლის ფართობი: 320 კვ.მ.  <p></p> <br>სახლში განთავსებულია: სტუდიოს ტიპის მისაღები, 3 საძინებელი, 3 სველი წერტილი, ტექნიკური ოთახი, 2 ტერასა.',
       textEn: '',
       image: [
         'assets/galerea/remonti/2/1.jpg',
@@ -825,7 +826,7 @@ export class ServiceListService {
       titleEn: 'An individual residential house in Tskneti',
       category: 'რემონტი',
       categoryEn: 'Renovation',
-      text: 'შევასრულეთ სამშენბელო და  სარემონტო სამუშაოები.<br>სახლის ფართობი: 220 კვ.მ. <br>სახლში განთავსებულია: მისაღები ოთახი, 4 საძინებელი,  სასადილო ოთახი, სამზარეულო, სველი წერტილი, ვერანდა.',
+      text: 'შევასრულეთ სამშენბელო და  სარემონტო სამუშაოები.<br>სახლის ფართობი: 220 კვ.მ. <p></p> <br>სახლში განთავსებულია: მისაღები ოთახი, 4 საძინებელი,  სასადილო ოთახი, სამზარეულო, სველი წერტილი, ვერანდა.',
       textEn: '',
       image: [
         'assets/galerea/remonti/3/1.jpg',
@@ -836,7 +837,7 @@ export class ServiceListService {
       ],
       video: '_N2INtpRIos'
     },
-  ]
+  ];
 
 getproject(): project[]{
   return this.project;

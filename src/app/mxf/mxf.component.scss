@@ -5,6 +5,9 @@
   width: 100%;
   height: 100%;
 }
+.upper{
+  font-family: "ALK Sanet", sans-serif;
+}
 //article
 .about {
   overflow: hidden;
@@ -15,10 +18,7 @@
       margin-top: 40px;
       height: 400px;
       width: 100%;
-      background-image: url(../../assets/pics/SVG/backPatern.svg);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: 100%;
+
 
       .forpatternB {
         width: 100%;
@@ -35,8 +35,9 @@
             font-size: clamp(1rem,2vw,2rem);
             font-weight: 100;
             letter-spacing: 2px;
-            text-align: end;
-            padding: 10px 20px;
+            text-align: center;
+            padding: 0;
+            margin-bottom: 30px;
             text-wrap: nowrap;
             color: white;
               font-family: "ALK Sanet", sans-serif;
@@ -84,96 +85,21 @@
         }
       }
     }
-    .middlec {
-      height: 400px;
-      margin: 150px 0;
-      width: 100%;
-      background-image: url(../../assets/pics/SVG/pattern.svg);
-      background-attachment: fixed;
-      background-repeat:repeat;
-      background-size: 100%;
-      padding: 20px 0;
-      .forpatternW {
-        width: 100%;
-        height: max-content;
 
-        object-fit: cover;
-        display: flex;
-        .forcont {
-          height: 100%;
-          width: 30%;
-          p {
-            line-height: 2;
-            margin-left: 90px;
-            margin-top: 30px;
-            text-align: justify;
-            margin-right: 30px;
-              font-family: "BPG Banner ExtraSquare", sans-serif;
-          
-          }
-        }
-        .imgesW {
-          position: relative;
-          width: 30%;
-          img {
-            position: absolute;
-            border: 7px solid black;
-            width: 200px;
-            height: 150px;
-          }
-          object-fit: cover;
-          .sizeW1 {
-            left: 20px;
-            transform: translateY(-40px);
-            z-index: 998;
-            width: 380px;
-            height: 260px;
-          }
-          .sizeW2 {
-            z-index: 999;
-            height: 130px;
-            left: 220px;
-            top: 160px;
-            width: 250px;
-          }
-          .sizeW3 {
-            transform: translateY(40px);
-            left: -10px;
-            bottom: 0;
-            z-index: 998;
-            width: 260px;
-            height: 160px;
-          }
-        }
-        .moreCont {
-          width: 40%;
-          p {
-            font-size: clamp(0.7rem, 2vw, 1rem);
-            margin-right: 90px;
-            margin-top: 30px;
-            height: 70px;
-            text-align: justify;
-              font-family: "BPG Banner ExtraSquare", sans-serif;
-          
-          }
-          .pos1 {
-            transform: translateY(30px);
-            font-size: clamp(0.7rem, 2vw, 1rem);
-          }
-          .pos2 {
-            width: 75%;
-            transform: translate(60px, 70px);
-            font-size: clamp(0.7rem, 2vw, 1rem);
-          }
-          .pos3 {
-            width: 100%;
-            transform: translate(-90px, 100px);
-            font-size: clamp(0.7rem, 2vw, 1rem);
-          }
-        }
-      }
-    }
   }
+}
+
+.black{
+  background-image: url(../../assets/pics/SVG/backPatern.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.white{
+  background-image: url(../../assets/pics/SVG/pattern.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 p{
   font-family: Arial, sans-serif !important; 

@@ -4,12 +4,13 @@ import { LandshaftiComponent } from './landshafti/landshafti.component';
 import { MsheneblobaComponent } from './mshenebloba/mshenebloba.component';
 import { ProektirebaComponent } from './proektireba/proektireba.component';
 import { RemontiComponent } from './remonti/remonti.component';
-import { RouterLink, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../header/header.component";
 import { FloatContactComponent } from "../float-contact/float-contact.component";
 import { FooterComponent } from "../footer/footer.component";
 import { LanguageService } from '../language.service';
+import { filter } from 'rxjs';
 
 @Component({
     selector: 'app-service',
@@ -20,12 +21,27 @@ import { LanguageService } from '../language.service';
 })
 export class ServiceComponent implements OnInit{
     isGeorgian: boolean = true; 
-
-    constructor(private languageService: LanguageService){}
+    activeFilter='';
+    constructor(private languageService: LanguageService,private router :Router){
+         this.activeFilter = this.router.url;
+         
+    }
     ngOnInit(): void {
         this.languageService.currentLanguage$.subscribe(language => {
             this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
           });
+         
+          
+          this.router.events.pipe(
+            filter(event => event instanceof NavigationEnd)
+          ).subscribe((event: any) => {
+            if (event instanceof NavigationEnd) {
+              this.activeFilter = event.urlAfterRedirects;
+
+            }
+          });
+        }
+          
     }
 
-}
+
