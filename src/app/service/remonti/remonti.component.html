@@ -1,9 +1,9 @@
 <div class="forAlign">
   <app-carusel-pic-remonti class="compo"></app-carusel-pic-remonti>
-s
+
   <article>
     <h1>{{ isGeorgian ? 'რემონტი' : 'Renovation' }}</h1>
-    <div class="txtcontain">
+    <div class="txtcontain lowtext">
       <p *ngFor="let remontiItem of remontiList">
         {{ isGeorgian ? remontiItem.pcont11 : remontiItem.pcont11EN }}
       </p>
@@ -12,6 +12,12 @@ s
           <li *ngFor="let item of isGeorgian ? remontiItem.pcontli : remontiItem.pcontliEN">{{ item }}</li>
         </ng-container>
       </ul>
+      <div class="parent-container">
+        <a href="/projects">  {{ isGeorgian ? 'ჩვენი ნამუშევრები' : 'see our projects' }}</a>
+      </div>
+
     </div>
+
   </article>
 </div>
+

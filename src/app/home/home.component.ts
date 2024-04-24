@@ -392,10 +392,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   imageObjects: { imageUrl: string; text: string; textEn:string; linkUrl: string }[] = [
-    { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', textEn:'Design',  linkUrl: 'services/proektireba' },
+    { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', textEn:'Project Design',  linkUrl: 'services/proektireba' },
     { imageUrl: 'assets/pics/web/mshenebloba/cover.jpg', text: 'მშენებლობა',textEn:'construction', linkUrl: 'services/mshenebloba' },
     { imageUrl: 'assets/pics/web/interieri/cover.jpg', text: 'ინტერიერის დიზაინი',textEn:'interior design', linkUrl: 'services/interieri' },
-    { imageUrl: 'assets/pics/web/remonti/cover.jpg', text: 'რემონტი',textEn:'Repair', linkUrl: 'services/remonti' },
+    { imageUrl: 'assets/pics/web/remonti/cover.jpg', text: 'რემონტი',textEn:'Renovation', linkUrl: 'services/remonti' },
     { imageUrl: 'assets/pics/web/landshapti/cover.jpg', text: 'ლანდშაფტის დიზაინი',textEn:'Landscape design', linkUrl: 'services/landshafti' },
   ];
 

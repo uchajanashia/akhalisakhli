@@ -5,6 +5,7 @@ article {
   align-items: center;
   flex-direction: column;
 }
+
 .carusel {
   animation: intro 0.75s ease;
   border-radius: 10px;
@@ -932,4 +933,10 @@ px
     font-size: 1.2em; 
     letter-spacing: 0.15rem;
     line-height: 1.4;
+}
+
+.lowtext{
+  font-family: Arial, sans-serif !important; 
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
 }

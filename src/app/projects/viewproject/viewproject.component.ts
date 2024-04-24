@@ -36,8 +36,6 @@ export class ViewprojectComponent {
 
   project: any;
   product="";
-  image2url="";
-  image3url="";
   productlist: string[] = [];
   
   countries=[
@@ -254,6 +252,11 @@ export class ViewprojectComponent {
   visibleImages: string[] = [];
   moreimage = false;
 
+  isimage =false;
+
+  fullscreenImage: string | null = null;
+  fullscreenVideo: string | null = null;
+  isFullScreen = false;
 
 
   constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,    private serviceService: ServiceListService,
@@ -263,6 +266,9 @@ export class ViewprojectComponent {
   private youtubePlayerService:YoutubePlayerService) {
     this.project = history.state;
     this.updateVisibleImages();
+    if(this.project.image.length > 1){
+      this.isimage=true;
+    }
 
   }
   ngOnInit(): void {
@@ -270,6 +276,16 @@ export class ViewprojectComponent {
       this.languagecheck = value;
     });
     this.product = this.project.image[0];
+  }
+
+
+  toggleFullScreen(imageSrc: string): void {
+    if (this.fullscreenImage === imageSrc) {
+      this.isFullScreen = !this.isFullScreen;
+    } else {
+      this.isFullScreen = true;
+      this.fullscreenImage = imageSrc;
+    }
   }
 
   updateVisibleImages() {

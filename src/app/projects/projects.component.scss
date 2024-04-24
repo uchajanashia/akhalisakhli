@@ -91,7 +91,7 @@ button {
   height: 180px;
   margin: 10px;
   position: relative;
-  background: url(../../assets/pics/SVG/pattern.svg), var(--black-v4);
+  background: url(../../assets/pics/SVG/backPatern.svg);
   background-attachment: fixed;
   background-size: 100%;
   overflow: hidden;
@@ -105,7 +105,9 @@ button {
     opacity: 0.9;
     transition: opacity 0.3s ease;
   }
-
+  .lowtext{
+    font-family: Arial, sans-serif;
+  }
   p,
   .grid__title {
     color: white;
@@ -130,9 +132,7 @@ button {
     color: white;
     letter-spacing: 2px;
   }
-  .upper{
-    font-family: "ALK Sanet", sans-serif;
-  }
+
   .grid__overlay {
     background: url(../../assets/pics/SVG/backPatern.svg);
     background-attachment: fixed;

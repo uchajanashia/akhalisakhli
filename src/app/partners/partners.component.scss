@@ -5,7 +5,6 @@
     align-items: center;
 }
 .partniorebi {
-    background-color: var(--black-v4);
     position: relative;
     height: 400px;
     object-fit: cover;
@@ -17,7 +16,7 @@
   }
   .over{
     position: relative;
-    background-image: url(../../assets/pics/SVG/pattern.svg);
+    background-image: url(../../assets/pics/SVG/backPatern.svg);
     background-attachment: fixed;
     object-fit: cover;
     height: 100%;
@@ -86,7 +85,6 @@
       a{
         text-decoration: none;
         color: white;
-        background-color: var(--black-v5);
         border-radius: 5px;
         padding: 5px 10px;
         font-size: clamp(0.6rem, 1.2vw, 1rem);
@@ -104,7 +102,6 @@
   
 @media only screen and (min-width: 1023px) and (max-width: 1400px) {
   .partniorebi {
-    background-color: var(--black-v4);
     position: relative;
     height: 400px;
     object-fit: cover;
@@ -115,7 +112,7 @@
     display: flex;
     .over {
       position: relative;
-      background-image: url(../../assets/pics/SVG/pattern.svg);
+      background-image: url(../../assets/pics/SVG/backPatern.svg);
       
       object-fit: cover;
       background-size: 100%;
@@ -162,9 +159,8 @@
     }
   }
 }
-@media only screen and (min-width: 770px) and (max-width: 1024px) {
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
   .partniorebi {
-    background-color: var(--black-v4);
     position: relative;
     height: 400px;
     object-fit: cover;
@@ -174,71 +170,10 @@
     justify-content: center;
     display: flex;
     .over {
-      background-size: 150%;
       position: relative;
-      background-image: url(../../assets/pics/SVG/pattern.svg);
+      background-image: url(../../assets/pics/SVG/backPatern.svg);
       object-fit: cover;
-      background-size: 100%;
-      height: 100%;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 30px;
-      display: flex;
-      .saxeli {
-        width: 30%;
-        color: white;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 150px;
-        }
-        margin: 20px;
-        height: 65%;
-        border-right: 2px solid white;
-      }
-      .part {
-        position: relative;
-        overflow: hidden;
-        height: 80%;
-        width: 70%;
-        display: flex;
-        margin-right: 40px;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        .caru {
-          height: 80%;
-        }
-        h1 {
-          color: white;
-          font-weight: 100;
-          font-size: 2rem;
-            font-family: "ALK Sanet", sans-serif;
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 771px) {
-  .partniorebi {
-    background-color: var(--black-v4);
-    position: relative;
-    height: 400px;
-    object-fit: cover;
-    background-size: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    .over {
-      position: relative;
       background-size: 200%;
-      background-image: url(../../assets/pics/SVG/pattern.svg);
-      object-fit: cover;
-      background-size: 100%;
       height: 100%;
       width: 100%;
       align-items: center;
@@ -277,16 +212,14 @@
           font-weight: 100;
           font-size: 2rem;
             font-family: "ALK Sanet", sans-serif;
-          
         }
       }
     }
   }
-  
 }
+
 @media only screen and (max-width: 588px) {
   .partniorebi {
-    background-color: var(--black-v4);
     position: relative;
     object-fit: cover;
     background-size: 100%;
@@ -295,13 +228,12 @@
     justify-content: center;
     display: flex;
     .over {
-      background-size: 200%;
       display: flex;
       flex-direction: column;
       position: relative;
-      background-image: url(../../assets/pics/SVG/pattern.svg);
+      background-image: url(../../assets/pics/SVG/backPatern.svg);
       object-fit: cover;
-      background-size: 100%;
+      background-size: 300%;
       width: 100%;
       align-items: center;
       justify-content: space-between;

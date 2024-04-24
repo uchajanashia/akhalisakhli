@@ -1,3 +1,8 @@
+.lowtext p li {
+  font-family: Arial, sans-serif !important; 
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
 .floatcont {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.233);
@@ -10,9 +15,11 @@
   transition: opacity 0.3s;
   ul {
     li {
+      font-family: Arial, sans-serif !important; 
+      font-size: 1rem !important;
+      line-height: 1.5 !important;
       color: var(--mid-green);
-      font-family: "BPG Banner ExtraSquare", sans-serif;
-      line-height: 1.6;
+
     }
   }
 }
@@ -52,7 +59,10 @@
       flex-direction: column;
       flex-wrap: wrap;
       padding-bottom: 30px;
-      p {
+      p { 
+         font-family: Arial, sans-serif !important; 
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
         max-width: 100%;
         font-size: clamp(1rem, 1.2vw, 1.2rem);
         text-align: justify;
@@ -66,19 +76,21 @@
       }
       ul {
         li {
+          font-family: Arial, sans-serif !important; 
+          font-size: 1rem !important;
+          line-height: 1.5 !important;
           color: white;
           line-height: 1.6;
           margin-left: 30px;
           font-family: "BPG Banner ExtraSquare", sans-serif;
           width: auto;
           transition: 0.3s;
-
-
+          
+        }
       }
       }
     }
   }
-}
 .txtcontain2 {
   width: 100%;
   background: url(../../../assets/pics/SVG/backPatern.svg);
@@ -88,6 +100,9 @@
   flex-wrap: wrap;
   padding: 30px 0;
   p {
+    font-family: Arial, sans-serif !important; 
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
     max-width: 430px;
     font-size: clamp(0.7rem, 1vw, 0.9rem);
     text-align: justify;
@@ -215,4 +230,57 @@
   .forAlign article .txtcontain {
     margin: 2% 5%;
   }
+}
+.parent-container {
+  overflow: hidden; 
+}
+
+.parent-container a {
+  font-family: Arial, sans-serif !important; 
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5em;
+  margin-left: -.5em;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.parent-container a:before,
+.parent-container a:after {
+  position: absolute;
+  content: '';
+  border-bottom: 3px solid white;
+  border-radius: 1em;
+  bottom: .3em;
+  transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.parent-container a:before {
+  width: 1em;
+  transform-origin: left;
+}
+
+.parent-container a:after {
+  width: 82%;
+  left: 1em;
+  transform: translateX(110%);
+}
+
+.parent-container a:hover:before {
+  transform: scaleX(0.3);
+}
+
+.parent-container a:hover:after {
+  transform: translateX(0);
+}
+.lowtext p li {
+  font-family: Arial, sans-serif !important; 
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
 }
