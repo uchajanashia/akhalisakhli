@@ -37,6 +37,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './guard.guard';
 import { ViewprojectComponent } from './projects/viewproject/viewproject.component';
 import { NewsviewComponent } from './news/newsview/newsview.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 export const routes: Routes = [
     {
@@ -207,6 +208,10 @@ export const routes: Routes = [
     {      path: 'newsview',
     component:NewsviewComponent
 
+    },
+    {
+      path :'privacy',
+      component:PrivacyComponent
     },
     { path: '**', component: OtxsotxComponent }
   ];
