@@ -17,7 +17,7 @@ export class HeaderComponent {
 
   isGeorgian: boolean = true;
   isMobileMenuOpen: boolean = false;
-  selectedLanguage: string= "";
+  selectedLanguage: string= "ka";
   constructor(private language: LanguageService , private cook :CookieService) {}
 
   ngOnInit(): void {

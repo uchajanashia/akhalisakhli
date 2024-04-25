@@ -12,6 +12,7 @@ export class LanguageService {
   constructor(public cook : CookieService) {    
       this.currentLanguageSubject.next(this.cook.get('lang'))
       this.updateLanguageCheck();
+
   }
 
   setLanguage(language: boolean) {
@@ -32,7 +33,10 @@ export class LanguageService {
   }
 
   updateLanguageCheck() {
-    const truee = this.cook.get('lang');
+    var truee = this.cook.get('lang');
+    if (!truee){
+      truee = 'ka'
+    }
     const languageCheckValue = truee === 'ka'; 
     this.languageCheckSubject.next(languageCheckValue);
   }
