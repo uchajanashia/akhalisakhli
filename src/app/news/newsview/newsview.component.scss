@@ -76,13 +76,25 @@ section p {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
+	width: min-content;
 }
 
-
+.image{
+	width: 1000px;
+	height: 562px;
+	margin-bottom: 30px;
+}
 /*    Mobile    */
 
 @media only screen and (min-width: 320px) {
+	.background{
+		background-size: 400%;
+	}
+	.image{
+		width: 400px;
+		height: 225px;
+		margin: auto;
+	}
     /* 320px */
 	h1 {
 		font-size: 42px;
@@ -96,11 +108,11 @@ section p {
 
 }
 
-
-
-
-
 @media only screen and (min-width: 667px) {
+	.image{
+		width: 500px;
+		height: 225px;
+	}
     /* 667px */
 	article p {
 		column-count: 2;
@@ -109,9 +121,6 @@ section p {
 	
 }
 
-
-
-/*Tablet*/
 
 @media only screen and (min-width: 768px) {
     /* 768 */
@@ -158,6 +167,14 @@ section p {
 }
 
 @media only screen and (min-width: 1140px) {
+	.background{
+		background-size: 200%;
+	}
+	.image{
+		width: 1000px;
+		height: 562px;
+		margin-bottom: 30px;
+	}
     /* 1140 */
 	section {
 		width: 1035px;

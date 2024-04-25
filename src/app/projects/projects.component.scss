@@ -26,7 +26,7 @@
 
       border-radius: 3px;
       padding: 5px 10px;
-      font-size: clamp(0.6rem, 1.2vw, 1rem);
+      font-size: 1rem;
       text-wrap: nowrap;
       transition: 0.2s;
       
@@ -189,3 +189,15 @@ button {
 }
 
 
+@media only screen and (max-width: 760px) {
+  #portfolio{
+    background-size: 250%;
+  }
+  .grid__overlay{
+    font-size: 0.8rem !important;
+  }
+  .project{
+    width: 300px;
+    height: 169px;
+  }
+}

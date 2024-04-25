@@ -13,7 +13,7 @@
       </ul>
       <section id="portfolio">
         <div class="project" *ngFor="let project of filteredProjects">
-          <img class="project__image" [src]="project.image[0]" />
+          <img class="project__image" [src]="project.image[0]" loading="lazy" />
           <div class="grid__overlay">
           <h3 class="grid__title long-title upper" >{{ languagecheck? project.title :project.titleEn}}</h3>
             <button class="viewbutton upper" (click)="viewMore(project)" > {{languagecheck ?'დეტალების ნახვა' : 'see more'}} </button>

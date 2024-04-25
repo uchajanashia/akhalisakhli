@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../header/header.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../language.service';
 
 @Component({
     selector: 'app-newsview',
@@ -10,14 +11,19 @@ import { CommonModule } from '@angular/common';
     styleUrl: './newsview.component.scss',
     imports: [HeaderComponent, FooterComponent ,CommonModule]
 })
-export class NewsviewComponent {
+export class NewsviewComponent  implements OnInit{
 toggleFullScreen(arg0: any) {
 throw new Error('Method not implemented.');
 }
   news : any;
   languagecheck = true;
- constructor(){
+ constructor(private language : LanguageService){
   this.news = history.state;
-  console.log(this.news)
  }
+  ngOnInit(): void {
+    this.language.updateLanguageCheck();
+    this.language.getBoolean().subscribe(value => {
+      this.languagecheck = value;
+    });
+  }
 }

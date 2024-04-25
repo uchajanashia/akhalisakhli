@@ -10,8 +10,7 @@
 		<h1>{{languagecheck ? news.title : news.titleEN}}</h1>
 		<div class="h1-divider"></div>
 		<div class="placeHolder_img">
-			<img style="	width: 1000px;
-			height: 562px; margin-bottom: 30px;" [src]="news.image" alt="" (click)="toggleFullScreen(news.image) ">
+			<img class="image" [src]="news.image" alt="" (click)="toggleFullScreen(news.image) ">
 			</div>
 		<p  class="intro" [innerHTML]="languagecheck ? news.content: news.contentEN"></p>
 

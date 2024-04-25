@@ -210,151 +210,14 @@ p{
   }
 }
 
-@media only screen and (min-width: 1023px) and (max-width: 1400px) {
-  .about {
-    .abcompany {
-      .majorc {
-        .forpatternB {
-          .imgesB {
-            width: 80%;
-            .sizeB1 {
-              transform: scale(0.8);
-            }
-            .sizeB2 {
-              transform: scale(0.8);
-            }
-            .sizeB3 {
-              transform: scale(0.8);
-            }
-          }
-          .content {
-            p {
-              font-size: clamp(0.8rem, 1.2vw, 1rem);
-              line-height: 1.1;
-              height: 300px;
-            }
-          }
-        }
-      }
-      .middlec {
-        .forpatternW {
-          .forcont {
-            p {
-              font-size: clamp(1rem, 1.5vw, 1.2rem);
-              line-height: 1.3;
-            }
-          }
-          .imgesW {
-            .sizeW1,
-            .sizeW2,
-            .sizeW3 {
-              transform: scale(0.8);
-            }
-          }
-          .moreCont {
-            .pos1,
-            .pos2,
-            .pos3 {
-              font-size: clamp(0.7rem, 1vw, 0.9rem);
-              line-height: 1.1;
-              width: 50%;
-              margin-left: 25%;
-              height: min-content;
-            }
-            .pos2 {
-              margin-top: 0;
-              width: 40%;
-            }
-            .pos3 {
-              margin-top: 0;
-              width: 70%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 770px) and (max-width: 1024px) {
-  .about {
-    .abcompany {
-      .majorc {
-        .forpatternB {
-          .imgesB {
-            width: 80%;
-            .sizeB1 {
-              transform: scale(0.7) translateX(-200px);
-            }
-            .sizeB2 {
-              transform: scale(0.7) translateX(-100px);
-            }
-            .sizeB3 {
-              transform: scale(0.7) translateX(-100px);
-            }
-          }
-          .content {
-            p {
-              font-size: clamp(0.7rem, 1.2vw, 1rem);
-              line-height: 1.1;
-              transform: translateX(-50px);
-              width: 110%;
-              height: 300px;
-            }
-          }
-        }
-      }
-      .middlec {
-        .forpatternW {
-          .forcont {
-            p {
-              font-size: clamp(0.8rem, 1.2vw, 1rem);
-              line-height: 1.3;
-            }
-          }
-          .imgesW {
-            .sizeW1,
-            .sizeW2,
-            .sizeW3 {
-              transform: scale(0.7);
-              position: relative;
-              transform: translate(0, 0);
-              top: 0;
-              left: 0;
-              right: 0;
-              width: 100%;
-              height: 30%;
-            }
-          }
-          .moreCont {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            flex-direction: column;
-            .pos1,
-            .pos2,
-            .pos3 {
-              font-size: clamp(0.7rem, 1vw, 0.9rem);
-              line-height: 1.1;
-              width: 60%;
-              height: 30%;
-              margin-left: 50px;
-              transform: translate(0, 0);
-              height: min-content;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 @media only screen and (max-width: 771px) {
   .about {
     .abcompany {
       .majorc {
+        background-size: 400%;
+
         .forpatternB {
-          background-size: 200%;
           .imgesB {
             width: 80%;
             .sizeB1 {
@@ -369,9 +232,8 @@ p{
           }
           .content {
             p {
-              font-size: clamp(0.7rem, 1.2vw, 1rem);
-              line-height: 1.1;
-              transform: translateX(-50px);
+              font-size: clamp(0.7rem, 1.2vw, 1rem) !important;
+              line-height: 1.5 !important;
               width: 110%;
               height: 300px;
             }
@@ -379,8 +241,9 @@ p{
         }
       }
       .middlec {
+        background-size: 400%;
+        height: min-content;
         .forpatternW {
-          background-size: 200%;
           padding: 20px 0;
           display: flex;
           flex-direction: column;
@@ -389,7 +252,7 @@ p{
           .forcont {
             width: 100%;
             p {
-              font-size: clamp(0.8rem, 1.2vw, 1rem);
+              font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
               line-height: 1.3;
               width: 70%;
               text-align: justify;
@@ -422,13 +285,12 @@ p{
             .pos1,
             .pos2,
             .pos3 {
-              font-size: clamp(0.7rem, 1vw, 0.9rem);
+              font-size: clamp(0.7rem, 1vw, 0.9rem) !important;
               line-height: 1.1;
               width: 80%;
               height: 30%;
               margin-left: 50px;
               transform: translate(0, 0);
-              transform: translateX(20px);
               height: min-content;
             }
           }
@@ -442,8 +304,9 @@ p{
   .about {
     .abcompany {
       .majorc {
+        background-size: 400%;
+
         .forpatternB {
-          background-size: 200%;
           position: relative;
           box-sizing: border-box;
           display: flex;
@@ -486,34 +349,40 @@ p{
             align-items: center;
             flex-direction: column;
             p {
-              font-size: clamp(0.7rem, 1.2vw, 1rem);
+              font-size: 0.8rem!important;
               line-height: 1.1;
               position: relative;
               right: 0;
-              margin-left: 80px;
-              transform: translateX(-50px);
-              width: 90%;
+              width: 80%;
+              margin: 0;
               height: 300px;
+            }
+            h1{
+              font-size: 1.2rem;
             }
           }
         }
       }
       .middlec{
         .forpatternW{
-          background-size: 200%;
+          background-size: 400%;
           padding: 20px 0;
           display: flex;
           flex-direction: column;
-          align-items: center;
-          justify-content: center;
           .forcont{
             width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             p{
-              font-size: clamp(0.6rem, 1vw, 0.7rem);
+              font-size: 0.8rem!important;
               line-height: 1.3;
-              width: 60%;
-              transform: translateX(-30px);
+              width: 80%;
               text-align: justify;
+              margin: 0;
+              margin-bottom: 20px;
+
             }
           }
           .imgesW{
@@ -539,16 +408,15 @@ p{
             justify-content: center;
             align-items:stretch;
             flex-direction: column;
+            align-items: center;
             .pos1,.pos2,.pos3{
               
-              font-size: clamp(0.7rem, 1vw, 0.9rem);
-              line-height: 1.1;
-              width: 60%;
-              height: 30%;
-              margin-left: 50px;
-              transform: translate(0,0);
-              transform: translateX(20px);
+              font-size: 0.8rem!important;
+              line-height: 1.5 !important;
+              width: 80%;
               height: min-content;
+              margin: 0;
+              margin-top: 20px;
             }
           }
         }

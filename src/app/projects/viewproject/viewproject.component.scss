@@ -1,6 +1,12 @@
 /* 12columns.css | Created by Katherine Kato | Released under the MIT license */
 /* GitHub: https://kathykato.github.io/12columns/ */
 @import url("https://fonts.googleapis.com/css?family=Pontano+Sans");
+.hide{
+  display: none;
+}
+.is-image{
+ display: flex;
+}
 .container {
   margin: auto;
   padding: 0 1rem;
@@ -929,5 +935,10 @@ footer {
   }
   100% {
       opacity: 1;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .hide{
+    display: flex;
   }
 }
