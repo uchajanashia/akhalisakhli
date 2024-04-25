@@ -3,7 +3,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import Splide from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import { ServiceListService } from '../service-list.service';
-import { CaruselInputComponent } from "../inputed/carusel-input/carusel-input.component";
 import { Partniorebi, Services } from '../services';
 
 @Component({
@@ -11,7 +10,7 @@ import { Partniorebi, Services } from '../services';
     standalone: true,
     templateUrl: './carusel.component.html',
     styleUrl: './carusel.component.scss',
-    imports: [CommonModule, CaruselInputComponent]
+    imports: [CommonModule, ]
 })
 export class CaruselComponent implements OnInit {
   @Input() partniorebi!: Partniorebi;

@@ -6,11 +6,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LanguageService {
   
-  private currentLanguageSubject: BehaviorSubject<string> = new BehaviorSubject<string>('ka');
-  public currentLanguage$: Observable<string> = this.currentLanguageSubject.asObservable();
   private languageCheckSubject = new BehaviorSubject<boolean>(false);
   constructor(public cook : CookieService) {    
-      this.currentLanguageSubject.next(this.cook.get('lang'))
       this.updateLanguageCheck();
 
   }
@@ -20,7 +17,6 @@ export class LanguageService {
     this.cook.set('lang', 'ka');}
     if(!language){
       this.cook.set('lang', 'en');}
-      this.currentLanguageSubject.next(this.cook.get('lang'))
       this.updateLanguageCheck();
   }
 

@@ -5,12 +5,3 @@
     </section>
     <button (click)="showNext()"><i class="fa-solid fa-chevron-right"></i></button>
 </div>
-
-<div
-class="fullscreen-image"
-[ngClass]="{ show: isFullScreen && fullscreenImage }"
-*ngIf="isFullScreen && fullscreenImage"
-(click)="toggleFullScreen(fullscreenImage)"
->
-<img [src]="fullscreenImage" [alt]="fullscreenImage" />
-</div>

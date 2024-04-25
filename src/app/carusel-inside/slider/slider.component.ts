@@ -26,7 +26,7 @@ export class SliderComponent {
     }
   }
 
-  showNext(): void {
+  showNext( ): void {
     if (this.selectedPicIndex < this.images.length - 1) {
       this.selectedPicIndex++;
     }

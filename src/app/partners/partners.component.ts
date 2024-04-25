@@ -17,14 +17,14 @@ import { LanguageService } from '../language.service';
 export class PartnersComponent implements OnInit{
   isGeorgian: boolean = true; 
   constructor(
-    private serviceService: ServiceListService,
     private languageService: LanguageService // Assuming LanguageService is imported correctly
   ) {}
   ngOnInit(): void {
     Aos.init();
     Aos.refresh();
-    this.languageService.currentLanguage$.subscribe(language => {
-      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+    this.languageService.updateLanguageCheck();
+    this.languageService.getBoolean().subscribe(value => {
+      this.isGeorgian = value;
     });
   }
 

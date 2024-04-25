@@ -22,14 +22,15 @@ import { filter } from 'rxjs';
 export class ServiceComponent implements OnInit{
     isGeorgian: boolean = true; 
     activeFilter='';
-    constructor(private languageService: LanguageService,private router :Router){
+    constructor(private language: LanguageService,private router :Router){
          this.activeFilter = this.router.url;
          
     }
     ngOnInit(): void {
-        this.languageService.currentLanguage$.subscribe(language => {
-            this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
-          });
+      this.language.updateLanguageCheck();
+      this.language.getBoolean().subscribe(value => {
+        this.isGeorgian = value;
+      });
          
           
           this.router.events.pipe(

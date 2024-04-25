@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CaruselPicLandshaftComponent } from "../../carusel-vids-pics/carusel-pic-landshaft/carusel-pic-landshaft.component";
-import { CaruselVidLandshaftComponent } from "../../carusel-vids-pics/carusel-vid-landshaft/carusel-vid-landshaft.component";
 import { CommonModule } from '@angular/common';
 import { Mshenebloba } from '../../services';
 import { ServiceListService } from '../../service-list.service';
@@ -12,11 +11,10 @@ import { LanguageService } from '../../language.service';
     standalone: true,
     templateUrl: './landshafti.component.html',
     styleUrl: './landshafti.component.scss',
-    imports: [CaruselPicLandshaftComponent, CaruselVidLandshaftComponent,CommonModule]
+    imports: [CaruselPicLandshaftComponent ,CommonModule]
 })
 export class LandshaftiComponent implements OnInit{
   isGeorgian: boolean = true;
-  @Input() landshaft!:Mshenebloba;
 
   landshaftList:Mshenebloba[]=[];
 
@@ -26,8 +24,9 @@ export class LandshaftiComponent implements OnInit{
     Aos.init();
     Aos.refresh();
     this.landshaftList=this.serviceService.getAllLandshafti();
-    this.languageService.currentLanguage$.subscribe(language => {
-      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+    this.languageService.updateLanguageCheck();
+    this.languageService.getBoolean().subscribe(value => {
+      this.isGeorgian = value;
     });
   }
 

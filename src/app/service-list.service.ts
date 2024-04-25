@@ -561,6 +561,8 @@ export class ServiceListService {
       textEn: 'no text for english sorry',
       image: [
         'assets/galerea/interieris dizaini/1/1.jpg',
+        'assets/galerea/interieris dizaini/1/2.jpg',
+
       ],
       video: ''
     },

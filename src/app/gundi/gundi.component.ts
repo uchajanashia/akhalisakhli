@@ -16,7 +16,6 @@ import { LanguageService } from '../language.service';
     imports: [CommonModule, HeaderComponent, FooterComponent, FloatContactComponent]
 })
 export class GundiComponent implements OnInit{
-  @Input() gundi!:Gundi;
   gundiList:Gundi[]=[];
   gundiListEn:Gundi[]=[];
   isGeorgian: boolean = true; 
@@ -27,8 +26,9 @@ export class GundiComponent implements OnInit{
       Aos.refresh();
       this.gundiList = this.serviceService.getAllGroup();
       this.gundiListEn = this.serviceService.getAllGroupEn();
-      this.languageService.currentLanguage$.subscribe(language => {
-        this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+      this.languageService.updateLanguageCheck();
+      this.languageService.getBoolean().subscribe(value => {
+        this.isGeorgian = value;
       });
   }
 

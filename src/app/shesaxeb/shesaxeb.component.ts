@@ -17,17 +17,15 @@ import { ServiceListService } from '../service-list.service';
 })
 export class ShesaxebComponent  implements OnInit{
   isGeorgian: boolean = true; 
-
-  @Input() shesaxeb!:AboutCompany[];
-
   aboutCompanyList:AboutCompany[]=[];
   constructor(
     private serviceService: ServiceListService,
     private languageService: LanguageService // Assuming LanguageService is imported correctly
   ) {}
   ngOnInit() {
-    this.languageService.currentLanguage$.subscribe(language => {
-      this.isGeorgian = language === 'ka'; // Update isGeorgian based on language
+    this.languageService.updateLanguageCheck();
+    this.languageService.getBoolean().subscribe(value => {
+      this.isGeorgian = value;
     });
     Aos.init();
     Aos.refresh();

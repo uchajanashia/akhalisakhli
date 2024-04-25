@@ -39,8 +39,9 @@ export class AboutComponent implements OnInit {
     this.activeFilter = this.router.url;
   }
     ngOnInit(): void {
-      this.languageService.currentLanguage$.subscribe(language => {
-        this.isGeorgian = language === 'ka';
+      this.languageService.updateLanguageCheck();
+      this.languageService.getBoolean().subscribe(value => {
+        this.isGeorgian = value;
       });
 
       this.router.events.pipe(

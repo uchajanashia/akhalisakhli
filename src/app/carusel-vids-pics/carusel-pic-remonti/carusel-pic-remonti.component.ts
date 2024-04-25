@@ -16,10 +16,8 @@ export class CaruselPicRemontiComponent {
 
   toggleFullScreen(imageSrc: string): void {
     if (this.fullscreenImage === imageSrc) {
-      // If the same image is clicked again, toggle fullscreen mode
       this.isFullScreen = !this.isFullScreen;
     } else {
-      // Display the clicked image in fullscreen mode
       this.isFullScreen = true;
       this.fullscreenImage = imageSrc;
     }
