@@ -46,24 +46,14 @@ button{
 }
 
 
-@media only screen and (min-width: 770px) and (max-width: 1024px) {
-:host {
-  .picCarusel {
-    height: 40vh;
-  }
-}
-}
+
 @media only screen and (max-width: 768px) {
-:host {
-  .picCarusel {
-    height: 30vh;
+  .forslider{
+    background-size: 400%;
   }
-}
-}
-@media only screen and (max-width: 588px) {
 :host {
   .picCarusel {
-    height: 20vh;
+    height: min-content;
   }
 }
 }

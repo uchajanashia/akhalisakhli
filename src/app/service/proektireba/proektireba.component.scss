@@ -222,18 +222,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .forAlign article h1 {
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .forAlign article .txtcontain {
-    margin: 2% 5%;
-  }
-}
 .parent-container {
   overflow: hidden; 
   text-align: end;
@@ -286,4 +274,19 @@
   font-family: Arial, sans-serif !important; 
   font-size: 1rem !important;
   line-height: 1.5 !important;
+}
+@media screen and (max-width: 768px) {
+  .forAlign article h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .forAlign article{
+    background-size: 400%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .forAlign article .txtcontain {
+    margin: 2% 5%;
+  }
 }
