@@ -1,11 +1,25 @@
 /* 12columns.css | Created by Katherine Kato | Released under the MIT license */
 /* GitHub: https://kathykato.github.io/12columns/ */
 @import url("https://fonts.googleapis.com/css?family=Pontano+Sans");
+.hidemobile{
+  display: none;
+}
 .hide{
+  display: none;
+
+}
+.hide2{
   display: none;
 }
 .is-image{
  display: flex;
+}
+.is-image2{
+  display: flex;
+ }
+.hidemobile{
+  display: none;
+
 }
 .container {
   margin: auto;
@@ -14,6 +28,7 @@
   width: 100%;
 }
 ul.image-list {
+  width: 100%;
   li:last-child {
    margin: 0px !important;
   }
@@ -938,7 +953,33 @@ footer {
   }
 }
 @media only screen and (max-width: 760px) {
-  .hide{
+  .is-image2{
+    display: none;
+  }
+  .hide2{
     display: flex;
+  }
+  .hidemobile{
+    display: flex;
+  }
+  .arrow {
+    margin-top: auto ;
+    margin-bottom: auto;
+    height: 170px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+    width: 30px;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.7)
+    }
+  } 
+  #youtube-container {
+    max-width: 300px; /* set your maximum width */
+    max-height: 200px; /* set your maximum height */
+    
   }
 }

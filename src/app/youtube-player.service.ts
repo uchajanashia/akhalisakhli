@@ -18,6 +18,7 @@ export class YoutubePlayerService {
     container.style.marginBottom = '20px'; 
     container.style.marginLeft = 'auto'; 
     container.style.marginRight = 'auto';
+    container.style.maxWidth = '100%'
 
   }
 

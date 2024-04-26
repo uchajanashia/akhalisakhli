@@ -258,6 +258,7 @@ export class ViewprojectComponent {
   fullscreenVideo: string | null = null;
   isFullScreen = false;
 
+  videoplay = false
 
   constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,    private serviceService: ServiceListService,
     private language: LanguageService,
@@ -350,6 +351,8 @@ export class ViewprojectComponent {
     }
 
     openVideo(id:string) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.videoplay = true;
       this.video=true
       this.youtubePlayerService.loadPlayer(id);
       this.youtubePlayerService.showPlayer();

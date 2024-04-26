@@ -42,8 +42,7 @@ export class LoginComponent {
   verifyMFA() {
     this.authService.verifyMFA(this.email, this.code).subscribe(() => {
         this.router.navigate(['/admin']);
-        alert("sworia")
-      
+            
     },
     (error) => {
       this.toastr.error("mfa code incorect")
