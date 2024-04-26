@@ -305,6 +305,9 @@
   }
 }
 @media only screen and (max-width: 771px) {
+  .shortcut li a {
+    font-size: 1rem !important;
+  }
   .about {
     .abcompany {
       .majorc {
