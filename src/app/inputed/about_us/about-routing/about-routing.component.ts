@@ -13,19 +13,13 @@ import { HeaderInputComponent } from "../../header-input/header-input.component"
     imports: [RouterLink, CommonModule, RouterModule, HeaderInputComponent]
 })
 export class AboutRoutingComponent {
-  isGeorgian: boolean = true; 
   activeFilter =''
   constructor(
-    private languageService: LanguageService , private router : Router
+   private router : Router
   ) {
     this.activeFilter = this.router.url;
   }
     ngOnInit(): void {
-      this.languageService.updateLanguageCheck();
-      this.languageService.getBoolean().subscribe(value => {
-        this.isGeorgian = value;
-      });
-
       this.router.events.pipe(
         filter(event => event instanceof NavigationEnd)
       ).subscribe((event: any) => {

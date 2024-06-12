@@ -75,7 +75,31 @@ export interface AboutCompany {
 
     description:any,
 }
+export interface MisionValueVision{
+    MissionName:string,
+    MissionDescription:string,
+    VisionName:string,
+    VisionDescription:string,
+    ValueName:string,
+    Name3:string,
+    Description3:string,
+    Name2:string,
+    Description2:string,
+    Name1:string,
+    Description1:string,
 
+    MissionNameEn:string,
+    MissionDescriptionEn:string,
+    VisionNameEn:string,
+    VisionDescriptionEn:string,
+    ValueNameEn:string,
+    Name3En:string,
+    Description3En:string,
+    Name2En:string,
+    Description2En:string,
+    Name1En:string,
+    Description1En:string,
+}
 export interface project{
     id:number,
     title:string,

@@ -20,23 +20,24 @@
         <div class="imgesB line" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
           <div class="input-group">
             <label>პროექტირება</label>
-            <input class="imginput" type="file" accept="image/*" onchange="onImageUpload(event, 'Home1.jpg')">
+            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, 'Home1.jpg')">
           </div>
           <div class="input-group">
             <label>მშენებლობა</label>
-            <input class="imginput" type="file" accept="image/*" onchange="onImageUpload(event, 'Home2.jpg')">
+            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, 'Home2.jpg')">
           </div>
           <div class="input-group">
             <label>ინტერიერი დიზაინი</label>
-            <input class="imginput" type="file" accept="image/*" onchange="onImageUpload(event, 'Home3.jpg')">
+            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, 'Home3.jpg')">
           </div>
           <div class="input-group">
             <label>რემონტი</label>
-            <input class="imginput" type="file" accept="image/*" onchange="onImageUpload(event,'Home4.jpg')">
+            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event,'Home4.jpg')">
           </div>
           <div class="input-group">
             <label>ლანდშაპტის დიზაინი</label>
-            <input class="imginput" type="file" accept="image/*" onchange="onImageUpload(event, 'Home5.jpg')">
+            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event,'Home5.jpg')">
+
           </div>
         </div>
       </div>

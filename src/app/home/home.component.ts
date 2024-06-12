@@ -290,20 +290,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     Aos.refresh();
     this.language.getBoolean().subscribe(value => {
       this.languagecheck = value;
-      if (this.languagecheck) {
-        this.pageService.getPageById('e45033b4-8c93-4b52-8a84-0e526b7932da').subscribe(data => {
-          this.serviceList = data.pageComponentModals.map((item: any) => ({
-            id: item.pageComponentId,
-            name: item.componentName,
-            description: item.componentContent
-          }));
-        });
-
-      } else {
-
-      }
     });
-
+    this.pageService.getPageById('e45033b4-8c93-4b52-8a84-0e526b7932da').subscribe(data => {
+      this.serviceList = data.pageComponentModals.map((item: any) => {
+        const parsedContent = JSON.parse(item.componentContent);
+        return {
+          id: item.pageComponentId,
+          ...parsedContent 
+        };
+      });
+    });
     };
   
 
