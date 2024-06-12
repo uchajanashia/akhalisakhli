@@ -28,7 +28,7 @@
           'fade-out': hoveredImage !== imageObject
         }"
       >
-        <img [src]="imageObject.imageUrl" alt="Project Image" />
+        <img [src]="imageObject.imageUrl" alt="Project Image" loading="lazy" />
       </div>
     </div>
     <video data-aos="flip-down" #sairmeVideo id="vid" class="video" autoplay muted loop>
@@ -49,13 +49,13 @@
 <section [ngClass]="{ hidden: loading }" class="sect">
   <ul>
     <li *ngFor="let service of serviceList; let even = even; let odd = odd">
-      <a [href]="service.link" data-aos="fade-up" class="seccontain" id="sec1">
+      <a [href]="service.name" data-aos="fade-up" class="seccontain" id="sec1">
         <div class="text">
           <p class="nowrap">{{ service.name }}</p>
           <p class="lowtext">{{ service.description }}</p>
         </div>
         <div class="imgtxt">
-          <img [src]="service.photo" alt="pic" />
+          <img class="imginside" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg'" alt="pic" />
         </div>
       </a>
     </li>

@@ -1,0 +1,185 @@
+header {
+  width: 100%;
+  background-color: var(--black-tr);
+  position: fixed;
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 10px 0;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo,
+.logo img {
+  width: 180px;
+}
+.list {
+  display: flex;
+  gap: 20px;
+}
+.list li {
+  margin-left: 20px;
+  transition: 0.3s;
+  list-style: none;
+  position: relative;
+}
+.list a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.list a {
+  font-family: "ALK Sanet", sans-serif;
+}
+//
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: black;
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: white;
+  transition: 0.3s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+ul li a:hover:before {
+  transition: transform 0.3s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.submenu1 {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  top: 80%;
+  z-index: 1001;
+  left:0;
+  border-radius: 10px;
+  background-color: var(--black-tr);
+  li{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    a{
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.list li:nth-of-type(2):hover .submenu1 {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.submenu2 {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  top: 80%;
+  z-index: 1001;
+  left: 0;
+  border-radius: 10px;
+  background-color: var(--black-tr);
+  li{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    a{
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.list li:nth-of-type(3):hover .submenu2 {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+
+//responsive
+
+.mobile-menu-button {
+  display: none; /* Initially hide the button on larger screens */
+  // Add styles for the button icon (you can use your own styling)
+  z-index: 999;
+}
+
+/* Define the fade-out animation keyframes */
+
+@media only screen and (max-width: 588px) {
+  header {
+    display: flex;
+    justify-content: space-between; /* Ensure the button is on the right */
+  }
+  .list {
+    display: none; /* Hide the default list on small screens */
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Ensure the button is on the right */
+  }
+  nav {
+    gap: 40%;
+  }
+  .list {
+    display: none; /* Hide the default list on small screens */
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Ensure the button is on the right */
+  }
+  nav {
+    gap: 60%;
+  }
+  .list {
+    display: none; /* Hide the default list on small screens */
+  }
+}

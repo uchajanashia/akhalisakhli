@@ -9,23 +9,32 @@ import { AuthService } from './auth.service';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private authService: AuthService, private router: Router, private cook : CookieService) { }
+  constructor(private authService: AuthService, private router: Router, private cook: CookieService) { }
 
   canActivate(): boolean {
-    if (this.authService.isLoggedIn()) {
-      const role  = this.cook.get('role')
-      if(role == "ADMIN_USER_ROLE")
-      return true;
-      if(role == "STAFF_USER_ROLE")
-      this.router.navigate(["sales"])
-      return false;
-    
-    
-    } else {
-      this.router.navigate(['/login']); 
+    console.log('AuthGuard#canActivate called');
+    if (!this.authService.isLoggedIn()) {
+      this.router.navigate(['/login']);
+      console.log('Redirect to login: not logged in');
       return false;
     }
+
+    const role = this.cook.get('role');
+    console.log('Detected role:', role);
+    switch (role) {
+      case "ADMIN_USER_ROLE":
+        return true;
+      case "STAFF_USER_ROLE":
+        this.router.navigate(["sales"]);
+        console.log('Redirect to sales: staff user');
+        return false;
+      default:
+        this.router.navigate(['/login']);
+        console.log('Redirect to login: unrecognized role');
+        return false;
+    }
   }
+
   canActivateforsales(): boolean {
     if (this.authService.isLoggedIn()) {
       return true;
@@ -34,5 +43,5 @@ export class AuthGuard implements CanActivate {
       return false;
     }
   }
-  }
+}
 

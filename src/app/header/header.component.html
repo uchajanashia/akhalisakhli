@@ -1,31 +1,33 @@
-<header>
+
+<header *ngIf="isGeorgian">
   <nav>
     <div class="logo">
-      <a href=""><img src="assets/pics/SVG/tetri logo.svg" alt="logo" /></a>
+    <a href=""><img src="assets/image/white_logo.svg" alt="logo" /></a>
     </div>
     <ul class="list">
-      <li><a href="">{{ isGeorgian ? 'მთავარი' : 'Home' }}</a></li>
-      <li><a class="linksub1">{{ isGeorgian ? 'ჩვენს შესახებ' : 'About us' }}</a>
-        <ul class="submenu1">
-          <li><a href="about/aboutCompany">{{ isGeorgian ? 'კომპანიის შესახებ' : 'About Company' }}</a></li>
-          <li><a href="about/mxf">{{ isGeorgian ? 'მისია, ხედვა, ფასეულობები' : 'Vision, mission, values' }}</a></li>
-          <li><a href="about/team">{{ isGeorgian ? 'ჩვენი გუნდი' : 'Our team' }}</a></li>
-          <li><a href="about/partners">{{ isGeorgian ? 'პარტნიორები' : 'Partners' }}</a></li>
-        </ul>
-      </li>
-      <li><a>{{ isGeorgian ? 'სერვისები' : 'Services' }}</a>
-        <ul class="submenu2">
-          <li><a href="services/proektireba">{{ isGeorgian ? 'პროექტირება' : 'Project design' }}</a></li>
-          <li><a href="services/mshenebloba">{{ isGeorgian ? 'მშენებლობა' : 'Construction' }}</a></li>
-          <li><a href="services/interieri">{{ isGeorgian ? 'ინტერიერის დიზაინი' : 'Interior design' }}</a></li>
-          <li><a href="services/remonti">{{ isGeorgian ? 'რემონტი' : 'Renovation' }}</a></li>
-          <li><a href="services/landshafti">{{ isGeorgian ? 'ლანდშაფტის დიზაინი' : 'Landscape design' }}</a></li>
-        </ul>
-      </li>
-      <li><a href="projects">{{ isGeorgian ? 'გალერეა' : 'Gallery' }}</a></li>
-      <li><a href="news">{{ isGeorgian ? 'სიახლეები' : 'News' }}</a></li>
-      <li><a href="contact">{{ isGeorgian ? 'კონტაქტი' : 'Contact' }}</a></li>
-    </ul>
+    <li><a [routerLink]="['/home/']">მთავარი</a></li>
+    <li><a class="linksub1">ჩვენს შესახებ</a>
+      <ul class="submenu1">
+        <li><a [routerLink]="'/about_us/company_info/'">კომპანიის შესახებ</a></li>
+        <li><a [routerLink]="'/about_us/company_value/'">მისია, ხედვა, ფასეულობები</a></li>
+        <li><a [routerLink]="'/about_us/company_team/'">ჩვენი გუნდი</a></li>
+        <li><a [routerLink]="'/about_us/company_partners/'">პარტნიორები</a></li>
+      </ul>
+    </li>
+    <li><a style="padding: 10px 25px;" >სერვისები</a>
+      <ul class="submenu2">
+        <li><a [routerLink]="'/service/project_design/'">პროექტირება</a></li>
+        <li><a [routerLink]="'/service/construction/'">მშენებლობა</a></li>
+        <li><a [routerLink]="'/service/interior_Design/'">ინტერიერის დიზაინი</a></li>
+        <li><a [routerLink]="'/service/renovation/'">რემონტი</a></li>
+        <li><a [routerLink]="'/service/landscape_design/'">ლანდშაფტის დიზაინი</a></li>
+      </ul>
+    </li>
+    <li><a [routerLink]="['/projects']">გალერია</a></li>
+
+    <li><a [routerLink]="['/news/']">სიახლეები</a></li>
+    <li><a [routerLink]="['/contact_page/']">კონტაქტი</a></li>
+  </ul>
     <select class="lang" (change)="toggleLanguage()" [(ngModel)]="selectedLanguage" >
       <option value="ka">GE</option>
       <option value="en">EN</option>
@@ -36,13 +38,12 @@
 
       <ul class="listo">
 
-        <li><a href="">{{ isGeorgian ? 'მთავარი' : 'Home' }}</a></li>
-        <li><a href="about/aboutCompany">{{ isGeorgian ? 'ჩვენს შესახებ' : 'About us' }}</a></li>
-        <li><a href="services/proektireba">{{ isGeorgian ? 'სერვისები' : 'Services' }}</a></li>
-      <li><a href="projects">{{ isGeorgian ? 'გალერეა' : 'Gallery' }}</a></li>
-        <li><a href="news">{{ isGeorgian ? 'სიახლეები' : 'News' }}</a></li>
-        <li><a href="contact">{{ isGeorgian ? 'კონტაქტი' : 'Contact' }}</a></li>
-        <li style="margin-top: 10rem; "><a style="font-size: 1rem;" *ngIf="!isGeorgian" (click)="setGeo()">ქართლი ვერსია</a>  </li>
+        <li><a routerLink="/home">მთავარი</a></li>
+        <li><a routerLink="/about_us/company_info/">ჩვენს შესახებ</a></li>
+        <li><a routerLink="/service/project_design/">სერვისები</a></li>
+      <li><a routerLink="/projects">გალერეა</a></li>
+        <li><a routerLink="/news">სიახლეები</a></li>
+        <li><a routerLink="/contact_page">კონტაქტი</a></li>
         <li ><a style="font-size: 1rem;" *ngIf="isGeorgian" (click)="setEn()">English version </a>  </li>
 
       </ul>
@@ -58,3 +59,67 @@
 
   </nav>
 </header>
+<header *ngIf="!isGeorgian">
+  <nav>
+  <div class="logo">
+    <a [routerLink]="['/home/']">
+      <a href=""><img src="assets/image/white_logo.svg" alt="logo" /></a>
+    </a>
+  </div>
+  <ul class="list">
+    <li><a [routerLink]="['/home/']">Home</a></li>
+    <li>
+      <a class="linksub1">About us</a>
+      <ul class="submenu1">
+        <li><a [routerLink]="['/about_us/company_info/']">About Company</a></li>
+        <li><a [routerLink]="['/about_us/company_value/']">Vision, mission, values</a></li>
+        <li><a [routerLink]="['/about_us/company_team/']">Our team</a></li>
+        <li><a [routerLink]="['/about_us/company_partners/']">Partners</a></li>
+      </ul>
+    </li>
+    <li>
+      <a style="padding: 0 20px;">Services</a>
+      <ul class="submenu2">
+        <li><a [routerLink]="['/service/project_design']">Project design</a></li>
+        <li><a [routerLink]="['/service/construction']">Construction</a></li>
+        <li><a [routerLink]="['/service/interior_Design']">Interior design</a></li>
+        <li><a [routerLink]="['/service/renovation']">Renovation</a></li>
+        <li><a [routerLink]="['/service/landscape_design']">Landscape design</a></li>
+      </ul>
+    </li>
+    <li><a [routerLink]="['/projects']">Gallery</a></li>
+    <li><a [routerLink]="['/news']">News</a></li>
+    <li><a [routerLink]="['/contact_page']">Contact</a></li>
+  </ul>
+    <select class="lang" (change)="toggleLanguage()" [(ngModel)]="selectedLanguage" >
+      <option value="ka">GE</option>
+      <option value="en">EN</option>
+    </select>
+
+
+    <div class="mobile-menu" *ngIf="isMobileMenuOpen">
+
+      <ul class="listo">
+
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about_us/company_info/">About us</a></li>
+        <li><a routerLink="/service/project_design/">Services</a></li>
+      <li><a routerLink="/projects">Gallery</a></li>
+        <li><a routerLink="/news">News</a></li>
+        <li><a routerLink="/contact_page">Contact</a></li>
+        <li style="margin-top: 10rem; "><a style="font-size: 1rem;" *ngIf="!isGeorgian" (click)="setGeo()">ქართლი ვერსია</a>  </li>
+      </ul>
+
+    </div>
+
+    <button id="menu" class="mobile-menu-button" (click)="toggleMobileMenu()">
+      <span class="line top"></span>
+      <span class="line middle"></span>
+      <span class="line buttom"></span>
+    </button>
+
+
+  </nav>
+</header>
+
+  

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CaruselPicRemontiComponent } from "../../carusel-vids-pics/carusel-pic-remonti/carusel-pic-remonti.component";
 import Aos from 'aos';
 import { ServiceListService } from '../../service-list.service';
 import { Mshenebloba } from '../../services';
@@ -11,7 +10,7 @@ import { LanguageService } from '../../language.service';
     standalone: true,
     templateUrl: './remonti.component.html',
     styleUrl: './remonti.component.scss',
-    imports: [CaruselPicRemontiComponent,CommonModule]
+    imports: [CommonModule]
 })
 export class RemontiComponent implements OnInit{
   isGeorgian: boolean = true;

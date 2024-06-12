@@ -41,7 +41,7 @@ export class LoginComponent {
    
   verifyMFA() {
     this.authService.verifyMFA(this.email, this.code).subscribe(() => {
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/admin/home']);
             
     },
     (error) => {

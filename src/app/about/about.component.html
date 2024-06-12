@@ -1,10 +1,16 @@
 <app-header></app-header>
 <div class="contain">
-  <ul class="shortcut" >
-    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about/aboutCompany' }" [routerLink]="['/about/aboutCompany']">{{ isGeorgian ? 'კომპანიის შესახებ' : 'About Company' }}</a></li>
-    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about/mxf' }" [routerLink]="['/about/mxf']">{{ isGeorgian ? 'მისია, ხედვა, ფასეულობები' : 'Mission, Vision, Values' }}</a></li>
-    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about/team' }" [routerLink]="['/about/team']">{{ isGeorgian ? 'ჩვენი გუნდი' : 'Our Team' }}</a></li>
-    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about/partners' }" [routerLink]="['/about/partners']">{{ isGeorgian ? 'პარტნიორები' : 'Partners' }}</a></li>
+  <ul class="shortcut" *ngIf="isGeorgian">
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_info' }" [routerLink]="['/about_us/company_info']">კომპანიის შესახებ</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_value' }" [routerLink]="['/about_us/company_value']">მისია, ხედვა, ფასეულობები</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_team' }" [routerLink]="['/about_us/company_team']">ჩვენი გუნდი</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_partners' }" [routerLink]="['/about_us/company_partners']">პარტნიორები</a></li>
+  </ul>
+  <ul class="shortcut" *ngIf="!isGeorgian">
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_info' }" [routerLink]="['/about_us/company_info']">About Company</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_value' }" [routerLink]="['/about_us/company_value']">Mission, Vision, Values</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_team' }" [routerLink]="['/about_us/company_team']">Our Team</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '/about_us/company_partners' }" [routerLink]="['/about_us/company_partners']">Partners</a></li>
   </ul>
   <router-outlet></router-outlet>
   <app-float-contact></app-float-contact>

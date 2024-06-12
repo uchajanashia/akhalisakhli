@@ -1,0 +1,26 @@
+<header>
+  <nav>
+  <ul class="list">
+    <li><a [routerLink]="['/admin/home/']">მთავარი</a></li>
+    <li><a class="admin/about_us/">ჩვენს შესახებ</a>
+      <ul class="submenu1">
+        <li><a [routerLink]="'/admin/about_us/company_info/'">კომპანიის შესახებ</a></li>
+        <li><a [routerLink]="'/admin/about_us/company_value/'">მისია, ხედვა, ფასეულობები</a></li>
+        <li><a [routerLink]="'/admin/about_us/company_team/'">ჩვენი გუნდი</a></li>
+        <li><a [routerLink]="'/admin/about_us/company_partners/'">პარტნიორები</a></li>
+      </ul>
+    </li>
+    <li><a [routerLink]="'/admin/service/project_design/'">სერვისები</a>
+      <ul class="submenu2">
+        <li><a [routerLink]="'/admin/service/project_design/'">პროექტირება</a></li>
+        <li><a [routerLink]="'/admin/service/construction/'">მშენებლობა</a></li>
+        <li><a [routerLink]="'/admin/service/interior_Design/'">ინტერიერის დიზაინი</a></li>
+        <li><a [routerLink]="'/admin/service/renovation/'">რემონტი</a></li>
+        <li><a [routerLink]="'/admin/service/landscape_design/'">ლანდშაფტის დიზაინი</a></li>
+      </ul>
+    </li>
+    <li><a [routerLink]="['/admin/news/']">სიახლეები</a></li>
+    <li><a [routerLink]="['/admin/contact_page/']">კონტაქტი</a></li>
+  </ul>
+</nav>
+  </header>

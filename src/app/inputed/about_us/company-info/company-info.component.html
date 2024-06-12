@@ -1,0 +1,56 @@
+
+<article>
+    <div class="about">
+        <div class="abcompany" >
+            <div class="majorc" *ngFor="let service of service" >
+
+                <div class="forpatternB">
+
+                    <div class="content">
+                        <div class="text">
+                            <h1 style="color: wheat;"> ქართული ვერსია</h1>
+                            <input  class="title" type="text" [(ngModel)]="service.title_GEO"/>
+                            <textarea  class="translate" rows="5"  [(ngModel)]="service.company_info_GEO"></textarea>
+                            <textarea  class="translate" rows="5" [(ngModel)]="service.company_info_1_GEO"></textarea>
+
+                            <button (click)="updateService(service)">განახლება</button>
+                        </div>
+
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                            <h1 style="color: wheat;"> English version</h1>
+
+                            <input  class="title" type="text" [(ngModel)]="service.title_EN"/>
+                            <textarea  class="translate" rows="5"  [(ngModel)]="service.company_info_EN"></textarea>
+                            <textarea  class="translate" rows="5" [(ngModel)]="service.company_info_1_EN"></textarea>
+
+                            <button (click)="updateService(service)">Update</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="forpatternB">
+
+                        <div class="imgesB line">
+                            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'1.jpg')">
+                            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'2.jpg')">
+                            <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'3.jpg')">
+                    </div>
+                </div>
+                <div class="forpatternB">
+
+                    <div class="imgesB line">
+                        <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'4.jpg')">
+                        <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'5.jpg')">
+                        <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'6.jpg')">
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+</article>
+

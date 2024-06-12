@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CaruselPicInterierComponent } from "../../carusel-vids-pics/carusel-pic-interier/carusel-pic-interier.component";
 import { Mshenebloba } from '../../services';
 import { ServiceListService } from '../../service-list.service';
 import Aos from 'aos';
@@ -11,7 +10,7 @@ import { LanguageService } from '../../language.service';
     standalone: true,
     templateUrl: './interieri.component.html',
     styleUrl: './interieri.component.scss',
-    imports: [CaruselPicInterierComponent,CommonModule]
+    imports: [CommonModule]
 })
 export class InterieriComponent implements OnInit{
   isGeorgian: boolean = true;

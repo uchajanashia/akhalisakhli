@@ -42,7 +42,16 @@ nav {
 .list a {
   font-family: "ALK Sanet", sans-serif;
 }
-//
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  position: relative;
+}
+
 ul li a {
   display: block;
   position: relative;
@@ -52,6 +61,7 @@ ul li a {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s;
+  line-height: 1.5;
 }
 
 ul li a:hover {
@@ -61,6 +71,7 @@ ul li a:hover {
   text-decoration: none;
   color: black;
 }
+
 ul li a:before {
   content: "";
   position: absolute;
@@ -75,71 +86,42 @@ ul li a:before {
   transform: scaleX(0);
   z-index: -1;
 }
+
 ul li a:hover:before {
   transition: transform 0.3s;
   transform-origin: left;
   transform: scaleX(1);
 }
-.submenu1 {
+
+.submenu1, .submenu2 {
   text-align: center;
   visibility: hidden;
   opacity: 0;
-  width: min-content;
-  min-width: 5rem;
+  width: 100%; /* Make the submenu the same width as the parent li */
   position: absolute;
   transition: all 0.2s ease;
   margin-top: 1rem;
-  top: 80%;
+  top: 100%; /* Adjust top to 100% to position below the parent li */
   z-index: 2001;
   left: 0;
   border-radius: 3px;
   background-color: var(--black-tr);
-  li{
+  li {
     list-style: none;
     width: 100%;
     margin: 0;
     padding: 0;
-    a{
+    a {
       font-size: 0.8rem;
     }
   }
 }
 
-.list li:nth-of-type(2):hover .submenu1 {
-  opacity: 1;
+ul li:hover .submenu1, ul li:hover .submenu2 {
   visibility: visible;
-  display: block;
-}
-.submenu2 {
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  width: min-content;
-  min-width: 5rem;
-  position: absolute;
-  transition: all 0.2s ease;
-  margin-top: 1rem;
-  top: 80%;
-  z-index: 1201;
-  left: 0;
-  border-radius: 3px;
-  background-color: var(--black-tr);
-  li{
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    a{
-      font-size: 0.8rem;
-    }
-  }
+  opacity: 1;
 }
 
-.list li:nth-of-type(3):hover .submenu2 {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-}
 
 
 .lang{

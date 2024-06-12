@@ -104,7 +104,7 @@ export class AuthService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${Token}`
     });
-    return this.http.get<any>(`http://192.168.1.6:8081/api/v1/manage-user/get-user-list`,{ headers });
+    return this.http.get<any>(`${URL}/api/v1/manage-user/get-user-list`,{ headers });
   }
 
   

@@ -25,7 +25,7 @@ import { filter } from 'rxjs';
         ShesaxebComponent,
         GundiComponent,
         MxfComponent,
-        PartnersComponent
+        PartnersComponent 
     ]
 })
 export class AboutComponent implements OnInit {

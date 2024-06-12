@@ -15,10 +15,6 @@
       margin-top: 40px;
       height: 400px;
       width: 100%;
-      background-image: url(../../assets/pics/SVG/backPatern.svg);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: 100%;
 
       .forpatternB {
         width: 100%;
@@ -30,7 +26,6 @@
           margin: 30px;
           width: 40%;
           padding: 0 40px;
-          border-right: 2px solid white;
           h1 {
             font-size: clamp(1rem,2vw,2rem);
             font-weight: 100;
@@ -51,126 +46,38 @@
               font-family: "BPG Banner ExtraSquare", sans-serif;
           }
         }
-        .imgesB {
-          position: relative;
-          width: 60%;
-          img {
-            position: absolute;
-            border: 7px solid white;
-            object-fit: cover;
-          }
-          .sizeB1 {
-            z-index: 998;
-            transform: translateY(-40px);
-            left: 400px;
-            width: 250px;
-            height: 180px;
-          }
-          .sizeB2 {
-            z-index: 999;
-            top: 8%;
-            left: 30px;
-            height: 200px;
-            width: 400px;
-          }
-          .sizeB3 {
-            z-index: 998;
-            bottom: 0;
-            transform: translateY(50px);
-            left: 140px;
-            height: 240px;
-            width: 400px;
-          }
-        }
+
       }
     }
-    .middlec {
-      height: 400px;
-      margin: 150px 0;
-      width: 100%;
-      background-image: url(../../assets/pics/SVG/pattern.svg);
-      background-attachment: fixed;
-      background-repeat:repeat;
-      background-size: 100%;
-      padding: 20px 0;
-      .forpatternW {
-        width: 100%;
-        height: max-content;
-
+    .imgesB {
+      position: relative;
+      width: 50%;
+      img {
+        position: absolute;
+        border: 7px solid black;
         object-fit: cover;
-        display: flex;
-        .forcont {
-          height: 100%;
-          width: 30%;
-          p {
-            line-height: 2;
-            margin-left: 90px;
-            margin-top: 30px;
-            text-align: justify;
-            margin-right: 30px;
-              font-family: "BPG Banner ExtraSquare", sans-serif;
-          
-          }
-        }
-        .imgesW {
-          position: relative;
-          width: 30%;
-          img {
-            position: absolute;
-            border: 7px solid black;
-            width: 200px;
-            height: 150px;
-          }
-          object-fit: cover;
-          .sizeW1 {
-            left: 20px;
-            transform: translateY(-40px);
-            z-index: 998;
-            width: 380px;
-            height: 260px;
-          }
-          .sizeW2 {
-            z-index: 999;
-            height: 130px;
-            left: 220px;
-            top: 160px;
-            width: 250px;
-          }
-          .sizeW3 {
-            transform: translateY(40px);
-            left: -10px;
-            bottom: 0;
-            z-index: 998;
-            width: 260px;
-            height: 160px;
-          }
-        }
-        .moreCont {
-          width: 40%;
-          p {
-            font-size: clamp(0.7rem, 2vw, 1rem);
-            margin-right: 90px;
-            margin-top: 30px;
-            height: 70px;
-            text-align: justify;
-              font-family: "BPG Banner ExtraSquare", sans-serif;
-          
-          }
-          .pos1 {
-            transform: translateY(30px);
-            font-size: clamp(0.7rem, 2vw, 1rem);
-          }
-          .pos2 {
-            width: 75%;
-            transform: translate(60px, 70px);
-            font-size: clamp(0.7rem, 2vw, 1rem);
-          }
-          .pos3 {
-            width: 100%;
-            transform: translate(-90px, 100px);
-            font-size: clamp(0.7rem, 2vw, 1rem);
-          }
-        }
+      }
+      .sizeB1 {
+        z-index: 998;
+        transform: translateY(-40px);
+        left: 400px;
+        width: 250px;
+        height: 180px;
+      }
+      .sizeB2 {
+        z-index: 999;
+        top: 8%;
+        left: 30px;
+        height: 200px;
+        width: 400px;
+      }
+      .sizeB3 {
+        z-index: 998;
+        bottom: 0;
+        transform: translateY(50px);
+        left: 140px;
+        height: 240px;
+        width: 400px;
       }
     }
   }
@@ -209,7 +116,19 @@ p{
     }
   }
 }
+.background{
+  background-image: url(../../assets/pics/SVG/backPatern.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
+.whitebackground{
+  background-image: url(../../assets/pics/SVG/pattern.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
 @media only screen and (max-width: 771px) {
 
@@ -237,62 +156,6 @@ p{
               line-height: 1.5 !important;
               width: 80%;
               height: 300px;
-            }
-          }
-        }
-      }
-      .middlec {
-        background-size: 400%;
-        height: min-content;
-        .forpatternW {
-          padding: 20px 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          .forcont {
-            width: 100%;
-            p {
-              font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
-              line-height: 1.3;
-              width: 70%;
-              text-align: justify;
-            }
-          }
-          .imgesW {
-            width: 80%;
-            display: flex;
-            justify-content: space-around;
-            .sizeW1,
-            .sizeW2,
-            .sizeW3 {
-              transform: scale(0.7);
-              position: relative;
-              transform: translate(0, 0);
-              top: 0;
-              left: 0;
-              right: 0;
-              width: 30%;
-              height: 100%;
-              border: none;
-            }
-          }
-          .moreCont {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            flex-direction: column;
-            .pos1,
-            .pos2,
-            .pos3 {
-              font-size: clamp(0.7rem, 1vw, 0.9rem) !important;
-              line-height: 1.1;
-              width: 80%;
-              height: 30%;
-              margin-left: 50px;
-              transform: translate(0, 0);
-              height: min-content;
             }
           }
         }
@@ -359,64 +222,6 @@ p{
             }
             h1{
               font-size: 1.2rem;
-            }
-          }
-        }
-      }
-      .middlec{
-        .forpatternW{
-          background-size: 400%;
-          padding: 20px 0;
-          display: flex;
-          flex-direction: column;
-          .forcont{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            p{
-              font-size: 0.8rem!important;
-              line-height: 1.3;
-              width: 80%;
-              text-align: justify;
-              margin: 0;
-              margin-bottom: 20px;
-
-            }
-          }
-          .imgesW{
-            width: 80%;
-            height: 100px;
-            display: flex;
-            justify-content: space-around;
-            .sizeW1,.sizeW2,.sizeW3{
-              transform: scale(0.7);
-              position: relative;
-              transform: translate(0,0);
-              top: 0;
-              left: 0;
-              right: 0;
-              width: 30%;
-              height: 100%;
-              border: none;
-            }
-          }
-          .moreCont{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items:stretch;
-            flex-direction: column;
-            align-items: center;
-            .pos1,.pos2,.pos3{
-              
-              font-size: 0.8rem!important;
-              line-height: 1.5 !important;
-              width: 80%;
-              height: min-content;
-              margin: 0;
-              margin-top: 20px;
             }
           }
         }

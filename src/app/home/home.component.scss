@@ -664,6 +664,14 @@ px
   line-height: 1.5 !important;
 }
 @media only screen and (max-width: 768px) {
+  .sect ul li:nth-child(even) a .text {
+    align-items: start;}
+  .sect ul li:nth-child(even) a .text p {
+    text-align: start;
+  }
+  .sect ul li:nth-child(odd) a .text {
+    margin-right: 50px;
+  }
   .sect ul li:nth-child(odd) .seccontain p {
     color: white;
   }
@@ -674,16 +682,6 @@ px
   }
   .sect ul li a {
     scale: 1;
-  }
-  .sect ul li:nth-child(odd) {
-    .nowrap {
-      transform: translateX(-100%);
-    }
-  }
-  .sect ul li:nth-child(even) {
-    .nowrap {
-      transform: translateX(100%);
-    }
   }
   .seccontain {
     width: 100%;

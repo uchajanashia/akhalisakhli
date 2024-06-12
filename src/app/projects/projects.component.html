@@ -11,17 +11,32 @@
       
       
       </ul>
-      <section id="portfolio">
-        <div class="project" *ngFor="let project of filteredProjects">
+      <section id="portfolio" *ngIf="languagecheck">
+        <div class="project" *ngFor="let project of filteredProjects  trackBy: trackByProjectId">
           <img class="project__image" [src]="project.image[0]" loading="lazy" />
           <div class="grid__overlay">
-          <h3 class="grid__title long-title upper" >{{ languagecheck? project.title :project.titleEn}}</h3>
-            <button class="viewbutton upper" (click)="viewMore(project)" > {{languagecheck ?'დეტალების ნახვა' : 'see more'}} </button>
-          <p class="upper">{{ languagecheck? project.category : project.categoryEn }}</p>
+          <h3 class="grid__title long-title upper" >{{  project.title}}</h3>
+            <button class="viewbutton upper" (click)="viewMore(project)" >დეტალების ნახვა</button>
+          <p class="upper">{{project.category}}</p>
 
           </div>
         </div>
       </section>
-      
+      <section id="portfolio" *ngIf="!languagecheck">
+        <div class="project" *ngFor="let project of filteredProjects; trackBy: trackByProjectId">
+          <img class="project__image" [src]="project.image[0]" loading="lazy" />
+          <div class="grid__overlay">
+          <h3 class="grid__title long-title upper" >{{project.titleEn}}</h3>
+            <button class="viewbutton upper" (click)="viewMore(project)" > see more </button>
+          <p class="upper">{{project.categoryEn }}</p>
+
+          </div>
+        </div>
+      </section>
+      <div class="pagination">
+        <button (click)="goToPage(1)">1</button>
+        <button (click)="goToPage(2)">2</button>
+        <button (click)="goToPage(3)">3</button>
+      </div>
 </div>
 <app-footer ></app-footer>

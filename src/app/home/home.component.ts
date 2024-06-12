@@ -21,6 +21,7 @@ import { LanguageService } from '../language.service';
 import { CustumerdataService } from '../custumerdata.service';
 import { ToastrService } from 'ngx-toastr';
 import { ContactformComponent } from "../contactform/contactform.component";
+import { PageService } from '../inputed/service/page.service';
 
 
 @Component({
@@ -273,7 +274,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private serviceService: ServiceListService,
     private language: LanguageService,
     private custumerData: CustumerdataService,
-    private tost:ToastrService
+    private tost:ToastrService,
+    private pageService : PageService
   ) {
 
   }
@@ -289,10 +291,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.language.getBoolean().subscribe(value => {
       this.languagecheck = value;
       if (this.languagecheck) {
-        this.serviceList = this.serviceService.getAllService();
+        this.pageService.getPageById('e45033b4-8c93-4b52-8a84-0e526b7932da').subscribe(data => {
+          this.serviceList = data.pageComponentModals.map((item: any) => ({
+            id: item.pageComponentId,
+            name: item.componentName,
+            description: item.componentContent
+          }));
+        });
 
       } else {
-        this.serviceList = this.serviceService.getAllServiceEN();
 
       }
     });
@@ -396,11 +403,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   imageObjects: { imageUrl: string; text: string; textEn:string; linkUrl: string }[] = [
-    { imageUrl: 'assets/pics/web/proeqtireba/cover.jpg', text: 'პროექტირება', textEn:'Project Design',  linkUrl: 'services/proektireba' },
-    { imageUrl: 'assets/pics/web/mshenebloba/cover.jpg', text: 'მშენებლობა',textEn:'construction', linkUrl: 'services/mshenebloba' },
-    { imageUrl: 'assets/pics/web/interieri/cover.jpg', text: 'ინტერიერის დიზაინი',textEn:'interior design', linkUrl: 'services/interieri' },
-    { imageUrl: 'assets/pics/web/remonti/cover.jpg', text: 'რემონტი',textEn:'Renovation', linkUrl: 'services/remonti' },
-    { imageUrl: 'assets/pics/web/landshapti/cover.jpg', text: 'ლანდშაფტის დიზაინი',textEn:'Landscape design', linkUrl: 'services/landshafti' },
+    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home1.jpg', text: 'პროექტირება', textEn:'Project Design',  linkUrl: 'services/proektireba' },
+    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home2.jpg', text: 'მშენებლობა',textEn:'construction', linkUrl: 'services/mshenebloba' },
+    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home3.jpg', text: 'ინტერიერის დიზაინი',textEn:'interior design', linkUrl: 'services/interieri' },
+    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home4.jpg', text: 'რემონტი',textEn:'Renovation', linkUrl: 'services/remonti' },
+    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home5.jpg', text: 'ლანდშაფტის დიზაინი',textEn:'Landscape design', linkUrl: 'services/landshafti' },
   ];
 
 
@@ -431,7 +438,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
     }
   
-
+    
 
  
 }

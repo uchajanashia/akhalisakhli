@@ -120,4 +120,21 @@
     }
   }
  
+  @media only screen and (max-width: 788px) {
+    .floating{
+      padding: 0;
+    }
+    .floating i {
+      font-size: 18px;
+      margin: 8px;
+    }
+    .floatingmess{
+      padding: 0;
+    }
+    .floatingmess i {
+      font-size: 18px;
+      margin: 8px;
+    }
+
+  }
   

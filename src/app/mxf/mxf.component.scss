@@ -26,11 +26,11 @@
 
         object-fit: cover;
         display: flex;
+        justify-content: space-around;
         .content {
-          margin: 30px;
+          margin-top: 20px;
           width: 40%;
           padding: 0 40px;
-          border-right: 2px solid white;
           h1 {
             font-size: clamp(1rem,2vw,2rem);
             font-weight: 100;
@@ -157,6 +157,8 @@ p{
           .border{
             border-top: 2px solid white;
             padding-top: 30px ;
+            padding-bottom: 30px ;
+
           }
           
         }

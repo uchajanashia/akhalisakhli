@@ -1,35 +1,76 @@
 <article>
-  <div class="about">
+  <div class="about" *ngIf="isGeorgian">
     <div class="abcompany" *ngFor="let about of aboutCompanyList">
-      <div class="majorc">
+      <div class="majorc background">
         <div class="forpatternB">
           <div class="content">
-            <h1 data-aos="fade-right">{{ isGeorgian ? about.satauri : about.satauriEN }}</h1>
-            <p data-aos="fade-right lowtext">{{ isGeorgian ? about.sataurisTxt : about.sataurisTxtEN }}</p>
+            <h1 data-aos="fade-right">{{about.title_GEO }}</h1>
+            <p data-aos="fade-right lowtext">{{ about.company_info_GEO}}</p>
           </div>
-          <div class="imgesB">
-            <img data-aos="fade-up" class="sizeB1" [src]="about.sec1Pic1" alt="">
-            <img data-aos="fade-up" class="sizeB2" [src]="about.sec1Pic2" alt="">
-            <img data-aos="fade-up" class="sizeB3" [src]="about.sec1Pic3" alt="">
+          <hr width="2" size="maximum" color="white" />
+          <div class="imgesB ">
+            <img data-aos="fade-up" class="sizeB1" [src]="" alt="">
+            <img data-aos="fade-up" class="sizeB2" [src]="" alt="">
+            <img data-aos="fade-up" class="sizeB3" [src]="" alt="">
           </div>
         </div>
       </div>
-      <div class="middlec">
-        <div class="forpatternW lowtext">
-          <div class="forcont lowtext">
-            <p data-aos="fade-right lowtext">{{ isGeorgian ? about.qveda : about.qvedaEN }}</p>
+      <div class="majorc whitebackground" style="margin-top: 100px;">
+        <div class="forpatternB">
+          <div class="imgesB">
+            <img data-aos="fade-up" class="sizeB1" [src]="" alt="">
+            <img data-aos="fade-up" class="sizeB2" [src]="" alt="">
+            <img data-aos="fade-up" class="sizeB3" [src]="" alt="">
           </div>
-          <div class="imgesW ">
-            <img data-aos="fade-up" class="sizeW1" [src]="about.sec2Pic1" alt="">
-            <img data-aos="fade-up" class="sizeW2" [src]="about.sec2Pic2" alt="">
-            <img data-aos="fade-up" class="sizeW3" [src]="about.sec2Pic3" alt="">
-          </div>
-          <div class="moreCont lowtext">
-            <p data-aos="fade-left" class="pos1">{{ isGeorgian ? about.qveda1 : about.qveda1EN }}</p>
-            <p data-aos="fade-left" class="pos2">{{ isGeorgian ? about.qveda2 : about.qveda2EN }}</p>
-            <p data-aos="fade-left" class="pos3">{{ isGeorgian ? about.qveda3 : about.qveda3EN }}</p>
+          <hr width="2" size="maximum"  color="black"/>
+          <div class="content">
+            <p data-aos="fade-right lowtext" style="color: black;">{{ about.company_info_1_GEO }}</p>
+
           </div>
         </div>
+      </div>
+      <div>
+        <h1 style="color: white;">.</h1>
+        <h1 style="color: white;">.</h1>
+
+      </div>
+    </div>
+  </div>
+  <div class="about" *ngIf="!isGeorgian">
+    <div class="abcompany" *ngFor="let about of aboutCompanyList">
+      <div class="majorc background">
+        <div class="forpatternB">
+          <div class="content">
+            <h1 data-aos="fade-right">{{about.title_EN }}</h1>
+            <p data-aos="fade-right lowtext">{{ about.company_info_EN}}</p>
+          </div>
+          <hr width="2" size="maximum" color="white" />
+          <div class="imgesB ">
+          <img data-aos="fade-up" class="sizeB1" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+about.id+'1.jpg'" alt="service image" />
+          <img data-aos="fade-up" class="sizeB2" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+about.id+'2.jpg'" alt="service image" />
+          <img data-aos="fade-up" class="sizeB3" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+about.id+'3.jpg'" alt="service image" />
+
+          </div>
+        </div>
+      </div>
+      <div class="majorc whitebackground" style="margin-top: 100px;">
+        <div class="forpatternB">
+          <div class="imgesB">
+          <img data-aos="fade-up" class="sizeB1" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+about.id+'1.jpg'" alt="service image" />
+          <img data-aos="fade-up" class="sizeB2" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+about.id+'2.jpg'" alt="service image" />
+          <img data-aos="fade-up" class="sizeB3" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+about.id+'3.jpg'" alt="service image" />
+          </div>
+          <hr width="2" size="maximum"  color="black"/>
+          <div class="content">
+            <p data-aos="fade-right lowtext" style="color: black;">{{ about.company_info_1_EN }}</p>
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1 style="color: white;">.</h1>
+        <h1 style="color: white;">.</h1>
+
       </div>
     </div>
   </div>

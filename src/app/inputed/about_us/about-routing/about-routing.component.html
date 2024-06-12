@@ -1,0 +1,16 @@
+<app-header-input></app-header-input>
+<div class="contain">
+    <ul class="shortcut" *ngIf="isGeorgian">
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_info' }" [routerLink]="['/admin/about_us/company_info']">კომპანიის შესახებ</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_value' }" [routerLink]="['/admin/about_us/company_value']">მისია, ხედვა, ფასეულობები</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_team' }" [routerLink]="['/admin/about_us/company_team']">ჩვენი გუნდი</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_partners' }" [routerLink]="['/admin/about_us/company_partners']">პარტნიორები</a></li>
+    </ul>
+    <ul class="shortcut" *ngIf="!isGeorgian">
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_info' }" [routerLink]="['/admin/about_us/company_info']">About Company</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_value' }" [routerLink]="['/admin/about_us/company_value']">Mission, Vision, Values</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_team' }" [routerLink]="['/admin/about_us/company_team']">Our Team</a></li>
+      <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/about_us/company_partners' }" [routerLink]="['/admin/about_us/company_partners']">Partners</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
