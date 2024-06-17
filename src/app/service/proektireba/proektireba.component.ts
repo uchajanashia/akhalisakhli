@@ -3,9 +3,10 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
 import Aos from 'aos';
-import { Proeqtireba } from '../../services';
+import { Proeqtireba, iService } from '../../services';
 import { ServiceListService } from '../../service-list.service';
 import { LanguageService } from '../../language.service';
+import { PageService } from '../../inputed/service/page.service';
 
 export interface SlideVId {
   vidSrc: string;
@@ -24,33 +25,44 @@ export interface SlideVId {
     ]
 })
 export class ProektirebaComponent {
+  isGeorgian: boolean = true;
+  iService: iService = { // Set a default empty object
+    id: '',
+    title: '',
+    text: '',
+    listservice: [],
+    titleEn: '',
+    textEn: '',
+    listserviceEn: []
+  };
+  pageId : string = '38e5b29e-1757-4c55-960c-790ed0c230ea';
+  constructor(private serviceService: ServiceListService, private languageService: LanguageService, private pageService: PageService) {}
 
-
-
-  floatcontainer=false;
-
-  isGeorgian: boolean = true; 
-
-
-  proeqtirebaList:Proeqtireba[]=[];
-
-
-
-  constructor(private serviceService: ServiceListService,private languageService: LanguageService){}
   ngOnInit(): void {
     Aos.init();
     Aos.refresh();
-    this.proeqtirebaList=this.serviceService.getAllProeqtireba();
     this.languageService.updateLanguageCheck();
     this.languageService.getBoolean().subscribe(value => {
       this.isGeorgian = value;
     });
+    this.getServiceData(this.pageId); // Replace 'your-page-id' with the actual ID
   }
 
-
-
-
-
+  getServiceData(id: string): void {
+    this.pageService.getPageById(id).subscribe(data => {
+      const pageComponent = data.pageComponentModals[0];
+      const parsedContent = JSON.parse(pageComponent.componentContent);
+      this.iService = {
+        id: pageComponent.pageComponentId,
+        title: parsedContent.title,
+        text: parsedContent.text,
+        listservice: parsedContent.listservice,
+        titleEn: parsedContent.titleEn,
+        textEn: parsedContent.textEn,
+        listserviceEn: parsedContent.listserviceEn
+      };
+    });
+  }
 
 
 }

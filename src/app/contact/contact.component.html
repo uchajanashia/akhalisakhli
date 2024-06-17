@@ -17,20 +17,21 @@
                         <i class="fas fa-mobile-alt"></i>
                         <h4 class="d-inline-block upper"> {{languagecheck ? 'ტელეფონი':'phone'}} :
                             <br>
-                            <span>+995 595 04 41 11 | +995 551 351 111</span></h4>
+                            <span>{{ contactInfo.phone1 }}| {{ contactInfo.phone2 }}</span></h4>
                     </div>
                     <!-- Info-2 -->
                     <div class="info">
                         <i class="far fa-envelope"></i>
                         <h4 class="d-inline-block upper">{{languagecheck ?'ელ-ფოსტა':'e-mail'}} :
                             <br>
-                            <a >info&commat;akhalisakhli.com</a> </h4>
+                            <a style="color: var(--dark-green);" href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a>
+                        </h4>
                     </div>
                     <!-- Info-3 -->
                     <div class="info">
                         <i class="fas fa-map-marker-alt"></i>
                         <h4 class="d-inline-block upper">{{languagecheck ? 'მისამართი':'address'}} :<br>
-                            <span>{{languagecheck ?'ს.ჩიქოვანის ქუჩა #4 ':'S.Chikovani st. N4'}}</span></h4>
+                            <span>{{ languagecheck ? contactInfo.address : contactInfo.addressEn }}</span></h4>
                     </div>
                 </div>
             </div>

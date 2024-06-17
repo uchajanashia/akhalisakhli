@@ -1,0 +1,77 @@
+.container {
+    padding: 20px;
+    background: #2d2d2d;
+    color: white;
+    border-radius: 10px;
+    max-width: 1200px; /* Increase the max-width for both forms */
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .form-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between the two forms */
+    gap: 20px; /* Add some space between the forms */
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  textarea, input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  li input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4500;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #ff6347;
+  }
+  
+  .button-container {
+    text-align: center; /* Center the submit button */
+    margin-top: 20px;
+  }
+  
+  .update-button {
+    background-color: #007bff; /* New color for the update button */
+  }
+  
+  .update-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  

@@ -1,1 +1,31 @@
-<p>company-team works!</p>
+<article>
+  <div class="about">
+    <div class="abcompany">
+      <div class="majorc" *ngFor="let service of gundiList; let i = index">
+        <div class="forpatternB">
+          <div class="content">
+            <div class="text">
+              <h1>ქართული ვერსია</h1>
+              <input class="title" type="text" [(ngModel)]="service.name" />
+              <input class="title" [(ngModel)]="service.surname">
+              <input class="title" [(ngModel)]="service.position">
+              <button id="button" (click)="updateService(service)">განახლება</button>
+            </div>
+          </div>
+          <div class="content">
+            <div class="text">
+              <h1>English version</h1>
+              <input class="title" type="text" [(ngModel)]="service.nameEn" />
+              <input class="title" [(ngModel)]="service.surnameEn">
+              <input class="title" [(ngModel)]="service.positionEn">
+              <button id="button" (click)="updateService(service)">Update</button>
+            </div>
+          </div>
+        </div>
+        <div class="img-container">
+          <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id + '.jpg')" />
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,37 @@
+<div class="container" *ngIf="iService">
+    <div class="form-wrapper">
+      <div class="form-group">
+        <h2>ქართული</h2>
+        <input [(ngModel)]="iService.title" placeholder="Enter title"/>
+        <textarea [(ngModel)]="iService.text" placeholder="Enter some text here"></textarea>
+        <ul>
+          <li *ngFor="let service of iService.listservice; let i = index">
+            <input [(ngModel)]="iService.listservice[i]" />
+            <button (click)="deleteService(i, false)">Delete</button>
+          </li>
+        </ul>
+        <input [(ngModel)]="newService" placeholder="Add new service"/>
+        <button (click)="addService(false)">Add</button>
+      </div>
+  
+      <div class="form-group">
+        <h2>English</h2>
+        <input [(ngModel)]="iService.titleEn" placeholder="Enter title"/>
+        <textarea [(ngModel)]="iService.textEn" placeholder="Enter some text here"></textarea>
+        <ul>
+          <li *ngFor="let service of iService.listserviceEn; let i = index">
+            <input [(ngModel)]="iService.listserviceEn[i]" />
+            <button (click)="deleteService(i, true)">Delete</button>
+          </li>
+        </ul>
+        <input [(ngModel)]="newServiceEn" placeholder="Add new service"/>
+        <button (click)="addService(true)">Add</button>
+      </div>
+    </div>
+  
+    <!-- Submit Button -->
+    <div class="button-container">
+      <button class="update-button" (click)="submitChanges()">Submit Changes</button>
+    </div>
+  </div>
+  

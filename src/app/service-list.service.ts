@@ -79,80 +79,7 @@ export class ServiceListService {
       image: '../../assets/pics/partniorebi/x2white.png',
     },
   ];
-  protected gundiList: Gundi[] = [
-    {
-      id: 1,
-      name: 'ილია',
-      surname: 'ტყეშელაშვილი',
-      position: 'დამფუძნებელი',
-      img: 'assets/pics/group/ilia.jpg',
-    },
-    {
-      id: 2,
-      name: 'სოფიო',
-      surname: 'ჩიტრეკაშვილი',
-      position: 'დირექტორი',
-      img: 'assets/pics/group/sofio.jpg',
-    },
-    {
-      id: 3,
-      name: 'თეკლა',
-      surname: 'საცერაძე',
-      position: 'პროექტების მენეჯერი',
-      img: 'assets/pics/group/tekla.jpg',
-    },
-    {
-      id: 4,
-      name: 'ივანე',
-      surname: 'ბლიაძე',
-      position: 'მშენებელი',
-      img: 'assets/pics/group/ivane.jpg',
-    },
-    {
-      id: 5,
-      name: 'გურამ',
-      surname: 'დევიძე',
-      position: 'არქიტექტორი',
-      img: 'assets/pics/group/guram.jpg',
-    },
-  ];
-  protected gundiListEn: Gundi[] = [
-    {
-      id: 1,
-      name: 'Ilia',
-      surname: 'Tkeshelashvili',
-      position: 'The founder',
-      img: 'assets/pics/group/ilia.jpg',
-    },
-    {
-      id: 2,
-      name: 'Sofia',
-      surname: 'Chitrekashvili',
-      position: 'The director',
-      img: 'assets/pics/group/sofio.jpg',
-    },
-    {
-      id: 3,
-      name: 'Tekla',
-      surname: 'Satseradze',
-      position: 'Project manager',
-      img: 'assets/pics/group/tekla.jpg',
-    },
-    {
-      id: 4,
-      name: 'Ivane',
-      surname: 'Bliadze',
-      position: 'Builder',
-      img: 'assets/pics/group/ivane.jpg',
-    },
-    {
-      id: 5,
-      name: 'Guram',
-      surname: 'Devidze',
-      position: 'An architect',
-      img: 'assets/pics/group/guram.jpg',
-    },
-  ];
+
 
   protected aboutCompanyList: AboutCompany[] = [
     {
@@ -393,38 +320,6 @@ export class ServiceListService {
 
   protected news: News[] = [
 
-  {
-    title: '„ახალი სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
-    title2: ' ',
-    title3: '  ',
-    content: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<p></p><br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<p></p><br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
-    content2: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს.', 
-    content3: '',
-    titleEN: 'New House participates in the 28th International Caucasus Build 2024 exhibition of building materials and interiors',
-    titleEN2: ' ',
-    titleEN3: ' ',
-    contentEN: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements.I will serve with a discount.',
-    contentEN2: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.',
-    contentEN3: ' ',
-    image: 'assets/news/anonsi16.9.jpg',
-    id: 1
-  },
-  {
-    title: '„ახალი სახლი“   სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა „Caucasus Build 2024“ -ში მონაწილეობს',
-    title2: ' ',
-    title3: '  ',
-    content: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<p></p><br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს. კომპანიის სტენდთან დამთვალიერებლებს  შესაძლებლობა ექნებათ გაეცნონ კომპანიის სერვისებს,  VR სათვალის საშუალებით დაათვალიერონ ჩვენს მიერ ექსკლუზიურად შესრულებული სახლების პროექტები და ვირტუალურად აღიქვან დიზაინისა და არქიტექტურის ელემენტები.<p></p><br>ამასთან, გამოფენაზე მოსული სტუმრებისთვის,  „ახალი სახლი“ განსაკუთრებულ შეთავაზებებსაც  ამზდებს და  თითოეულ სასურველ სერვისზე 10 %-იანი ფასდაკლებით მოემსახურება. ',
-    content2: 'გამოფენების ცენტრ ექსპოჯორჯიას ორგანიზებით, 2024 წლის 26-27-28 აპრილს სამშენებლო მასალებისა და ინტერიერის 28-ე საერთაშორისო გამოფენა ჩატარდება.<br>„ახალი სახლი“ გამოფენაზე მოსულ სტუმრებს  მე-5 პავილიონში უმასპინძლებს.', 
-    content3: '',
-    titleEN: 'New House participates in the 28th International Caucasus Build 2024 exhibition of building materials and interiors',
-    titleEN2: ' ',
-    titleEN3: ' ',
-    contentEN: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.Visitors to the companys stand will be able to get acquainted with the companys services, view the projects of our exclusively homes through VR glasses and perceive virtually design and architecture elements.I will serve with a discount.',
-    contentEN2: 'The Exhibition Center Expojorja will host the 28th International Exhibition of Construction Materials and Interior on April 26-27-28.',
-    contentEN3: ' ',
-    image: 'assets/news/anonsi16.9.jpg',
-    id: 2
-  },
 
 
     
@@ -435,9 +330,6 @@ export class ServiceListService {
   //news
   getNews(): Observable<News[]> {
     return of(this.news);
-  }
-  getNewsId(id: number): News | undefined {
-    return this.news.find((sitem) => sitem.id === id);
   }
   //landshafti
   getAllLandshafti(): Mshenebloba[] {
@@ -473,17 +365,7 @@ export class ServiceListService {
   getAllMXF(): AboutCompany[] {
     return this.MXFList;
   }
-  //gundi
-  getAllGroup(): Gundi[] {
-    return this.gundiList;
-  }
-  getGroupID(id: number): Gundi | undefined {
-    return this.gundiList.find((sitem) => sitem.id === id);
-  }
-  //gundien
-  getAllGroupEn(): Gundi[] {
-    return this.gundiListEn;
-  }
+
 
   //partniorebi
   getAllPartniorebi(): Partniorebi[] {

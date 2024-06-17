@@ -7,6 +7,8 @@ import { FloatContactComponent } from "../float-contact/float-contact.component"
 import { AboutCompany } from '../services';
 import { LanguageService } from '../language.service';
 import { ServiceListService } from '../service-list.service';
+import { PageService } from '../inputed/service/page.service';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-shesaxeb',
@@ -19,8 +21,9 @@ export class ShesaxebComponent  implements OnInit{
   isGeorgian: boolean = true; 
   aboutCompanyList:AboutCompany[]=[];
   constructor(
-    private serviceService: ServiceListService,
-    private languageService: LanguageService // Assuming LanguageService is imported correctly
+    private pageService: PageService,
+    private languageService: LanguageService, // Assuming LanguageService is imported correctly
+    private sanitizer: DomSanitizer
   ) {}
   ngOnInit() {
     this.languageService.updateLanguageCheck();
@@ -29,6 +32,19 @@ export class ShesaxebComponent  implements OnInit{
     });
     Aos.init();
     Aos.refresh();
-    this.aboutCompanyList = this.serviceService.getAllAboutCompany();
+    this.pageService.getPageById('463e6689-a45d-4e1d-a853-cf930cdb0a81').subscribe(data => {
+      this.aboutCompanyList = data.pageComponentModals.map((item: any) => {
+        const parsedContent = JSON.parse(item.componentContent);
+        return {
+          id: item.pageComponentId,
+          name: item.pageComponentId,
+          ...parsedContent // Spread the parsed JSON content into the main object
+        };
+      });
+    });
+  }
+
+  getSafeUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 }

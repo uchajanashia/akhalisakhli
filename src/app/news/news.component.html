@@ -1,33 +1,22 @@
 <app-header></app-header>
 
 <div class="main">
-
-    <div class="news" *ngFor="let item of getPaginatedNews()" >
-        <div data-aos="fade-up" class="text">
-            <h3>{{ languagecheck ? item.title : item.titleEN}}</h3>
-            <p [innerHTML]="languagecheck ? item.content2  : item.contentEN2"></p>
-            <div class="parent-container">
-                <a (click)="viewMore(item)" class="upper">  {{ languagecheck ? 'იხილეთ ვრცლად ' : 'find more' }}</a>
-              </div>
+  <div class="news-container">
+    <div class="news" *ngFor="let item of news; let i = index" [class.even]="i % 2 === 1">
+      <div data-aos="fade-up" class="text">
+        <h3>{{ languagecheck ? item.title : item.titleEn }}</h3>
+        <p [innerHTML]="languagecheck ? item.shortText : item.shortTextEn"></p>
+        <div class="parent-container">
+          <a (click)="viewMore(item)" class="upper">{{ languagecheck ? 'იხილეთ ვრცლად ' : 'Find More' }}</a>
         </div>
-        <img data-aos="fade-up" [src]="item.image" alt="" (click)="toggleFullScreen(item.image)">
+      </div>
+      <img data-aos="fade-up" class="image" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+item.id+'.jpg'" alt="" (click)="toggleFullScreen(item.image)">
     </div>
-    
-    <div class="pagination">
-        <button *ngFor="let page of getPageNumbers()"
-        (click)="onPageChange(page)"
-        [class.selected]="page === currentPage">
-        {{ page }}
-    </button>
+  </div>
 </div>
 
-</div>
 <app-footer></app-footer>
 
-<div
-class="fullscreen-image"
-[ngClass]="{ show: isFullScreen && fullscreenImage }"
-*ngIf="isFullScreen && fullscreenImage"
-(click)="toggleFullScreen(fullscreenImage)"
->
-<img [src]="fullscreenImage" alt="" />
+<div class="fullscreen-image" [ngClass]="{ show: isFullScreen && fullscreenImage }" *ngIf="isFullScreen && fullscreenImage" (click)="toggleFullScreen(fullscreenImage)">
+  <img [src]="fullscreenImage" alt="" />
+</div>

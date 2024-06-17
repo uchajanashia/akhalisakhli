@@ -12,18 +12,29 @@ import { LanguageService } from '../../language.service';
     imports: [HeaderComponent, FooterComponent ,CommonModule]
 })
 export class NewsviewComponent  implements OnInit{
-toggleFullScreen(arg0: any) {
-throw new Error('Method not implemented.');
-}
-  news : any;
+
+  news: any;
   languagecheck = true;
- constructor(private language : LanguageService){
-  this.news = history.state;
- }
+  fullscreenImage: string | null = null;
+  isFullScreen = false;
+
+  constructor(private language: LanguageService) {
+    this.news = history.state;
+  }
+
   ngOnInit(): void {
     this.language.updateLanguageCheck();
     this.language.getBoolean().subscribe(value => {
       this.languagecheck = value;
     });
+  }
+
+  toggleFullScreen(imageSrc: string): void {
+    if (this.fullscreenImage === imageSrc) {
+      this.isFullScreen = !this.isFullScreen;
+    } else {
+      this.isFullScreen = true;
+      this.fullscreenImage = imageSrc;
+    }
   }
 }

@@ -5,10 +5,7 @@ export interface Services {
     nameEn:string;
     descriptionEN:string;
 }
-export interface Slide {
-    imgSrc: string;
-    imgAlt: string;
-}
+
 export interface Proeqtireba {
     pcont11:string;
     pcontli:string[];
@@ -25,20 +22,14 @@ export interface Partniorebi {
 }
 
 export interface News {
-    id: number;
-  title: string;
-  title2: string;
-  title3: string;
-  content: string;
-  content2: string;
-  content3: string;
-  titleEN:string;
-  titleEN2:string;
-  titleEN3:string;
-  contentEN:string;
-  contentEN2:string;
-  contentEN3:string;
-  image:string;
+    id:string,
+    title: string,
+    titleEn: string,
+    shortText: string,
+    shortTextEn:string,
+    text: string,
+    textEn: string,
+    image: string,
 
 }
 export interface Mshenebloba {
@@ -52,7 +43,10 @@ export interface Gundi {
     name:string,
     surname:string,
     position:string,
-    img:string,
+
+    nameEn:string,
+    surnameEn:string,
+    positionEn:string,
 }
 export interface Country {
     id:number,
@@ -113,4 +107,15 @@ export interface project{
 
     image:string[],
     video:string,
+}
+
+export interface iService{
+    id: any;
+    title: string;
+    text: string;
+    listservice: string[];
+    titleEn: string;
+    textEn: string;
+    listserviceEn: string[];
+    
 }

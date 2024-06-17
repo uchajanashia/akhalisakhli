@@ -1,0 +1,58 @@
+<app-header-input></app-header-input>
+
+<div class="container" style="padding-top: 120PX;">
+  <div class="form-group">
+    <label for="selectNews">სიახლის არჩევა:</label>
+    <select id="selectNews" [(ngModel)]="selectedNewsId" (change)="onNewsSelect($event)" class="form-control custom-select">
+      <option *ngFor="let news of newsList" [value]="news.id">
+        {{ news.title }}
+      </option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedNews">
+    <div class="news-content">
+      <div class="form-group">
+        <h2>ქართული ვერსია</h2>
+        <label for="newsTitle">სათაური:</label>
+        <input id="newsTitle" [(ngModel)]="selectedNews.title" class="form-control" />
+
+        <label for="newsShortText">მოკლე ტექსტი:</label>
+        <input id="newsShortText" [(ngModel)]="selectedNews.shortText" class="form-control" />
+
+        <label for="newsContent">ტექსტი:</label>
+        <textarea id="newsContent" [(ngModel)]="selectedNews.text" class="form-control"></textarea>
+      </div>
+
+      <div class="form-group">
+        <h2>English Version</h2>
+        <label for="newsTitleEn">Title:</label>
+        <input id="newsTitleEn" [(ngModel)]="selectedNews.titleEn" class="form-control" />
+
+        <label for="newsShortTextEn">Short Text:</label>
+        <input id="newsShortTextEn" [(ngModel)]="selectedNews.shortTextEn" class="form-control" />
+
+        <label for="newsContentEn">Text:</label>
+        <textarea id="newsContentEn" [(ngModel)]="selectedNews.textEn" class="form-control"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newsImage">ფოტო:</label>
+      <input type="file" id="newsImage" (change)="onImageUpload($event, selectedNews.id+'.jpg')" />
+      <img *ngIf="selectedNews.image"  [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+selectedNews.id+'.jpg'" alt="News Image" />
+    </div>
+    
+
+    <button (click)="updateNews()" class="btn btn-primary">განახლება</button>
+    <button (click)="deleteNews(selectedNews.id+'.jpg')" class="btn btn-danger">წაშლა</button>
+  </div>
+
+  <div class="form-group">
+    <label for="newNewsTitle">ახალი სიახლის სათაური:</label>
+    <input id="newNewsTitle" [(ngModel)]="newNewsTitle" class="form-control" />
+  </div>
+
+  <button (click)="addNewNews()" class="btn btn-success">სიახლის დამატება</button>
+</div>
+

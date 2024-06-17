@@ -1,20 +1,17 @@
-  <div class="about">
-    <div class="abcompany">
-      <div></div>
-
-      <div class="majorc black">
+  <div class="about" *ngIf="languagecheck">
+    <div class="abcompany"  *ngFor="let service of service">
+    <div class="majorc black">
         <div class="forpatternB">
 
           <div class="content">
-            <h1 data-aos="fade-right " >{{ languagecheck ? 'მისია':'Mission'}}</h1>
-            <p class="border" data-aos="fade-right">{{ languagecheck ? 'სტაბილური და მდგრადი კომპანია, რომელიც მუდმივად ზრუნავს განვითარებაზე, ეცნობა ახალ საერთაშორისო ტექნოლოგიებსა და სტანდარტებს, ადაპტირებას უკეთებს ქართულ რეალობაში და მაქსიმალურად იყენებს: ადგილობრივ, ბიოდეგრადირებად, გადამუშავებად და ეკოლოგიურად სუფთა მასალებს.'
-            :'Creating maximum comfort for users, human life Improving quality and building an aesthetically pleasing future.'}}
+            <h1 data-aos="fade-right " >{{service.MissionName}}</h1>
+            <p class="border" data-aos="fade-right">{{service.MissionDescription }}
               </p>
           </div>
           <hr width="1" size="maximum"  />
             <div class="content">
-              <h1 data-aos="fade-right upper">{{ languagecheck ? 'ხედვა':'View'}}</h1>
-              <p class="border" data-aos="fade-right">{{ languagecheck ? 'მომხმარებლებისთვის მაქსიმალური კომფორტის შექმნა, ადამიანის ცხოვრების ხარისხის გაუმჯობესება და ესთეტიურად მომხიბვლელი მომავლის შენება.':'A stable and sustainable company that constantly cares about development, is familiar with new international technologies and standards, adapts to the Georgian reality and uses local, biodegradable, recyclable and environmentally friendly materials as much as possible.'}}
+              <h1 data-aos="fade-right upper">{{ service.VisionName}}</h1>
+              <p class="border" data-aos="fade-right">{{ service.VisionDescription}}
                 </p>
             </div>
         
@@ -22,24 +19,73 @@
       </div>
       <div class="majorc white">
         <div class="forpatternW">
-          <h1 class="upper" style="text-align: center; margin-bottom: 50px; padding-top: 20px;"> {{ languagecheck ? 'ფასეულობები':'Values'}}</h1>
+          <h1 class="upper" style="text-align: center; margin-bottom: 50px; padding-top: 20px;"> {{service.ValueName }}</h1>
 
           <div class="forpatternB" style="text-align: center;">
             <div class="content" style="border-color: black; margin: 0;" >
-              <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ languagecheck ? 'სამართლიანობა':'Fairness '}}</h2>
-            <p class="border" data-aos="fade-left" style="color: black;  padding: 0;" class="pos1">  {{ languagecheck ? 'გამჭვირვალე და თანასწორი ურთიერთობა მომხმარებლებთან, პარტნიორებთან და თანამშრომლებთან.':'transparent and equal relations with customers, partners and employees.'}}</p>
+              <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ service.Name1}}</h2>
+            <p class="border" data-aos="fade-left" style="color: black;  padding: 0;" class="pos1">  {{ service.Description1}}</p>
 
    
             </div>
          
               <div class="content" style="border-color: black; margin: 0;">
-                <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ languagecheck ? 'გუნდურობა':'Teamwork '}}</h2>
-                <p class="border" data-aos="fade-left" style="color: black;  padding: 0;" class="pos2">{{ languagecheck ? 'თანამშრომლებისა  და სერვისების მუდმივად განვითარება.':'continuous development of employees and services.'}} </p>
+                <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ service.Name2}}</h2>
+                <p class="border" data-aos="fade-left" style="color: black;  padding: 0;" class="pos2">{{ service.Description2}} </p>
 
               </div>
               <div class="content" style="border: none; margin: 0;">
-                <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ languagecheck ? 'ხარისხი':'Quality '}}</h2>
-                <p class="border" data-aos="fade-left" style="color: black; padding: 0;" class="pos3"> {{ languagecheck ? 'გარემოზე ზემოქმედების მინიმუმამდე შემცირება,  ეკოლოგიურად უსაფრთხო გადაწყვეტილებების მიღება, ენერგოეფექტური მშენებლობის  წარმოება და პოპულარიზაცია.':'minimization of environmental impact, ecologically safe Decision-making, production of energy-efficient construction and promotion.'}}</p>
+                <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ service.Name3}}</h2>
+                <p class="border" data-aos="fade-left" style="color: black; padding: 0;" class="pos3"> {{ service.Description3}}</p>
+
+              </div>
+          
+          </div>
+          <div class="moreCont">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about" *ngIf="!languagecheck">
+    <div class="abcompany"  *ngFor="let service of service">
+    <div class="majorc black">
+        <div class="forpatternB">
+
+          <div class="content">
+            <h1 data-aos="fade-right " >{{service.MissionNameEn}}</h1>
+            <p class="border" data-aos="fade-right">{{service.MissionDescriptionEn }}
+              </p>
+          </div>
+          <hr width="1" size="maximum"  />
+            <div class="content">
+              <h1 data-aos="fade-right upper">{{ service.VisionNameEn}}</h1>
+              <p class="border" data-aos="fade-right">{{ service.VisionDescriptionEn}}
+                </p>
+            </div>
+        
+        </div>
+      </div>
+      <div class="majorc white">
+        <div class="forpatternW">
+          <h1 class="upper" style="text-align: center; margin-bottom: 50px; padding-top: 20px;"> {{service.ValueNameEn }}</h1>
+
+          <div class="forpatternB" style="text-align: center;">
+            <div class="content" style="border-color: black; margin: 0;" >
+              <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ service.Name1En}}</h2>
+            <p class="border" data-aos="fade-left" style="color: black;  padding: 0;" class="pos1">  {{ service.Description1En}}</p>
+
+   
+            </div>
+         
+              <div class="content" style="border-color: black; margin: 0;">
+                <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ service.Name2En}}</h2>
+                <p class="border" data-aos="fade-left" style="color: black;  padding: 0;" class="pos2">{{ service.Description2En}} </p>
+
+              </div>
+              <div class="content" style="border: none; margin: 0;">
+                <h2 data-aos="fade-right " class="upper" style="margin-bottom: 10px;">{{ service.Name3En}}</h2>
+                <p class="border" data-aos="fade-left" style="color: black; padding: 0;" class="pos3"> {{ service.Description3En}}</p>
 
               </div>
           

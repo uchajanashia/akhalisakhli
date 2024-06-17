@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 import { CustumerdataService } from '../custumerdata.service';
 import { LanguageService } from '../language.service';
 import { SharedcontactService } from '../projects/sharedcontact.service';
+import { PageService } from '../inputed/service/page.service';
 
 @Component({
     selector: 'app-contact',
@@ -227,9 +228,20 @@ export class ContactComponent implements OnInit{
   languagecheck = true;
 
 
+  pageId = '485d2121-be16-4e58-86a6-8b4b0e6a7399';
+  componentId = '';
+  contactInfo = {
+    phone1: '',
+    phone2: '',
+    email: '',
+    address: '',
+    addressEn: ''
+  };
+
   constructor(public sharedService: SharedcontactService, private language: LanguageService, private toastr: ToastrService ,     private serviceService: ServiceListService,
     private custumerData: CustumerdataService,
-    private tost:ToastrService) {
+    private tost:ToastrService,
+    private pageService :PageService) {
       }
 
  
@@ -237,6 +249,8 @@ export class ContactComponent implements OnInit{
     this.language.getBoolean().subscribe(value => {
       this.languagecheck = value;
     });
+    this.getContactInfo();
+
   }
 
   onInputChange(){
@@ -267,5 +281,20 @@ export class ContactComponent implements OnInit{
     }else{
       this.tost.info('გთხოვთ შეავსეთ ყველა ველი')
     }
+    }
+
+    getContactInfo(): void {
+      this.pageService.getPageById(this.pageId).subscribe(data => {
+        const pageComponent = data.pageComponentModals[0];
+        this.componentId = pageComponent.pageComponentId;
+        const parsedContent = JSON.parse(pageComponent.componentContent);
+        this.contactInfo = {
+          phone1: parsedContent.phone1 || '',
+          phone2: parsedContent.phone2 || '',
+          email: parsedContent.email || '',
+          address: parsedContent.address || '',
+          addressEn: parsedContent.addressEn || ''
+        };
+      });
     }
 }

@@ -1,0 +1,12 @@
+<app-header-input></app-header-input>
+<div class="contain">
+    <ul class="shortcut">
+        <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/service/project_design' }"  [routerLink]="['/admin/service/project_design']">პროექტირება</a></li>
+        <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/service/construction' }"  [routerLink]="['/admin/service/construction']">მშენებლობა</a></li>
+        <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/service/interior_Design' }"  [routerLink]="['/admin/service/interior_Design']">ინტერიერის დიზაინი</a></li>
+        <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/service/renovation' }"  [routerLink]="['/admin/service/renovation']">რემონტი</a></li>
+        <li><a [ngClass]="{ 'active-filter': activeFilter === '/admin/service/landscape_design' }"  [routerLink]="['/admin/service/landscape_design']">ლანდშაფტის დიზაინი</a></li>
+      </ul>
+
+    <router-outlet></router-outlet>
+  </div>

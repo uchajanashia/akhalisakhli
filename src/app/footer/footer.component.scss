@@ -1,93 +1,102 @@
-.lowtext{
-  font-family: Arial, sans-serif !important; 
+/* Make sure the html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure main content takes up available space */
+main {
+  flex: 1 0 auto; /* This ensures that the main content takes up available space, pushing the footer to the bottom */
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto; /* Ensure footer is pushed to the bottom */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #141414;
+  backdrop-filter: blur(3px);
+  bottom: 0;
+}
+
+footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .logo img {
+  width: 150px;
+  padding: 20px;
+}
+
+footer .l1, footer .l2 {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  color: white;
+}
+
+footer .l1 li, footer .l2 li {
+  margin-top: 5px;
+  text-align: justify;
+  list-style: none;
+}
+
+footer .l1 a, footer .l2 a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+footer .l2 {
+  flex-direction: column;
+  font-family: "ALK Sanet", sans-serif !important;
+}
+
+.rights {
+  background-color: var(--black-v3-tr);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rights a {
+  color: white;
+  text-decoration: none;
+}
+
+.rights a:lang(ka) {
+  font-family: "ALK Sanet", sans-serif;
+}
+
+ul li {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 588px) {
+  .item:nth-child(1) {
+    order: 2;
+  }
+
+  .item:nth-child(2) {
+    order: 1;
+    width: 100%;
+  }
+
+  .item:nth-child(3) {
+    order: 3;
+  }
+}
+
+.lowtext {
+  font-family: Arial, sans-serif !important;
   font-size: 0.8rem !important;
   line-height: 1.5 !important;
 }
-footer {
-    margin-top: auto;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
-    position: relative;
-    justify-content: space-around;
-    background-color:#141414;
-    backdrop-filter: blur(3px);
-    bottom: 0;
-    .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      img {
-        width: 150px;
-        padding: 20px;
-      }
-    }
-  
-    .l1,
-    .l2 {
-      
-      display: flex;
-      justify-content: start;
-      align-items: start;
-      color: white;
-  
-      li {
-        margin-top: 5px;
-        text-align: justify;
-        list-style: none;
-      }
-  
-      a {
-        margin-left: 5px;
-        text-decoration: none;
-        color: white;
-      }
-    }
-  
-
-  
-    .l2 {
-      flex-direction: column;
-      font-family: "ALK Sanet", sans-serif !important;
-
-    }
-  }
-  
-  .rights {
-    background-color: var(--black-v3-tr);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    a{
-      color: white;
-  
-      &:lang(ka) {
-        font-family: "ALK Sanet", sans-serif;
-      }
-    }
-  }
-  ul{
-    li{
-      padding: 10px;
-    }
-  }
-  @media only screen and (max-width: 588px) {
-
-.item:nth-child(1) {
-    order: 2; 
-}
-
-.item:nth-child(2) {
-    order: 1; 
-    width: 100%;
-
-}
-
-.item:nth-child(3) {
-    order: 3; 
-}
-  }

@@ -1,21 +1,17 @@
 <div class="forAlign">
-  <article>
-      <h1>{{ isGeorgian ? 'ინტერიერის დიზაინი' : 'Interior design' }}</h1>
+    <article *ngIf="iService">
+      <h1>{{ isGeorgian ? iService.title : iService.titleEn }}</h1>
       <div class="txtcontain">
-          <p *ngFor="let interieriItem of interieriList">
-              {{ isGeorgian ? interieriItem.pcont11 : interieriItem.pcont11EN }}
-          </p>
-          <ul>
-              <ng-container *ngFor="let interieriItem of interieriList">
-                  <ng-container *ngFor="let item of isGeorgian ? interieriItem.pcontli : interieriItem.pcontliEN">
-                      <li>{{ item }}</li>
-                  </ng-container>
-              </ng-container>
-          </ul>
-          <div class="parent-container">
-            <a href="/projects" class="upper">  {{ isGeorgian ? 'ჩვენი ნამუშევრები' : 'Our Portfolio' }}</a>
-          </div>
-
+        <p>{{ isGeorgian ? iService.text : iService.textEn }}</p>
+        <ul>
+          <ng-container *ngFor="let item of (isGeorgian ? iService.listservice : iService.listserviceEn)">
+            <li>{{ item }}</li>
+          </ng-container>
+        </ul>
+        <div class="parent-container">
+          <a href="/projects" class="upper">{{ isGeorgian ? 'ჩვენი ნამუშევრები' : 'Our Portfolio' }}</a>
+        </div>
       </div>
-  </article>
-</div>
+    </article>
+  </div>
+  

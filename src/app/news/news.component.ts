@@ -7,6 +7,7 @@ import Aos from 'aos';
 import { News, Services } from '../services';
 import { LanguageService } from '../language.service';
 import { Router } from '@angular/router';
+import { PageService } from '../inputed/service/page.service';
 
 @Component({
     selector: 'app-news',
@@ -16,27 +17,13 @@ import { Router } from '@angular/router';
     imports: [HeaderComponent, FooterComponent,CommonModule]
 })
 export class NewsComponent implements OnInit{
-project: any;
-
-
   fullscreenImage: string | null = null;
   isFullScreen = false;
-
-
-  toggleFullScreen(imageSrc: string): void {
-      if (this.fullscreenImage === imageSrc) {
-          this.isFullScreen = !this.isFullScreen;
-      } else {
-          this.isFullScreen = true;
-          this.fullscreenImage = imageSrc;
-      }
-  }
-
   news: News[] = [];
-  currentPage = 1;
-  itemsPerPage = 5;
   languagecheck = true;
-  constructor(private serviceService: ServiceListService , private language : LanguageService , private router : Router) { }
+  pageId: string = 'd49e2a44-7c13-4e13-a9b8-8ad550485b7f'; // ფეიჯის აიდი
+
+  constructor(private serviceService: ServiceListService, private language: LanguageService, private router: Router, private pageService: PageService) { }
 
   ngOnInit(): void {
     this.language.getBoolean().subscribe(value => {
@@ -46,32 +33,35 @@ project: any;
     Aos.init();
     Aos.refresh();
   }
+
   viewMore(item: any) {
-    this.router.navigate(['/newsview'], { state: item});
+    this.router.navigate(['/newsview'], { state: item });
   }
+
   loadNews(): void {
-    this.serviceService.getNews().subscribe(news => {
-      this.news = news;
+    this.pageService.getPageById(this.pageId).subscribe(data => {
+      this.news = data.pageComponentModals.map((item: any) => {
+        const parsedContent = JSON.parse(item.componentContent);
+        return {
+          id: item.pageComponentId,
+          title: parsedContent.title,
+          titleEn: parsedContent.titleEn,
+          shortText: parsedContent.shortText,
+          shortTextEn: parsedContent.shortTextEn,
+          text: parsedContent.text,
+          textEn: parsedContent.textEn,
+          image: parsedContent.image
+        };
+      });
     });
   }
 
-
-
-  getPaginatedNews(): News[] {
-    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-    return this.news.slice(startIndex, startIndex + this.itemsPerPage);
-  }
-  
-  onPageChange(pageNumber: number): void {
-    this.currentPage = pageNumber;
-    this.scrollToTop();
-  }
-  scrollToTop(): void {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  getPageNumbers(): number[] {
-    const pageCount = Math.ceil(this.news.length / this.itemsPerPage);
-    return Array.from({ length: pageCount }, (_, index) => index + 1);
+  toggleFullScreen(imageSrc: string): void {
+    if (this.fullscreenImage === imageSrc) {
+      this.isFullScreen = !this.isFullScreen;
+    } else {
+      this.isFullScreen = true;
+      this.fullscreenImage = imageSrc;
+    }
   }
 }

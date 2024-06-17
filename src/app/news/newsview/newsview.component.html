@@ -1,30 +1,20 @@
+
 <app-header></app-header>
 <div class="background"></div>
 
 <main>
-
-	<div class="forpadding">
-
-	</div>
-	<section>
-		<h1>{{languagecheck ? news.title : news.titleEN}}</h1>
-		<div class="h1-divider"></div>
-		<div class="placeHolder_img">
-			<img class="image" [src]="news.image" alt="" (click)="toggleFullScreen(news.image) ">
-			</div>
-		<p  class="intro" [innerHTML]="languagecheck ? news.content: news.contentEN"></p>
-
-		<!-- <article>
-			
-			<h3  *ngIf="news.title2">{{languagecheck ? news.title2 : news.titleEN2}}</h3>
-			<p  *ngIf="news.content2" [innerHTML]="languagecheck ? news.content2: news.contentEN2"></p>
-
-	
-			<h3 *ngIf="news.title3" >{{languagecheck ? news.title3 : news.titleEN3}}</h3>
-
-			<p *ngIf="news.content3" [innerHTML]="languagecheck ? news.content3: news.contentEN3"></p>
-
-		</article> -->
-	</section>
+  <div class="forpadding"></div>
+  <section>
+    <h1>{{languagecheck ? news.title : news.titleEn}}</h1>
+    <div class="h1-divider"></div>
+    <div class="placeHolder_img">
+		<img class="image" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+news.id+'.jpg'" alt="" (click)="toggleFullScreen(news.image)">
+    </div>
+    <p class="intro" [innerHTML]="languagecheck ? news.text : news.textEn"></p>
+  </section>
 </main>
 <app-footer></app-footer>
+
+<div class="fullscreen-image" [ngClass]="{ show: isFullScreen && fullscreenImage }" *ngIf="isFullScreen && fullscreenImage" (click)="toggleFullScreen(fullscreenImage)">
+  <img [src]="fullscreenImage" alt="" />
+</div>
