@@ -49,7 +49,7 @@
 <section [ngClass]="{ hidden: loading }" class="sect" >
   <ul>
     <li *ngFor="let service of serviceList; let even = even; let odd = odd">
-      <a [href]="service.name" data-aos="fade-up" class="seccontain" id="sec1">
+      <a [routerLink]="['/service/'+service.name]" data-aos="fade-up" class="seccontain" id="sec1">
         <div class="text" *ngIf="languagecheck">
           <p class="nowrap">{{ service.name }}</p>
           <p class="lowtext">{{ service.description }}</p>
@@ -59,7 +59,7 @@
           <p class="lowtext">{{ service.descriptionEN }}</p>
         </div>
         <div class="imgtxt">
-          <img class="imginside" [src]="getSafeUrl('https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg')" alt="pic" />
+          <img class="imginside" [src]="getSafeUrl('https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg')" alt="pic" loading="lazy" />
         </div>
       </a>
     </li>
@@ -88,7 +88,7 @@
         required
       />
       <div style="display: flex; ">
-        <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage">
+        <img class="countryimg" [src]="selectedCountryImage" alt="Selected Country Flag" *ngIf="selectedCountryImage" loading="lazy">
         <!-- <select class="form-select" id="phoone" name="phone" [(ngModel)]="selectedCountry" (ngModelChange)="onCountryChange()">
           <option *ngFor="let country of countryList" [value]="country.code" > {{country.code}}  {{country.name}}</option>
         </select> -->

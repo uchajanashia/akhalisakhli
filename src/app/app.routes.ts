@@ -119,6 +119,31 @@ export const routes: Routes = [
           component: RemontiComponent,
           data: { title: 'რემონტი' },
         },
+        {
+          path: 'ინტერიერი',
+          component: InterieriComponent,
+          data: { title: 'ინტერიერი' },
+        },
+        {
+          path: 'ლანდშაფტის%20დიზაინი',
+          component: LandshaftiComponent,
+          data: { title: 'ლადნშაფტის დიზაინი' },
+        },
+        {
+          path: 'მშენებლობა',
+          component: MsheneblobaComponent,
+          data: { title: 'მშენებლობა' },
+        },
+        {
+          path: 'პროექტირება',
+          component: ProektirebaComponent,
+          data: { title: 'პროექტირება' },
+        },
+        {
+          path: 'რემონტი',
+          component: RemontiComponent,
+          data: { title: 'რემონტი' },
+        },
       ]
     },
     {

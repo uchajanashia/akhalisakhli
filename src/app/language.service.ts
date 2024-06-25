@@ -5,7 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
   providedIn: 'root'
 })
 export class LanguageService {
-  
+  private readonly key = 'popupShown';
   private languageCheckSubject = new BehaviorSubject<boolean>(false);
   constructor(public cook : CookieService) {    
       this.updateLanguageCheck();
@@ -35,5 +35,12 @@ export class LanguageService {
     }
     const languageCheckValue = truee === 'ka'; 
     this.languageCheckSubject.next(languageCheckValue);
+  }
+  public setPopupShown(): void {
+    localStorage.setItem(this.key, 'true');
+  }
+
+  public isPopupShown(): boolean {
+    return localStorage.getItem(this.key) === 'true';
   }
 }

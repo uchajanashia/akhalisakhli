@@ -23,6 +23,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ContactformComponent } from "../contactform/contactform.component";
 import { PageService } from '../inputed/service/page.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { RouterLink, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -38,13 +39,15 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
         FloatContactComponent,
         FormsModule,
         CommonModule,
+        RouterLink,
+        RouterModule,
         ContactformComponent
     ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   longList: any;
   serviceList: Services[] = [];
-
+  showPopup = false;
   countries=[
     { id: 1, name: 'Afghanistan', code: '+93', img: 'assets/4x3/af.svg' },
     { id: 2, name: 'Albania', code: '+355', img: 'assets/4x3/al.svg' },
@@ -306,11 +309,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
 
   ngAfterViewInit() {
-    setTimeout(() => {
+    if (!this.language.isPopupShown()) {
+      setTimeout(() => {
+        this.loading = false;
+        this.playVideo();
+      }, 5000);
+      this.setAutoplayAttribute();
+      this.language.setPopupShown();
+    }
+    if (this.language.isPopupShown()) {
       this.loading = false;
       this.playVideo();
-    }, 5000);
     this.setAutoplayAttribute();
+    }
 
     Aos.refresh();
   }

@@ -8,7 +8,7 @@
     <h1>{{languagecheck ? news.title : news.titleEn}}</h1>
     <div class="h1-divider"></div>
     <div class="placeHolder_img">
-		<img class="image" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+news.id+'.jpg'" alt="" (click)="toggleFullScreen(news.image)">
+		<img class="image" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+news.id+'.jpg'" alt="" (click)="toggleFullScreen(news.image)" loading="lazy">
     </div>
     <p class="intro" [innerHTML]="languagecheck ? news.text : news.textEn"></p>
   </section>
@@ -16,5 +16,5 @@
 <app-footer></app-footer>
 
 <div class="fullscreen-image" [ngClass]="{ show: isFullScreen && fullscreenImage }" *ngIf="isFullScreen && fullscreenImage" (click)="toggleFullScreen(fullscreenImage)">
-  <img [src]="fullscreenImage" alt="" />
+  <img [src]="fullscreenImage" alt="" loading="lazy"/>
 </div>
