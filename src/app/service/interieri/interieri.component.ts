@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Mshenebloba, iService } from '../../services';
-import { ServiceListService } from '../../service-list.service';
+import { Component,  OnInit } from '@angular/core';
+import {  iService } from '../../services';
 import Aos from 'aos';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
@@ -26,7 +25,7 @@ export class InterieriComponent implements OnInit{
     listserviceEn: []
   };
   pageId : string = 'db2d9c74-e9d2-4734-9826-be1d836bb181';
-  constructor(private serviceService: ServiceListService, private languageService: LanguageService, private pageService: PageService) {}
+  constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {
     Aos.init();

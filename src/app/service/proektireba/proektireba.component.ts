@@ -1,10 +1,9 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
 import Aos from 'aos';
-import { Proeqtireba, iService } from '../../services';
-import { ServiceListService } from '../../service-list.service';
+import {  iService } from '../../services';
 import { LanguageService } from '../../language.service';
 import { PageService } from '../../inputed/service/page.service';
 
@@ -36,7 +35,7 @@ export class ProektirebaComponent {
     listserviceEn: []
   };
   pageId : string = '38e5b29e-1757-4c55-960c-790ed0c230ea';
-  constructor(private serviceService: ServiceListService, private languageService: LanguageService, private pageService: PageService) {}
+  constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {
     Aos.init();

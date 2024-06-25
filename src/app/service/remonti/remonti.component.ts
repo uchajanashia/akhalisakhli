@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import Aos from 'aos';
-import { ServiceListService } from '../../service-list.service';
-import { Mshenebloba, iService } from '../../services';
+import {  iService } from '../../services';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
 import { PageService } from '../../inputed/service/page.service';
@@ -25,7 +24,7 @@ export class RemontiComponent implements OnInit{
     listserviceEn: []
   };
   pageId : string = '780795cc-4a9c-4547-8cc0-17dd4090b19f';
-  constructor(private serviceService: ServiceListService, private languageService: LanguageService, private pageService: PageService) {}
+  constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {
     Aos.init();

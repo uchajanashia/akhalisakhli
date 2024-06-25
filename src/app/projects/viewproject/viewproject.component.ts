@@ -8,11 +8,9 @@ import { FooterComponent } from "../../footer/footer.component";
 import { ToastrService } from 'ngx-toastr';
 import { CustumerdataService } from '../../custumerdata.service';
 import { LanguageService } from '../../language.service';
-import { ServiceListService } from '../../service-list.service';
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { YoutubePlayerService } from '../../youtube-player.service';
-import { delay } from 'rxjs';
 @Component({
     selector: 'app-viewproject',
     standalone: true,
@@ -260,7 +258,7 @@ export class ViewprojectComponent {
 
   videoplay = false
 
-  constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,    private serviceService: ServiceListService,
+  constructor(public sharedService : SharedcontactService,private route: ActivatedRoute,  
     private language: LanguageService,
     private custumerData: CustumerdataService,
     private tost:ToastrService,

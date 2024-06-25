@@ -4,7 +4,6 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import Aos from 'aos';
 import { FloatContactComponent } from "../float-contact/float-contact.component";
-import { ServiceListService } from '../service-list.service';
 import { LanguageService } from '../language.service';
 
 @Component({

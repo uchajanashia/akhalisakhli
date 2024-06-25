@@ -2,9 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  Input,
   OnInit,
-  Renderer2,
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
@@ -13,8 +11,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { FloatContactComponent } from '../float-contact/float-contact.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Country, Partniorebi, Services } from '../services';
-import { ServiceListService } from '../service-list.service';
+import {  Services } from '../services';
 import Aos from 'aos';
 import { MapComponent } from '../map/map.component';
 import { LanguageService } from '../language.service';
@@ -275,7 +272,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     } 
   }
   constructor(
-    private serviceService: ServiceListService,
     private language: LanguageService,
     private custumerData: CustumerdataService,
     private tost:ToastrService,

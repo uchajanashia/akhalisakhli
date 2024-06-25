@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { SharedcontactService } from '../projects/sharedcontact.service';
 import { ToastrService } from 'ngx-toastr';
 import { LanguageService } from '../language.service';
 import { FormsModule } from '@angular/forms';
 import { CustumerdataService } from '../custumerdata.service';
-import { ServiceListService } from '../service-list.service';
 
 @Component({
   selector: 'app-contactform',
@@ -16,7 +15,7 @@ import { ServiceListService } from '../service-list.service';
 })
 export class ContactformComponent {
 
-  constructor(public sharedService: SharedcontactService, private languageService: LanguageService, private toastr: ToastrService ,     private serviceService: ServiceListService,
+  constructor(public sharedService: SharedcontactService, private languageService: LanguageService, private toastr: ToastrService , 
     private custumerData: CustumerdataService,
     private tost:ToastrService) {}
 

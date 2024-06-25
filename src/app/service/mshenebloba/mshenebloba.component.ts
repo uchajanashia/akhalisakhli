@@ -1,9 +1,7 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SlideVId } from '../proektireba/proektireba.component';
 import Aos from 'aos';
-import { Mshenebloba, iService } from '../../services';
-import { ServiceListService } from '../../service-list.service';
+import {  iService } from '../../services';
 import { LanguageService } from '../../language.service';
 import { PageService } from '../../inputed/service/page.service';
 
@@ -26,7 +24,7 @@ export class MsheneblobaComponent {
     listserviceEn: []
   };
   pageId : string = 'f3aee0d3-586b-4e8a-9845-5b7c46026c7e';
-  constructor(private serviceService: ServiceListService, private languageService: LanguageService, private pageService: PageService) {}
+  constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {
     Aos.init();

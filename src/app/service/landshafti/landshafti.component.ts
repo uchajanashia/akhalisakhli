@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Mshenebloba, iService } from '../../services';
-import { ServiceListService } from '../../service-list.service';
+import {  iService } from '../../services';
 import Aos from 'aos';
 import { LanguageService } from '../../language.service';
 import { PageService } from '../../inputed/service/page.service';
@@ -25,7 +24,7 @@ export class LandshaftiComponent implements OnInit{
     listserviceEn: []
   };
   pageId : string = 'a5b694f0-7ea8-4848-aee3-0a934c7ded55';
-  constructor(private serviceService: ServiceListService, private languageService: LanguageService, private pageService: PageService) {}
+  constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {
     Aos.init();

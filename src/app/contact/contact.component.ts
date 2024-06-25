@@ -3,7 +3,6 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { FloatContactComponent } from '../float-contact/float-contact.component';
 import { MapComponent } from "../map/map.component";
-import { ServiceListService } from '../service-list.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
@@ -238,7 +237,7 @@ export class ContactComponent implements OnInit{
     addressEn: ''
   };
 
-  constructor(public sharedService: SharedcontactService, private language: LanguageService, private toastr: ToastrService ,     private serviceService: ServiceListService,
+  constructor(public sharedService: SharedcontactService, private language: LanguageService, private toastr: ToastrService ,
     private custumerData: CustumerdataService,
     private tost:ToastrService,
     private pageService :PageService) {

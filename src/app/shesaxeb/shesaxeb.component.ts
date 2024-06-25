@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Aos from 'aos';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { FloatContactComponent } from "../float-contact/float-contact.component";
 import { AboutCompany } from '../services';
 import { LanguageService } from '../language.service';
-import { ServiceListService } from '../service-list.service';
 import { PageService } from '../inputed/service/page.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 

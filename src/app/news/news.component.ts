@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
-import { ServiceListService } from '../service-list.service';
 import { CommonModule } from '@angular/common';
 import Aos from 'aos';
 import { News, Services } from '../services';
@@ -23,7 +22,7 @@ export class NewsComponent implements OnInit{
   languagecheck = true;
   pageId: string = 'd49e2a44-7c13-4e13-a9b8-8ad550485b7f'; // ფეიჯის აიდი
 
-  constructor(private serviceService: ServiceListService, private language: LanguageService, private router: Router, private pageService: PageService) { }
+  constructor( private language: LanguageService, private router: Router, private pageService: PageService) { }
 
   ngOnInit(): void {
     this.language.getBoolean().subscribe(value => {

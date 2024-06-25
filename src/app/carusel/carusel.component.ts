@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import Splide from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import { ServiceListService } from '../service-list.service';
-import { Partniorebi, Services } from '../services';
+import { Partniorebi } from '../services';
 
 @Component({
     selector: 'app-carusel',
@@ -16,10 +15,9 @@ export class CaruselComponent implements OnInit {
   @Input() partniorebi!: Partniorebi;
   partniorebiList: Partniorebi[] = [];
 
-  constructor(private serviceService: ServiceListService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.partniorebiList = this.serviceService.getAllPartniorebi();
   
     const splide = new Splide('.splide', {
       type: 'loop',
