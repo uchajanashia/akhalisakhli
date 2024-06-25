@@ -20,7 +20,8 @@ import { ToastrService } from 'ngx-toastr';
 import { ContactformComponent } from "../contactform/contactform.component";
 import { PageService } from '../inputed/service/page.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { delay } from 'rxjs';
 
 
 @Component({
@@ -36,15 +37,14 @@ import { RouterLink, RouterModule } from '@angular/router';
         FloatContactComponent,
         FormsModule,
         CommonModule,
-        RouterLink,
-        RouterModule,
-        ContactformComponent
+        ContactformComponent,
+        RouterLink
     ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   longList: any;
   serviceList: Services[] = [];
-  showPopup = false;
+
   countries=[
     { id: 1, name: 'Afghanistan', code: '+93', img: 'assets/4x3/af.svg' },
     { id: 2, name: 'Albania', code: '+355', img: 'assets/4x3/al.svg' },
@@ -284,14 +284,79 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('videoElement', { static: false }) videoElement!: ElementRef;
   @ViewChild('sairmeVideo', { static: false }) sairmeVideoElement!: ElementRef;
 
-  
   ngOnInit() {
-
     Aos.init();
     Aos.refresh();
     this.language.getBoolean().subscribe(value => {
       this.languagecheck = value;
     });
+  
+    if (!this.language.isPopupShown()) {
+      this.loading = true;
+      this.language.setPopupShown();
+    } else {
+      this.loading = false;
+    }
+  }
+  
+
+  ngAfterViewInit() {
+    this.setAutoplayAttribute();
+    if (this.loading) {
+      this.playLogoVideo();
+    } else {
+      this.loadData();
+      this.playSairmeVideo();
+    }
+  }
+  
+
+  private setAutoplayAttribute(): void {
+    if (this.videoElement && this.videoElement.nativeElement) {
+      const videoElement: HTMLVideoElement = this.videoElement.nativeElement;
+      videoElement.setAttribute('autoplay', 'autoplay');
+      videoElement.muted = true;
+    }
+
+    if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
+      const sairmeVideoElement: HTMLVideoElement = this.sairmeVideoElement.nativeElement;
+      sairmeVideoElement.setAttribute('autoplay', 'autoplay');
+      sairmeVideoElement.muted = true;
+    }
+  }
+
+  private playLogoVideo() {
+    if (this.videoElement && this.videoElement.nativeElement) {
+      const video: HTMLVideoElement = this.videoElement.nativeElement;
+      video.loop = true;
+      video.play().catch((error) => {
+        console.error('Error playing intro video:', error);
+      });
+      setTimeout(() => {
+        this.loadData();
+      }, 10000); // Minimum 5 seconds before starting to load data
+    }
+  }
+
+  private stopLogoVideo() {
+    if (this.videoElement && this.videoElement.nativeElement) {
+      const video: HTMLVideoElement = this.videoElement.nativeElement;
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  private playSairmeVideo() {
+    if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
+      const sairmeVideo: HTMLVideoElement = this.sairmeVideoElement.nativeElement;
+      sairmeVideo.muted = true;
+      sairmeVideo.play().catch((error) => {
+        console.error('Error playing Sairme video:', error);
+      });
+    }
+  }
+
+  private loadData() {
     this.pageService.getPageById('e45033b4-8c93-4b52-8a84-0e526b7932da').subscribe(data => {
       this.serviceList = data.pageComponentModals.map((item: any) => {
         const parsedContent = JSON.parse(item.componentContent);
@@ -300,112 +365,36 @@ export class HomeComponent implements OnInit, AfterViewInit {
           ...parsedContent 
         };
       });
+      this.onDataLoaded();
     });
-    };
-  
-
-  ngAfterViewInit() {
-    if (!this.language.isPopupShown()) {
-      setTimeout(() => {
-        this.loading = false;
-        this.playVideo();
-      }, 5000);
-      this.setAutoplayAttribute();
-      this.language.setPopupShown();
-    }
-    if (this.language.isPopupShown()) {
-      this.loading = false;
-      this.playVideo();
-    this.setAutoplayAttribute();
-    }
-
-    Aos.refresh();
   }
 
-  
-  private setAutoplayAttribute(): void {
-    if (this.videoElement && this.videoElement.nativeElement) {
-      const videoElement: HTMLVideoElement = this.videoElement.nativeElement;
-      videoElement.setAttribute('autoplay', 'autoplay');
-      videoElement.muted = true;
-    }
-  
-    if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
-      const sairmeVideoElement: HTMLVideoElement =
-        this.sairmeVideoElement.nativeElement;
-      sairmeVideoElement.setAttribute('autoplay', 'autoplay');
-      sairmeVideoElement.muted = true;
-    }
-  
+  private onDataLoaded() {
+    this.loading = false;
+    this.stopLogoVideo();
+    this.playSairmeVideo();
   }
+  
 
-  playVideo() {
-    if (this.videoElement && this.videoElement.nativeElement) {
-      const video: HTMLVideoElement = this.videoElement.nativeElement;
-      video
-        .play()
-        .then(() => {
-          video.addEventListener('ended', () => {
-            this.playSairmeVideo();
-          });
-        })
-        .catch((error) => {
-          console.error('Error playing intro video:', error);
-        });
+  onButtonClick() {
+    const video: HTMLVideoElement = this.videoElement.nativeElement;
+    const sairmeVideo: HTMLVideoElement = this.sairmeVideoElement.nativeElement;
+
+    if (video.paused) {
+      this.playLogoVideo();
+    } else {
+      this.stopLogoVideo();
     }
-  }
 
-  playSairmeVideo() {
-    if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
-      const sairmeVideo: HTMLVideoElement =
-        this.sairmeVideoElement.nativeElement;
-      sairmeVideo.muted = true;
-      sairmeVideo
-        .play()
-        .then(() => {
-          console.log('Sairme video played successfully');
-        })
-        .catch((error) => {
-          console.error('Error playing Sairme video:', error);
-        });
-    }
-  }
-
-  pauseSairmeVideo() {
-    if (this.sairmeVideoElement && this.sairmeVideoElement.nativeElement) {
-      const sairmeVideo: HTMLVideoElement =
-        this.sairmeVideoElement.nativeElement;
+    if (sairmeVideo.paused) {
+      this.playSairmeVideo();
+    } else {
       sairmeVideo.pause();
     }
   }
-
-  pauseVideo() {
-    if (this.videoElement && this.videoElement.nativeElement) {
-      const video: HTMLVideoElement = this.videoElement.nativeElement;
-      video.pause();
-    }
+  getSafeUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
-
-  onButtonClick() {
-    if (this.videoElement) {
-      const video: HTMLVideoElement = this.videoElement.nativeElement;
-      const sairmeVideo: HTMLVideoElement =
-        this.sairmeVideoElement.nativeElement;
-
-      if (video.paused) {
-        this.playVideo();
-      } else {
-        this.pauseVideo();
-      }
-
-      if (sairmeVideo.paused) {
-        this.playSairmeVideo();
-      } else {
-        this.pauseSairmeVideo();
-      }
-    }
-  }
-
 
   imageObjects: { imageUrl: string; text: string; textEn:string; linkUrl: string }[] = [
     { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home1.jpg', text: 'პროექტირება', textEn:'Project Design',  linkUrl: 'services/proektireba' },
@@ -445,7 +434,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
     
 
-    getSafeUrl(url: string): SafeUrl {
-      return this.sanitizer.bypassSecurityTrustUrl(url);
-    }
+ 
 }

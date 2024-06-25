@@ -1,7 +1,7 @@
 <app-header [ngClass]="{ hidden: loading }"></app-header>
 <div class="loading-sence" [ngClass]="{ hidden: !loading }">
   <div class="introdiv">
-    <video #videoElement id="vid" class="video" autoplay muted loop >
+    <video #videoElement id="vid" class="video" muted loop>
       <source src="assets/video/logo_animation.mp4" type="video/mp4" />
     </video>
   </div>
@@ -15,7 +15,7 @@
           (mouseenter)="showImage(imageObject)"
           (mouseleave)="hideImage()"
           class="upper"
-          >{{ languagecheck ? imageObject.text :imageObject.textEn}}</a
+          >{{ languagecheck ? imageObject.text : imageObject.textEn}}</a
         >
       </li>
     </ul>
@@ -31,7 +31,7 @@
         <img [src]="getSafeUrl(imageObject.imageUrl)" alt="Project Image" loading="lazy" />
       </div>
     </div>
-    <video data-aos="flip-down" #sairmeVideo id="vid" class="video" autoplay muted loop>
+    <video data-aos="flip-down" #sairmeVideo id="vid" class="video" muted loop>
       <source src="../../assets/video/For_Website.mp4" type="video/mp4" />
     </video>
   </div>
@@ -136,6 +136,5 @@
     </form>
   </div>
 </section>
-<app-map data-aos="fade-up"
-data-aos-duration="3000" [ngClass]="{ hidden: loading }"></app-map>
+<app-map data-aos="fade-up" data-aos-duration="3000" [ngClass]="{ hidden: loading }"></app-map>
 <app-footer [ngClass]="{ hidden: loading }"></app-footer>
