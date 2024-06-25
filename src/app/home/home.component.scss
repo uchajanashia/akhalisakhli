@@ -445,6 +445,7 @@ article {
 //contact
 .contact {
   margin: 100px 0;
+  margin-bottom: 200px;
   height: 250px;
   width: 100%;
   display: flex;
@@ -527,7 +528,7 @@ textarea {
 #button {
   border: none;
   background-color: var(--dark-green);
-  height: 20px;
+  height: 22px;
   border-radius: 10px;
   margin-top: 20px;
   width: 100%;
@@ -636,7 +637,7 @@ px
     align-items: center;
     width: 90%;
     font-size: 1rem;
-    padding: 12px 0;
+    padding: 14px 0;
   }
 }
 //media

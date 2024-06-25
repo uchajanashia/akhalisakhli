@@ -77,7 +77,7 @@ export class AdminNewsComponent implements OnInit {
       };
       this.pageService.updateComponent(updatedNews.pageComponentId, updatedNews.componentName, updatedNews.componentContent)
         .subscribe({
-          next: () => alert('სიახლე განახლდა წარმატებით!'),
+          next: () => this.toastr.info('სიახლე წარმატებით დაემატა'),
           error: () => alert('დაფიქსირდა შეცდომა განახლებისას.')
         });
     }
@@ -88,7 +88,8 @@ export class AdminNewsComponent implements OnInit {
       await this.pageService.deleteComponent([newsId]);
       this.newsList = this.newsList.filter(news => news.id !== newsId);
       this.selectedNews = null;
-      alert('სიახლე წაიშალა წარმატებით!');
+      this.toastr.info('სიახლე წარმატებით დაემატა');
+
     } catch (error) {
       alert('დაფიქსირდა შეცდომა წაშლისას.');
     }
@@ -127,7 +128,8 @@ export class AdminNewsComponent implements OnInit {
             textEn: '',
             image: ''
           };
-          alert('სიახლე დაემატა წარმატებით!');
+          this.toastr.info('სიახლე წარმატებით დაემატა');
+
         },
         error: () => alert('დაფიქსირდა შეცდომა დამატებისას.')
       });

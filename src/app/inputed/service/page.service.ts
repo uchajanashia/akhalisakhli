@@ -28,7 +28,7 @@ export class PageService {
   }
 
   getPageById(pageId: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/api/v1/admin-panel/get-page-by-id/${pageId}`, { headers: this.getHeaders() });
+    return this.http.get(`${this.baseUrl}/api/v1/admin-panel/get-page-by-id/${pageId}`);
   }
 
   uploadUserImage(file: File , filename : string): Observable<any> {

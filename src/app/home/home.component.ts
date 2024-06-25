@@ -22,6 +22,7 @@ import { CustumerdataService } from '../custumerdata.service';
 import { ToastrService } from 'ngx-toastr';
 import { ContactformComponent } from "../contactform/contactform.component";
 import { PageService } from '../inputed/service/page.service';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 
 @Component({
@@ -275,7 +276,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private language: LanguageService,
     private custumerData: CustumerdataService,
     private tost:ToastrService,
-    private pageService : PageService
+    private pageService : PageService,
+    private sanitizer: DomSanitizer
   ) {
 
   }
@@ -436,5 +438,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
     
 
- 
+    getSafeUrl(url: string): SafeUrl {
+      return this.sanitizer.bypassSecurityTrustUrl(url);
+    }
 }

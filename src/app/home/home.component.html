@@ -28,7 +28,7 @@
           'fade-out': hoveredImage !== imageObject
         }"
       >
-        <img [src]="imageObject.imageUrl" alt="Project Image" loading="lazy" />
+        <img [src]="getSafeUrl(imageObject.imageUrl)" alt="Project Image" loading="lazy" />
       </div>
     </div>
     <video data-aos="flip-down" #sairmeVideo id="vid" class="video" autoplay muted loop>
@@ -46,16 +46,20 @@
   </button>
 </article>
 <app-float-contact [ngClass]="{ hidden: loading }"></app-float-contact>
-<section [ngClass]="{ hidden: loading }" class="sect">
+<section [ngClass]="{ hidden: loading }" class="sect" >
   <ul>
     <li *ngFor="let service of serviceList; let even = even; let odd = odd">
       <a [href]="service.name" data-aos="fade-up" class="seccontain" id="sec1">
-        <div class="text">
+        <div class="text" *ngIf="languagecheck">
           <p class="nowrap">{{ service.name }}</p>
           <p class="lowtext">{{ service.description }}</p>
         </div>
+        <div class="text" *ngIf="!languagecheck">
+          <p class="nowrap">{{ service.nameEn }}</p>
+          <p class="lowtext">{{ service.descriptionEN }}</p>
+        </div>
         <div class="imgtxt">
-          <img class="imginside" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg'" alt="pic" />
+          <img class="imginside" [src]="getSafeUrl('https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg')" alt="pic" />
         </div>
       </a>
     </li>
