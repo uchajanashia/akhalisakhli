@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class PageService {
     });
   }
 
-  updateComponent(pageComponentId: any, componentName: any, componentContent: any): Observable<any> {
+  updateComponent(pageComponentId: any, componentName: any, componentContent: any ): Observable<any> {
     const body = {
       pageComponentId: pageComponentId,
       componentName: componentName,
@@ -26,7 +26,15 @@ export class PageService {
     };
     return this.http.put(`${this.baseUrl}/api/v1/admin-panel/update-page-component-modal`, body, { headers: this.getHeaders() });
   }
-
+  updateComponentprt(pageComponentId: any, componentName: any, componentContent: any , priority:any): Observable<any> {
+    const body = {
+      pageComponentId: pageComponentId,
+      componentName: componentName,
+      componentContent: componentContent,
+      priority:priority
+    };
+    return this.http.put(`${this.baseUrl}/api/v1/admin-panel/update-page-component-modal`, body, { headers: this.getHeaders() });
+  }
   getPageById(pageId: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/api/v1/admin-panel/get-page-by-id/${pageId}`);
   }
@@ -74,5 +82,11 @@ export class PageService {
       ]
     };
     return this.http.put(`${this.baseUrl}/api/v1/admin-panel/add-page-components-in-page`, body, { headers: this.getHeaders() });
+  }
+  getImageUrls(ids: string[]): Observable<string[]> {
+    const requests = ids.map(id =>
+      this.http.get<string>(`https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/${id}.jpg`, { responseType: 'text' as 'json' })
+    );
+    return forkJoin(requests);
   }
 }

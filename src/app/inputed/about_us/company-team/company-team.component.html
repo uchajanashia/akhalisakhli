@@ -6,18 +6,31 @@
           <div class="content">
             <div class="text">
               <h1>ქართული ვერსია</h1>
+              <h3>სახელი</h3>
               <input class="title" type="text" [(ngModel)]="service.name" />
+              <h3>გვარი</h3>
               <input class="title" [(ngModel)]="service.surname">
+              <h3>პოზიცია</h3>
               <input class="title" [(ngModel)]="service.position">
+              <h3>პრიორიტეტი</h3>
+              <h6>რაც უფრო დაბალია რიცხვი მით  უფრო მაღლა იმყოფება ელემნტი</h6>
+              <input class="title" [(ngModel)]="service.priority">
+
               <button id="button" (click)="updateService(service)">განახლება</button>
             </div>
           </div>
           <div class="content">
             <div class="text">
-              <h1>English version</h1>
+              <h1>ინგლისური ვერსია</h1>
+              <h3>სახელი</h3>
               <input class="title" type="text" [(ngModel)]="service.nameEn" />
+              <h3>გვარი</h3>
               <input class="title" [(ngModel)]="service.surnameEn">
+              <h3>პოზიცია</h3>
               <input class="title" [(ngModel)]="service.positionEn">
+              <h3>პრიორიტეტი</h3>
+              <h6>რაც უფრო დაბალია რიცხვი მით  უფრო მაღლა იმყოფება ელემნტი</h6>
+              <input class="title" [(ngModel)]="service.priority">
               <button id="button" (click)="updateService(service)">Update</button>
             </div>
           </div>

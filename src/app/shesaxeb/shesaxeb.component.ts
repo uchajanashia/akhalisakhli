@@ -19,6 +19,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class ShesaxebComponent  implements OnInit{
   isGeorgian: boolean = true; 
   aboutCompanyList:AboutCompany[]=[];
+  imageUrls: SafeUrl[] = [];
   constructor(
     private pageService: PageService,
     private languageService: LanguageService, // Assuming LanguageService is imported correctly
@@ -31,14 +32,21 @@ export class ShesaxebComponent  implements OnInit{
     });
     Aos.init();
     Aos.refresh();
+
     this.pageService.getPageById('463e6689-a45d-4e1d-a853-cf930cdb0a81').subscribe(data => {
       this.aboutCompanyList = data.pageComponentModals.map((item: any) => {
         const parsedContent = JSON.parse(item.componentContent);
         return {
           id: item.pageComponentId,
           name: item.pageComponentId,
-          ...parsedContent // Spread the parsed JSON content into the main object
+          ...parsedContent
         };
+      });
+
+      // გამოსახულებების ჩატვირთვა პარალელურად
+      const imageIds = ['info1', 'info2', 'info3', 'info4', 'info5', 'info6'];
+      this.pageService.getImageUrls(imageIds).subscribe(urls => {
+        this.imageUrls = urls.map(url => this.getSafeUrl(url));
       });
     });
   }

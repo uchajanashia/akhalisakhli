@@ -47,12 +47,14 @@ export interface Gundi {
     nameEn:string,
     surnameEn:string,
     positionEn:string,
+    priority:number,
 }
 export interface Country {
     id:number,
     name:string,
     code:string,
     img:string,
+    
 }
 
 export interface AboutCompany {

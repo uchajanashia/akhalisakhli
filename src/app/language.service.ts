@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 @Injectable({
   providedIn: 'root'
@@ -37,10 +37,10 @@ export class LanguageService {
     this.languageCheckSubject.next(languageCheckValue);
   }
   public setPopupShown(): void {
-    localStorage.setItem(this.key, 'true');
+    sessionStorage.setItem(this.key, 'true');
   }
 
   public isPopupShown(): boolean {
-    return localStorage.getItem(this.key) === 'true';
+    return sessionStorage.getItem(this.key) === 'true';
   }
 }

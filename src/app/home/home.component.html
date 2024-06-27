@@ -31,7 +31,7 @@
         <img [src]="getSafeUrl(imageObject.imageUrl)" alt="Project Image" loading="lazy" />
       </div>
     </div>
-    <video data-aos="flip-down" #sairmeVideo id="vid" class="video" muted loop>
+    <video #sairmeVideo id="vid" class="video" muted loop>
       <source src="../../assets/video/For_Website.mp4" type="video/mp4" />
     </video>
   </div>
@@ -49,14 +49,20 @@
 <section [ngClass]="{ hidden: loading }" class="sect" >
   <ul>
     <li *ngFor="let service of serviceList; let even = even; let odd = odd">
-      <a [routerLink]="['/service/'+service.name]" data-aos="fade-up" class="seccontain" id="sec1">
+      <a [routerLink]="['/service/'+service.name]"  class="seccontain" id="sec1">
         <div class="text" *ngIf="languagecheck">
           <p class="nowrap">{{ service.name }}</p>
           <p class="lowtext">{{ service.description }}</p>
+          <div class="parent-container">
+            <a href="/projects" class="upper">გაიგე მეტი</a>
+          </div>
         </div>
         <div class="text" *ngIf="!languagecheck">
           <p class="nowrap">{{ service.nameEn }}</p>
           <p class="lowtext">{{ service.descriptionEN }}</p>
+          <div class="parent-container">
+            <a href="/projects" class="upper">See More</a>
+          </div>
         </div>
         <div class="imgtxt">
           <img class="imginside" [src]="getSafeUrl('https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg')" alt="pic" loading="lazy" />
@@ -67,7 +73,7 @@
 </section>
 
 <section [ngClass]="{ hidden: loading }" class="contact" id="myContact">
-  <div data-aos="zoom-out-down" class="contContain">
+  <div  class="contContain">
     <div class="hedtxt">
       <h2 class="translate mobilehead">
         {{languagecheck ? 'მოითხოვეთ ზარი' :'Request a call'}}
@@ -136,5 +142,5 @@
     </form>
   </div>
 </section>
-<app-map data-aos="fade-up" data-aos-duration="3000" [ngClass]="{ hidden: loading }"></app-map>
+<app-map   [ngClass]="{ hidden: loading }"></app-map>
 <app-footer [ngClass]="{ hidden: loading }"></app-footer>

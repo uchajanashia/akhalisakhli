@@ -6,6 +6,54 @@ article {
   flex-direction: column;
 }
 
+.parent-container {
+  text-align: end;
+  width: 100%;
+}
+
+.parent-container a {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5em;
+  margin-left: -.5em;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.parent-container a:before,
+.parent-container a:after {
+  position: absolute;
+  content: '';
+  border-bottom: 3px solid white;
+  border-radius: 1em;
+  bottom: .3em;
+  transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.parent-container a:before {
+  width: 1em;
+  transform-origin: left;
+}
+
+.parent-container a:after {
+  width: 82%;
+  left: 1em;
+  transform: translateX(110%);
+}
+
+.parent-container a:hover:before {
+  transform: scaleX(0.3);
+}
+
+.parent-container a:hover:after {
+  transform: translateX(0);
+}
 .carusel {
   animation: intro 0.75s ease;
   border-radius: 10px;
@@ -365,6 +413,13 @@ article {
             font-size: clamp(1rem, 2vw, 1.5rem);
           }
         }
+        a{
+          color: black;
+        }
+        .parent-container a:before,
+.parent-container a:after {
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
       }
     }
   }
@@ -664,7 +719,11 @@ px
   font-size: 1rem !important;
   line-height: 1.5 !important;
 }
+
 @media only screen and (max-width: 768px) {
+  .imgtxt{
+    width: 0;
+  }
   .sect ul li:nth-child(even) a .text {
     align-items: start;}
   .sect ul li:nth-child(even) a .text p {

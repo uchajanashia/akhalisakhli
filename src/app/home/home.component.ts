@@ -12,7 +12,6 @@ import { FloatContactComponent } from '../float-contact/float-contact.component'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {  Services } from '../services';
-import Aos from 'aos';
 import { MapComponent } from '../map/map.component';
 import { LanguageService } from '../language.service';
 import { CustumerdataService } from '../custumerdata.service';
@@ -285,8 +284,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('sairmeVideo', { static: false }) sairmeVideoElement!: ElementRef;
 
   ngOnInit() {
-    Aos.init();
-    Aos.refresh();
     this.language.getBoolean().subscribe(value => {
       this.languagecheck = value;
     });
@@ -334,7 +331,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       });
       setTimeout(() => {
         this.loadData();
-      }, 10000); // Minimum 5 seconds before starting to load data
+      }, 7000); // Minimum 5 seconds before starting to load data
     }
   }
 
