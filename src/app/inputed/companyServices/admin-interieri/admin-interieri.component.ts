@@ -13,6 +13,7 @@ import { PageService } from '../../service/page.service';
   styleUrl: './admin-interieri.component.scss'
 })
 export class AdminInterieriComponent  implements OnInit{
+  prioritety=0
   iService: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
@@ -50,19 +51,23 @@ export class AdminInterieriComponent  implements OnInit{
     }
   }
 
+
+
   submitChanges(): void {
     if (this.iService) {
       const updatedService = {
         pageComponentId: this.iService.id,
         componentName: "Component",
-        componentContent: JSON.stringify(this.iService)
+        componentContent: JSON.stringify(this.iService),
+        priority : this.prioritety
       };
 
       this.pageService
-        .updateComponent(
+        .updateComponentprt(
           updatedService.pageComponentId,
           updatedService.componentName,
-          updatedService.componentContent
+          updatedService.componentContent,
+          updatedService.priority
         )
         .subscribe({
           next: (response) => this.toastr.info('წარმატებით შეიცვალა'),

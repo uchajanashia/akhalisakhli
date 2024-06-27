@@ -7,6 +7,7 @@
     align-items: center;
     width: 19%;
   }
+
   .imginput {
     width: 100%;
   }
@@ -15,7 +16,7 @@
 <section class="sect">
 
   <ul>
-    <li>
+    <li style="margin-top: 80px;">
       <div class="seccontain" style="color: aliceblue;">
         <div class="imgesB line" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
           <div class="input-group">
@@ -41,30 +42,47 @@
           </div>
         </div>
       </div>
-      
+
     </li>
     <li *ngFor="let service of serviceList">
       <a data-aos="fade-up" class="seccontain">
         <div class="text">
-          <label for="georgian"></label>
-          <input style="color: white" class="translate" type="text" name="georgian" [(ngModel)]="service.name" />
-          <textarea style="color: white" class="translate" [(ngModel)]="service.description"></textarea>
-          <button (click)="updateService(service)" id="button"> georgian Update</button>
-          
+          <h3> ქართული ვერსია</h3>
+          <h5>
+            სერვისის სახელი
+          </h5>
+          <input style="color: white; margin-bottom: 10px;" class="translate" type="text" name="georgian"
+            [(ngModel)]="service.name" />
+            <h5>
+              სერვისის აღწერა
+            </h5>
+          <textarea style="color: white; margin-bottom: 10px;" class="translate"
+            [(ngModel)]="service.description"></textarea>
+            <h5>
+              პრიორიტეტი
+            </h5>
+          <input style="color: white" class="translate" type="text" [(ngModel)]="service.priority">
         </div>
         <div class="text">
-          <label for="English"></label>
-          <input style="color: white" class="translate" type="text" name="English" [(ngModel)]="service.nameEn" />
-          <textarea style="color: white" class="translate" [(ngModel)]="service.descriptionEN"></textarea>
-          <button (click)="updateService(service)" id="button"> English Update</button>
-          
+          <h3> ინგლისური ვერსია</h3>
+          <h5>
+            სერვისის სახელი
+          </h5>
+          <input style="color: white ; margin-bottom: 10px;" class="translate" type="text" name="English"
+            [(ngModel)]="service.nameEn" />
+            <h5>
+              სერვისის აღწერა
+            </h5>
+          <textarea  class="translate" [(ngModel)]="service.descriptionEN"></textarea>
+          <button (click)="updateService(service)" id="button">  Update</button>
+
         </div>
         <div class="imgtxt">
-          <img class="imginside" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg'" alt="pic" />
+          <img class="imginside"
+            [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+service.id+'.jpg'" alt="pic" />
           <input class="imginput" type="file" accept="image/*" (change)="onImageUpload($event, service.id+'.jpg')">
         </div>
       </a>
     </li>
   </ul>
 </section>
-

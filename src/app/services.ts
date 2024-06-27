@@ -4,6 +4,8 @@ export interface Services {
     description:string;
     nameEn:string;
     descriptionEN:string;
+
+    priority:number;
 }
 
 export interface Proeqtireba {
@@ -30,6 +32,8 @@ export interface News {
     text: string,
     textEn: string,
     image: string,
+    priority:number,
+
 
 }
 export interface Mshenebloba {
@@ -70,6 +74,7 @@ export interface AboutCompany {
 
 
     description:any,
+    priority:number,
 }
 export interface MisionValueVision{
     MissionName:string,
@@ -95,6 +100,9 @@ export interface MisionValueVision{
     Description2En:string,
     Name1En:string,
     Description1En:string,
+
+    priority:number,
+
 }
 export interface project{
     id:number,

@@ -14,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
   imports: [CommonModule, FormsModule, HeaderInputComponent]
 })
 export class AdminNewsComponent implements OnInit {
+  prioritety=0;
   pageId: string = 'd49e2a44-7c13-4e13-a9b8-8ad550485b7f'; // ფეიჯის აიდი
   newsList: News[] = [];
   selectedNewsId: string | null = null;
@@ -27,7 +28,8 @@ export class AdminNewsComponent implements OnInit {
     shortTextEn: '',
     text: '',
     textEn: '',
-    image: ''
+    image: '',
+    priority: 0
   };
 
   constructor(private pageService: PageService , private toastr : ToastrService) {}
@@ -48,7 +50,8 @@ export class AdminNewsComponent implements OnInit {
           shortTextEn: parsedContent.shortTextEn,
           text: parsedContent.text,
           textEn: parsedContent.textEn,
-          image: parsedContent.image
+          image: parsedContent.image,
+          priority: item.priority,
         };
       });
     });
@@ -72,10 +75,11 @@ export class AdminNewsComponent implements OnInit {
           shortTextEn: this.selectedNews.shortTextEn,
           text: this.selectedNews.text,
           textEn: this.selectedNews.textEn,
-          image: this.selectedNews.image
-        })
+          image: this.selectedNews.image,
+        }),
+          priority:this.selectedNews.priority,
       };
-      this.pageService.updateComponent(updatedNews.pageComponentId, updatedNews.componentName, updatedNews.componentContent)
+      this.pageService.updateComponentprt(updatedNews.pageComponentId, updatedNews.componentName, updatedNews.componentContent,updatedNews.priority)
         .subscribe({
           next: () => this.toastr.info('სიახლე წარმატებით დაემატა'),
           error: () => alert('დაფიქსირდა შეცდომა განახლებისას.')
@@ -113,7 +117,9 @@ export class AdminNewsComponent implements OnInit {
             shortTextEn: this.newNewsContent.shortTextEn,
             text: this.newNewsContent.text,
             textEn: this.newNewsContent.textEn,
-            image: this.newNewsContent.image
+            image: this.newNewsContent.image,
+           priority:this.newNewsContent.priority
+
           });
           this.selectedNewsId = newNewsId;
           this.selectedNews = this.newsList.find(news => news.id === newNewsId) || null;
@@ -126,7 +132,8 @@ export class AdminNewsComponent implements OnInit {
             shortTextEn: '',
             text: '',
             textEn: '',
-            image: ''
+            image: '',
+            priority:0,
           };
           this.toastr.info('სიახლე წარმატებით დაემატა');
 

@@ -7,18 +7,26 @@
                     <div class="content">
                         <div class="text">
                             <h1 style="color: wheat;"> ქართული ვერსია</h1>
+                            <h3>სათაური</h3>
                             <input  class="title" type="text" [(ngModel)]="service.title_GEO"/>
+                            <h3>პირველი ტექსტი </h3>
                             <textarea  class="translate" rows="5"  [(ngModel)]="service.company_info_GEO"></textarea>
+                            <h3>მეორე ტექსტი</h3>
                             <textarea  class="translate" rows="5" [(ngModel)]="service.company_info_1_GEO"></textarea>
+                            <input type="text" [(ngModel)]="service.priority" style="display: none;">
                             <button  id="button" (click)="updateService(service)">განახლება</button>
                         </div>
                     </div>
                     <div class="content">
                         <div class="text">
-                            <h1 style="color: wheat;"> English version</h1>
+                            <h1 style="color: wheat;"> ინგლისური ვერსია</h1>    
+                             <h3>სათაური</h3>
                             <input  class="title" type="text" [(ngModel)]="service.title_EN"/>
+                            <h3>პირველი ტექსტი </h3>
                             <textarea  class="translate" rows="5"  [(ngModel)]="service.company_info_EN"></textarea>
+                            <h3>მეორე ტექსტი</h3>
                             <textarea  class="translate" rows="5" [(ngModel)]="service.company_info_1_EN"></textarea>
+                            <input type="text" [(ngModel)]="service.priority" style="display: none;">
                             <button  id="button" (click)="updateService(service)">Update</button>
                         </div>
                     </div>

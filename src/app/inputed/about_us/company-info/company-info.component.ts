@@ -31,18 +31,22 @@ export class CompanyInfoComponent implements OnInit {
     });
     console.log(this.service);
        }
+
        updateService(service: any): void {
         const updatedService = {
           id: service.id,
           name: service.id, // Assuming service.id should be used for both name and id
           description: JSON.stringify(service), // Convert the service object to a JSON string
+          priority: service.priority,
         };
     
         this.pageService
-          .updateComponent(
+          .updateComponentprt(
             updatedService.id,
             updatedService.name,
-            updatedService.description
+            updatedService.description,
+            updatedService.priority
+    
           )
           .subscribe({
             next: (response) => this.toastr.info('წარმატებით შეიცვალა'),

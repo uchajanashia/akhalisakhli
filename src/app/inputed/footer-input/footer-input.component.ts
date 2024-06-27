@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
     imports: [HeaderInputComponent,FormsModule,CommonModule]
 })
 export class FooterInputComponent {
+  priority=0;
   pageId = '485d2121-be16-4e58-86a6-8b4b0e6a7399';
   componentId = '';
   contactInfo = {
@@ -46,7 +47,7 @@ export class FooterInputComponent {
 
   updateContact(): void {
     const updatedContent = JSON.stringify(this.contactInfo);
-    this.pageService.updateComponent(this.componentId, this.pageId, updatedContent).subscribe({
+    this.pageService.updateComponentprt(this.componentId, this.pageId, updatedContent , this.priority).subscribe({
       next: () => this.toastr.info('Contact information updated successfully'),
       error: (error) => this.toastr.error('Failed to update contact information', error)
     });

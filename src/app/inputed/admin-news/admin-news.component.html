@@ -22,18 +22,22 @@
 
         <label for="newsContent">ტექსტი:</label>
         <textarea id="newsContent" [(ngModel)]="selectedNews.text" class="form-control"></textarea>
+        <label for="priority"> პრიორიტეტი</label>
+        <input id="priority" type="text" [(ngModel)]="selectedNews.priority"  class="form-control" >
       </div>
 
       <div class="form-group">
-        <h2>English Version</h2>
-        <label for="newsTitleEn">Title:</label>
+        <h2>ინგლისური ვერსია</h2>
+        <label for="newsTitleEn">სათაური:</label>
         <input id="newsTitleEn" [(ngModel)]="selectedNews.titleEn" class="form-control" />
 
-        <label for="newsShortTextEn">Short Text:</label>
+        <label for="newsShortTextEn">მოკლე ტექსტი:</label>
         <input id="newsShortTextEn" [(ngModel)]="selectedNews.shortTextEn" class="form-control" />
 
-        <label for="newsContentEn">Text:</label>
+        <label for="newsContentEn">ტექსტი:</label>
         <textarea id="newsContentEn" [(ngModel)]="selectedNews.textEn" class="form-control"></textarea>
+        <label for="priority"> პრიორიტეტი</label>
+        <input id="priority" type="text" [(ngModel)]="selectedNews.priority"  class="form-control" >
       </div>
     </div>
 

@@ -18,7 +18,6 @@
 .sect ul li {
   height: min-content;
   padding: (20px 20px);
-  margin-top: 100px ;
   background-image: none;
   background-size: 100%;
   display: flex;
@@ -27,17 +26,16 @@
   align-items: center;
   min-width: 200px;
   list-style: none;
-  &:nth-child(odd) {
     background: url(../../../assets/pics/SVG/DarkPattern.svg);
     background-attachment: fixed;
     background-size: 200%;
+    h1,h2,h3,h4,h5,h6{
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+  margin-bottom: 100px;
 
-  }
-  &:nth-child(even) {
-    background: url(../../../assets/pics/SVG/pattern.svg);
-    background-attachment: fixed;
-    background-size: 200%;
-  }
 }
 
 .sect ul a {
@@ -47,13 +45,13 @@
 .seccontain img {
   object-fit: cover;
   height: 350px;
-  width: 650px;
+  width: 450px;
   transition: 0.2s;
 }
 .text {
   align-items: center;
   width: 40%;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;

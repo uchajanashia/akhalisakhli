@@ -13,6 +13,7 @@ import { iService } from '../../../services';
   styleUrl: './admin-proeqtireba.component.scss'
 })
 export class AdminProeqtirebaComponent {
+  prioritety=0;
   mshenebloba: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
@@ -54,14 +55,16 @@ export class AdminProeqtirebaComponent {
       const updatedService = {
         pageComponentId: this.mshenebloba.id,
         componentName: "Component",
-        componentContent: JSON.stringify(this.mshenebloba)
+        componentContent: JSON.stringify(this.mshenebloba),
+        priority : this.prioritety
       };
 
       this.pageService
-        .updateComponent(
+        .updateComponentprt(
           updatedService.pageComponentId,
           updatedService.componentName,
-          updatedService.componentContent
+          updatedService.componentContent,
+          updatedService.priority
         )
         .subscribe({
           next: (response) => this.toastr.info('წარმატებით შეიცვალა'),

@@ -13,6 +13,8 @@ import { PageService } from '../../service/page.service';
   styleUrls: ['./admin-mshenebloba.component.scss']
 })
 export class AdminMsheneblobaComponent implements OnInit {
+  prioritety=0;
+
   iService: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
@@ -55,14 +57,16 @@ export class AdminMsheneblobaComponent implements OnInit {
       const updatedService = {
         pageComponentId: this.iService.id,
         componentName: "Component",
-        componentContent: JSON.stringify(this.iService)
+        componentContent: JSON.stringify(this.iService),
+        priority : this.prioritety
       };
 
       this.pageService
-        .updateComponent(
+        .updateComponentprt(
           updatedService.pageComponentId,
           updatedService.componentName,
-          updatedService.componentContent
+          updatedService.componentContent,
+          updatedService.priority
         )
         .subscribe({
           next: (response) => this.toastr.info('წარმატებით შეიცვალა'),

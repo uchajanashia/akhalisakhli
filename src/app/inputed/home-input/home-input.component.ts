@@ -8,6 +8,7 @@ import { FooterInputComponent } from '../footer-input/footer-input.component';
 import { FloatContactComponent } from '../../float-contact/float-contact.component';
 import { MapComponent } from '../../map/map.component';
 import { PageService } from '../service/page.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home-input',
@@ -26,7 +27,7 @@ import { PageService } from '../service/page.service';
 })
 export class HomeInputComponent implements OnInit ,AfterViewInit{
   serviceList: Services[] = [];
-  constructor(private pageService :PageService,) {}
+  constructor(private pageService :PageService, private tostera :ToastrService) {}
   loading = true;
   ngOnInit() {
     Aos.init();
@@ -57,15 +58,17 @@ export class HomeInputComponent implements OnInit ,AfterViewInit{
     const updatedService = {
         id: service.id,
         name: service.id,
-        description: JSON.stringify(service)
+        description: JSON.stringify(service),
+        priority:service.priority
     };
 
-    this.pageService.updateComponent(updatedService.id, updatedService.name, updatedService.description).subscribe({
+    this.pageService.updateComponentprt(updatedService.id, updatedService.name, updatedService.description , updatedService.priority).subscribe({
         next: (response) => {
-            console.log('Update successful', response);
+          this.tostera.info('წარმატებით დანახლდა')
         },
         error: (error) => {
-            console.error('Error updating service', error);
+          this.tostera.error('უჩას დაურეკეთ ')
+
         }
     });
   }
