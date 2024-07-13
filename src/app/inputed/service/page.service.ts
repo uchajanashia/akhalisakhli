@@ -7,7 +7,7 @@ import { Observable, forkJoin } from 'rxjs';
   providedIn: 'root'
 })
 export class PageService {
-  private baseUrl = 'https://bk.akhalisakhli.com';
+  private baseUrl = 'https://backend.mr-morrison.duckdns.org';
 
   constructor(private http: HttpClient, private cookiservice: CookieService) {}
 
@@ -17,6 +17,14 @@ export class PageService {
       'Authorization': `Bearer ${token}`,
     });
   }
+  private getHeaders1(): HttpHeaders {
+    const token = this.cookiservice.get('jwtToken');
+    return new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`,
+    });
+  }
+
 
   updateComponent(pageComponentId: any, componentName: any, componentContent: any ): Observable<any> {
     const body = {
@@ -88,5 +96,24 @@ export class PageService {
       this.http.get<string>(`https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/${id}.jpg`, { responseType: 'text' as 'json' })
     );
     return forkJoin(requests);
+  }
+
+
+  addPageComponentsInPage(): Observable<any> {
+    const url = `${this.baseUrl}/api/v1/admin-panel/add-page-components-in-page`;
+
+    const body = {
+      pageModalId: "03ab07f8-ac28-4734-b019-68cc6cce9dfe",
+      pageComponentModals: [
+        {
+          componentName: "Component 9",
+          componentContent: JSON.stringify({
+            name: "ინტერიერის დიზაინი",}),
+          priority: 0
+        }
+      ]
+    };
+
+    return this.http.post<any>(url, body, { headers: this.getHeaders1() });
   }
 }

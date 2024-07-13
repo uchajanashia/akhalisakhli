@@ -117,6 +117,7 @@ export interface project{
 
     image:string[],
     video:string,
+    priority:number,
 }
 
 export interface iService{

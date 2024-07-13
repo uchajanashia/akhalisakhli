@@ -15,7 +15,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AdminNewsComponent implements OnInit {
   prioritety=0;
-  pageId: string = 'd49e2a44-7c13-4e13-a9b8-8ad550485b7f'; // ფეიჯის აიდი
+  pageId: string = 'db768e3a-cc02-46cb-8506-e0b4d3543732'; // ფეიჯის აიდი
   newsList: News[] = [];
   selectedNewsId: string | null = null;
   selectedNews: News | null = null;

@@ -1,4 +1,4 @@
-export const URL = 'https://bk.akhalisakhli.com';
+export const URL = 'https://backend.mr-morrison.duckdns.org';
 
 export const API = {
     auth: {

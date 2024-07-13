@@ -27,7 +27,7 @@ export class MxfComponent implements OnInit{
         this.language.getBoolean().subscribe(value => {
           this.languagecheck = value;
         });
-        this.pageService.getPageById('6b77d7a2-d6d2-4386-87d1-00f4e156fa98').subscribe(data => {
+        this.pageService.getPageById('fad1732a-60b0-4752-8564-76bcda6593a2').subscribe(data => {
             this.service = data.pageComponentModals.map((item: any) => {
               const parsedContent = JSON.parse(item.componentContent);
               return {

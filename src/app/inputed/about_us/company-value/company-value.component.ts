@@ -17,7 +17,7 @@ export class CompanyValueComponent {
     service: MisionValueVision[] = [];
     constructor(private pageService: PageService , private toastr : ToastrService){}
      ngOnInit() {
-    this.pageService.getPageById('6b77d7a2-d6d2-4386-87d1-00f4e156fa98').subscribe(data => {
+    this.pageService.getPageById('fad1732a-60b0-4752-8564-76bcda6593a2').subscribe(data => {
       this.service = data.pageComponentModals.map((item: any) => {
         const parsedContent = JSON.parse(item.componentContent);
         return {
@@ -31,7 +31,7 @@ export class CompanyValueComponent {
             id: service.id,
             name: service.id, // Assuming service.id should be used for both name and id
             description: JSON.stringify(service), // Convert the service object to a JSON string
-            priority: service.priority,
+            priority: service.priority=1,
           };
       
           this.pageService

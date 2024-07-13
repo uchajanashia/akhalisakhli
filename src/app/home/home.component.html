@@ -49,19 +49,19 @@
 <section [ngClass]="{ hidden: loading }" class="sect" >
   <ul>
     <li *ngFor="let service of serviceList; let even = even; let odd = odd">
-      <a [routerLink]="['/service/'+service.name]"  class="seccontain" id="sec1">
+      <a   class="seccontain" id="sec1">
         <div class="text" *ngIf="languagecheck">
           <p class="nowrap">{{ service.name }}</p>
           <p class="lowtext">{{ service.description }}</p>
           <div class="parent-container">
-            <a href="/projects" class="upper">გაიგე მეტი</a>
+            <a [routerLink]="['/service/'+service.name]" class="upper">გაიგე მეტი</a>
           </div>
         </div>
         <div class="text" *ngIf="!languagecheck">
           <p class="nowrap">{{ service.nameEn }}</p>
           <p class="lowtext">{{ service.descriptionEN }}</p>
           <div class="parent-container">
-            <a href="/projects" class="upper">See More</a>
+            <a [routerLink]="['/service/'+service.name]" class="upper">See More</a>
           </div>
         </div>
         <div class="imgtxt">

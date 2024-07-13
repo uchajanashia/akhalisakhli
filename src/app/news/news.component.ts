@@ -20,7 +20,7 @@ export class NewsComponent implements OnInit{
   isFullScreen = false;
   news: News[] = [];
   languagecheck = true;
-  pageId: string = 'd49e2a44-7c13-4e13-a9b8-8ad550485b7f'; // ფეიჯის აიდი
+  pageId: string = 'db768e3a-cc02-46cb-8506-e0b4d3543732'; // ფეიჯის აიდი
 
   constructor( private language: LanguageService, private router: Router, private pageService: PageService) { }
 

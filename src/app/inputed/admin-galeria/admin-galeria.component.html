@@ -1,0 +1,71 @@
+<app-header-input></app-header-input>
+
+<div class="container" style="padding-top: 120px;">
+  <div class="form-group">
+    <label for="selectGallery">გალერიის არჩევა:</label>
+    <select id="selectGallery" [(ngModel)]="selectedGalleryId" (change)="onGallerySelect($event)" class="form-control custom-select">
+      <option *ngFor="let gallery of galleryList" [value]="gallery.id">
+        {{ gallery.title }}
+      </option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedGallery">
+    <div class="gallery-content">
+      <div class="form-group">
+        <h2>ქართული ვერსია</h2>
+        <label for="galleryTitle">სახელწოდება:</label>
+        <input id="galleryTitle" [(ngModel)]="selectedGallery.title" class="form-control" />
+
+        <label for="galleryCategory">კატეგორია:</label>
+        <input id="galleryCategory" [(ngModel)]="selectedGallery.category" class="form-control" />
+
+        <label for="galleryText">ტექსტი:</label>
+        <textarea id="galleryText" [(ngModel)]="selectedGallery.text" class="form-control"></textarea>
+      </div>
+
+      <div class="form-group">
+        <h2>ინგლისური ვერსია</h2>
+        <label for="galleryTitleEn">სახელწოდება ინგლისურად:</label>
+        <input id="galleryTitleEn" [(ngModel)]="selectedGallery.titleEn" class="form-control" />
+
+        <label for="galleryCategoryEn">კატეგორია ინგლისურად:</label>
+        <input id="galleryCategoryEn" [(ngModel)]="selectedGallery.categoryEn" class="form-control" />
+
+        <label for="galleryTextEn">ტექსტი ინგლისურად:</label>
+        <textarea id="galleryTextEn" [(ngModel)]="selectedGallery.textEn" class="form-control"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="galleryVideo">ვიდეო:</label>
+      <input id="galleryVideo" [(ngModel)]="selectedGallery.video" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="galleryPriority">პრიორიტეტი:</label>
+      <input id="galleryPriority" type="number" [(ngModel)]="selectedGallery.priority" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="galleryImage">ფოტო:</label>
+      <input type="file" id="galleryImage" (change)="onImageUpload($event, selectedGallery.id)" />
+      <div *ngFor="let image of selectedGallery?.image; let i = index">
+        <img [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+selectedGallery.id+'_'+(i+1)+'.jpg'" alt="Gallery Image" />
+        <button style="background-color: red;" (click)="deleteImage(i)">სურათის წაშლა</button>
+      </div>
+    </div>
+    
+    
+    
+
+    <button (click)="updateGallery()" class="btn btn-primary">განახლება</button>
+    <button (click)="deleteGallery(selectedGallery.id)" class="btn btn-danger">წაშლა</button>
+  </div>
+
+  <div class="form-group">
+    <label for="newGalleryTitle">ახალი გალერიის სახელწოდება:</label>
+    <input id="newGalleryTitle" [(ngModel)]="newGalleryTitle" class="form-control" />
+  </div>
+
+  <button (click)="addNewGallery()" class="btn btn-success">გალერიის დამატება</button>
+</div>

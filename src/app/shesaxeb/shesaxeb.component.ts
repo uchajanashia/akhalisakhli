@@ -33,7 +33,7 @@ export class ShesaxebComponent  implements OnInit{
     Aos.init();
     Aos.refresh();
 
-    this.pageService.getPageById('463e6689-a45d-4e1d-a853-cf930cdb0a81').subscribe(data => {
+    this.pageService.getPageById('554e912f-c38f-42aa-865d-fdf01e4a70ad').subscribe(data => {
       this.aboutCompanyList = data.pageComponentModals.map((item: any) => {
         const parsedContent = JSON.parse(item.componentContent);
         return {

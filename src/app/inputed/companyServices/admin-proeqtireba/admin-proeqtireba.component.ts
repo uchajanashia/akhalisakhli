@@ -21,7 +21,7 @@ export class AdminProeqtirebaComponent {
   constructor(private pageService: PageService, private toastr: ToastrService) {}
 
   ngOnInit(): void {
-    this.getServiceData('38e5b29e-1757-4c55-960c-790ed0c230ea');
+    this.getServiceData('56e24210-2ce4-48dd-b01a-770cde35603d');
   }
 
   addService(isEnglish: boolean) {

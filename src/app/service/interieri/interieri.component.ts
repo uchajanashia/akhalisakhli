@@ -24,7 +24,7 @@ export class InterieriComponent implements OnInit{
     textEn: '',
     listserviceEn: []
   };
-  pageId : string = 'db2d9c74-e9d2-4734-9826-be1d836bb181';
+  pageId : string = '9601c6b9-df31-4e40-8a9c-ad318594d2ea';
   constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {

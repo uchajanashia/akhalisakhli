@@ -32,7 +32,7 @@ export class HomeInputComponent implements OnInit ,AfterViewInit{
   ngOnInit() {
     Aos.init();
     Aos.refresh();
-    this.pageService.getPageById('e45033b4-8c93-4b52-8a84-0e526b7932da').subscribe(data => {
+    this.pageService.getPageById('cb15ac1c-ef72-4cfe-a694-531f3dcf4485').subscribe(data => {
       this.serviceList = data.pageComponentModals.map((item: any) => {
         const parsedContent = JSON.parse(item.componentContent);
         return {
@@ -61,12 +61,13 @@ export class HomeInputComponent implements OnInit ,AfterViewInit{
         description: JSON.stringify(service),
         priority:service.priority
     };
-
+    alert(updatedService.id)
     this.pageService.updateComponentprt(updatedService.id, updatedService.name, updatedService.description , updatedService.priority).subscribe({
         next: (response) => {
           this.tostera.info('წარმატებით დანახლდა')
         },
         error: (error) => {
+          console.log(error)
           this.tostera.error('უჩას დაურეკეთ ')
 
         }

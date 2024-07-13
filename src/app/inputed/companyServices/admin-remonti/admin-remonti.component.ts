@@ -17,7 +17,7 @@ export class AdminRemontiComponent implements OnInit {
   iService: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
-  pageId: string = '780795cc-4a9c-4547-8cc0-17dd4090b19f'; // შეცვალეთ შესაბამისი ID
+  pageId: string = 'c3c1ff84-6d06-488f-bdd5-ae39f7a2f7ad'; // შეცვალეთ შესაბამისი ID
 
   constructor(private pageService: PageService, private toastr: ToastrService) {}
 

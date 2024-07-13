@@ -23,7 +23,7 @@ export class LandshaftiComponent implements OnInit{
     textEn: '',
     listserviceEn: []
   };
-  pageId : string = 'a5b694f0-7ea8-4848-aee3-0a934c7ded55';
+  pageId : string = 'f0322732-c753-44fb-9de8-9865a3474316';
   constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {

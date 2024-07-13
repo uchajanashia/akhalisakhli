@@ -29,7 +29,7 @@ export class GundiComponent implements OnInit{
         this.isGeorgian = value;
       });
       this.pageService
-      .getPageById('c764fa44-6349-4922-87c0-a91fa512bda1')
+      .getPageById('03ab07f8-ac28-4734-b019-68cc6cce9dfe')
       .subscribe((data) => {
         this.gundiList = data.pageComponentModals.map((item: any) => {
           const parsedContent = JSON.parse(item.componentContent);

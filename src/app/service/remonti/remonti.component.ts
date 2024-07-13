@@ -23,7 +23,7 @@ export class RemontiComponent implements OnInit{
     textEn: '',
     listserviceEn: []
   };
-  pageId : string = '780795cc-4a9c-4547-8cc0-17dd4090b19f';
+  pageId : string = 'c3c1ff84-6d06-488f-bdd5-ae39f7a2f7ad';
   constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {

@@ -17,7 +17,7 @@ export class AdminInterieriComponent  implements OnInit{
   iService: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
-  pageId: string = 'db2d9c74-e9d2-4734-9826-be1d836bb181'; // შეცვალეთ შესაბამისი ID
+  pageId: string = '9601c6b9-df31-4e40-8a9c-ad318594d2ea'; // შეცვალეთ შესაბამისი ID
 
   constructor(private pageService: PageService, private toastr: ToastrService) {}
 

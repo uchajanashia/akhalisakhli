@@ -19,7 +19,7 @@ export class CompanyInfoComponent implements OnInit {
     service: AboutCompany[] = [];
     constructor(private pageService: PageService, private toastr : ToastrService){}
      ngOnInit() {
-    this.pageService.getPageById('463e6689-a45d-4e1d-a853-cf930cdb0a81').subscribe(data => {
+    this.pageService.getPageById('554e912f-c38f-42aa-865d-fdf01e4a70ad').subscribe(data => {
       this.service = data.pageComponentModals.map((item: any) => {
         const parsedContent = JSON.parse(item.componentContent);
         return {
@@ -37,9 +37,9 @@ export class CompanyInfoComponent implements OnInit {
           id: service.id,
           name: service.id, // Assuming service.id should be used for both name and id
           description: JSON.stringify(service), // Convert the service object to a JSON string
-          priority: service.priority,
+          priority: service.priority =1,
         };
-    
+        alert(updatedService.id)
         this.pageService
           .updateComponentprt(
             updatedService.id,
@@ -50,7 +50,7 @@ export class CompanyInfoComponent implements OnInit {
           )
           .subscribe({
             next: (response) => this.toastr.info('წარმატებით შეიცვალა'),
-            error: (error) => this.toastr.error('Upload failed', error),
+            error: (error) => {this.toastr.error('Upload failed', error); console.log(error)},
           });
       }
       onImageUpload(event: any, filename: any): void {

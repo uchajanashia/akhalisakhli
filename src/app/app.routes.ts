@@ -36,6 +36,7 @@ import { AdminRemontiComponent } from './inputed/companyServices/admin-remonti/a
 import { AdminLandshaptiComponent } from './inputed/companyServices/admin-landshapti/admin-landshapti.component';
 import { AdminNewsComponent } from './inputed/admin-news/admin-news.component';
 import { FooterInputComponent } from './inputed/footer-input/footer-input.component';
+import { AdminGaleriaComponent } from './inputed/admin-galeria/admin-galeria.component';
 
 export const routes: Routes = [
   {
@@ -126,7 +127,7 @@ export const routes: Routes = [
           data: { title: 'ინტერიერი' },
         },
         {
-          path: 'ლანდშაფტის%20დიზაინი',
+          path: 'ლანდშაფტის დიზაინი',
           component: LandshaftiComponent,
           data: { title: 'ლადნშაფტის დიზაინი' },
         },
@@ -229,6 +230,11 @@ export const routes: Routes = [
         {
           path: 'news',
           component: AdminNewsComponent,
+          canActivate: [AuthGuard],
+        },
+        {
+          path: 'gallery',
+          component: AdminGaleriaComponent,
           canActivate: [AuthGuard],
         },
         {

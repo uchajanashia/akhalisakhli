@@ -18,7 +18,7 @@ export class AdminMsheneblobaComponent implements OnInit {
   iService: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
-  pageId: string = 'f3aee0d3-586b-4e8a-9845-5b7c46026c7e'; // შეცვალეთ შესაბამისი ID
+  pageId: string = 'd5858b10-a13e-4166-b5b4-840f7bdfa33b'; // შეცვალეთ შესაბამისი ID
 
   constructor(private pageService: PageService, private toastr: ToastrService) {}
 

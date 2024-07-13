@@ -23,7 +23,7 @@ export class MsheneblobaComponent {
     textEn: '',
     listserviceEn: []
   };
-  pageId : string = 'f3aee0d3-586b-4e8a-9845-5b7c46026c7e';
+  pageId : string = 'd5858b10-a13e-4166-b5b4-840f7bdfa33b';
   constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {

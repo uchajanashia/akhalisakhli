@@ -17,7 +17,7 @@ export class AdminLandshaptiComponent implements  OnInit {
   iService: iService | null = null;
   newService: string = '';
   newServiceEn: string = '';
-  pageId: string = 'a5b694f0-7ea8-4848-aee3-0a934c7ded55'; // შეცვალეთ შესაბამისი ID
+  pageId: string = 'f0322732-c753-44fb-9de8-9865a3474316'; // შეცვალეთ შესაბამისი ID
 
   constructor(private pageService: PageService, private toastr: ToastrService) {}
 

@@ -34,7 +34,7 @@ export class ProektirebaComponent {
     textEn: '',
     listserviceEn: []
   };
-  pageId : string = '38e5b29e-1757-4c55-960c-790ed0c230ea';
+  pageId : string = '56e24210-2ce4-48dd-b01a-770cde35603d';
   constructor( private languageService: LanguageService, private pageService: PageService) {}
 
   ngOnInit(): void {
