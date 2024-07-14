@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeaderInputComponent } from '../header-input/header-input.component';
+import { imgurl } from '../../api-config';
 interface Gallery {
   id: string;
   title: string;
@@ -24,6 +25,7 @@ interface Gallery {
   styleUrl: './admin-galeria.component.scss'
 })
 export class AdminGaleriaComponent  implements OnInit{
+  imgurl = imgurl;
   pageId: string = '370cb96d-7cd2-4957-a7be-784b7670bd23'; // ფეიჯის აიდი
   galleryList: Gallery[] = [];
   selectedGalleryId: string | null = null;
@@ -159,7 +161,7 @@ export class AdminGaleriaComponent  implements OnInit{
         next: (response) => {
           console.log('Image upload response:', response); // Debug log
           if (this.selectedGallery) {
-            this.selectedGallery.image.push(response); // Assuming response contains the image URL
+            this.selectedGallery.image.push(imageId); // Assuming response contains the image URL
           }
           this.toastr.info('ფოტო წარმატებით ატვირთულია');
         },

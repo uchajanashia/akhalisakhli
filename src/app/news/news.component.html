@@ -10,7 +10,7 @@
           <a (click)="viewMore(item)" class="upper">{{ languagecheck ? 'იხილეთ ვრცლად ' : 'Find More' }}</a>
         </div>
       </div>
-      <img data-aos="fade-up" class="image" [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+item.id+'.jpg'" alt="" (click)="toggleFullScreen(item.image)" loading="lazy">
+      <img data-aos="fade-up" class="image" [src]="imgurl+item.id+'.jpg'" alt="" (click)="toggleFullScreen(item.image)" loading="lazy">
     </div>
   </div>
 </div>

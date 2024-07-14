@@ -8,6 +8,7 @@ import { FloatContactComponent } from "../float-contact/float-contact.component"
 import { LanguageService } from '../language.service';
 import { PageService } from '../inputed/service/page.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { imgurl } from '../api-config';
 
 @Component({
     selector: 'app-gundi',
@@ -17,6 +18,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
     imports: [CommonModule, HeaderComponent, FooterComponent, FloatContactComponent]
 })
 export class GundiComponent implements OnInit{
+  imgurl = imgurl;
   gundiList:Gundi[]=[];
   isGeorgian: boolean = true; 
   constructor(private pageService: PageService,private languageService: LanguageService,private sanitizer: DomSanitizer) {}

@@ -11,7 +11,7 @@
             <div id="youtube-container"></div>
             </div>
             <div class="product-image">
-              <img *ngIf="!video" class="active" [src]="product" (click)="toggleFullScreen(product)">
+              <img *ngIf="!video" class="active" [src]="imgurl+product" (click)="toggleFullScreen(product)">
             </div>
             <ul class="image-list">
               <div [class.is-image]="isimage" class="carousel-container hide2">
@@ -21,7 +21,7 @@
                 <ul class="image-list">
                   
                   <li class="image-item" *ngFor="let image of visibleImages">
-                    <img [src]="image" (click)="changeImage(image)">
+                    <img [src]="imgurl+image" (click)="changeImage(image)">
                   </li>
                 </ul>
                 <div  [class.is-image]="moreimage" class="hidemobile">
@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="fullscreen-image" [ngClass]="{ 'show': isFullScreen && fullscreenImage }" *ngIf="isFullScreen && fullscreenImage" (click)="toggleFullScreen(fullscreenImage)">
-      <img [src]="fullscreenImage" [alt]="fullscreenImage">
+      <img [src]="imgurl+fullscreenImage" [alt]="fullscreenImage">
   </div>
   </main>
   <app-footer ></app-footer>

@@ -9,6 +9,7 @@ import { FloatContactComponent } from '../../float-contact/float-contact.compone
 import { MapComponent } from '../../map/map.component';
 import { PageService } from '../service/page.service';
 import { ToastrService } from 'ngx-toastr';
+import { imgurl } from '../../api-config';
 
 @Component({
   selector: 'app-home-input',
@@ -29,6 +30,7 @@ export class HomeInputComponent implements OnInit ,AfterViewInit{
   serviceList: Services[] = [];
   constructor(private pageService :PageService, private tostera :ToastrService) {}
   loading = true;
+  imgurl = imgurl;
   ngOnInit() {
     Aos.init();
     Aos.refresh();
@@ -49,8 +51,9 @@ export class HomeInputComponent implements OnInit ,AfterViewInit{
     const file: File = event.target.files[0];
     if (file) {
       this.pageService.uploadUserImage(file , filename).subscribe({
-        next: (response) => console.log('Upload successful', response),
-        error: (error) => console.error('Upload failed', error)
+        next: (response) => {this.tostera.info('ფოტო წარმატებით შეიცვალა'); window.location.reload();}
+        ,
+        error: (error) => {this.tostera.error('უჩას დაურეკეთ '); console.log(error) }
       });
     }
   }
@@ -64,11 +67,11 @@ export class HomeInputComponent implements OnInit ,AfterViewInit{
     alert(updatedService.id)
     this.pageService.updateComponentprt(updatedService.id, updatedService.name, updatedService.description , updatedService.priority).subscribe({
         next: (response) => {
-          this.tostera.info('წარმატებით დანახლდა')
+          this.tostera.info('წარმატებით განახლდა')
         },
         error: (error) => {
-          console.log(error)
-          this.tostera.error('უჩას დაურეკეთ ')
+          console.log(error);
+          this.tostera.error('უჩას დაურეკეთ ' + error)
 
         }
     });

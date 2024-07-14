@@ -21,6 +21,7 @@ import { PageService } from '../inputed/service/page.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { delay } from 'rxjs';
+import { imgurl } from '../api-config';
 
 
 @Component({
@@ -250,7 +251,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   count="";
 
   languagecheck = true;
-  
+
+  imgurl = imgurl;
   onCountryChange() {
     const selectedCountry = this.countries.find(country => country.code === this.selectedCountry);
     if (selectedCountry) {
@@ -394,11 +396,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   imageObjects: { imageUrl: string; text: string; textEn:string; linkUrl: string }[] = [
-    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home1.jpg', text: 'პროექტირება', textEn:'Project Design',  linkUrl: 'services/proektireba' },
-    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home2.jpg', text: 'მშენებლობა',textEn:'construction', linkUrl: 'services/mshenebloba' },
-    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home3.jpg', text: 'ინტერიერის დიზაინი',textEn:'interior design', linkUrl: 'services/interieri' },
-    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home4.jpg', text: 'რემონტი',textEn:'Renovation', linkUrl: 'services/remonti' },
-    { imageUrl: 'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/Home5.jpg', text: 'ლანდშაფტის დიზაინი',textEn:'Landscape design', linkUrl: 'services/landshafti' },
+    { imageUrl: imgurl+'Home1.jpg', text: 'პროექტირება', textEn:'Project Design',  linkUrl: 'services/proektireba' },
+    { imageUrl:  imgurl+'Home2.jpg', text: 'მშენებლობა',textEn:'construction', linkUrl: 'services/mshenebloba' },
+    { imageUrl: imgurl+'Home3.jpg', text: 'ინტერიერის დიზაინი',textEn:'interior design', linkUrl: 'services/interieri' },
+    { imageUrl: imgurl+'Home4.jpg', text: 'რემონტი',textEn:'Renovation', linkUrl: 'services/remonti' },
+    { imageUrl: imgurl+'Home5.jpg', text: 'ლანდშაფტის დიზაინი',textEn:'Landscape design', linkUrl: 'services/landshafti' },
   ];
 
 

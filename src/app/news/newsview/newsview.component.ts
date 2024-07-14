@@ -3,6 +3,7 @@ import { HeaderComponent } from "../../header/header.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
+import { imgurl } from '../../api-config';
 
 @Component({
     selector: 'app-newsview',
@@ -12,7 +13,7 @@ import { LanguageService } from '../../language.service';
     imports: [HeaderComponent, FooterComponent ,CommonModule]
 })
 export class NewsviewComponent  implements OnInit{
-
+imgurl=imgurl;
   news: any;
   languagecheck = true;
   fullscreenImage: string | null = null;

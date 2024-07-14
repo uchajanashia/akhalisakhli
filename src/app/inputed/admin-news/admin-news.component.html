@@ -44,7 +44,7 @@
     <div class="form-group">
       <label for="newsImage">ფოტო:</label>
       <input type="file" id="newsImage" (change)="onImageUpload($event, selectedNews.id+'.jpg')" />
-      <img *ngIf="selectedNews.image"  [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+selectedNews.id+'.jpg'" alt="News Image" />
+      <img *ngIf="selectedNews.image"  [src]="imgurl+selectedNews.id+'.jpg'" alt="News Image" />
     </div>
     
 

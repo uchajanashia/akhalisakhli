@@ -7,6 +7,7 @@ import { News, Services } from '../services';
 import { LanguageService } from '../language.service';
 import { Router } from '@angular/router';
 import { PageService } from '../inputed/service/page.service';
+import { imgurl } from '../api-config';
 
 @Component({
     selector: 'app-news',
@@ -16,6 +17,7 @@ import { PageService } from '../inputed/service/page.service';
     imports: [HeaderComponent, FooterComponent,CommonModule]
 })
 export class NewsComponent implements OnInit{
+  imgurl=imgurl;
   fullscreenImage: string | null = null;
   isFullScreen = false;
   news: News[] = [];

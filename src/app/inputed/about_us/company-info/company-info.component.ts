@@ -5,6 +5,7 @@ import { AboutCompany } from '../../../services';
 import { CommonModule } from '@angular/common';
 import { PageService } from '../../service/page.service';
 import { ToastrService } from 'ngx-toastr';
+import { imgurl } from '../../../api-config';
 
 @Component({
     selector: 'app-company-info',
@@ -15,7 +16,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class CompanyInfoComponent implements OnInit {
-
+    imgurl = imgurl;
     service: AboutCompany[] = [];
     constructor(private pageService: PageService, private toastr : ToastrService){}
      ngOnInit() {
@@ -53,12 +54,13 @@ export class CompanyInfoComponent implements OnInit {
             error: (error) => {this.toastr.error('Upload failed', error); console.log(error)},
           });
       }
-      onImageUpload(event: any, filename: any): void {
+      onImageUpload(event: any , filename:any): void {
         const file: File = event.target.files[0];
         if (file) {
-          this.pageService.uploadUserImage(file, filename).subscribe({
-            next: (response) => this.toastr.info('წარმატებით შეიცვალა'),
-            error: (error) => this.toastr.error('Upload failed', error),
+          this.pageService.uploadUserImage(file , filename).subscribe({
+            next: (response) => {this.toastr.info('ფოტო წარმატებით შეიცვალა')}
+            ,
+            error: (error) => {this.toastr.error('უჩას დაურეკეთ '); console.log(error) }
           });
         }
       }

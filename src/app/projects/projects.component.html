@@ -1,38 +1,32 @@
-<app-header ></app-header>
+<app-header></app-header>
 <div>
-    <ul class="shortcut upper">
-
-      <li><a [ngClass]="{ 'active-filter': activeFilter === '' }" (click)="dontdo()">{{languagecheck ?'ყველა' : 'all'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'პროექტირება' }" (click)="filterByTitle('პროექტირება')">{{languagecheck ?'პროექტირება' : 'Project Design'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'მშენებლობა' }" (click)="filterByTitle('მშენებლობა')">{{languagecheck ?'მშენებლობა' : 'Construction'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'ინტერიერი დიზაინი' }" (click)="filterByTitle('ინტერიერი დიზაინი')">{{languagecheck ?'ინტერიერის დიზაინი' : 'Interior Design'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'რემონტი' }" (click)="filterByTitle('რემონტი')">{{languagecheck ?'რემონტი' : 'Renovation'}}</a></li>
-      <li><a [ngClass]="{ 'active-filter': activeFilter === 'ლანდშაფტის დიზაინი' }" (click)="filterByTitle('ლანდშაფტის დიზაინი')">{{languagecheck ?'ლანდშაფტის  დიზაინი' : 'Landscape Design'}} </a></li>
-      
-      
-      </ul>
-      <section id="portfolio" *ngIf="languagecheck">
-        <div class="project" *ngFor="let project of filteredProjects  trackBy: trackByProjectId">
-          <img class="project__image" [src]="project.image[0]" loading="lazy" />
-          <div class="grid__overlay">
-          <h3 class="grid__title long-title upper" >{{  project.title}}</h3>
-            <button class="viewbutton upper" (click)="viewMore(project)" >დეტალების ნახვა</button>
-          <p class="upper">{{project.category}}</p>
-
-          </div>
-        </div>
-      </section>
-      <section id="portfolio" *ngIf="!languagecheck">
-        <div class="project" *ngFor="let project of filteredProjects; trackBy: trackByProjectId">
-          <img class="project__image" [src]="project.image[0]" loading="lazy" />
-          <div class="grid__overlay">
-          <h3 class="grid__title long-title upper" >{{project.titleEn}}</h3>
-            <button class="viewbutton upper" (click)="viewMore(project)" > see more </button>
-          <p class="upper">{{project.categoryEn }}</p>
-
-          </div>
-        </div>
-      </section>
-
+  <ul class="shortcut upper">
+    <li><a [ngClass]="{ 'active-filter': activeFilter === '' }" (click)="dontdo()">{{ languagecheck ? 'ყველა' : 'All' }}</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === 'პროექტირება' }" (click)="filterByTitle('პროექტირება')">{{ languagecheck ? 'პროექტირება' : 'Project Design' }}</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === 'მშენებლობა' }" (click)="filterByTitle('მშენებლობა')">{{ languagecheck ? 'მშენებლობა' : 'Construction' }}</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === 'ინტერიერი დიზაინი' }" (click)="filterByTitle('ინტერიერი დიზაინი')">{{ languagecheck ? 'ინტერიერის დიზაინი' : 'Interior Design' }}</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === 'რემონტი' }" (click)="filterByTitle('რემონტი')">{{ languagecheck ? 'რემონტი' : 'Renovation' }}</a></li>
+    <li><a [ngClass]="{ 'active-filter': activeFilter === 'ლანდშაფტის დიზაინი' }" (click)="filterByTitle('ლანდშაფტის დიზაინი')">{{ languagecheck ? 'ლანდშაფტის დიზაინი' : 'Landscape Design' }}</a></li>
+  </ul>
+  <section id="portfolio" *ngIf="languagecheck">
+    <div class="project" *ngFor="let project of filteredProjects">
+      <img class="project__image" [src]="imgurl+project.image[0]" loading="lazy" (error)="onImageError(project.image[0])" />
+      <div class="grid__overlay">
+        <h3 class="grid__title long-title upper">{{ project.title }}</h3>
+        <button class="viewbutton upper" (click)="viewMore(project)">დეტალების ნახვა</button>
+        <p class="upper">{{ project.category }}</p>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" *ngIf="!languagecheck">
+    <div class="project" *ngFor="let project of filteredProjects">
+      <img class="project__image" [src]="imgurl+project.image[0]" loading="lazy" (error)="onImageError(project.image[0])" />
+      <div class="grid__overlay">
+        <h3 class="grid__title long-title upper">{{ project.titleEn }}</h3>
+        <button class="viewbutton upper" (click)="viewMore(project)">See more</button>
+        <p class="upper">{{ project.categoryEn }}</p>
+      </div>
+    </div>
+  </section>
 </div>
-<app-footer ></app-footer>
+<app-footer></app-footer>

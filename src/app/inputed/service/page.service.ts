@@ -2,12 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable, forkJoin } from 'rxjs';
+import { URL } from '../../api-config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PageService {
-  private baseUrl = 'https://backend.mr-morrison.duckdns.org';
+  private baseUrl = URL;
 
   constructor(private http: HttpClient, private cookiservice: CookieService) {}
 

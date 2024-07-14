@@ -11,6 +11,7 @@ import { LanguageService } from '../../language.service';
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { YoutubePlayerService } from '../../youtube-player.service';
+import { imgurl } from '../../api-config';
 @Component({
     selector: 'app-viewproject',
     standalone: true,
@@ -31,7 +32,7 @@ import { YoutubePlayerService } from '../../youtube-player.service';
 })
 
 export class ViewprojectComponent {
-
+  imgurl=imgurl;
   project: any;
   product="";
   productlist: string[] = [];

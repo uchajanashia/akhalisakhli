@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderInputComponent } from '../header-input/header-input.component';
 import { News } from '../../services';
 import { ToastrService } from 'ngx-toastr';
+import { imgurl } from '../../api-config';
 
 @Component({
   selector: 'app-admin-news',
@@ -14,6 +15,7 @@ import { ToastrService } from 'ngx-toastr';
   imports: [CommonModule, FormsModule, HeaderInputComponent]
 })
 export class AdminNewsComponent implements OnInit {
+  imgurl = imgurl;
   prioritety=0;
   pageId: string = 'db768e3a-cc02-46cb-8506-e0b4d3543732'; // ფეიჯის აიდი
   newsList: News[] = [];

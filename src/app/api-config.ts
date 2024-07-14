@@ -1,5 +1,5 @@
 export const URL = 'https://backend.mr-morrison.duckdns.org';
-
+export const imgurl = 'https://backend.mr-morrison.duckdns.org/api/v1/admin-panel/get-page-img/';
 export const API = {
     auth: {
         Check_JWT: '/api/v1/user-details/is-token-validate',

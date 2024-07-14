@@ -2,7 +2,7 @@
     <div class="tMshromlebi" *ngFor="let gundi of gundiList">
       <div class="backMshromlebi">
         <div class="portret">
-          <img data-aos="fade-up" class="sizeB3" [src]="getSafeUrl('https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+gundi.id+'.jpg')" alt="service image" loading="lazy"/>
+          <img data-aos="fade-up" class="sizeB3" [src]="getSafeUrl(imgurl+gundi.id+'.jpg')" alt="service image" loading="lazy"/>
 
         </div>
         <div class="txt " *ngIf="isGeorgian">

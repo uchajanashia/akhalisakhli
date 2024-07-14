@@ -50,7 +50,7 @@
       <label for="galleryImage">ფოტო:</label>
       <input type="file" id="galleryImage" (change)="onImageUpload($event, selectedGallery.id)" />
       <div *ngFor="let image of selectedGallery?.image; let i = index">
-        <img [src]="'https://bk.akhalisakhli.com/api/v1/admin-panel/get-page-img/'+selectedGallery.id+'_'+(i+1)+'.jpg'" alt="Gallery Image" />
+        <img [src]="imgurl+selectedGallery.id+'_'+(i+1)+'.jpg'" alt="Gallery Image" />
         <button style="background-color: red;" (click)="deleteImage(i)">სურათის წაშლა</button>
       </div>
     </div>

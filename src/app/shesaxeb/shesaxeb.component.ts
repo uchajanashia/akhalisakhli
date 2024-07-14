@@ -8,6 +8,7 @@ import { AboutCompany } from '../services';
 import { LanguageService } from '../language.service';
 import { PageService } from '../inputed/service/page.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { imgurl } from '../api-config';
 
 @Component({
     selector: 'app-shesaxeb',
@@ -17,6 +18,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
     imports: [HeaderComponent, FooterComponent, CommonModule, FloatContactComponent]
 })
 export class ShesaxebComponent  implements OnInit{
+  imgurl = imgurl;
   isGeorgian: boolean = true; 
   aboutCompanyList:AboutCompany[]=[];
   imageUrls: SafeUrl[] = [];

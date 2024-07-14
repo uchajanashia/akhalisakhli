@@ -1,34 +1,35 @@
-<footer>
-  <ul class="l1 item">
-    <div class="number lowtext">
-      <li>
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:{{ contactInfo.phone1 }}">{{ contactInfo.phone1 }}</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:{{ contactInfo.phone2 }}">{{ contactInfo.phone2 }}</a>
-      </li>
+
+    <footer>
+        <ul class="l1 item">
+            <div class="number lowtext">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:{{ contactInfo.phone1 }}">{{ contactInfo.phone1 }}</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:{{ contactInfo.phone2 }}">{{ contactInfo.phone2 }}</a>
+                </li>
+            </div>
+        </ul>
+        <div class="logo item">
+            <a href="#top"><img src="assets/pics/SVG/tetri logo.svg" alt="logo" /></a>
+        </div>
+        <ul class="l2 lowtext item">
+            <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <a target="_blank" href="https://www.google.com/maps/place/4%2F6%2F8%2F10+%E1%83%A1%E1%83%98%E1%83%9B%E1%83%9D%E1%83%9C+%E1%83%A9%E1%83%98%E1%83%A5%E1%83%9D%E1%83%95%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90,+%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98/@41.7151511,44.7743724,17z/data=!3m1!4b1!4m6!3m5!1s0x4044732bbab1e52b:0x9f4813344b06734e!8m2!3d41.7151471!4d44.7769473!16s%2Fg%2F11_pq20wv?entry=ttu">
+                    {{ languagecheck ? contactInfo.address : contactInfo.addressEn }}
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <div class="rights lowtext">
+        <a style="text-decoration: none" href="/privacy">
+            {{ languagecheck ? "© ახალი სახლი. ყველა უფლება დაცულია" : "Akhali Sakhli. all rights reserved" }}
+        </a>
     </div>
-  </ul>
-  <div class="logo item">
-    <a href="#top"><img src="assets/pics/SVG/tetri logo.svg" alt="logo" /></a>
-  </div>
-  <ul class="l2 lowtext item">
-    <li>
-      <i class="fa-solid fa-envelope"></i>
-      <a href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a>
-    </li>
-    <li>
-      <i class="fa-solid fa-location-dot"></i>
-      <a target="_blank" href="https://www.google.com/maps/place/4%2F6%2F8%2F10+%E1%83%A1%E1%83%98%E1%83%9B%E1%83%9D%E1%83%9C+%E1%83%A9%E1%83%98%E1%83%A5%E1%83%9D%E1%83%95%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90,+%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98/@41.7151511,44.7743724,17z/data=!3m1!4b1!4m6!3m5!1s0x4044732bbab1e52b:0x9f4813344b06734e!8m2!3d41.7151471!4d44.7769473!16s%2Fg%2F11_pq20wv?entry=ttu">
-        {{ languagecheck ? contactInfo.address : contactInfo.addressEn }}
-      </a>
-    </li>
-  </ul>
-</footer>
-<div class="rights lowtext">
-  <a style="text-decoration: none" href="/privacy">
-    {{ languagecheck ? "© ახალი სახლი. ყველა უფლება დაცულია" : "Akhali Sakhli. all rights reserved" }}
-  </a>
-</div>

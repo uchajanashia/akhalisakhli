@@ -10,7 +10,7 @@ import { PageService } from '../inputed/service/page.service';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent implements OnInit{
-  pageId = '485d2121-be16-4e58-86a6-8b4b0e6a7399';
+  pageId = 'c7d9fb7c-f374-45c5-b1d7-eeb63b7f6a72';
   componentId = '';
   contactInfo = {
     phone1: '',
